@@ -1,0 +1,11 @@
+.idea
+**/node_modules/*
+*/npm-debug.log
+*/firebase-debug.log
+dist
+.DS_Store
+/env.js
+.build
+/*.log
+*~
+service-account-credentials.json

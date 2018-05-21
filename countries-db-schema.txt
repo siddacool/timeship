@@ -1,0 +1,28 @@
+[
+  {
+    "name": {
+      "type": "String",
+      "isRequired": true,
+      "isPublic": true,
+      "value": "india"
+    },
+    "code": {
+      "type": "String",
+      "isRequired": true,
+      "isPublic": true,
+      "value": "IND"
+    },
+    "alias": {
+      "type": "Array",
+      "isRequired": false,
+      "isPublic": true,
+      "value": []
+    },
+    "country_id": {
+      "type": "String",
+      "isRequired": true,
+      "isPublic": true,
+      "value": "sunset-somewhere-ffggf"
+    },
+  }
+]

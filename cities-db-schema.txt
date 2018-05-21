@@ -1,0 +1,34 @@
+[
+  {
+    "name": {
+      "type": "String",
+      "isRequired": true,
+      "isPublic": true,
+      "value": "mumbai"
+    },
+    "alias": {
+      "type": "Array",
+      "isRequired": true,
+      "isPublic": true,
+      "value": ['bombay']
+    },
+    "country": {
+      "type": "String",
+      "isRequired": true,
+      "isPublic": true,
+      "value": "IND"
+    },
+    "city_id": {
+      "type": "String",
+      "isRequired": true,
+      "isPublic": true,
+      "value": "sunset-somewhere-ffggf"
+    },
+    "timezone": {
+      "type": "String",
+      "isRequired": true,
+      "isPublic": true,
+      "value": "+05:30"
+    },
+  }
+]
