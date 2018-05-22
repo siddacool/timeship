@@ -6,11 +6,12 @@ import City from '../Components/City';
 import AddNewCity from '../Components/AddNewCity';
 
 export default class extends Component {
-  constructor(api, storage, citiesCookie) {
+  constructor(api, storage, citiesCookie, offline) {
     super();
     this.api = api;
     this.storage = storage;
     this.cities_cookie = citiesCookie;
+    this.cities_offline = offline;
   }
 
   Markup() {
@@ -62,7 +63,7 @@ export default class extends Component {
       }
 
       finalArr.forEach((itm) => {
-        const city = City(itm, this.storage, this.cities_cookie);
+        const city = City(itm, this.storage, this.cities_cookie, this.cities_offline);
         ul.innerHTML += city;
       });
 
@@ -70,6 +71,24 @@ export default class extends Component {
         runningTime(city.querySelector('.city__time'), 'hh:mm:ssA DD MMM');
         runningTime(city.querySelector('.city__time--24'), 'HH:mm:ss');
       });
+    })
+    .catch(() => {
+      const storage = this.storage;
+      const offline = this.cities_offline;
+      const cookie = this.cities_cookie;
+      const offlineData = JSON.parse(storage.getItem(offline));
+
+      if (offlineData.length) {
+        offlineData.forEach((itm) => {
+          const city = City(itm, storage, cookie, offline);
+          ul.innerHTML += city;
+        });
+
+        ul.querySelectorAll('li').forEach((city) => {
+          runningTime(city.querySelector('.city__time'), 'hh:mm:ssA DD MMM');
+          runningTime(city.querySelector('.city__time--24'), 'HH:mm:ss');
+        });
+      }
     });
   }
 }

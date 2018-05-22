@@ -1,10 +1,11 @@
 import { Component } from 'domr-c';
 
 export default class extends Component {
-  constructor(storage, citiesCookie) {
+  constructor(storage, citiesCookie, offline) {
     super();
     this.storage = storage;
     this.cities_cookie = citiesCookie;
+    this.cities_offline = offline;
   }
 
   Markup() {
@@ -29,6 +30,14 @@ export default class extends Component {
         const filter = cookie.filter(value => value !== cityId);
 
         this.storage.setItem(this.cities_cookie, JSON.stringify(filter));
+      }
+
+      if (this.storage.getItem(this.cities_offline) &&
+       JSON.parse(this.storage.getItem(this.cities_offline)).length) {
+        const offline = JSON.parse(this.storage.getItem(this.cities_offline));
+        const filter = offline.filter(value => value.city_id !== cityId);
+
+        this.storage.setItem(this.cities_offline, JSON.stringify(filter));
       }
 
       grandParent.removeChild(parent);
