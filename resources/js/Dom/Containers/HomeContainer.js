@@ -36,7 +36,10 @@ export default class extends Component {
 
       result.forEach((itm) => {
         if (itm.city_id) {
-          citiesArr.push(itm);
+          const thisCity = itm;
+          const countryName = result.filter(e => e.country_id && e.code === thisCity.country);
+          thisCity.country_name = countryName[0].name;
+          citiesArr.push(thisCity);
         }
       });
 

@@ -1,3 +1,5 @@
+import localSave from '../browser-storage';
+
 function parseData(data) {
   return JSON.parse(data);
 }
@@ -10,8 +12,8 @@ function stringifyData(data) {
 export default function (data) {
   if (data.metadata && data.metadata.city) {
     const cityId = data.metadata.city;
-    if (sessionStorage.getItem('timeship-add-city-data-1')) {
-      let tempStore = parseData(sessionStorage.getItem('timeship-add-city-data-1'));
+    if (localSave.storage.getItem(localSave.cookie)) {
+      let tempStore = parseData(localSave.storage.getItem(localSave.cookie));
 
       if (tempStore.includes(cityId)) {
         tempStore = tempStore.filter(item => item !== cityId);
@@ -19,9 +21,9 @@ export default function (data) {
 
       tempStore.push(cityId);
 
-      sessionStorage.setItem('timeship-add-city-data-1', stringifyData(tempStore));
+      localSave.storage.setItem(localSave.cookie, stringifyData(tempStore));
     } else {
-      sessionStorage.setItem('timeship-add-city-data-1', stringifyData([cityId]));
+      localSave.storage.setItem(localSave.cookie, stringifyData([cityId]));
     }
     location.href = '#/';
   }

@@ -1,12 +1,12 @@
 import apiSet from '../api-set';
+import localSave from '../browser-storage';
 import HomeContainer from '../Containers/HomeContainer';
 
-const storage = sessionStorage;
-const cookie = 'timeship-add-city-data-1';
-
-export default function () {
+export default function (data) {
   const wrapper = document.getElementById('wrapper');
-  const homeContainer = new HomeContainer(apiSet.complete, storage, cookie);
+  const homeContainer = new HomeContainer(apiSet.complete, localSave.storage, localSave.cookie);
+
+  console.log(data);
 
   wrapper.innerHTML = homeContainer.Render();
 }

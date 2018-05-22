@@ -10,7 +10,7 @@ const routes = [
     isDefault: true,
   },
   {
-    name: 'Home Page',
+    name: 'Search',
     path: '/search',
     view: SearchView,
   },
