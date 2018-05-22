@@ -28,17 +28,34 @@ function fireSearchEvent(api, searchTerm, callback) {
     });
 
     countryArr.forEach((country) => {
-      if (country.name === val) {
+      const thisCountry = country;
+      if (thisCountry.name.startsWith(val)) {
         cityArr.forEach((city) => {
           const thisCity = city;
-          if (country.code === thisCity.country) {
+          if (thisCountry.code === thisCity.country) {
             const duplicates = finalArr.find(obj => obj.city_id === thisCity.city_id);
             if (!duplicates) {
-              thisCity.header = country.name;
+              thisCity.header = thisCountry.name;
               finalArr.push(thisCity);
             }
           }
         });
+      } else if (thisCountry.alias && thisCountry.alias.length) {
+        const alias = thisCountry.alias;
+        for (let i = 0; i < alias.length; i++) {
+          if (alias[i].trim().startsWith(val)) {
+            cityArr.forEach((city) => {
+              const thisCity = city;
+              if (thisCountry.code === thisCity.country) {
+                const duplicates = finalArr.find(obj => obj.city_id === thisCity.city_id);
+                if (!duplicates) {
+                  thisCity.header = alias[i];
+                  finalArr.push(thisCity);
+                }
+              }
+            });
+          }
+        }
       }
     });
 
