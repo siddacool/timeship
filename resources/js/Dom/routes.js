@@ -1,5 +1,6 @@
 import HomePageView from './Views/HomePageView';
 import SearchView from './Views/SearchView';
+import AddCityView from './Views/AddCityView';
 
 const routes = [
   {
@@ -9,9 +10,14 @@ const routes = [
     isDefault: true,
   },
   {
-    name: 'Home Page',
+    name: 'Search',
     path: '/search',
     view: SearchView,
+  },
+  {
+    name: 'Add City View',
+    path: '/add/:city',
+    view: AddCityView,
   },
 ];
 

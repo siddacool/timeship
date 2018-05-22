@@ -1,7 +1,17 @@
-import moment from 'moment';
+import apiSet from '../api-set';
+import localSave from '../browser-storage';
+import HomeContainer from '../Containers/HomeContainer';
 
-export default function () {
+export default function (data) {
   const wrapper = document.getElementById('wrapper');
+  const homeContainer = new HomeContainer(
+    apiSet.complete,
+    localSave.storage,
+    localSave.cookie,
+    localSave.offline,
+  );
 
-  wrapper.innerHTML = moment().utc().utcOffset('+00:30').format();
+  console.log(data);
+
+  wrapper.innerHTML = homeContainer.Render();
 }
