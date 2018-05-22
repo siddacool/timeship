@@ -1,6 +1,7 @@
 import { Component } from 'domr-c';
 import fireSearchEvent from './fire-search-event';
 import SearchResult from './SearchResult';
+import runningTime from '../utils/running-time';
 
 export default class extends Component {
   constructor(api) {
@@ -33,6 +34,10 @@ export default class extends Component {
               const searchResult = SearchResult(param, val);
 
               searchArea.innerHTML += searchResult;
+            });
+
+            searchArea.querySelectorAll('li').forEach((itm) => {
+              runningTime(itm.querySelector('.search__result__time'), 'HH:mm:ss');
             });
           });
         } else {

@@ -13,6 +13,8 @@ function fireSearchEvent(api, searchTerm) {
 
       cityArr.forEach((city) => {
         const thisCity = city;
+        const assignCountry = countryArr.filter(e => e.code === thisCity.country);
+        thisCity.country_name = assignCountry[0].name;
         if (thisCity.name.startsWith(val)) {
           finalArr.push(thisCity);
         } else if (thisCity.alias && thisCity.alias.length) {

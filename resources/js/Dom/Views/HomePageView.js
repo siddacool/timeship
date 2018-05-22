@@ -1,7 +1,12 @@
-import moment from 'moment';
+import apiSet from '../api-set';
+import HomeContainer from '../Containers/HomeContainer';
+
+const storage = sessionStorage;
+const cookie = 'timeship-add-city-data-1';
 
 export default function () {
   const wrapper = document.getElementById('wrapper');
+  const homeContainer = new HomeContainer(apiSet.complete, storage, cookie);
 
-  wrapper.innerHTML = moment().utc().utcOffset('+00:30').format();
+  wrapper.innerHTML = homeContainer.Render();
 }
