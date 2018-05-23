@@ -1,4 +1,4 @@
-import { DateTime } from 'luxon';
+import DateTime from 'luxon/src/datetime';
 
 function runningTime(target, format = 'hh:mm:ssa dd MMM') {
   const thisTarget = target;
