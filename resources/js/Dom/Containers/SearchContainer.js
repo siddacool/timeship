@@ -1,7 +1,7 @@
 import SearchBar from '../Components/SearchBar';
 
-export default function (api, storage, citiesCookie) {
-  const searchBar = new SearchBar(api, storage, citiesCookie);
+export default function (api) {
+  const searchBar = new SearchBar(api);
 
   return `
     <div class="search">

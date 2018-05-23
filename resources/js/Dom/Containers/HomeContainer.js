@@ -7,11 +7,9 @@ import City from '../Components/City';
 import AddNewCity from '../Components/AddNewCity';
 
 export default class extends Component {
-  constructor(api, storage, citiesCookie) {
+  constructor(api) {
     super();
     this.api = api;
-    this.storage = storage;
-    this.cities_cookie = citiesCookie;
   }
 
   Markup() {
@@ -32,7 +30,7 @@ export default class extends Component {
     getCityDataAll()
     .then((data) => {
       data.forEach((itm) => {
-        const city = City(itm, this.storage, this.cities_cookie);
+        const city = City(itm);
         ul.innerHTML += city;
       });
 
@@ -55,7 +53,7 @@ export default class extends Component {
           }
         });
 
-        const city = City(citiesArr[0], this.storage, this.cities_cookie);
+        const city = City(citiesArr[0]);
         ul.innerHTML = city;
 
         const li = ul.querySelector('li');

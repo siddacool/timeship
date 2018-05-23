@@ -1,14 +1,14 @@
 import apiSet from '../api-set';
-import localSave from '../browser-storage';
 import SearchContainer from '../Containers/SearchContainer';
 
-export default function () {
+export default function (data) {
+  let api = apiSet.complete;
+
+  if (data && data.query && data.query.cached === 'true') {
+    api = apiSet.complete_catched;
+  }
   const wrapper = document.getElementById('wrapper');
-  const searchContainer = SearchContainer(
-    apiSet.complete,
-    localSave.storage,
-    localSave.cookie,
-  );
+  const searchContainer = SearchContainer(api);
 
   wrapper.innerHTML = searchContainer;
 }

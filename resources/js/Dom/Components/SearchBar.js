@@ -4,29 +4,10 @@ import SearchResult from './SearchResult';
 import runningTime from '../utils/running-time';
 import { saveCityData, getCityDataAll } from '../utils/db-manipulation';
 
-function saveDataToLocal(cityId, storage, citiesCookie) {
-  if (storage.getItem(citiesCookie)) {
-    let tempStore = JSON.parse(storage.getItem(citiesCookie));
-
-    if (tempStore.includes(cityId)) {
-      tempStore = tempStore.filter(item => item !== cityId);
-    }
-
-    tempStore.push(cityId);
-
-    storage.setItem(citiesCookie, JSON.stringify(tempStore));
-  } else {
-    storage.setItem(citiesCookie, JSON.stringify([cityId]));
-  }
-}
-
 export default class extends Component {
-  constructor(api, storage, citiesCookie, db) {
+  constructor(api) {
     super();
     this.api = api;
-    this.storage = storage;
-    this.cities_cookie = citiesCookie;
-    this.db = db;
   }
 
   Markup() {
@@ -68,18 +49,11 @@ export default class extends Component {
                 const countryName = thisSearchResult.querySelector('.search__result__country-name').textContent;
                 const timezone = thisSearchResult.querySelector('.search__result__timezone').textContent;
 
-                saveDataToLocal(cityId, this.storage, this.cities_cookie);
-
                 saveCityData(cityId, name, country, countryName, timezone)
-                .then((dbresult) => {
-                  console.log(dbresult);
-                  getCityDataAll()
-                  .then((data) => {
-                    data.forEach((d) => {
-                      console.log(d.name);
-                    });
-                  });
+                .then(() => {
                   location.href = '#/';
+                }).catch((err) => {
+                  console.log(err);
                 });
               });
 

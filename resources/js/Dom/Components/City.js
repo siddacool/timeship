@@ -1,7 +1,7 @@
 import DeleteBtn from './CityDeleteButton';
 
-export default function (param, storage, citiesCookie) {
-  const deleteBtn = new DeleteBtn(storage, citiesCookie);
+export default function (param) {
+  const deleteBtn = new DeleteBtn();
 
   return `
     <li class="city" data-id="${param.city_id}">
