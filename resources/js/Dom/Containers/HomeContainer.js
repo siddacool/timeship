@@ -67,7 +67,7 @@ export default class extends Component {
       });
 
       ul.querySelectorAll('li').forEach((city) => {
-        runningTime(city.querySelector('.city__time'), 'hh:mm:ssA DD MMM');
+        runningTime(city.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
         runningTime(city.querySelector('.city__time--24'), 'HH:mm:ss');
       });
     })

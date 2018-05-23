@@ -45,6 +45,6 @@
   },
   "dependencies": {
     "domr-c": "^0.0.4",
-    "moment": "^2.22.1"
+    "luxon": "^1.2.1"
   }
 }

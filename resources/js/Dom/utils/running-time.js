@@ -1,11 +1,11 @@
-import moment from 'moment';
+import { DateTime } from 'luxon';
 
-function runningTime(target, format = 'hh:mm:ssA DD MMM') {
+function runningTime(target, format = 'hh:mm:ssa dd MMM') {
   const thisTarget = target;
   const thisTimezone = thisTarget.getAttribute('data-timezone');
 
   function step() {
-    const timeToUpdate = moment.utc().utcOffset(thisTimezone).format(format);
+    const timeToUpdate = DateTime.utc().setZone(`UTC${thisTimezone}`).toFormat(format);
 
     thisTarget.textContent = timeToUpdate;
 
