@@ -3,10 +3,28 @@ import fireSearchEvent from './fire-search-event';
 import SearchResult from './SearchResult';
 import runningTime from '../utils/running-time';
 
+function saveDataToLocal(cityId, storage, citiesCookie) {
+  if (storage.getItem(citiesCookie)) {
+    let tempStore = JSON.parse(storage.getItem(citiesCookie));
+
+    if (tempStore.includes(cityId)) {
+      tempStore = tempStore.filter(item => item !== cityId);
+    }
+
+    tempStore.push(cityId);
+
+    storage.setItem(citiesCookie, JSON.stringify(tempStore));
+  } else {
+    storage.setItem(citiesCookie, JSON.stringify([cityId]));
+  }
+}
+
 export default class extends Component {
-  constructor(api) {
+  constructor(api, storage, citiesCookie) {
     super();
     this.api = api;
+    this.storage = storage;
+    this.cities_cookie = citiesCookie;
   }
 
   Markup() {
@@ -37,6 +55,18 @@ export default class extends Component {
             });
 
             searchArea.querySelectorAll('li').forEach((itm) => {
+              const searchResult = itm.querySelector('.search__result');
+
+              searchResult.addEventListener('click', (e) => {
+                e.preventDefault();
+                const thisSearchResult = searchResult;
+                const cityId = thisSearchResult.getAttribute('data-id');
+
+                saveDataToLocal(cityId, this.storage, this.cities_cookie);
+
+                location.href = '#/';
+              });
+
               runningTime(itm.querySelector('.search__result__time'), 'HH:mm:ss');
             });
           });
