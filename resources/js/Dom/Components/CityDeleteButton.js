@@ -1,11 +1,11 @@
 import { Component } from 'domr-c';
+import { removeCityData } from '../utils/db-manipulation';
 
 export default class extends Component {
-  constructor(storage, citiesCookie, offline) {
+  constructor(storage, citiesCookie) {
     super();
     this.storage = storage;
     this.cities_cookie = citiesCookie;
-    this.cities_offline = offline;
   }
 
   Markup() {
@@ -39,6 +39,11 @@ export default class extends Component {
 
         this.storage.setItem(this.cities_offline, JSON.stringify(filter));
       }
+
+      removeCityData(cityId)
+      .then((data) => {
+        console.log(data);
+      });
 
       grandParent.removeChild(parent);
     });

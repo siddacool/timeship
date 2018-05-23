@@ -2,6 +2,7 @@ import { Component } from 'domr-c';
 import fireSearchEvent from './fire-search-event';
 import SearchResult from './SearchResult';
 import runningTime from '../utils/running-time';
+import { saveCityData, getCityDataAll } from '../utils/db-manipulation';
 
 function saveDataToLocal(cityId, storage, citiesCookie) {
   if (storage.getItem(citiesCookie)) {
@@ -20,11 +21,12 @@ function saveDataToLocal(cityId, storage, citiesCookie) {
 }
 
 export default class extends Component {
-  constructor(api, storage, citiesCookie) {
+  constructor(api, storage, citiesCookie, db) {
     super();
     this.api = api;
     this.storage = storage;
     this.cities_cookie = citiesCookie;
+    this.db = db;
   }
 
   Markup() {
@@ -61,10 +63,24 @@ export default class extends Component {
                 e.preventDefault();
                 const thisSearchResult = searchResult;
                 const cityId = thisSearchResult.getAttribute('data-id');
+                const name = thisSearchResult.querySelector('.search__result__name').getAttribute('data-value');
+                const country = thisSearchResult.querySelector('.search__result__country').textContent;
+                const countryName = thisSearchResult.querySelector('.search__result__country-name').textContent;
+                const timezone = thisSearchResult.querySelector('.search__result__timezone').textContent;
 
                 saveDataToLocal(cityId, this.storage, this.cities_cookie);
 
-                location.href = '#/';
+                saveCityData(cityId, name, country, countryName, timezone)
+                .then((dbresult) => {
+                  console.log(dbresult);
+                  getCityDataAll()
+                  .then((data) => {
+                    data.forEach((d) => {
+                      console.log(d.name);
+                    });
+                  });
+                  location.href = '#/';
+                });
               });
 
               runningTime(itm.querySelector('.search__result__time'), 'HH:mm:ss');

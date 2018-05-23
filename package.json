@@ -44,6 +44,7 @@
     "webpack": "3.0.0"
   },
   "dependencies": {
+    "dexie": "^2.0.3",
     "domr-c": "^0.0.4",
     "luxon": "^1.2.1"
   }

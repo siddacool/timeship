@@ -1,5 +1,6 @@
 import { Component } from 'domr-c';
 import goodOlAjax from '../utils/good-ol-ajax-promise';
+import { getCityDataAll } from '../utils/db-manipulation';
 import runningTime from '../utils/running-time';
 import getTimeZone from '../utils/get-timezone';
 import City from '../Components/City';
@@ -62,7 +63,7 @@ export default class extends Component {
       }
 
       finalArr.forEach((itm) => {
-        const city = City(itm, this.storage, this.cities_cookie, this.cities_offline);
+        const city = City(itm, this.storage, this.cities_cookie);
         ul.innerHTML += city;
       });
 
@@ -73,6 +74,18 @@ export default class extends Component {
     })
     .catch((err) => {
       console.log(err);
+      getCityDataAll()
+      .then((data) => {
+        data.forEach((itm) => {
+          const city = City(itm, this.storage, this.cities_cookie);
+          ul.innerHTML += city;
+        });
+
+        ul.querySelectorAll('li').forEach((city) => {
+          runningTime(city.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
+          runningTime(city.querySelector('.city__time--24'), 'HH:mm:ss');
+        });
+      });
     });
   }
 }
