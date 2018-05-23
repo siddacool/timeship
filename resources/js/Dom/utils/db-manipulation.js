@@ -21,9 +21,11 @@ function saveCityData(city_id, name, country, country_name, timezone) {
 function getCityDataAll() {
   const promiseObj = new Promise((resolve, reject) => {
     db.cities.orderBy('date').toArray((data) => {
-      return data;
-    }).then((data) => {
-      resolve(data);
+      if (data && data.length) {
+        resolve(data);
+      } else {
+        reject('No Data');
+      }
     }).catch((err) => {
       reject(err.stack || err);
     });
