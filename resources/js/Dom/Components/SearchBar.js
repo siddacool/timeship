@@ -2,6 +2,7 @@ import { Component } from 'domr-c';
 import fireSearchEvent from './fire-search-event';
 import SearchResult from './SearchResult';
 import runningTime from '../utils/running-time';
+import { saveCityData, getCityDataAll } from '../utils/db-manipulation';
 
 export default class extends Component {
   constructor(api) {
@@ -37,6 +38,25 @@ export default class extends Component {
             });
 
             searchArea.querySelectorAll('li').forEach((itm) => {
+              const searchResult = itm.querySelector('.search__result');
+
+              searchResult.addEventListener('click', (e) => {
+                e.preventDefault();
+                const thisSearchResult = searchResult;
+                const cityId = thisSearchResult.getAttribute('data-id');
+                const name = thisSearchResult.querySelector('.search__result__name').getAttribute('data-value');
+                const country = thisSearchResult.querySelector('.search__result__country').textContent;
+                const countryName = thisSearchResult.querySelector('.search__result__country-name').textContent;
+                const timezone = thisSearchResult.querySelector('.search__result__timezone').textContent;
+
+                saveCityData(cityId, name, country, countryName, timezone)
+                .then(() => {
+                  location.href = '#/';
+                }).catch((err) => {
+                  console.log(err);
+                });
+              });
+
               runningTime(itm.querySelector('.search__result__time'), 'HH:mm:ss');
             });
           });
