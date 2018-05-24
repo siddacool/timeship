@@ -1,0 +1,238 @@
+.timezone {
+  background-color: $backdrop-color;
+  display: block;
+  height: calc(100vh - 100px);
+  overflow: auto;
+  width: 100vw;
+
+  @include desktop {
+    height: calc(100vh - 170px);
+  }
+
+  &__city {
+    border-radius: 0 0 7px 7px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__add {
+    bottom: 0;
+    height: 100px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+
+    @include desktop {
+      height: 170px;
+    }
+
+    .container {
+      align-items: center;
+      background-color: $backdrop-color;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .city-new-add {
+      align-items: center;
+      background-color: $aui-n900;
+      border-radius: 50%;
+      display: flex;
+      height: 3rem;
+      justify-content: center;
+      position: relative;
+      width: 3rem;
+
+      @include desktop {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      .icon {
+        fill: $aui-n0;
+      }
+    }
+  }
+
+  .city {
+    background-color: $aui-n0;
+    display: flex;
+    flex: 1;
+    margin: 0;
+    max-height: 50%;
+    min-height: 14.285714%;
+    padding: .6rem;
+    position: relative;
+
+    @include desktop {
+      max-height: 33.333%;
+      padding: 1rem;
+    }
+
+    &__half {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 52%;
+
+      &:nth-of-type(2) {
+        padding-left: 2rem;
+        width: 48%;
+      }
+    }
+
+    &__name {
+      font-size: calc(30px + .83vmin);
+      font-weight: 500;
+      margin-bottom: 3px;
+      text-transform: capitalize;
+
+      @include desktop {
+        font-size: calc(30px + .93vmin);
+      }
+    }
+
+    &__country-name {
+      font-size: 17px;
+      margin-bottom: 1px;
+      text-transform: capitalize;
+
+      @include desktop {
+        font-size: calc(17px + .63vmin);
+      }
+    }
+
+    &__country {
+      font-size: 17px;
+
+      @include desktop {
+        font-size: calc(17px + .63vmin);
+      }
+    }
+
+    &__time {
+      font-size: 17px;
+
+      &--12 {
+        font-size: calc(30px + .83vmin);
+        font-weight: 500;
+        margin-bottom: 1px;
+
+        @include desktop {
+          font-size: calc(30px + .93vmin);
+        }
+      }
+
+      &--24 {
+        font-size: 18px;
+        font-weight: 500;
+
+        @include desktop {
+          font-size: calc(17px + .93vmin);
+        }
+      }
+
+      &--am {
+        font-size: calc(17px + .73vmin);
+        font-weight: 600;
+      }
+
+      &--day {
+        margin-bottom: 5px;
+
+        @include desktop {
+          font-size: calc(17px + .63vmin);
+        }
+      }
+    }
+
+    &__timezone {
+      font-size: 14px;
+
+      @include desktop {
+        font-size: 19px;
+      }
+    }
+
+    &__delete {
+      align-items: center;
+      display: flex;
+      height: 2rem;
+      justify-content: center;
+      position: absolute;
+      right: .5rem;
+      top: 1rem;
+      width: 1.8rem;
+
+      .icon {
+        fill: $aui-n900;
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+  }
+
+  & [data-level = '1'] {
+    .city {
+      &__name {
+        font-size: 23px;
+
+        @include desktop {
+          font-size: calc(23px + .63vmin);
+        }
+      }
+
+      &__country-name {
+        font-size: 16px;
+
+        @include desktop {
+          font-size: calc(16px + .43vmin);
+        }
+      }
+
+      &__country {
+        font-size: 16px;
+
+        @include desktop {
+          font-size: calc(16px + .43vmin);
+        }
+      }
+
+      &__time {
+        font-size: 16px;
+
+        &--12 {
+          font-size: 23px;
+
+          @include desktop {
+            font-size: calc(23px + .63vmin);
+          }
+        }
+
+        &--24 {
+          font-size: 16px;
+        }
+
+        &--am {
+          font-size: 16px;
+
+          @include desktop {
+            font-size: calc(16px + .43vmin);
+          }
+        }
+
+        &--day {
+          font-size: 16px;
+        }
+      }
+
+      &__timezone {
+        @include desktop {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
