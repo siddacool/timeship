@@ -28,15 +28,8 @@ export default class extends Component {
 
         getCityDataAll()
         .then((allData) => {
-          if (allData.length >= 4) {
-            const dl = allData.length;
-            if (dl >= 4 && dl <= 6) {
-              grandParent.setAttribute('data-level', '1');
-            } else if (dl >= 7 && dl <= 10) {
-              grandParent.setAttribute('data-level', '2');
-            } else {
-              grandParent.setAttribute('data-level', '3');
-            }
+          if (allData.length > 4) {
+            grandParent.setAttribute('data-level', '1');
           } else {
             grandParent.setAttribute('data-level', '0');
           }
