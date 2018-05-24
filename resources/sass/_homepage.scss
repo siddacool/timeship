@@ -1,0 +1,51 @@
+.timezone {
+  background-color: $backdrop-color;
+  display: block;
+  height: calc(100vh - 100px);
+  width: 100vw;
+
+  &__city {
+    border-radius: 0 0 7px 7px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__add {
+    align-items: center;
+    background-color: $backdrop-color;
+    bottom: 0;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+
+    .city-new-add {
+      align-items: center;
+      background-color: $aui-n900;
+      border-radius: 50%;
+      display: flex;
+      height: 2.5rem;
+      justify-content: center;
+      position: relative;
+      width: 2.5rem;
+
+      .icon {
+        fill: $aui-n0;
+      }
+    }
+  }
+
+  .city {
+    background-color: $aui-n0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0;
+    max-height: 50%;
+    min-height: 25%;
+    padding: .6rem;
+  }
+}

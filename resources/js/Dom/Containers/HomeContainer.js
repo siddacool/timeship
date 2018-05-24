@@ -4,7 +4,6 @@ import { saveCityData, getCityDataAll } from '../utils/db-manipulation';
 import runningTime from '../utils/running-time';
 import getTimeZone from '../utils/get-timezone';
 import City from '../Components/City';
-import AddNewCity from '../Components/AddNewCity';
 
 export default class extends Component {
   constructor(api) {
@@ -13,12 +12,14 @@ export default class extends Component {
   }
 
   Markup() {
-    const addNewCity = AddNewCity();
-
     return `
       <div class="timezone">
-        <ul></ul>
-        ${addNewCity}
+        <ul class="timezone__city"></ul>
+        <div class="timezone__add">
+          <a href="#/search" class="city-new-add">
+            <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>
+          </a>
+        </div>
       </div>
     `;
   }
@@ -57,7 +58,7 @@ export default class extends Component {
         const cityId = thisCity.city_id;
         const name = thisCity.name;
         const country = thisCity.country;
-        const countryName = thisCity.countryName;
+        const countryName = thisCity.country_name;
         const timezone = thisCity.timezone;
         const city = City(thisCity);
         ul.innerHTML = city;
