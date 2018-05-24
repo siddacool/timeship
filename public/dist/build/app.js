@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "public/dist/build/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -305,7 +305,7 @@ function timeObject(obj) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zones_localZone__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__ = __webpack_require__(20);
 
 
 
@@ -540,15 +540,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.utils = exports.Router = exports.Component = undefined;
 
-var _Component = __webpack_require__(25);
+var _Component = __webpack_require__(24);
 
 var _Component2 = _interopRequireDefault(_Component);
 
-var _Router = __webpack_require__(29);
+var _Router = __webpack_require__(28);
 
 var _Router2 = _interopRequireDefault(_Router);
 
-var _utils = __webpack_require__(34);
+var _utils = __webpack_require__(33);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -569,11 +569,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _hashLocationSet = __webpack_require__(32);
+var _hashLocationSet = __webpack_require__(31);
 
 var _hashLocationSet2 = _interopRequireDefault(_hashLocationSet);
 
-var _hashLocationGet = __webpack_require__(33);
+var _hashLocationGet = __webpack_require__(32);
 
 var _hashLocationGet2 = _interopRequireDefault(_hashLocationGet);
 
@@ -635,19 +635,19 @@ exports.default = hashLocation;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["friendlyDateTime"] = friendlyDateTime;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interval__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interval__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__info__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__info__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_formatter__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__zones_localZone__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__impl_locale__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__impl_zoneUtil__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__impl_diff__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__impl_regexParser__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__impl_tokenParser__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__impl_conversions__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__impl_zoneUtil__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__impl_diff__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__impl_regexParser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__impl_tokenParser__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__impl_conversions__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__impl_formats__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__errors__ = __webpack_require__(7);
 
@@ -3580,7 +3580,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.removeCityData = exports.getCityDataAll = exports.saveCityData = undefined;
 
-var _indexedStorage = __webpack_require__(38);
+var _indexedStorage = __webpack_require__(37);
 
 var _indexedStorage2 = _interopRequireDefault(_indexedStorage);
 
@@ -3642,7 +3642,7 @@ exports.removeCityData = removeCityData;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_formatter__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_regexParser__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_regexParser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__settings__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(7);
 
@@ -4895,8 +4895,7 @@ var apiSet = {
 exports.default = apiSet;
 
 /***/ }),
-/* 17 */,
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4930,7 +4929,7 @@ function goodOlAjaxPromise(url) {
 exports.default = goodOlAjaxPromise;
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports) {
 
 var g;
@@ -4957,7 +4956,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4993,7 +4992,7 @@ function runningTime(target) {
 exports.default = runningTime;
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5002,7 +5001,7 @@ exports.default = runningTime;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zones_localZone__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_IANAZone__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_fixedOffsetZone__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_invalidZone__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_invalidZone__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(0);
 /**
  * @private
@@ -5044,7 +5043,7 @@ function normalizeZone(input, defaultZone) {
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5346,18 +5345,18 @@ function parseSQL(s) {
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(24);
+__webpack_require__(23);
 
-__webpack_require__(58);
+__webpack_require__(56);
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5365,7 +5364,7 @@ __webpack_require__(58);
 
 var _domrC = __webpack_require__(3);
 
-var _routes = __webpack_require__(35);
+var _routes = __webpack_require__(34);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -5376,7 +5375,7 @@ var router = new _domrC.Router(_routes2.default);
 router.Start();
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5388,15 +5387,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _createElement = __webpack_require__(26);
+var _createElement = __webpack_require__(25);
 
 var _createElement2 = _interopRequireDefault(_createElement);
 
-var _lookup = __webpack_require__(27);
+var _lookup = __webpack_require__(26);
 
 var _lookup2 = _interopRequireDefault(_lookup);
 
-var _randomizer = __webpack_require__(28);
+var _randomizer = __webpack_require__(27);
 
 var _randomizer2 = _interopRequireDefault(_randomizer);
 
@@ -5605,7 +5604,7 @@ var _class = function () {
 exports.default = _class;
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5632,7 +5631,7 @@ function createElement(str, domrDataId) {
 exports.default = createElement;
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5652,7 +5651,7 @@ function Lookup(elmId) {
 exports.default = Lookup;
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5670,7 +5669,7 @@ function randomizer() {
 exports.default = randomizer;
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5682,7 +5681,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _addView = __webpack_require__(30);
+var _addView = __webpack_require__(29);
 
 var _addView2 = _interopRequireDefault(_addView);
 
@@ -5802,7 +5801,7 @@ var _class = function () {
 exports.default = _class;
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5812,7 +5811,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _cloneObject = __webpack_require__(31);
+var _cloneObject = __webpack_require__(30);
 
 var _cloneObject2 = _interopRequireDefault(_cloneObject);
 
@@ -5835,7 +5834,7 @@ function addView(candidate) {
 exports.default = addView;
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5874,7 +5873,7 @@ function cloneObject(obj) {
 exports.default = cloneObject;
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5988,7 +5987,7 @@ function hashLocationSet(field, opt) {
 exports.default = hashLocationSet;
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6018,7 +6017,7 @@ function hashLocationGet(field) {
 exports.default = hashLocationGet;
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6041,7 +6040,7 @@ var utils = {
 exports.default = utils;
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6051,11 +6050,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _HomePageView = __webpack_require__(36);
+var _HomePageView = __webpack_require__(35);
 
 var _HomePageView2 = _interopRequireDefault(_HomePageView);
 
-var _SearchView = __webpack_require__(53);
+var _SearchView = __webpack_require__(51);
 
 var _SearchView2 = _interopRequireDefault(_SearchView);
 
@@ -6075,7 +6074,7 @@ var routes = [{
 exports.default = routes;
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6096,11 +6095,125 @@ var _apiSet = __webpack_require__(16);
 
 var _apiSet2 = _interopRequireDefault(_apiSet);
 
-var _HomeContainer = __webpack_require__(37);
+var _HomeContainer = __webpack_require__(36);
 
 var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _domrC = __webpack_require__(3);
+
+var _goodOlAjaxPromise = __webpack_require__(17);
+
+var _goodOlAjaxPromise2 = _interopRequireDefault(_goodOlAjaxPromise);
+
+var _dbManipulation = __webpack_require__(11);
+
+var _runningTime = __webpack_require__(19);
+
+var _runningTime2 = _interopRequireDefault(_runningTime);
+
+var _getTimezone = __webpack_require__(48);
+
+var _getTimezone2 = _interopRequireDefault(_getTimezone);
+
+var _City = __webpack_require__(49);
+
+var _City2 = _interopRequireDefault(_City);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function liveTime(target) {
+  var city = target;
+  (0, _runningTime2.default)(city.querySelector('.city__time'), 'h:mm');
+  (0, _runningTime2.default)(city.querySelector('.city__time--am'), 'a');
+  (0, _runningTime2.default)(city.querySelector('.city__time--day'), 'cccc, LLL dd');
+  (0, _runningTime2.default)(city.querySelector('.city__time--24'), 'HH:mm');
+}
+
+exports.default = class extends _domrC.Component {
+  constructor(api) {
+    super();
+    this.api = api;
+  }
+
+  Markup() {
+    return '\n      <div class="timezone container">\n        <ul class="timezone__city"></ul>\n        <div class="timezone__add">\n          <div class="container">\n            <a href="#/search" class="city-new-add">\n              <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>\n            </a>\n          </div>\n        </div>\n      </div>\n    ';
+  }
+
+  AfterRenderDone() {
+    var _this = this;
+
+    var thisSelf = this.GetThisComponent();
+    var ul = thisSelf.querySelector('.timezone__city');
+
+    (0, _dbManipulation.getCityDataAll)().then(function (data) {
+      if (data.length > 4) {
+        ul.setAttribute('data-level', '1');
+      } else {
+        ul.setAttribute('data-level', '0');
+      }
+
+      data.forEach(function (itm) {
+        var city = (0, _City2.default)(itm);
+        ul.innerHTML += city;
+      });
+
+      ul.querySelectorAll('li').forEach(function (city) {
+        liveTime(city);
+      });
+    }).catch(function () {
+      (0, _goodOlAjaxPromise2.default)(_this.api).then(function (result) {
+        var citiesArr = [];
+        var localtimezone = (0, _getTimezone2.default)();
+
+        result.forEach(function (itm) {
+          if (itm.city_id && localtimezone === itm.timezone) {
+            var _thisCity = itm;
+            var _countryName = result.filter(function (e) {
+              return e.country_id && e.code === _thisCity.country;
+            });
+            _thisCity.country_name = _countryName[0].name;
+            citiesArr.push(_thisCity);
+          }
+        });
+
+        var thisCity = citiesArr[0];
+        var cityId = thisCity.city_id;
+        var name = thisCity.name;
+        var country = thisCity.country;
+        var countryName = thisCity.country_name;
+        var timezone = thisCity.timezone;
+        var city = (0, _City2.default)(thisCity);
+        ul.innerHTML = city;
+
+        var li = ul.querySelector('li');
+
+        liveTime(li);
+
+        (0, _dbManipulation.saveCityData)(cityId, name, country, countryName, timezone).catch(function (err) {
+          console.log(err);
+        });
+
+        ul.setAttribute('data-level', '0');
+      }).catch(function (errAjax) {
+        console.log(errAjax);
+        ul.setAttribute('data-level', '0');
+      });
+    });
+  }
+};
 
 /***/ }),
 /* 37 */
@@ -6113,102 +6226,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _domrC = __webpack_require__(3);
-
-var _goodOlAjaxPromise = __webpack_require__(18);
-
-var _goodOlAjaxPromise2 = _interopRequireDefault(_goodOlAjaxPromise);
-
-var _dbManipulation = __webpack_require__(11);
-
-var _runningTime = __webpack_require__(20);
-
-var _runningTime2 = _interopRequireDefault(_runningTime);
-
-var _getTimezone = __webpack_require__(49);
-
-var _getTimezone2 = _interopRequireDefault(_getTimezone);
-
-var _City = __webpack_require__(50);
-
-var _City2 = _interopRequireDefault(_City);
-
-var _AddNewCity = __webpack_require__(52);
-
-var _AddNewCity2 = _interopRequireDefault(_AddNewCity);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = class extends _domrC.Component {
-  constructor(api) {
-    super();
-    this.api = api;
-  }
-
-  Markup() {
-    var addNewCity = (0, _AddNewCity2.default)();
-
-    return '\n      <div class="timezone">\n        <ul></ul>\n        ' + addNewCity + '\n      </div>\n    ';
-  }
-
-  AfterRenderDone() {
-    var _this = this;
-
-    var thisSelf = this.GetThisComponent();
-    var ul = thisSelf.querySelector('ul');
-
-    (0, _dbManipulation.getCityDataAll)().then(function (data) {
-      data.forEach(function (itm) {
-        var city = (0, _City2.default)(itm);
-        ul.innerHTML += city;
-      });
-
-      ul.querySelectorAll('li').forEach(function (city) {
-        (0, _runningTime2.default)(city.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
-        (0, _runningTime2.default)(city.querySelector('.city__time--24'), 'HH:mm:ss');
-      });
-    }).catch(function (errDb) {
-      (0, _goodOlAjaxPromise2.default)(_this.api).then(function (result) {
-        var citiesArr = [];
-        var timezone = (0, _getTimezone2.default)();
-
-        result.forEach(function (itm) {
-          if (itm.city_id && timezone === itm.timezone) {
-            var thisCity = itm;
-            var countryName = result.filter(function (e) {
-              return e.country_id && e.code === thisCity.country;
-            });
-            thisCity.country_name = countryName[0].name;
-            citiesArr.push(thisCity);
-          }
-        });
-
-        var city = (0, _City2.default)(citiesArr[0]);
-        ul.innerHTML = city;
-
-        var li = ul.querySelector('li');
-
-        (0, _runningTime2.default)(li.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
-        (0, _runningTime2.default)(li.querySelector('.city__time--24'), 'HH:mm:ss');
-      }).catch(function (errAjax) {
-        console.log(errAjax);
-      });
-    });
-  }
-};
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _dexie = __webpack_require__(39);
+var _dexie = __webpack_require__(38);
 
 var _dexie2 = _interopRequireDefault(_dexie);
 
@@ -6222,7 +6240,7 @@ db.version(1).stores({
 exports.default = db;
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10684,10 +10702,10 @@ dbNamesDB.version(1).stores({ dbnames: 'name' });
 /* harmony default export */ __webpack_exports__["default"] = (Dexie);
 //# sourceMappingURL=dexie.es.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(19), __webpack_require__(40).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(18), __webpack_require__(39).setImmediate))
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -10740,13 +10758,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(41);
+__webpack_require__(40);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -10936,10 +10954,10 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19), __webpack_require__(42)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18), __webpack_require__(41)))
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -11129,7 +11147,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11179,7 +11197,7 @@ class InvalidZone extends __WEBPACK_IMPORTED_MODULE_0__zone__["a" /* default */]
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11686,7 +11704,7 @@ class Interval {
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11864,7 +11882,7 @@ class Info {
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11954,7 +11972,7 @@ function highOrderDiffs(cursor, later, units) {
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12258,7 +12276,7 @@ function parseFromTokens(locale, input, format) {
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12411,7 +12429,7 @@ function hasInvalidTimeData(obj) {
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12429,7 +12447,7 @@ function getTimeZone() {
 exports.default = getTimeZone;
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12442,17 +12460,17 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (param) {
   var deleteBtn = new _CityDeleteButton2.default();
 
-  return '\n    <li class="city" data-id="' + param.city_id + '">\n      <span class="city__name">' + param.name + '</span>\n      <span class="city__country">' + param.country + '</span>\n      <span class="city__country-name">' + param.country_name + '</span>\n      <span class="city__time" data-timezone="' + param.timezone + '">...</span>\n      <span class="city__time city__time--24" data-timezone="' + param.timezone + '">...</span>\n      <span class="city__timezone">' + param.timezone + '</span>\n      ' + deleteBtn.Render() + '\n    </li>\n  ';
+  return '\n    <li class="city" data-id="' + param.city_id + '">\n      <div class="city__half">\n        <span class="city__name">' + param.name + '</span>\n        <span class="city__country-name">' + param.country_name + '</span>\n        <span class="city__country">(' + param.country + ')</span>\n      </div>\n      <div class="city__half">\n        <div class="city__time-master">\n          <span class="city__time city__time--12" data-timezone="' + param.timezone + '">...</span>\n          <span class="city__time city__time--am" data-timezone="' + param.timezone + '">...</span>\n          <div class="city__time city__time--day" data-timezone="' + param.timezone + '">...</div>\n          <span class="city__time city__time--24" data-timezone="' + param.timezone + '">...</span>\n          <span class="city__timezone">GMT ' + param.timezone + '</span>\n        </div>\n      </div>\n      ' + deleteBtn.Render() + '\n    </li>\n  ';
 };
 
-var _CityDeleteButton = __webpack_require__(51);
+var _CityDeleteButton = __webpack_require__(50);
 
 var _CityDeleteButton2 = _interopRequireDefault(_CityDeleteButton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12472,7 +12490,7 @@ exports.default = class extends _domrC.Component {
   }
 
   Markup() {
-    return '\n      <a href="#">\n        <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-x-mark-10"></use></svg>\n      </a>\n    ';
+    return '\n      <a href="#" class="city__delete">\n        <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-x-mark-10"></use></svg>\n      </a>\n    ';
   }
 
   Events() {
@@ -12485,6 +12503,16 @@ exports.default = class extends _domrC.Component {
 
       (0, _dbManipulation.removeCityData)(cityId).then(function (data) {
         console.log(data);
+
+        (0, _dbManipulation.getCityDataAll)().then(function (allData) {
+          if (allData.length > 4) {
+            grandParent.setAttribute('data-level', '1');
+          } else {
+            grandParent.setAttribute('data-level', '0');
+          }
+        }).catch(function () {
+          grandParent.setAttribute('data-level', '0');
+        });
       });
 
       grandParent.removeChild(parent);
@@ -12493,22 +12521,7 @@ exports.default = class extends _domrC.Component {
 };
 
 /***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function () {
-  return "\n    <a href=\"#/search\" class=\"timezone__city-add\">\n      <svg role=\"img\" class=\"icon\"><use xlink:href=\"#icon-iconmonstr-plus-5\"></use></svg>\n    </a>\n  ";
-};
-
-/***/ }),
-/* 53 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12534,14 +12547,14 @@ var _apiSet = __webpack_require__(16);
 
 var _apiSet2 = _interopRequireDefault(_apiSet);
 
-var _SearchContainer = __webpack_require__(54);
+var _SearchContainer = __webpack_require__(52);
 
 var _SearchContainer2 = _interopRequireDefault(_SearchContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 54 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12557,14 +12570,14 @@ exports.default = function (api) {
   return '\n    <div class="search">\n      ' + searchBar.Render() + '\n      <div class="search__area"></div>\n    </div>\n  ';
 };
 
-var _SearchBar = __webpack_require__(55);
+var _SearchBar = __webpack_require__(53);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 55 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12576,15 +12589,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _domrC = __webpack_require__(3);
 
-var _fireSearchEvent = __webpack_require__(56);
+var _fireSearchEvent = __webpack_require__(54);
 
 var _fireSearchEvent2 = _interopRequireDefault(_fireSearchEvent);
 
-var _SearchResult = __webpack_require__(57);
+var _SearchResult = __webpack_require__(55);
 
 var _SearchResult2 = _interopRequireDefault(_SearchResult);
 
-var _runningTime = __webpack_require__(20);
+var _runningTime = __webpack_require__(19);
 
 var _runningTime2 = _interopRequireDefault(_runningTime);
 
@@ -12655,7 +12668,7 @@ exports.default = class extends _domrC.Component {
 };
 
 /***/ }),
-/* 56 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12665,7 +12678,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _goodOlAjaxPromise = __webpack_require__(18);
+var _goodOlAjaxPromise = __webpack_require__(17);
 
 var _goodOlAjaxPromise2 = _interopRequireDefault(_goodOlAjaxPromise);
 
@@ -12761,7 +12774,7 @@ function fireSearchEvent(api, searchTerm) {
 exports.default = fireSearchEvent;
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12782,7 +12795,7 @@ function bolden(text, searchTerm) {
 }
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
