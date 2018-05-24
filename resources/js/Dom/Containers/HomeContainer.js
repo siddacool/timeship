@@ -1,6 +1,6 @@
 import { Component } from 'domr-c';
 import goodOlAjax from '../utils/good-ol-ajax-promise';
-import { getCityDataAll } from '../utils/db-manipulation';
+import { saveCityData, getCityDataAll } from '../utils/db-manipulation';
 import runningTime from '../utils/running-time';
 import getTimeZone from '../utils/get-timezone';
 import City from '../Components/City';
@@ -38,14 +38,14 @@ export default class extends Component {
         runningTime(city.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
         runningTime(city.querySelector('.city__time--24'), 'HH:mm:ss');
       });
-    }).catch((errDb) => {
+    }).catch(() => {
       goodOlAjax(this.api)
       .then((result) => {
         const citiesArr = [];
-        const timezone = getTimeZone();
+        const localtimezone = getTimeZone();
 
         result.forEach((itm) => {
-          if (itm.city_id && timezone === itm.timezone) {
+          if (itm.city_id && localtimezone === itm.timezone) {
             const thisCity = itm;
             const countryName = result.filter(e => e.country_id && e.code === thisCity.country);
             thisCity.country_name = countryName[0].name;
@@ -53,13 +53,24 @@ export default class extends Component {
           }
         });
 
-        const city = City(citiesArr[0]);
+        const thisCity = citiesArr[0];
+        const cityId = thisCity.city_id;
+        const name = thisCity.name;
+        const country = thisCity.country;
+        const countryName = thisCity.countryName;
+        const timezone = thisCity.timezone;
+        const city = City(thisCity);
         ul.innerHTML = city;
 
         const li = ul.querySelector('li');
 
         runningTime(li.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
         runningTime(li.querySelector('.city__time--24'), 'HH:mm:ss');
+
+        saveCityData(cityId, name, country, countryName, timezone)
+        .catch((err) => {
+          console.log(err);
+        });
       }).catch((errAjax) => {
         console.log(errAjax);
       });

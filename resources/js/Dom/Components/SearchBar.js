@@ -2,7 +2,7 @@ import { Component } from 'domr-c';
 import fireSearchEvent from './fire-search-event';
 import SearchResult from './SearchResult';
 import runningTime from '../utils/running-time';
-import { saveCityData, getCityDataAll } from '../utils/db-manipulation';
+import { saveCityData } from '../utils/db-manipulation';
 
 export default class extends Component {
   constructor(api) {
