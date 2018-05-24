@@ -11,11 +11,15 @@ export default function (param) {
         <span class="city__country">(${param.country})</span>
       </div>
       <div class="city__half">
-        <span class="city__time" data-timezone="${param.timezone}">...</span>
-        <span class="city__time city__time--24" data-timezone="${param.timezone}">...</span>
-        <span class="city__timezone">${param.timezone}</span>
-        ${deleteBtn.Render()}
+        <div class="city__time-master">
+          <span class="city__time city__time--12" data-timezone="${param.timezone}">...</span>
+          <span class="city__time city__time--am" data-timezone="${param.timezone}">...</span>
+          <div class="city__time city__time--day" data-timezone="${param.timezone}">...</div>
+          <span class="city__time city__time--24" data-timezone="${param.timezone}">...</span>
+          <span class="city__timezone">GMT ${param.timezone}</span>
+        </div>
       </div>
+      ${deleteBtn.Render()}
     </li>
   `;
 }

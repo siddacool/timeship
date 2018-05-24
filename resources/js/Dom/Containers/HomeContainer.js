@@ -5,6 +5,14 @@ import runningTime from '../utils/running-time';
 import getTimeZone from '../utils/get-timezone';
 import City from '../Components/City';
 
+function liveTime(target) {
+  const city = target;
+  runningTime(city.querySelector('.city__time'), 'h:mm');
+  runningTime(city.querySelector('.city__time--am'), 'a');
+  runningTime(city.querySelector('.city__time--day'), 'cccc, LLL dd');
+  runningTime(city.querySelector('.city__time--24'), 'HH:mm');
+}
+
 export default class extends Component {
   constructor(api) {
     super();
@@ -36,8 +44,7 @@ export default class extends Component {
       });
 
       ul.querySelectorAll('li').forEach((city) => {
-        runningTime(city.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
-        runningTime(city.querySelector('.city__time--24'), 'HH:mm:ss');
+        liveTime(city);
       });
     }).catch(() => {
       goodOlAjax(this.api)
@@ -65,8 +72,7 @@ export default class extends Component {
 
         const li = ul.querySelector('li');
 
-        runningTime(li.querySelector('.city__time'), 'hh:mm:ssa dd MMM');
-        runningTime(li.querySelector('.city__time--24'), 'HH:mm:ss');
+        liveTime(li);
 
         saveCityData(cityId, name, country, countryName, timezone)
         .catch((err) => {

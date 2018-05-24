@@ -46,6 +46,7 @@
     max-height: 50%;
     min-height: 25%;
     padding: .6rem;
+    position: relative;
 
     &__half {
       display: inline-flex;
@@ -68,7 +69,38 @@
     }
 
     &__country {
-      font-size: 20px;
+      font-size: 17px;
+    }
+
+    &__time {
+      font-size: 17px;
+
+      &--12 {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 1px;
+      }
+
+      &--24 {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      &--am {
+        font-weight: 600;
+      }
+
+      &--day {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__timezone {
+      font-size: 14px;
+    }
+
+    &__delete {
+      position: absolute;
     }
   }
 }

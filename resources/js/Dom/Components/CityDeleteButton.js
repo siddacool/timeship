@@ -8,8 +8,8 @@ export default class extends Component {
 
   Markup() {
     return `
-      <a href="#">
-        <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-x-mark-10"></use></svg>
+      <a href="#" class="city__delete">
+        <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-x-mark-9"></use></svg>
       </a>
     `;
   }
