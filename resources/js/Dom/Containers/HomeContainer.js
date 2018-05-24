@@ -21,12 +21,14 @@ export default class extends Component {
 
   Markup() {
     return `
-      <div class="timezone">
+      <div class="timezone container">
         <ul class="timezone__city"></ul>
         <div class="timezone__add">
-          <a href="#/search" class="city-new-add">
-            <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>
-          </a>
+          <div class="container">
+            <a href="#/search" class="city-new-add">
+              <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>
+            </a>
+          </div>
         </div>
       </div>
     `;

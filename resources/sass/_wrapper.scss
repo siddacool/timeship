@@ -4,8 +4,23 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
+
+  @include desktop {
+    overflow-y: hidden;
+  }
+}
+
+body {
+  background-color: $backdrop-color;
 }
 
 .wrapper {
   width: 100%;
+}
+
+.container {
+  @include desktop {
+    margin: 0 auto;
+    max-width: 768px;
+  }
 }
