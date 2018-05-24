@@ -52,7 +52,12 @@
       display: inline-flex;
       flex-direction: column;
       justify-content: center;
-      width: 50%;
+      width: 52%;
+
+      &:nth-of-type(2) {
+        padding-left: 1rem;
+        width: 48%;
+      }
     }
 
     &__name {
@@ -100,7 +105,20 @@
     }
 
     &__delete {
+      align-items: center;
+      display: flex;
+      height: 2rem;
+      justify-content: center;
       position: absolute;
+      right: .5rem;
+      top: 1rem;
+      width: 1.8rem;
+
+      .icon {
+        fill: $aui-n900;
+        height: 1.2rem;
+        width: 1.2rem;
+      }
     }
   }
 }
