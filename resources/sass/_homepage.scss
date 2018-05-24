@@ -2,11 +2,11 @@
   background-color: $backdrop-color;
   display: block;
   height: calc(100vh - 100px);
+  overflow: auto;
   width: 100vw;
 
   @include desktop {
     height: calc(100vh - 170px);
-    overflow: auto;
   }
 
   &__city {
@@ -62,7 +62,7 @@
     flex: 1;
     margin: 0;
     max-height: 50%;
-    min-height: 25%;
+    min-height: 16.666666%;
     padding: .6rem;
     position: relative;
 
@@ -174,19 +174,65 @@
     }
   }
 
-/*   &__city--level--one {
-  .city {
-    &__name {
-      font-size: calc(25px + .23vmin);
-    }
+  & [data-level = '1'] {
+    .city {
+      &__name {
+        font-size: 23px;
 
-    &__country-name {
-      font-size: calc(16px);
-    }
+        @include desktop {
+          font-size: calc(23px + .63vmin);
+        }
+      }
 
-    &__country {
-      font-size: calc(16px);
+      &__country-name {
+        font-size: 16px;
+
+        @include desktop {
+          font-size: calc(16px + .43vmin);
+        }
+      }
+
+      &__country {
+        font-size: 16px;
+
+        @include desktop {
+          font-size: calc(16px + .43vmin);
+        }
+      }
+
+      &__time {
+        font-size: 16px;
+
+        &--12 {
+          font-size: 23px;
+
+          @include desktop {
+            font-size: calc(23px + .63vmin);
+          }
+        }
+
+        &--24 {
+          font-size: 16px;
+        }
+
+        &--am {
+          font-size: 16px;
+
+          @include desktop {
+            font-size: calc(16px + .43vmin);
+          }
+        }
+
+        &--day {
+          font-size: 16px;
+        }
+      }
+
+      &__timezone {
+        @include desktop {
+          font-size: 15px;
+        }
+      }
     }
   }
-} */
 }
