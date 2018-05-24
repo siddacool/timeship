@@ -1,5 +1,5 @@
 import { Component } from 'domr-c';
-import { removeCityData } from '../utils/db-manipulation';
+import { removeCityData, getCityDataAll } from '../utils/db-manipulation';
 
 export default class extends Component {
   constructor() {
@@ -25,6 +25,24 @@ export default class extends Component {
       removeCityData(cityId)
       .then((data) => {
         console.log(data);
+
+        getCityDataAll()
+        .then((allData) => {
+          if (allData.length >= 4) {
+            const dl = allData.length;
+            if (dl >= 4 && dl <= 6) {
+              grandParent.setAttribute('data-level', '1');
+            } else if (dl >= 7 && dl <= 10) {
+              grandParent.setAttribute('data-level', '2');
+            } else {
+              grandParent.setAttribute('data-level', '3');
+            }
+          } else {
+            grandParent.setAttribute('data-level', '0');
+          }
+        }).catch(() => {
+          grandParent.setAttribute('data-level', '0');
+        });
       });
 
       grandParent.removeChild(parent);

@@ -42,15 +42,15 @@ export default class extends Component {
     .then((data) => {
       if (data.length >= 4) {
         const dl = data.length;
-        ul.classList.add('timezone__city--level');
-
         if (dl >= 4 && dl <= 6) {
-          ul.classList.add('timezone__city--level--one');
+          ul.setAttribute('data-level', '1');
         } else if (dl >= 7 && dl <= 10) {
-          ul.classList.add('timezone__city--level--two');
+          ul.setAttribute('data-level', '2');
         } else {
-          ul.classList.add('timezone__city--level--three');
+          ul.setAttribute('data-level', '3');
         }
+      } else {
+        ul.setAttribute('data-level', '0');
       }
 
       data.forEach((itm) => {
@@ -93,8 +93,11 @@ export default class extends Component {
         .catch((err) => {
           console.log(err);
         });
+
+        ul.setAttribute('data-level', '0');
       }).catch((errAjax) => {
         console.log(errAjax);
+        ul.setAttribute('data-level', '0');
       });
     });
   }
