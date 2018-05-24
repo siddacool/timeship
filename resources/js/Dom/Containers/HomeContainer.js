@@ -36,10 +36,23 @@ export default class extends Component {
 
   AfterRenderDone() {
     const thisSelf = this.GetThisComponent();
-    const ul = thisSelf.querySelector('ul');
+    const ul = thisSelf.querySelector('.timezone__city');
 
     getCityDataAll()
     .then((data) => {
+      if (data.length >= 4) {
+        const dl = data.length;
+        ul.classList.add('timezone__city--level');
+
+        if (dl >= 4 && dl <= 6) {
+          ul.classList.add('timezone__city--level--one');
+        } else if (dl >= 7 && dl <= 10) {
+          ul.classList.add('timezone__city--level--two');
+        } else {
+          ul.classList.add('timezone__city--level--three');
+        }
+      }
+
       data.forEach((itm) => {
         const city = City(itm);
         ul.innerHTML += city;

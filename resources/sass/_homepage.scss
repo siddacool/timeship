@@ -68,6 +68,7 @@
 
     @include desktop {
       max-height: 33.333%;
+      padding: 1rem;
     }
 
     &__half {
@@ -83,47 +84,76 @@
     }
 
     &__name {
-      font-size: calc(30px + .92vmin);
+      font-size: calc(30px + .83vmin);
       font-weight: 500;
       margin-bottom: 3px;
       text-transform: capitalize;
+
+      @include desktop {
+        font-size: calc(30px + .93vmin);
+      }
     }
 
     &__country-name {
-      font-size: calc(17px + .83vmin);
+      font-size: 17px;
       margin-bottom: 1px;
       text-transform: capitalize;
+
+      @include desktop {
+        font-size: calc(17px + .63vmin);
+      }
     }
 
     &__country {
-      font-size: calc(17px + .83vmin);
+      font-size: 17px;
+
+      @include desktop {
+        font-size: calc(17px + .63vmin);
+      }
     }
 
     &__time {
-      font-size: calc(17px + .83vmin);
+      font-size: 17px;
 
       &--12 {
-        font-size: calc(30px + .92vmin);
+        font-size: calc(30px + .83vmin);
         font-weight: 500;
         margin-bottom: 1px;
+
+        @include desktop {
+          font-size: calc(30px + .93vmin);
+        }
       }
 
       &--24 {
-        font-size: calc(14px + .83vmin);
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: 500;
+
+        @include desktop {
+          font-size: calc(17px + .93vmin);
+        }
       }
 
       &--am {
+        font-size: calc(17px + .73vmin);
         font-weight: 600;
       }
 
       &--day {
         margin-bottom: 5px;
+
+        @include desktop {
+          font-size: calc(17px + .63vmin);
+        }
       }
     }
 
     &__timezone {
-      font-size: calc(14px + .83vmin);
+      font-size: 14px;
+
+      @include desktop {
+        font-size: 19px;
+      }
     }
 
     &__delete {
@@ -143,4 +173,20 @@
       }
     }
   }
+
+/*   &__city--level--one {
+  .city {
+    &__name {
+      font-size: calc(25px + .23vmin);
+    }
+
+    &__country-name {
+      font-size: calc(16px);
+    }
+
+    &__country {
+      font-size: calc(16px);
+    }
+  }
+} */
 }
