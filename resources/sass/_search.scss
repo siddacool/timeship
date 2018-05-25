@@ -7,7 +7,8 @@
   width: 100vw;
 
   @include desktop {
-    height: calc(100vh - 225px);
+    height: calc(100vh - 295px);
+    margin-top: 125px;
   }
 
   &__close {
@@ -70,6 +71,10 @@
     width: 100vw;
     z-index: 100;
 
+    @include desktop {
+      top: 70px;
+    }
+
     &__ui {
       align-items: center;
       background-color: $aui-n0;
@@ -78,6 +83,10 @@
       height: 100%;
       justify-content: center;
       position: relative;
+
+      @include desktop {
+        border-radius: 7px 7px 0 0;
+      }
     }
 
     .search-icon {
@@ -96,6 +105,10 @@
     font-weight: 400;
     height: 100%;
     width: 100%;
+
+    @include desktop {
+      border-radius: 7px 7px 0 0;
+    }
   }
 
   &__area {
@@ -103,7 +116,18 @@
     display: block;
     height: 100%;
 
+    @keyframes makeSearchArea {
+      from {
+        height: 0%;
+      }
+
+      to {
+        height: 100%;
+      }
+    }
+
     @include desktop {
+      animation: makeSearchArea 400ms;
       border-radius: 0 0 7px 7px;
     }
 
