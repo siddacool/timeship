@@ -20,7 +20,9 @@ export default class extends Component {
     let timeout = null;
 
     this.Keyup((self) => {
-      const searchArea = self.parentElement.querySelector('.search__area');
+      const thisSelf = self;
+      const parent = thisSelf.parentElement.parentElement.parentElement;
+      const searchArea = parent.querySelector('.search__area');
       clearTimeout(timeout);
 
       timeout = setTimeout(() => {
@@ -65,6 +67,12 @@ export default class extends Component {
         }
       }, 300);
     });
+  }
+
+  AfterRenderDone() {
+    const thisSelf = this.GetThisComponent();
+
+    thisSelf.focus();
   }
 }
 

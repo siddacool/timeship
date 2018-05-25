@@ -1,0 +1,43 @@
+.search {
+  background-color: $backdrop-color;
+  display: block;
+  height: calc(100vh - 55px);
+  margin-top: 55px;
+  overflow: auto;
+  width: 100vw;
+
+  &__box {
+    height: 55px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    &__ui {
+      align-items: center;
+      background-color: $aui-n0;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      position: relative;
+    }
+
+    .search-icon {
+      align-items: center;
+      display: inline-flex;
+      height: 100%;
+      justify-content: center;
+      padding: 0 .9rem;
+    }
+  }
+
+  &__bar {
+    border: 0;
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    height: 100%;
+    letter-spacing: .4px;
+    width: 100%;
+  }
+}
