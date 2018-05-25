@@ -6,7 +6,8 @@
   width: 100vw;
 
   @include desktop {
-    height: calc(100vh - 170px);
+    height: calc(100vh - 210px);
+    margin-top: 40px;
   }
 
   &__city {
@@ -62,13 +63,25 @@
     display: flex;
     flex: 1;
     margin: 0;
-    max-height: 50%;
+    max-height: 40%;
     min-height: 16.666666%;
     padding: .6rem;
     position: relative;
 
+    &:first-child {
+      @include desktop {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+      }
+    }
+
     &:last-child {
       border-bottom-color: transparent;
+
+      @include desktop {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+      }
     }
 
     @include desktop {
