@@ -58,13 +58,18 @@
 
   .city {
     background-color: $aui-n0;
+    border-bottom: 2px solid $border-grey-color;
     display: flex;
     flex: 1;
     margin: 0;
     max-height: 50%;
-    min-height: 14.285714%;
+    min-height: 16.666666%;
     padding: .6rem;
     position: relative;
+
+    &:last-child {
+      border-bottom-color: transparent;
+    }
 
     @include desktop {
       max-height: 33.333%;
@@ -75,6 +80,7 @@
       display: inline-flex;
       flex-direction: column;
       justify-content: center;
+      padding-left: 1rem;
       width: 52%;
 
       &:nth-of-type(2) {
@@ -109,6 +115,16 @@
 
       @include desktop {
         font-size: calc(17px + .63vmin);
+      }
+    }
+
+    &__time-master {
+      margin-left: auto;
+      width: 140px;
+
+      @include desktop {
+        margin-left: auto;
+        width: 200px;
       }
     }
 
@@ -225,6 +241,16 @@
 
         &--day {
           font-size: 16px;
+        }
+      }
+
+      &__time-master {
+        margin-left: 0;
+        width: initial;
+
+        @include desktop {
+          margin-left: auto;
+          width: 170px;
         }
       }
 
