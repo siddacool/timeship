@@ -1,13 +1,14 @@
 .timezone {
   background-color: $backdrop-color;
   display: block;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 115px);
+  margin-top: 25px;
   overflow: auto;
   width: 100vw;
 
   @include desktop {
-    height: calc(100vh - 210px);
-    margin-top: 40px;
+    height: calc(100vh - 240px);
+    margin-top: 70px;
   }
 
   &__city {
@@ -17,9 +18,33 @@
     height: 100%;
   }
 
+  &__world {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    height: 25px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    @include desktop {
+      font-size: 25px;
+      height: 70px;
+    }
+
+    .container {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+  }
+
   &__add {
     bottom: 0;
-    height: 100px;
+    height: 90px;
     left: 0;
     position: fixed;
     width: 100%;
@@ -64,7 +89,7 @@
     flex: 1;
     margin: 0;
     max-height: 40%;
-    min-height: 16.666666%;
+    min-height: 20%;
     padding: .6rem;
     position: relative;
 
