@@ -1,0 +1,231 @@
+.search {
+  background-color: $backdrop-color;
+  display: block;
+  height: calc(100vh - 145px);
+  margin-top: 55px;
+  overflow: auto;
+  width: 100vw;
+
+  @include desktop {
+    height: calc(100vh - 320px);
+    margin-top: 150px;
+  }
+
+  &__close {
+    bottom: 0;
+    height: 90px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+
+    @include desktop {
+      height: 170px;
+    }
+
+    .container {
+      align-items: center;
+      background-color: $backdrop-color;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .search-close-button {
+      align-items: center;
+      background-color: $aui-n900;
+      border-radius: 50%;
+      display: flex;
+      height: 3rem;
+      justify-content: center;
+      position: relative;
+      transform: rotate(44deg);
+      width: 3rem;
+
+      @keyframes rotatebtn {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(44deg);
+        }
+      }
+
+      @include desktop {
+        animation: rotatebtn 200ms;
+        height: 4rem;
+        width: 4rem;
+      }
+
+      .icon {
+        fill: $aui-n0;
+      }
+    }
+  }
+
+  &__box {
+    height: 55px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+
+    @include desktop {
+      height: 80px;
+      top: 70px;
+    }
+
+    &__ui {
+      align-items: center;
+      background-color: $aui-n0;
+      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .1);
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      position: relative;
+
+      @include desktop {
+        border-radius: 7px 7px 0 0;
+      }
+    }
+
+    .search-icon {
+      align-items: center;
+      display: inline-flex;
+      height: 100%;
+      justify-content: center;
+      padding: 0 .9rem;
+    }
+  }
+
+  &__bar {
+    border: 0;
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+
+    @include desktop {
+      border-radius: 7px 7px 0 0;
+      font-size: 30px;
+    }
+  }
+
+  &__area {
+    background-color: $aui-n0;
+    display: block;
+    height: 100%;
+
+    @keyframes makeSearchArea {
+      from {
+        height: 0%;
+      }
+
+      to {
+        height: 100%;
+      }
+    }
+
+    @include desktop {
+      animation: makeSearchArea 400ms;
+      border-radius: 0 0 7px 7px;
+    }
+
+    li {
+      display: block;
+      height: 110px;
+      margin: 0;
+      padding: 0;
+
+      @include desktop {
+        height: 130px;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__result {
+    background-color: $aui-n0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    padding: 0 .7rem;
+    padding-top: 10px;
+    position: relative;
+
+    b {
+      font-weight: 800;
+    }
+
+    &__half {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1rem;
+      width: 52%;
+
+      &:nth-of-type(2) {
+        align-items: flex-end;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        width: 48%;
+      }
+    }
+
+    &__header {
+      font-size: 16px;
+      left: 26px;
+      position: absolute;
+      text-transform: capitalize;
+      top: 9px;
+
+      @include desktop {
+        font-size: 18px;
+      }
+    }
+
+    &__group {
+      font-size: 16px;
+
+      @include desktop {
+        font-size: 22px;
+      }
+    }
+
+    &__name {
+      font-size: 22px;
+      text-transform: capitalize;
+
+      @include desktop {
+        font-size: 33px;
+      }
+    }
+
+    &__time-12 {
+      font-size: 23px;
+      font-weight: 600;
+
+      @include desktop {
+        font-size: 30px;
+      }
+    }
+
+    &__time-am {
+      font-weight: 600;
+    }
+
+    &__country-name {
+      text-transform: capitalize;
+    }
+
+    &__country {
+
+    }
+  }
+}

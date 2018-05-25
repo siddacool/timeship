@@ -20,7 +20,9 @@ export default class extends Component {
     let timeout = null;
 
     this.Keyup((self) => {
-      const searchArea = self.parentElement.querySelector('.search__area');
+      const thisSelf = self;
+      const parent = thisSelf.parentElement.parentElement.parentElement;
+      const searchArea = parent.querySelector('.search__area');
       clearTimeout(timeout);
 
       timeout = setTimeout(() => {
@@ -57,7 +59,9 @@ export default class extends Component {
                 });
               });
 
-              runningTime(itm.querySelector('.search__result__time'), 'HH:mm:ss');
+              runningTime(itm.querySelector('.search__result__time-12'), 'h:mm');
+              runningTime(itm.querySelector('.search__result__time-am'), 'a');
+              runningTime(itm.querySelector('.search__result__time-24'), 'HH:mm');
             });
           });
         } else {
@@ -65,6 +69,12 @@ export default class extends Component {
         }
       }, 300);
     });
+  }
+
+  AfterRenderDone() {
+    const thisSelf = this.GetThisComponent();
+
+    thisSelf.focus();
   }
 }
 
