@@ -12465,6 +12465,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (param) {
   var deleteBtn = new _CityDeleteButton2.default();
 
+  console.log(param.country);
+
   return '\n    <li class="city" data-id="' + param.city_id + '">\n      <div class="city__half">\n        <span class="city__name">' + param.name + '</span>\n        <span class="city__country-name">' + param.country_name + '</span>\n        <span class="city__country">(' + param.country + ')</span>\n      </div>\n      <div class="city__half">\n        <div class="city__time-master">\n          <div class="city__time-group">\n            <span class="city__time city__time--12" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__time city__time--am" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--day" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--24" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__timezone">GMT ' + param.timezone + '</span>\n          </div>\n        </div>\n      </div>\n      ' + deleteBtn.Render() + '\n    </li>\n  ';
 };
 
@@ -12572,7 +12574,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (api) {
   var searchBar = new _SearchBar2.default(api);
 
-  return '\n    <div class="search">\n      ' + searchBar.Render() + '\n      <div class="search__area"></div>\n    </div>\n  ';
+  return '\n    <div class="search container">\n      <div class="search__box">\n        <div class="search__box__ui container">\n          <a href="#/" class="search-icon">\n            <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-arrow-64"></use></svg>\n          </a>\n          ' + searchBar.Render() + '\n        </div>\n      </div>\n      <ul class="search__area"></ul>\n      <div class="search__close">\n        <div class="container">\n          <a href="#/" class="search-close-button">\n            <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>\n          </a>\n        </div>\n      </div>\n    </div>\n  ';
 };
 
 var _SearchBar = __webpack_require__(53);
@@ -12626,7 +12628,9 @@ exports.default = class extends _domrC.Component {
     var timeout = null;
 
     this.Keyup(function (self) {
-      var searchArea = self.parentElement.querySelector('.search__area');
+      var thisSelf = self;
+      var parent = thisSelf.parentElement.parentElement.parentElement;
+      var searchArea = parent.querySelector('.search__area');
       clearTimeout(timeout);
 
       timeout = setTimeout(function () {
@@ -12661,7 +12665,9 @@ exports.default = class extends _domrC.Component {
                 });
               });
 
-              (0, _runningTime2.default)(itm.querySelector('.search__result__time'), 'HH:mm:ss');
+              (0, _runningTime2.default)(itm.querySelector('.search__result__time-12'), 'h:mm');
+              (0, _runningTime2.default)(itm.querySelector('.search__result__time-am'), 'a');
+              (0, _runningTime2.default)(itm.querySelector('.search__result__time-24'), 'HH:mm');
             });
           });
         } else {
@@ -12669,6 +12675,12 @@ exports.default = class extends _domrC.Component {
         }
       }, 300);
     });
+  }
+
+  AfterRenderDone() {
+    var thisSelf = this.GetThisComponent();
+
+    thisSelf.focus();
   }
 };
 
@@ -12790,7 +12802,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function (param, searchTerm) {
-  return '\n    <li>\n      <a href="#" class="search__result" data-id="' + param.city_id + '">\n        <span class="search__result__header">' + (param.header ? bolden(param.header, searchTerm) : '') + '</span>\n        <span class="search__result__name" data-value="' + param.name + '">' + (param.header ? param.name : bolden(param.name, searchTerm)) + '</span>\n        <span class="search__result__time" data-timezone="' + param.timezone + '">...</span>\n        <span class="search__result__timezone">' + param.timezone + '</span>\n        <span class="search__result__country">' + param.country + '</span>\n        <span class="search__result__country-name">' + param.country_name + '</span>\n      </a>\n    </li>\n  ';
+  return '\n    <li>\n      <a href="#" class="search__result" data-id="' + param.city_id + '">\n        <span class="search__result__header">' + (param.header ? bolden(param.header, searchTerm) : '') + '</span>\n        <div class="search__result__half">\n          <div class="search__result__group">\n            <span class="search__result__name" data-value="' + param.name + '">' + (param.header ? param.name : bolden(param.name, searchTerm)) + '</span>\n          </div>\n          <div class="search__result__group">\n            <span class="search__result__country-name">' + param.country_name + '</span>\n            (<span class="search__result__country">' + param.country + '</span>)\n          </div>\n        </div>\n        <div class="search__result__half">\n          <div class="search__result__group">\n            <span class="search__result__time-12" data-timezone="' + param.timezone + '">...</span>\n            <span class="search__result__time-am" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="search__result__group">\n            <span class="search__result__time-24" data-timezone="' + param.timezone + '">...</span>\n            GMT <span class="search__result__timezone">' + param.timezone + '</span>\n          </div>\n        </div>\n      </a>\n    </li>\n  ';
 };
 
 function bolden(text, searchTerm) {
