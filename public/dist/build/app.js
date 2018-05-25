@@ -6149,7 +6149,7 @@ exports.default = class extends _domrC.Component {
   }
 
   Markup() {
-    return '\n      <div class="timezone container">\n        <ul class="timezone__city"></ul>\n        <div class="timezone__add">\n          <div class="container">\n            <a href="#/search" class="city-new-add">\n              <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>\n            </a>\n          </div>\n        </div>\n      </div>\n    ';
+    return '\n      <div class="timezone container">\n        <div class="timezone__world">\n          <div class="container">\n            <span class="world-time__title">UTC Time</span>\n            <span class="world-time__12" data-timezone="+00:00">...</span>\n            <span class="world-time__day" data-timezone="+00:00">...</span>\n          </div>\n        </div>\n        <ul class="timezone__city"></ul>\n        <div class="timezone__add">\n          <div class="container">\n            <a href="#/search" class="city-new-add">\n              <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>\n            </a>\n          </div>\n        </div>\n      </div>\n    ';
   }
 
   AfterRenderDone() {
@@ -6157,6 +6157,11 @@ exports.default = class extends _domrC.Component {
 
     var thisSelf = this.GetThisComponent();
     var ul = thisSelf.querySelector('.timezone__city');
+    var worldTime = thisSelf.querySelector('.world-time__12');
+    var worldTimeDay = thisSelf.querySelector('.world-time__day');
+
+    (0, _runningTime2.default)(worldTime, 'h:mm:ss a');
+    (0, _runningTime2.default)(worldTimeDay, 'cccc, LLL dd');
 
     (0, _dbManipulation.getCityDataAll)().then(function (data) {
       if (data.length > 4) {
@@ -12460,7 +12465,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (param) {
   var deleteBtn = new _CityDeleteButton2.default();
 
-  return '\n    <li class="city" data-id="' + param.city_id + '">\n      <div class="city__half">\n        <span class="city__name">' + param.name + '</span>\n        <span class="city__country-name">' + param.country_name + '</span>\n        <span class="city__country">(' + param.country + ')</span>\n      </div>\n      <div class="city__half">\n        <div class="city__time-master">\n          <span class="city__time city__time--12" data-timezone="' + param.timezone + '">...</span>\n          <span class="city__time city__time--am" data-timezone="' + param.timezone + '">...</span>\n          <div class="city__time city__time--day" data-timezone="' + param.timezone + '">...</div>\n          <span class="city__time city__time--24" data-timezone="' + param.timezone + '">...</span>\n          <span class="city__timezone">GMT ' + param.timezone + '</span>\n        </div>\n      </div>\n      ' + deleteBtn.Render() + '\n    </li>\n  ';
+  return '\n    <li class="city" data-id="' + param.city_id + '">\n      <div class="city__half">\n        <span class="city__name">' + param.name + '</span>\n        <span class="city__country-name">' + param.country_name + '</span>\n        <span class="city__country">(' + param.country + ')</span>\n      </div>\n      <div class="city__half">\n        <div class="city__time-master">\n          <div class="city__time-group">\n            <span class="city__time city__time--12" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__time city__time--am" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--day" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--24" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__timezone">GMT ' + param.timezone + '</span>\n          </div>\n        </div>\n      </div>\n      ' + deleteBtn.Render() + '\n    </li>\n  ';
 };
 
 var _CityDeleteButton = __webpack_require__(50);
