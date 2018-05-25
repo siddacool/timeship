@@ -14,6 +14,13 @@ export default function (api) {
         </div>
       </div>
       <ul class="search__area"></ul>
+      <div class="search__close">
+        <div class="container">
+          <a href="#/" class="search-close-button">
+            <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>
+          </a>
+        </div>
+      </div>
     </div>
   `;
 }

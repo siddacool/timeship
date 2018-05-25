@@ -1,10 +1,66 @@
 .search {
   background-color: $backdrop-color;
   display: block;
-  height: calc(100vh - 55px);
+  height: calc(100vh - 145px);
   margin-top: 55px;
   overflow: auto;
   width: 100vw;
+
+  @include desktop {
+    height: calc(100vh - 225px);
+  }
+
+  &__close {
+    bottom: 0;
+    height: 90px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+
+    @include desktop {
+      height: 170px;
+    }
+
+    .container {
+      align-items: center;
+      background-color: $backdrop-color;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .search-close-button {
+      align-items: center;
+      animation: rotatebtn 400ms;
+      background-color: $aui-n900;
+      border-radius: 50%;
+      display: flex;
+      height: 3rem;
+      justify-content: center;
+      position: relative;
+      transform: rotate(44deg);
+      width: 3rem;
+
+      @keyframes rotatebtn {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(44deg);
+        }
+      }
+
+      @include desktop {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      .icon {
+        fill: $aui-n0;
+      }
+    }
+  }
 
   &__box {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .1);
@@ -47,16 +103,20 @@
     height: 100%;
 
     li {
+      border-bottom: 2px solid $border-grey-color;
       display: block;
       height: 115px;
       margin: 0;
       padding: 0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
     }
   }
 
   &__result {
     background-color: $aui-n0;
-    border-bottom: 2px solid $border-grey-color;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
