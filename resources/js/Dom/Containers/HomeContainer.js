@@ -22,6 +22,13 @@ export default class extends Component {
   Markup() {
     return `
       <div class="timezone container">
+        <div class="timezone__world">
+          <div class="container">
+            <span class="world-time__title">UTC Time</span>
+            <span class="world-time__12" data-timezone="+00:00">...</span>
+            <span class="world-time__day" data-timezone="+00:00">...</span>
+          </div>
+        </div>
         <ul class="timezone__city"></ul>
         <div class="timezone__add">
           <div class="container">
@@ -37,6 +44,11 @@ export default class extends Component {
   AfterRenderDone() {
     const thisSelf = this.GetThisComponent();
     const ul = thisSelf.querySelector('.timezone__city');
+    const worldTime = thisSelf.querySelector('.world-time__12');
+    const worldTimeDay = thisSelf.querySelector('.world-time__day');
+
+    runningTime(worldTime, 'h:mm:ss a');
+    runningTime(worldTimeDay, 'cccc, LLL dd');
 
     getCityDataAll()
     .then((data) => {
