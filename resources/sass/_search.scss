@@ -7,11 +7,13 @@
   width: 100vw;
 
   &__box {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .1);
     height: 55px;
     left: 0;
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 100;
 
     &__ui {
       align-items: center;
@@ -37,7 +39,83 @@
     font-size: 22px;
     font-weight: 400;
     height: 100%;
-    letter-spacing: .4px;
     width: 100%;
+  }
+
+  &__area {
+    display: block;
+    height: 100%;
+
+    li {
+      display: block;
+      height: 115px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__result {
+    background-color: $aui-n0;
+    border-bottom: 2px solid $border-grey-color;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    padding: 0 .7rem;
+    padding-top: 10px;
+    position: relative;
+
+    b {
+      font-weight: 800;
+    }
+
+    &__half {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1rem;
+      width: 52%;
+
+      &:nth-of-type(2) {
+        align-items: flex-end;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        width: 48%;
+      }
+    }
+
+    &__header {
+      font-size: 16px;
+      left: 26px;
+      position: absolute;
+      text-transform: capitalize;
+      top: 9px;
+    }
+
+    &__group {
+      font-size: 16px;
+    }
+
+    &__name {
+      font-size: 22px;
+      text-transform: capitalize;
+    }
+
+    &__time-12 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    &__time-am {
+      font-weight: 600;
+    }
+
+    &__country-name {
+      text-transform: capitalize;
+    }
+
+    &__country {
+
+    }
   }
 }

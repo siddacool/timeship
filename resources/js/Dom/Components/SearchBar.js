@@ -59,7 +59,9 @@ export default class extends Component {
                 });
               });
 
-              runningTime(itm.querySelector('.search__result__time'), 'HH:mm:ss');
+              runningTime(itm.querySelector('.search__result__time-12'), 'h:mm');
+              runningTime(itm.querySelector('.search__result__time-am'), 'a');
+              runningTime(itm.querySelector('.search__result__time-24'), 'HH:mm');
             });
           });
         } else {

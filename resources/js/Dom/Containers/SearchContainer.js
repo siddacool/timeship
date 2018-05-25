@@ -13,7 +13,7 @@ export default function (api) {
           ${searchBar.Render()}
         </div>
       </div>
-      <div class="search__area"></div>
+      <ul class="search__area"></ul>
     </div>
   `;
 }
