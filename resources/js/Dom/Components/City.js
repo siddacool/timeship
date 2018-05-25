@@ -12,11 +12,17 @@ export default function (param) {
       </div>
       <div class="city__half">
         <div class="city__time-master">
-          <span class="city__time city__time--12" data-timezone="${param.timezone}">...</span>
-          <span class="city__time city__time--am" data-timezone="${param.timezone}">...</span>
-          <div class="city__time city__time--day" data-timezone="${param.timezone}">...</div>
-          <span class="city__time city__time--24" data-timezone="${param.timezone}">...</span>
-          <span class="city__timezone">GMT ${param.timezone}</span>
+          <div class="city__time-group">
+            <span class="city__time city__time--12" data-timezone="${param.timezone}">...</span>
+            <span class="city__time city__time--am" data-timezone="${param.timezone}">...</span>
+          </div>
+          <div class="city__time-group">
+            <span class="city__time city__time--day" data-timezone="${param.timezone}">...</span>
+          </div>
+          <div class="city__time-group">
+            <span class="city__time city__time--24" data-timezone="${param.timezone}">...</span>
+            <span class="city__timezone">GMT ${param.timezone}</span>
+          </div>
         </div>
       </div>
       ${deleteBtn.Render()}
