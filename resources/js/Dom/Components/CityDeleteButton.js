@@ -24,7 +24,6 @@ export default class extends Component {
 
       removeCityData(cityId)
       .then((data) => {
-        console.log(data);
 
         getCityDataAll()
         .then((allData) => {

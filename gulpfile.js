@@ -9,7 +9,7 @@ const appPath = require('./dist/public/dist/build/rev-manifest.json');
 gulp.task('html-templates', () => {
   gulp.src('./views/*.ejs')
   .pipe(ejs({
-    title: 'Jumpship',
+    title: 'Timeship',
     jsPath: `${appPath.app.js}`,
     cssPath: `${appPath.app.css}`,
   }))
