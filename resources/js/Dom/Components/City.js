@@ -3,8 +3,6 @@ import DeleteBtn from './CityDeleteButton';
 export default function (param) {
   const deleteBtn = new DeleteBtn();
 
-  console.log(param.country);
-
   return `
     <li class="city" data-id="${param.city_id}">
       <div class="city__half">
