@@ -6,6 +6,10 @@
   overflow: auto;
   width: 100vw;
 
+  @include desktopMixHeight {
+    height: calc(100vh - 115px);
+  }
+
   @include desktop {
     height: calc(100vh - 320px);
     margin-top: 150px;
