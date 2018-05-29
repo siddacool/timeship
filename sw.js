@@ -1,5 +1,5 @@
 if (location.pathname.startsWith('/timeship/')) {
-  var cacheName = 'timeship-admin-main-v2';
+  var cacheName = 'timeship-admin-main-v1';
   var catchToClear;
 
   if (cacheName === 'timeship-admin-main-v1') {
