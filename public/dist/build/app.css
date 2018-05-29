@@ -87,6 +87,34 @@ body {
   }
 }
 
+.loading-screen {
+  background-color: #edf9fe;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading-screen .boat-img {
+  height: 30%;
+  min-height: 150px;
+  position: relative;
+}
+
+.loading-screen .boat-img img {
+  bottom: -39px;
+  left: 20%;
+  position: absolute;
+}
+
+.loading-screen .water {
+  background: linear-gradient(0deg, #254a8d 0%, #0054ef 100%);
+  -webkit-flex: 1;
+          flex: 1;
+}
+
 .timezone {
   background-color: #f5f5f5;
   display: block;
