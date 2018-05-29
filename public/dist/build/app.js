@@ -6160,7 +6160,7 @@ exports.default = class extends _domrC.Component {
     var worldTime = thisSelf.querySelector('.world-time__12');
     var worldTimeDay = thisSelf.querySelector('.world-time__day');
 
-    (0, _runningTime2.default)(worldTime, 'h:mm:ss a');
+    (0, _runningTime2.default)(worldTime, 'h:mm a');
     (0, _runningTime2.default)(worldTimeDay, 'cccc, LLL dd');
 
     (0, _dbManipulation.getCityDataAll)().then(function (data) {
@@ -12465,8 +12465,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (param) {
   var deleteBtn = new _CityDeleteButton2.default();
 
-  console.log(param.country);
-
   return '\n    <li class="city" data-id="' + param.city_id + '">\n      <div class="city__half">\n        <span class="city__name">' + param.name + '</span>\n        <span class="city__country-name">' + param.country_name + '</span>\n        <span class="city__country">(' + param.country + ')</span>\n      </div>\n      <div class="city__half">\n        <div class="city__time-master">\n          <div class="city__time-group">\n            <span class="city__time city__time--12" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__time city__time--am" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--day" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--24" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__timezone">GMT ' + param.timezone + '</span>\n          </div>\n        </div>\n      </div>\n      ' + deleteBtn.Render() + '\n    </li>\n  ';
 };
 
@@ -12509,7 +12507,6 @@ exports.default = class extends _domrC.Component {
       var cityId = parent.getAttribute('data-id');
 
       (0, _dbManipulation.removeCityData)(cityId).then(function (data) {
-        console.log(data);
 
         (0, _dbManipulation.getCityDataAll)().then(function (allData) {
           if (allData.length > 4) {
@@ -12629,7 +12626,8 @@ exports.default = class extends _domrC.Component {
 
     this.Keyup(function (self) {
       var thisSelf = self;
-      var parent = thisSelf.parentElement.parentElement.parentElement;
+      var searchBox = thisSelf.parentElement;
+      var parent = searchBox.parentElement.parentElement;
       var searchArea = parent.querySelector('.search__area');
       clearTimeout(timeout);
 
@@ -12669,6 +12667,16 @@ exports.default = class extends _domrC.Component {
               (0, _runningTime2.default)(itm.querySelector('.search__result__time-am'), 'a');
               (0, _runningTime2.default)(itm.querySelector('.search__result__time-24'), 'HH:mm');
             });
+          }).catch(function (err) {
+            if (err.toString() === '0') {
+              searchArea.innerHTML = '\n                <li>\n                  <div class="search__err">Unable to connect</div>\n                </li>\n              ';
+            } else if (err === 'Unable to connect') {
+              searchArea.innerHTML = '\n                <li>\n                  <div class="search__err">You Are Offline</div>\n                </li>\n              ';
+            } else if (err === 'No Data') {
+              searchArea.innerHTML = '\n                <li>\n                  <div class="search__err">No Cities found</div>\n                </li>\n              ';
+            } else {
+              console.log(err);
+            }
           });
         } else {
           searchArea.innerHTML = '';
@@ -12779,7 +12787,11 @@ function fireSearchEvent(api, searchTerm) {
         }
       });
 
-      resolve(finalArr);
+      if (finalArr.length) {
+        resolve(finalArr);
+      } else {
+        reject('No Data');
+      }
     }).catch(function (err) {
       reject(err);
     });
