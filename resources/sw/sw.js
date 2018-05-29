@@ -1,28 +1,29 @@
-if (location.pathname.startsWith('/folio/')) {
-  var cacheName = 'folio-admin-main-v1';
+if (location.pathname.startsWith('/timeship/')) {
+  var cacheName = 'timeship-admin-main-v2';
   var catchToClear;
 
-  if (cacheName === 'folio-admin-main-v1') {
-    catchToClear = 'folio-admin-main-v2';
+  if (cacheName === 'timeship-admin-main-v1') {
+    catchToClear = 'timeship-admin-main-v2';
   } else {
-    catchToClear = 'folio-admin-main-v1';
+    catchToClear = 'timeship-admin-main-v1';
   }
 
   var appShellFiles = [
-    '/folio/admin-panel.html',
-    '/folio/site.js',
-    '/folio/<%= jsPathLogin %>',
-    '/folio/<%= cssPathLogin %>',
-    '/folio/public/dist/favicon/favicon.ico',
-    '/folio/public/dist/favicon/favicon.png',
-    '/folio/public/dist/favicon/icon-32.png',
-    '/folio/public/dist/favicon/icon-64.png',
-    '/folio/public/dist/favicon/icon-96.png',
-    '/folio/public/dist/favicon/icon-128.png',
-    '/folio/public/dist/favicon/icon-192.png',
-    '/folio/public/dist/favicon/icon-256.png',
-    '/folio/public/dist/favicon/icon-512.png',
-    'https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800',
+    '/timeship/',
+    '/timeship/index.html',
+    '/timeship/site.js',
+    '/timeship/public/dist/build/app.36d32a55d631a4df76c2.js',
+    '/timeship/public/dist/build/app.def3c16ce35f86055ae38cc86aece3d0.css',
+    '/timeship/public/dist/favicon/favicon.ico',
+    '/timeship/public/dist/favicon/favicon.png',
+    '/timeship/public/dist/favicon/logo-32.png',
+    '/timeship/public/dist/favicon/logo-64.png',
+    '/timeship/public/dist/favicon/logo-96.png',
+    '/timeship/public/dist/favicon/logo-128.png',
+    '/timeship/public/dist/favicon/logo-192.png',
+    '/timeship/public/dist/favicon/logo-256.png',
+    '/timeship/public/dist/favicon/logo-512.png',
+    'https://fonts.googleapis.com/css?family=Barlow:400,500,600,800',
   ];
 
   var contentToCache = appShellFiles;

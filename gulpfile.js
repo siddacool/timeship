@@ -19,6 +19,12 @@ gulp.task('html-templates', () => {
   .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('sw', () => {
+  return gulp
+  .src('./resources/sw/*')
+  .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('favicon', () => {
   return gulp
   .src('./resources/favicon/*.**')
