@@ -1,5 +1,5 @@
 if (location.pathname.startsWith('/timeship/')) {
-  var cacheName = 'timeship-admin-main-v2';
+  var cacheName = 'timeship-admin-main-v1';
   var catchToClear;
 
   if (cacheName === 'timeship-admin-main-v1') {
@@ -12,8 +12,8 @@ if (location.pathname.startsWith('/timeship/')) {
     '/timeship/',
     '/timeship/index.html',
     '/timeship/site.js',
-    '/timeship/public/dist/build/app.1708488f6fc6d3f99b19.js',
-    '/timeship/public/dist/build/app.2a7a4cbd676d0b11d8757a63ecb7219b.css',
+    '/timeship/public/dist/build/app.2829cb9cd86196c43437.js',
+    '/timeship/public/dist/build/app.ff78beca8b7fcaeaa7723cfb4213d91b.css',
     '/timeship/public/dist/favicon/favicon.ico',
     '/timeship/public/dist/favicon/favicon.png',
     '/timeship/public/dist/favicon/logo-32.png',
@@ -23,6 +23,7 @@ if (location.pathname.startsWith('/timeship/')) {
     '/timeship/public/dist/favicon/logo-192.png',
     '/timeship/public/dist/favicon/logo-256.png',
     '/timeship/public/dist/favicon/logo-512.png',
+    '/timeship/public/dist/favicon/logo-naked-128.png',
     'https://fonts.googleapis.com/css?family=Barlow:400,500,600,800',
   ];
 
