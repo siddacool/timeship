@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "svgmake": "gulp svg-make",
-    "build": "webpack --config webpack.config.js && gulp favicon && gulp sw && gulp html-templates",
+    "build": "webpack --config webpack.config.js && gulp favicon && gulp html-templates && gulp clean && gulp sw-files-transfer && gulp generate-service-worker",
     "buildw": "webpack --config webpack.config.js --watch"
   },
   "engines": {
@@ -22,6 +22,7 @@
     "browser-sync-webpack-plugin": "^1.1.4",
     "cli-color": "^1.2.0",
     "css-loader": "^0.28.0",
+    "del": "^3.0.0",
     "es6-promise-promise": "^1.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
@@ -40,7 +41,8 @@
     "run-sequence": "^1.2.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
-    "webpack": "3.0.0"
+    "webpack": "3.0.0",
+    "workbox-build": "^3.2.0"
   },
   "dependencies": {
     "dexie": "^2.0.3",
