@@ -1,72 +1,98 @@
-if (location.pathname.startsWith('/timeship/')) {
-  var cacheName = 'timeship-admin-main-v1';
-  var catchToClear;
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
 
-  if (cacheName === 'timeship-admin-main-v1') {
-    catchToClear = 'timeship-admin-main-v2';
-  } else {
-    catchToClear = 'timeship-admin-main-v1';
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
+
+workbox.skipWaiting();
+workbox.clientsClaim();
+
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [
+  {
+    "url": "index.html",
+    "revision": "107dd59096a958bde8faa50c84609ee0"
+  },
+  {
+    "url": "public/dist/build/app.2829cb9cd86196c43437.js",
+    "revision": "dae4fdc51c3173e4b16247b6d5d676da"
+  },
+  {
+    "url": "public/dist/build/app.css",
+    "revision": "09b525002862888cbb4e094e0ca66d57"
+  },
+  {
+    "url": "public/dist/build/app.ff78beca8b7fcaeaa7723cfb4213d91b.css",
+    "revision": "ff78beca8b7fcaeaa7723cfb4213d91b"
+  },
+  {
+    "url": "public/dist/build/app.js",
+    "revision": "134bbffbbc4ea230671168211242ca26"
+  },
+  {
+    "url": "public/dist/favicon/favicon.ico",
+    "revision": "5bd97c3537621cbe382f3dd16b472bc1"
+  },
+  {
+    "url": "public/dist/favicon/logo-1024.png",
+    "revision": "7fe55af7bc41035c46222196c1c83c10"
+  },
+  {
+    "url": "public/dist/favicon/logo-128.png",
+    "revision": "98b06b8a6109a08eafc648fec26c696f"
+  },
+  {
+    "url": "public/dist/favicon/logo-168.png",
+    "revision": "1eb3ce79e53e95c8497453ed292a3e0b"
+  },
+  {
+    "url": "public/dist/favicon/logo-192.png",
+    "revision": "83e9ded61610a9e83c871482ebb185a5"
+  },
+  {
+    "url": "public/dist/favicon/logo-256.png",
+    "revision": "252599975e44db9d3019f595323067b7"
+  },
+  {
+    "url": "public/dist/favicon/logo-32.png",
+    "revision": "61e3977aff5acc237bebc855a65995df"
+  },
+  {
+    "url": "public/dist/favicon/logo-512.png",
+    "revision": "5dc5dc26a0d5bebec4bb5f817f1a7dac"
+  },
+  {
+    "url": "public/dist/favicon/logo-64.png",
+    "revision": "ef707367f68763eb459840e8242d5931"
+  },
+  {
+    "url": "public/dist/favicon/logo-96.png",
+    "revision": "c3254efb23abc4b1b1114a9dd16221f3"
+  },
+  {
+    "url": "site.js",
+    "revision": "ff3ff025b2d0a5d3d9f0794996bc3d0b"
+  },
+  {
+    "url": "timeship.webmanifest",
+    "revision": "e31ed106fdaf7f4c857f125ec00431bc"
   }
+].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-  var appShellFiles = [
-    '/timeship/',
-    '/timeship/index.html',
-    '/timeship/site.js',
-    '/timeship/public/dist/build/app.2829cb9cd86196c43437.js',
-    '/timeship/public/dist/build/app.ff78beca8b7fcaeaa7723cfb4213d91b.css',
-    '/timeship/public/dist/favicon/favicon.ico',
-    '/timeship/public/dist/favicon/favicon.png',
-    '/timeship/public/dist/favicon/logo-32.png',
-    '/timeship/public/dist/favicon/logo-64.png',
-    '/timeship/public/dist/favicon/logo-96.png',
-    '/timeship/public/dist/favicon/logo-128.png',
-    '/timeship/public/dist/favicon/logo-192.png',
-    '/timeship/public/dist/favicon/logo-256.png',
-    '/timeship/public/dist/favicon/logo-512.png',
-    '/timeship/public/dist/favicon/logo-naked-128.png',
-    'https://fonts.googleapis.com/css?family=Barlow:400,500,600,800',
-  ];
-
-  var contentToCache = appShellFiles;
-
-  self.addEventListener('activate', function(e) {
-    e.waitUntil(
-      caches.keys().then(function(keyList) {
-          return Promise.all(keyList.map(function(key) {
-          if (catchToClear.indexOf(key) === -1) {
-            return caches.delete(key);
-          }
-        }));
-      })
-    );
-  });
-
-  self.addEventListener('install', function(e) {
-    console.log('[Service Worker] Install');
-    e.waitUntil(
-      caches.open(cacheName).then(function(cache) {
-        console.log('[Service Worker] Caching all: app shell and content');
-        return cache.addAll(contentToCache);
-      }).catch(function (bla) {
-        console.log(bla);
-      })
-    );
-  });
-
-  self.addEventListener('fetch', function(e) {
-    e.respondWith(
-      caches.match(e.request).then(function(r) {
-        console.log('[Service Worker] Fetching resource: '+e.request.url);
-        return r || fetch(e.request).then(function(response) {
-          return caches.open(cacheName).then(function(cache) {
-            console.log('[Service Worker] Caching new resource: '+e.request.url);
-            cache.put(e.request, response.clone()).catch((bla) => {
-              console.log(bla);
-            });
-            return response;
-          });
-        });
-      })
-    );
-  });
-}
+workbox.routing.registerRoute(/https:\/\/fonts.googleapis.com\/css?family/, workbox.strategies.cacheFirst(), 'GET');
+workbox.routing.registerRoute(/https:\/\/sid-man-timezones.firebaseapp.com\//, workbox.strategies.staleWhileRevalidate(), 'GET');
