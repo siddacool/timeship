@@ -1,5 +1,5 @@
 if (location.pathname.startsWith('/timeship/')) {
-  var cacheName = 'timeship-admin-main-v2';
+  var cacheName = 'timeship-admin-main-v1';
   var catchToClear;
 
   if (cacheName === 'timeship-admin-main-v1') {
@@ -12,8 +12,8 @@ if (location.pathname.startsWith('/timeship/')) {
     '/timeship/',
     '/timeship/index.html',
     '/timeship/site.js',
-    '/timeship/public/dist/build/app.923653be4a50cc64664b.js',
-    '/timeship/public/dist/build/app.91d2793284bb9f049ca6f9cb09644657.css',
+    '/timeship/public/dist/build/app.2829cb9cd86196c43437.js',
+    '/timeship/public/dist/build/app.ff78beca8b7fcaeaa7723cfb4213d91b.css',
     '/timeship/public/dist/favicon/favicon.ico',
     '/timeship/public/dist/favicon/favicon.png',
     '/timeship/public/dist/favicon/logo-32.png',

@@ -5372,14 +5372,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var router = new _domrC.Router(_routes2.default);
 
-var storage = localStorage;
+var storage = sessionStorage;
 var cookieName = 'timeship-loading-screen-displayed';
 var loadingScreen = storage.getItem(cookieName);
+var spalsh = document.querySelector('.loading-screen');
 
 if (loadingScreen) {
   router.Start();
 } else {
   storage.setItem(cookieName, true);
+  setTimeout(function () {
+    spalsh.classList.add('active');
+  }, 400);
+
   setTimeout(function () {
     router.Start();
   }, 3000);
