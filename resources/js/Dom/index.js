@@ -1,23 +1,39 @@
+import DateTime from 'luxon/src/datetime';
 import { Router } from 'domr-c';
 import routes from './routes';
 
 const router = new Router(routes);
 
-const storage = sessionStorage;
-const cookieName = 'timeship-loading-screen-displayed';
+const storage = localStorage;
+const cookieName = 'timeship-loading-screen-displayed-1';
 const loadingScreen = storage.getItem(cookieName);
 const spalsh = document.querySelector('.loading-screen');
 
-if (loadingScreen) {
-  router.Start();
-} else {
-  storage.setItem(cookieName, true);
+function delayedRouterStart() {
   setTimeout(() => {
     spalsh.classList.add('active');
   }, 400);
 
   setTimeout(() => {
     router.Start();
-  }, 3000);
+  }, 1000);
 }
 
+if (loadingScreen) {
+  const timeWhenLoadingScreen = DateTime.fromMillis(loadingScreen);
+  const timeNow = DateTime.local();
+
+  const diffHours = timeNow.diff(timeWhenLoadingScreen, 'hours');
+  const diffHoursObject = diffHours.toObject();
+
+  if (diffHoursObject.hours >= 48) {
+    delayedRouterStart();
+  } else {
+    router.Start();
+  }
+
+  storage.setItem(cookieName, DateTime.local().toMillis());
+} else {
+  delayedRouterStart();
+  storage.setItem(cookieName, DateTime.local().toMillis());
+}
