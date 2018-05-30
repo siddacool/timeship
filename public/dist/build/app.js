@@ -12768,12 +12768,14 @@ function fireSearchEvent(api, searchTerm) {
         });
         thisCity.country_name = assignCountry[0].name;
         if (thisCity.name.startsWith(val)) {
+          thisCity.priority = 1;
           finalArr.push(thisCity);
         } else if (thisCity.alias && thisCity.alias.length) {
           var alias = thisCity.alias;
           for (var i = 0; i < alias.length; i++) {
             if (alias[i].trim().startsWith(val)) {
               thisCity.header = alias[i];
+              thisCity.priority = 3;
               finalArr.push(thisCity);
             }
           }
@@ -12791,6 +12793,7 @@ function fireSearchEvent(api, searchTerm) {
               });
               if (!duplicates) {
                 thisCity.header = thisCountry.name;
+                thisCity.priority = 2;
                 finalArr.push(thisCity);
               }
             }
@@ -12809,6 +12812,7 @@ function fireSearchEvent(api, searchTerm) {
                     });
                     if (!duplicates) {
                       thisCity.header = alias[i];
+                      thisCity.priority = 4;
                       finalArr.push(thisCity);
                     }
                   }
@@ -12824,6 +12828,9 @@ function fireSearchEvent(api, searchTerm) {
       });
 
       if (finalArr.length) {
+        finalArr = finalArr.sort(function (a, b) {
+          return a.priority < b.priority ? -1 : 1;
+        });
         resolve(finalArr);
       } else {
         reject('No Data');
@@ -12850,7 +12857,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function (param, searchTerm) {
-  return '\n    <li>\n      <a href="#" class="search__result" data-id="' + param.city_id + '">\n        <span class="search__result__header">' + (param.header ? bolden(param.header, searchTerm) : '') + '</span>\n        <div class="search__result__half">\n          <div class="search__result__group">\n            <span class="search__result__name" data-value="' + param.name + '">' + (param.header ? param.name : bolden(param.name, searchTerm)) + '</span>\n          </div>\n          <div class="search__result__group">\n            <span class="search__result__country-name">' + param.country_name + '</span>\n            (<span class="search__result__country">' + param.country + '</span>)\n          </div>\n        </div>\n        <div class="search__result__half">\n          <div class="search__result__group">\n            <span class="search__result__time-12" data-timezone="' + param.timezone + '">...</span>\n            <span class="search__result__time-am" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="search__result__group">\n            <span class="search__result__time-24" data-timezone="' + param.timezone + '">...</span>\n            GMT <span class="search__result__timezone">' + param.timezone + '</span>\n          </div>\n        </div>\n      </a>\n    </li>\n  ';
+  return '\n    <li>\n      <a href="#" class="search__result" data-id="' + param.city_id + '">\n        <div class="search__result__full">\n          <span class="search__result__header">' + (param.header ? bolden(param.header, searchTerm) : '') + '</span>\n        </div>\n        <div class="search__result__half">\n          <div class="search__result__group">\n            <span class="search__result__name" data-value="' + param.name + '">' + (param.header ? param.name : bolden(param.name, searchTerm)) + '</span>\n          </div>\n          <div class="search__result__group">\n            <span class="search__result__country-name">' + param.country_name + '</span>\n            (<span class="search__result__country">' + param.country + '</span>)\n          </div>\n        </div>\n        <div class="search__result__half">\n          <div class="search__result__group">\n            <span class="search__result__time-12" data-timezone="' + param.timezone + '">...</span>\n            <span class="search__result__time-am" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="search__result__group">\n            <span class="search__result__time-24" data-timezone="' + param.timezone + '">...</span>\n            GMT <span class="search__result__timezone">' + param.timezone + '</span>\n          </div>\n        </div>\n      </a>\n    </li>\n  ';
 };
 
 function bolden(text, searchTerm) {

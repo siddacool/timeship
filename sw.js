@@ -24,23 +24,23 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "3aa871fc6a3c18fcdcfd81896084f998"
+    "revision": "e0108b11f9d9c69704ab67114f516d3f"
+  },
+  {
+    "url": "public/dist/build/app.012b1a6ea56f359fc9c4.js",
+    "revision": "c4b9d663f7045717cb0be05f77e558e8"
+  },
+  {
+    "url": "public/dist/build/app.bb42f3ae0123afaf276a4f4586ed287c.css",
+    "revision": "bb42f3ae0123afaf276a4f4586ed287c"
   },
   {
     "url": "public/dist/build/app.css",
-    "revision": "fcbc784aa038f4a9c734b5d8e882a587"
-  },
-  {
-    "url": "public/dist/build/app.d2a7ed39afbfeffc0e852f38469855e7.css",
-    "revision": "d2a7ed39afbfeffc0e852f38469855e7"
-  },
-  {
-    "url": "public/dist/build/app.dafc4b61f78d17397459.js",
-    "revision": "4f93320e4cfe7d100b2dd9cdbc9b77d9"
+    "revision": "fd1b08d2e8019f219f5b2380e5959910"
   },
   {
     "url": "public/dist/build/app.js",
-    "revision": "e693a7d375c25146953a1706a5e6a2d4"
+    "revision": "7edfb85744bb8231e66a225f27399b8b"
   },
   {
     "url": "public/dist/favicon/favicon.ico",
