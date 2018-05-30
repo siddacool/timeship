@@ -24,23 +24,23 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "107dd59096a958bde8faa50c84609ee0"
-  },
-  {
-    "url": "public/dist/build/app.2829cb9cd86196c43437.js",
-    "revision": "dae4fdc51c3173e4b16247b6d5d676da"
+    "revision": "3aa871fc6a3c18fcdcfd81896084f998"
   },
   {
     "url": "public/dist/build/app.css",
-    "revision": "09b525002862888cbb4e094e0ca66d57"
+    "revision": "fcbc784aa038f4a9c734b5d8e882a587"
   },
   {
-    "url": "public/dist/build/app.ff78beca8b7fcaeaa7723cfb4213d91b.css",
-    "revision": "ff78beca8b7fcaeaa7723cfb4213d91b"
+    "url": "public/dist/build/app.d2a7ed39afbfeffc0e852f38469855e7.css",
+    "revision": "d2a7ed39afbfeffc0e852f38469855e7"
+  },
+  {
+    "url": "public/dist/build/app.dafc4b61f78d17397459.js",
+    "revision": "4f93320e4cfe7d100b2dd9cdbc9b77d9"
   },
   {
     "url": "public/dist/build/app.js",
-    "revision": "134bbffbbc4ea230671168211242ca26"
+    "revision": "e693a7d375c25146953a1706a5e6a2d4"
   },
   {
     "url": "public/dist/favicon/favicon.ico",

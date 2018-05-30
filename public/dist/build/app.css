@@ -493,7 +493,7 @@ body {
 
 @media only screen and (max-height: 500px), screen and (max-device-height: 500px) {
   .search {
-    height: calc(100vh - 115px);
+    height: calc(100vh - 55px);
   }
 }
 

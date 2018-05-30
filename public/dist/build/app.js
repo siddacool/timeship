@@ -303,353 +303,24 @@ function timeObject(obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zones_localZone__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__ = __webpack_require__(20);
-
-
-
-
-
-let now = () => new Date().valueOf(),
-  defaultZone = null, // not setting this directly to LocalZone.instance bc loading order issues
-  defaultLocale = null,
-  defaultNumberingSystem = null,
-  defaultOutputCalendar = null,
-  throwOnInvalid = false;
-
-/**
- * Settings contains static getters and setters that control Luxon's overall behavior. Luxon is a simple library with few options, but the ones it does have live here.
- */
-class Settings {
-  /**
-   * Get the callback for returning the current timestamp.
-   * @type {function}
-   */
-  static get now() {
-    return now;
-  }
-
-  /**
-   * Set the callback for returning the current timestamp.
-   * @type {function}
-   */
-  static set now(n) {
-    now = n;
-  }
-
-  /**
-   * Get the default time zone to create DateTimes in.
-   * @type {string}
-   */
-  static get defaultZoneName() {
-    return (defaultZone || __WEBPACK_IMPORTED_MODULE_0__zones_localZone__["a" /* default */].instance).name;
-  }
-
-  /**
-   * Set the default time zone to create DateTimes in. Does not affect existing instances.
-   * @type {string}
-   */
-  static set defaultZoneName(z) {
-    if (!z) {
-      defaultZone = null;
-    } else {
-      defaultZone = __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__["a" /* normalizeZone */](z);
-    }
-  }
-
-  /**
-   * Get the default time zone object to create DateTimes in. Does not affect existing instances.
-   * @type {Zone}
-   */
-  static get defaultZone() {
-    return defaultZone || __WEBPACK_IMPORTED_MODULE_0__zones_localZone__["a" /* default */].instance;
-  }
-
-  /**
-   * Get the default locale to create DateTimes with. Does not affect existing instances.
-   * @type {string}
-   */
-  static get defaultLocale() {
-    return defaultLocale;
-  }
-
-  /**
-   * Set the default locale to create DateTimes with. Does not affect existing instances.
-   * @type {string}
-   */
-  static set defaultLocale(locale) {
-    defaultLocale = locale;
-  }
-
-  /**
-   * Get the default numbering system to create DateTimes with. Does not affect existing instances.
-   * @type {string}
-   */
-  static get defaultNumberingSystem() {
-    return defaultNumberingSystem;
-  }
-
-  /**
-   * Set the default numbering system to create DateTimes with. Does not affect existing instances.
-   * @type {string}
-   */
-  static set defaultNumberingSystem(numberingSystem) {
-    defaultNumberingSystem = numberingSystem;
-  }
-
-  /**
-   * Get the default output calendar to create DateTimes with. Does not affect existing instances.
-   * @type {string}
-   */
-  static get defaultOutputCalendar() {
-    return defaultOutputCalendar;
-  }
-
-  /**
-   * Set the default output calendar to create DateTimes with. Does not affect existing instances.
-   * @type {string}
-   */
-  static set defaultOutputCalendar(outputCalendar) {
-    defaultOutputCalendar = outputCalendar;
-  }
-
-  /**
-   * Get whether Luxon will throw when it encounters invalid DateTimes, Durations, or Intervals
-   * @type {boolean}
-   */
-  static get throwOnInvalid() {
-    return throwOnInvalid;
-  }
-
-  /**
-   * Set whether Luxon will throw when it encounters invalid DateTimes, Durations, or Intervals
-   * @type {boolean}
-   */
-  static set throwOnInvalid(t) {
-    throwOnInvalid = t;
-  }
-
-  /**
-   * Reset Luxon's global caches. Should only be necessary in testing scenarios.
-   * @return {void}
-   */
-  static resetCaches() {
-    __WEBPACK_IMPORTED_MODULE_1__impl_locale__["a" /* default */].resetCache();
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Settings;
-
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__errors__ = __webpack_require__(7);
-/* eslint no-unused-vars: "off" */
-
-
-/**
- * @interface
-*/
-class Zone {
-  /**
-   * The type of zone
-   * @abstract
-   * @type {string}
-   */
-  get type() {
-    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
-  }
-
-  /**
-   * The name of this zone.
-   * @abstract
-   * @type {string}
-   */
-  get name() {
-    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
-  }
-
-  /**
-   * Returns whether the offset is known to be fixed for the whole year.
-   * @abstract
-   * @type {boolean}
-   */
-  get universal() {
-    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
-  }
-
-  /**
-   * Returns the offset's common name (such as EST) at the specified timestamp
-   * @abstract
-   * @param {number} ts - Epoch milliseconds for which to get the name
-   * @param {Object} opts - Options to affect the format
-   * @param {string} opts.format - What style of offset to return. Accepts 'long' or 'short'.
-   * @param {string} opts.locale - What locale to return the offset name in.
-   * @return {string}
-   */
-  offsetName(ts, opts) {
-    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
-  }
-
-  /**
-   * Return the offset in minutes for this zone at the specified timestamp.
-   * @abstract
-   * @param {number} ts - Epoch milliseconds for which to compute the offset
-   * @return {number}
-   */
-  offset(ts) {
-    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
-  }
-
-  /**
-   * Return whether this Zone is equal to another zoner
-   * @abstract
-   * @param {Zone} otherZone - the zone to compare
-   * @return {boolean}
-   */
-  equals(otherZone) {
-    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
-  }
-
-  /**
-   * Return whether this Zone is valid.
-   * @abstract
-   * @type {boolean}
-   */
-  get isValid() {
-    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Zone;
-
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.utils = exports.Router = exports.Component = undefined;
-
-var _Component = __webpack_require__(24);
-
-var _Component2 = _interopRequireDefault(_Component);
-
-var _Router = __webpack_require__(28);
-
-var _Router2 = _interopRequireDefault(_Router);
-
-var _utils = __webpack_require__(33);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.Component = _Component2.default;
-exports.Router = _Router2.default;
-exports.utils = _utils2.default;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _hashLocationSet = __webpack_require__(31);
-
-var _hashLocationSet2 = _interopRequireDefault(_hashLocationSet);
-
-var _hashLocationGet = __webpack_require__(32);
-
-var _hashLocationGet2 = _interopRequireDefault(_hashLocationGet);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function loc() {
-  var originalHash = location.hash;
-  var path = originalHash;
-  var search = '';
-  var query = '';
-
-  if (path.includes('?')) {
-    var searchQuery = path.split('?');
-    path = searchQuery[0];
-    search = searchQuery[1].replace(/\//g, '');
-
-    if (search !== '') {
-      var obj = {};
-      var filterString = search.split('&');
-
-      for (var i = 0; i < filterString.length; i++) {
-        var splitString = filterString[i].split('=');
-        var field = splitString[0];
-        var value = splitString[1];
-
-        obj[field] = value;
-      }
-      query = obj;
-    }
-  }
-
-  if (path.endsWith('/') && !path.endsWith('#/')) {
-    var pathSlice = path.slice(0, -1);
-
-    path = pathSlice.replace('#', '');
-  } else {
-    path = path.replace('#', '');
-  }
-
-  return {
-    hash: originalHash.replace('#', ''),
-    path: path,
-    search: search,
-    query: query,
-    set: _hashLocationSet2.default,
-    get: _hashLocationGet2.default
-  };
-}
-
-var hashLocation = loc;
-
-exports.default = hashLocation;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["friendlyDateTime"] = friendlyDateTime;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interval__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__info__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_formatter__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__zones_localZone__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__impl_locale__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interval__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__info__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_formatter__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__zones_localZone__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__impl_locale__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__impl_zoneUtil__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__impl_diff__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__impl_regexParser__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__impl_tokenParser__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__impl_conversions__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__impl_formats__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__errors__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__impl_zoneUtil__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__impl_diff__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__impl_regexParser__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__impl_tokenParser__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__impl_conversions__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__impl_formats__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__errors__ = __webpack_require__(5);
 
 
 
@@ -2488,15 +2159,245 @@ function friendlyDateTime(dateTimeish) {
 
 
 /***/ }),
-/* 6 */
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zones_localZone__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__ = __webpack_require__(16);
+
+
+
+
+
+let now = () => new Date().valueOf(),
+  defaultZone = null, // not setting this directly to LocalZone.instance bc loading order issues
+  defaultLocale = null,
+  defaultNumberingSystem = null,
+  defaultOutputCalendar = null,
+  throwOnInvalid = false;
+
+/**
+ * Settings contains static getters and setters that control Luxon's overall behavior. Luxon is a simple library with few options, but the ones it does have live here.
+ */
+class Settings {
+  /**
+   * Get the callback for returning the current timestamp.
+   * @type {function}
+   */
+  static get now() {
+    return now;
+  }
+
+  /**
+   * Set the callback for returning the current timestamp.
+   * @type {function}
+   */
+  static set now(n) {
+    now = n;
+  }
+
+  /**
+   * Get the default time zone to create DateTimes in.
+   * @type {string}
+   */
+  static get defaultZoneName() {
+    return (defaultZone || __WEBPACK_IMPORTED_MODULE_0__zones_localZone__["a" /* default */].instance).name;
+  }
+
+  /**
+   * Set the default time zone to create DateTimes in. Does not affect existing instances.
+   * @type {string}
+   */
+  static set defaultZoneName(z) {
+    if (!z) {
+      defaultZone = null;
+    } else {
+      defaultZone = __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__["a" /* normalizeZone */](z);
+    }
+  }
+
+  /**
+   * Get the default time zone object to create DateTimes in. Does not affect existing instances.
+   * @type {Zone}
+   */
+  static get defaultZone() {
+    return defaultZone || __WEBPACK_IMPORTED_MODULE_0__zones_localZone__["a" /* default */].instance;
+  }
+
+  /**
+   * Get the default locale to create DateTimes with. Does not affect existing instances.
+   * @type {string}
+   */
+  static get defaultLocale() {
+    return defaultLocale;
+  }
+
+  /**
+   * Set the default locale to create DateTimes with. Does not affect existing instances.
+   * @type {string}
+   */
+  static set defaultLocale(locale) {
+    defaultLocale = locale;
+  }
+
+  /**
+   * Get the default numbering system to create DateTimes with. Does not affect existing instances.
+   * @type {string}
+   */
+  static get defaultNumberingSystem() {
+    return defaultNumberingSystem;
+  }
+
+  /**
+   * Set the default numbering system to create DateTimes with. Does not affect existing instances.
+   * @type {string}
+   */
+  static set defaultNumberingSystem(numberingSystem) {
+    defaultNumberingSystem = numberingSystem;
+  }
+
+  /**
+   * Get the default output calendar to create DateTimes with. Does not affect existing instances.
+   * @type {string}
+   */
+  static get defaultOutputCalendar() {
+    return defaultOutputCalendar;
+  }
+
+  /**
+   * Set the default output calendar to create DateTimes with. Does not affect existing instances.
+   * @type {string}
+   */
+  static set defaultOutputCalendar(outputCalendar) {
+    defaultOutputCalendar = outputCalendar;
+  }
+
+  /**
+   * Get whether Luxon will throw when it encounters invalid DateTimes, Durations, or Intervals
+   * @type {boolean}
+   */
+  static get throwOnInvalid() {
+    return throwOnInvalid;
+  }
+
+  /**
+   * Set whether Luxon will throw when it encounters invalid DateTimes, Durations, or Intervals
+   * @type {boolean}
+   */
+  static set throwOnInvalid(t) {
+    throwOnInvalid = t;
+  }
+
+  /**
+   * Reset Luxon's global caches. Should only be necessary in testing scenarios.
+   * @return {void}
+   */
+  static resetCaches() {
+    __WEBPACK_IMPORTED_MODULE_1__impl_locale__["a" /* default */].resetCache();
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Settings;
+
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__errors__ = __webpack_require__(5);
+/* eslint no-unused-vars: "off" */
+
+
+/**
+ * @interface
+*/
+class Zone {
+  /**
+   * The type of zone
+   * @abstract
+   * @type {string}
+   */
+  get type() {
+    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
+  }
+
+  /**
+   * The name of this zone.
+   * @abstract
+   * @type {string}
+   */
+  get name() {
+    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
+  }
+
+  /**
+   * Returns whether the offset is known to be fixed for the whole year.
+   * @abstract
+   * @type {boolean}
+   */
+  get universal() {
+    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
+  }
+
+  /**
+   * Returns the offset's common name (such as EST) at the specified timestamp
+   * @abstract
+   * @param {number} ts - Epoch milliseconds for which to get the name
+   * @param {Object} opts - Options to affect the format
+   * @param {string} opts.format - What style of offset to return. Accepts 'long' or 'short'.
+   * @param {string} opts.locale - What locale to return the offset name in.
+   * @return {string}
+   */
+  offsetName(ts, opts) {
+    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
+  }
+
+  /**
+   * Return the offset in minutes for this zone at the specified timestamp.
+   * @abstract
+   * @param {number} ts - Epoch milliseconds for which to compute the offset
+   * @return {number}
+   */
+  offset(ts) {
+    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
+  }
+
+  /**
+   * Return whether this Zone is equal to another zoner
+   * @abstract
+   * @param {Zone} otherZone - the zone to compare
+   * @return {boolean}
+   */
+  equals(otherZone) {
+    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
+  }
+
+  /**
+   * Return whether this Zone is valid.
+   * @abstract
+   * @type {boolean}
+   */
+  get isValid() {
+    throw new __WEBPACK_IMPORTED_MODULE_0__errors__["g" /* ZoneIsAbstractError */]();
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Zone;
+
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__datetime__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__formatter__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__datetime__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__formatter__ = __webpack_require__(8);
 
 
 
@@ -2883,7 +2784,7 @@ class Locale {
 
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2965,12 +2866,12 @@ class ZoneIsAbstractError extends LuxonError {
 
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zone__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zone__ = __webpack_require__(3);
 
 
 
@@ -3093,12 +2994,12 @@ class IANAZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* default */] {
 
 
 /***/ }),
-/* 9 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zone__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zone__ = __webpack_require__(3);
 
 
 
@@ -3172,12 +3073,12 @@ class FixedOffsetZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* default
 
 
 /***/ }),
-/* 10 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__english__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formats__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__english__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formats__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(0);
 
 
@@ -3569,7 +3470,7 @@ class Formatter {
 
 
 /***/ }),
-/* 11 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3578,73 +3479,107 @@ class Formatter {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.removeCityData = exports.getCityDataAll = exports.saveCityData = undefined;
+exports.utils = exports.Router = exports.Component = undefined;
 
-var _indexedStorage = __webpack_require__(37);
+var _Component = __webpack_require__(30);
 
-var _indexedStorage2 = _interopRequireDefault(_indexedStorage);
+var _Component2 = _interopRequireDefault(_Component);
+
+var _Router = __webpack_require__(34);
+
+var _Router2 = _interopRequireDefault(_Router);
+
+var _utils = __webpack_require__(39);
+
+var _utils2 = _interopRequireDefault(_utils);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function saveCityData(city_id, name, country, country_name, timezone) {
-  var promiseObj = new Promise(function (resolve, reject) {
-    var date = new Date();
-    date = Date.parse(date);
-    _indexedStorage2.default.cities.put({ city_id: city_id, name: name, country: country, country_name: country_name, timezone: timezone, date: date }).then(function (id) {
-      return _indexedStorage2.default.cities.get(id);
-    }).then(function (item) {
-      resolve(item);
-    }).catch(function (err) {
-      reject(err.stack || err);
-    });
-  });
-  return promiseObj;
-}
-
-function getCityDataAll() {
-  var promiseObj = new Promise(function (resolve, reject) {
-    _indexedStorage2.default.cities.orderBy('date').toArray(function (data) {
-      if (data && data.length) {
-        resolve(data);
-      } else {
-        reject('No Data');
-      }
-    }).catch(function (err) {
-      reject(err.stack || err);
-    });
-  });
-
-  return promiseObj;
-}
-
-function removeCityData(city_id) {
-  var promiseObj = new Promise(function (resolve, reject) {
-    _indexedStorage2.default.cities.delete(city_id, function () {}).then(function () {
-      resolve(city_id);
-    }).catch(function (err) {
-      reject(err.stack || err);
-    });
-  });
-
-  return promiseObj;
-}
-
-exports.saveCityData = saveCityData;
-exports.getCityDataAll = getCityDataAll;
-exports.removeCityData = removeCityData;
+exports.Component = _Component2.default;
+exports.Router = _Router2.default;
+exports.utils = _utils2.default;
 
 /***/ }),
-/* 12 */
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _hashLocationSet = __webpack_require__(37);
+
+var _hashLocationSet2 = _interopRequireDefault(_hashLocationSet);
+
+var _hashLocationGet = __webpack_require__(38);
+
+var _hashLocationGet2 = _interopRequireDefault(_hashLocationGet);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function loc() {
+  var originalHash = location.hash;
+  var path = originalHash;
+  var search = '';
+  var query = '';
+
+  if (path.includes('?')) {
+    var searchQuery = path.split('?');
+    path = searchQuery[0];
+    search = searchQuery[1].replace(/\//g, '');
+
+    if (search !== '') {
+      var obj = {};
+      var filterString = search.split('&');
+
+      for (var i = 0; i < filterString.length; i++) {
+        var splitString = filterString[i].split('=');
+        var field = splitString[0];
+        var value = splitString[1];
+
+        obj[field] = value;
+      }
+      query = obj;
+    }
+  }
+
+  if (path.endsWith('/') && !path.endsWith('#/')) {
+    var pathSlice = path.slice(0, -1);
+
+    path = pathSlice.replace('#', '');
+  } else {
+    path = path.replace('#', '');
+  }
+
+  return {
+    hash: originalHash.replace('#', ''),
+    path: path,
+    search: search,
+    query: query,
+    set: _hashLocationSet2.default,
+    get: _hashLocationGet2.default
+  };
+}
+
+var hashLocation = loc;
+
+exports.default = hashLocation;
+
+/***/ }),
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["b"] = friendlyDuration;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_formatter__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_regexParser__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__settings__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_formatter__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_regexParser__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__settings__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(5);
 
 
 
@@ -4370,7 +4305,7 @@ class Duration {
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4382,7 +4317,7 @@ class Duration {
 /* harmony export (immutable) */ __webpack_exports__["f"] = monthForDateTime;
 /* harmony export (immutable) */ __webpack_exports__["a"] = eraForDateTime;
 /* harmony export (immutable) */ __webpack_exports__["c"] = formatString;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formats__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formats__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(0);
 
 
@@ -4595,7 +4530,7 @@ function formatString(knownFormat) {
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4818,12 +4753,12 @@ const DATETIME_HUGE_WITH_SECONDS = {
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zone__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zone__ = __webpack_require__(3);
 
 
 
@@ -4872,7 +4807,7 @@ class LocalZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* default */] {
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4881,127 +4816,72 @@ class LocalZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* default */] {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var url = 'https://sid-man-timezones.firebaseapp.com';
+exports.removeCityData = exports.getCityDataAll = exports.saveCityData = undefined;
 
-var apiSet = {
-  complete: url + '/complete.json',
-  complete_catched: url + '/complete-c.json',
-  city: url + '/city.json',
-  city_catched: url + '/city-c.json',
-  country: url + '/country.json',
-  country_catched: url + '/country-c.json'
-};
+var _indexedStorage = __webpack_require__(43);
 
-exports.default = apiSet;
+var _indexedStorage2 = _interopRequireDefault(_indexedStorage);
 
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-function goodOlAjaxPromise(url) {
+function saveCityData(city_id, name, country, country_name, timezone) {
   var promiseObj = new Promise(function (resolve, reject) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('GET', url, true);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange = function () {
-      if (xmlhttp.readyState === 4) {
-        if (xmlhttp.status === 200) {
-          var responseText = xmlhttp.responseText.trim();
-          var obj = JSON.parse(responseText);
-          resolve(obj);
-          console.log('good Ol Ajax Promise');
-        } else {
-          reject(xmlhttp.status);
-          console.log('xmlhttp failed');
-        }
-      }
-    };
+    var date = new Date();
+    date = Date.parse(date);
+    _indexedStorage2.default.cities.put({ city_id: city_id, name: name, country: country, country_name: country_name, timezone: timezone, date: date }).then(function (id) {
+      return _indexedStorage2.default.cities.get(id);
+    }).then(function (item) {
+      resolve(item);
+    }).catch(function (err) {
+      reject(err.stack || err);
+    });
   });
   return promiseObj;
 }
 
-exports.default = goodOlAjaxPromise;
+function getCityDataAll() {
+  var promiseObj = new Promise(function (resolve, reject) {
+    _indexedStorage2.default.cities.orderBy('date').toArray(function (data) {
+      if (data && data.length) {
+        resolve(data);
+      } else {
+        reject('No Data');
+      }
+    }).catch(function (err) {
+      reject(err.stack || err);
+    });
+  });
 
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
+  return promiseObj;
 }
 
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
+function removeCityData(city_id) {
+  var promiseObj = new Promise(function (resolve, reject) {
+    _indexedStorage2.default.cities.delete(city_id, function () {}).then(function () {
+      resolve(city_id);
+    }).catch(function (err) {
+      reject(err.stack || err);
+    });
+  });
 
-module.exports = g;
-
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _datetime = __webpack_require__(5);
-
-var _datetime2 = _interopRequireDefault(_datetime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function runningTime(target) {
-  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'hh:mm:ssa dd MMM';
-
-  var thisTarget = target;
-  var thisTimezone = thisTarget.getAttribute('data-timezone');
-
-  function step() {
-    var timeToUpdate = _datetime2.default.utc().setZone('UTC' + thisTimezone).toFormat(format);
-
-    thisTarget.textContent = timeToUpdate;
-
-    requestAnimationFrame(step);
-  }
-
-  requestAnimationFrame(step);
+  return promiseObj;
 }
 
-exports.default = runningTime;
+exports.saveCityData = saveCityData;
+exports.getCityDataAll = getCityDataAll;
+exports.removeCityData = removeCityData;
 
 /***/ }),
-/* 20 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = normalizeZone;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zone__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zones_localZone__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_IANAZone__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_fixedOffsetZone__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_invalidZone__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zone__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zones_localZone__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_IANAZone__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_fixedOffsetZone__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_invalidZone__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(0);
 /**
  * @private
@@ -5043,7 +4923,7 @@ function normalizeZone(input, defaultZone) {
 
 
 /***/ }),
-/* 21 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5053,9 +4933,9 @@ function normalizeZone(input, defaultZone) {
 /* harmony export (immutable) */ __webpack_exports__["c"] = parseISODuration;
 /* harmony export (immutable) */ __webpack_exports__["e"] = parseSQL;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(6);
 
 
 
@@ -5345,6 +5225,126 @@ function parseSQL(s) {
 
 
 /***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var url = 'https://sid-man-timezones.firebaseapp.com';
+
+var apiSet = {
+  complete: url + '/complete.json',
+  complete_catched: url + '/complete-c.json',
+  city: url + '/city.json',
+  city_catched: url + '/city-c.json',
+  country: url + '/country.json',
+  country_catched: url + '/country-c.json'
+};
+
+exports.default = apiSet;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function goodOlAjaxPromise(url) {
+  var promiseObj = new Promise(function (resolve, reject) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open('GET', url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState === 4) {
+        if (xmlhttp.status === 200) {
+          var responseText = xmlhttp.responseText.trim();
+          var obj = JSON.parse(responseText);
+          resolve(obj);
+          console.log('good Ol Ajax Promise');
+        } else {
+          reject(xmlhttp.status);
+          console.log('xmlhttp failed');
+        }
+      }
+    };
+  });
+  return promiseObj;
+}
+
+exports.default = goodOlAjaxPromise;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _datetime = __webpack_require__(1);
+
+var _datetime2 = _interopRequireDefault(_datetime);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function runningTime(target) {
+  var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'hh:mm:ssa dd MMM';
+
+  var thisTarget = target;
+  var thisTimezone = thisTarget.getAttribute('data-timezone');
+
+  function step() {
+    var timeToUpdate = _datetime2.default.utc().setZone('UTC' + thisTimezone).toFormat(format);
+
+    thisTarget.textContent = timeToUpdate;
+
+    requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+}
+
+exports.default = runningTime;
+
+/***/ }),
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5362,9 +5362,13 @@ __webpack_require__(56);
 "use strict";
 
 
-var _domrC = __webpack_require__(3);
+var _datetime = __webpack_require__(1);
 
-var _routes = __webpack_require__(34);
+var _datetime2 = _interopRequireDefault(_datetime);
+
+var _domrC = __webpack_require__(9);
+
+var _routes = __webpack_require__(40);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -5372,26 +5376,1324 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var router = new _domrC.Router(_routes2.default);
 
-var storage = sessionStorage;
-var cookieName = 'timeship-loading-screen-displayed';
+var storage = localStorage;
+var cookieName = 'timeship-loading-screen-displayed-1';
 var loadingScreen = storage.getItem(cookieName);
 var spalsh = document.querySelector('.loading-screen');
 
-if (loadingScreen) {
-  router.Start();
-} else {
-  storage.setItem(cookieName, true);
+function delayedRouterStart() {
   setTimeout(function () {
     spalsh.classList.add('active');
   }, 400);
 
   setTimeout(function () {
     router.Start();
-  }, 3000);
+  }, 1000);
+}
+
+if (loadingScreen) {
+  var timeWhenLoadingScreen = _datetime2.default.fromMillis(loadingScreen);
+  var timeNow = _datetime2.default.local();
+
+  var diffHours = timeNow.diff(timeWhenLoadingScreen, 'hours');
+  var diffHoursObject = diffHours.toObject();
+
+  if (diffHoursObject.hours >= 48) {
+    delayedRouterStart();
+  } else {
+    router.Start();
+  }
+
+  storage.setItem(cookieName, _datetime2.default.local().toMillis());
+} else {
+  delayedRouterStart();
+  storage.setItem(cookieName, _datetime2.default.local().toMillis());
 }
 
 /***/ }),
 /* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zone__ = __webpack_require__(3);
+
+
+let singleton = null;
+
+class InvalidZone extends __WEBPACK_IMPORTED_MODULE_0__zone__["a" /* default */] {
+  static get instance() {
+    if (singleton === null) {
+      singleton = new InvalidZone();
+    }
+    return singleton;
+  }
+
+  get type() {
+    return 'invalid';
+  }
+
+  get name() {
+    return null;
+  }
+
+  get universal() {
+    return false;
+  }
+
+  offsetName() {
+    return null;
+  }
+
+  offset() {
+    return NaN;
+  }
+
+  equals() {
+    return false;
+  }
+
+  get isValid() {
+    return false;
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = InvalidZone;
+
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__datetime__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__duration__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__errors__ = __webpack_require__(5);
+
+
+
+
+
+const INVALID = 'Invalid Interval';
+
+// checks if the start is equal to or before the end
+function validateStartEnd(start, end) {
+  return !!start && !!end && start.isValid && end.isValid && start <= end;
+}
+
+/**
+ * An Interval object represents a half-open interval of time, where each endpoint is a {@link DateTime}. Conceptually, it's a container for those two endpoints, accompanied by methods for creating, parsing, interrogating, comparing, transforming, and formatting them.
+ *
+ * Here is a brief overview of the most commonly used methods and getters in Interval:
+ *
+ * * **Creation** To create an Interval, use {@link fromDateTimes}, {@link after}, {@link before}, or {@link fromISO}.
+ * * **Accessors** Use {@link start} and {@link end} to get the start and end.
+ * * **Interrogation** To analyze the Interval, use {@link count}, {@link length}, {@link hasSame}, {@link contains}, {@link isAfter}, or {@link isBefore}.
+ * * **Transformation** To create other Intervals out of this one, use {@link set}, {@link splitAt}, {@link splitBy}, {@link divideEqually}, {@link merge}, {@link xor}, {@link union}, {@link intersection}, or {@link difference}.
+ * * **Comparison** To compare this Interval to another one, use {@link equals}, {@link overlaps}, {@link abutsStart}, {@link abutsEnd}, {@link engulfs}
+ * * **Output*** To convert the Interval into other representations, see {@link toString}, {@link toISO}, {@link toFormat}, and {@link toDuration}.
+ */
+class Interval {
+  /**
+   * @private
+   */
+  constructor(config) {
+    /**
+     * @access private
+     */
+    this.s = config.start;
+    /**
+     * @access private
+     */
+    this.e = config.end;
+    /**
+     * @access private
+     */
+    this.invalid = config.invalidReason || null;
+  }
+
+  /**
+   * Create an invalid Interval.
+   * @return {Interval}
+   */
+  static invalid(reason) {
+    if (!reason) {
+      throw new __WEBPACK_IMPORTED_MODULE_3__errors__["b" /* InvalidArgumentError */]('need to specify a reason the DateTime is invalid');
+    }
+    if (__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* default */].throwOnInvalid) {
+      throw new __WEBPACK_IMPORTED_MODULE_3__errors__["e" /* InvalidIntervalError */](reason);
+    } else {
+      return new Interval({ invalidReason: reason });
+    }
+  }
+
+  /**
+   * Create an Interval from a start DateTime and an end DateTime. Inclusive of the start but not the end.
+   * @param {DateTime|Date|Object} start
+   * @param {DateTime|Date|Object} end
+   * @return {Interval}
+   */
+  static fromDateTimes(start, end) {
+    const builtStart = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](start),
+      builtEnd = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](end);
+
+    return new Interval({
+      start: builtStart,
+      end: builtEnd,
+      invalidReason: validateStartEnd(builtStart, builtEnd) ? null : 'invalid endpoints'
+    });
+  }
+
+  /**
+   * Create an Interval from a start DateTime and a Duration to extend to.
+   * @param {DateTime|Date|Object} start
+   * @param {Duration|Object|number} duration - the length of the Interval.
+   * @return {Interval}
+   */
+  static after(start, duration) {
+    const dur = __WEBPACK_IMPORTED_MODULE_1__duration__["b" /* friendlyDuration */](duration),
+      dt = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](start);
+    return Interval.fromDateTimes(dt, dt.plus(dur));
+  }
+
+  /**
+   * Create an Interval from an end DateTime and a Duration to extend backwards to.
+   * @param {DateTime|Date|Object} end
+   * @param {Duration|Object|number} duration - the length of the Interval.
+   * @return {Interval}
+   */
+  static before(end, duration) {
+    const dur = __WEBPACK_IMPORTED_MODULE_1__duration__["b" /* friendlyDuration */](duration),
+      dt = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](end);
+    return Interval.fromDateTimes(dt.minus(dur), dt);
+  }
+
+  /**
+   * Create an Interval from an ISO 8601 string
+   * @param {string} string - the ISO string to parse
+   * @param {Object} opts - options to pass {@see DateTime.fromISO}
+   * @return {Interval}
+   */
+  static fromISO(string, opts) {
+    if (string) {
+      const [s, e] = string.split(/\//);
+      if (s && e) {
+        return Interval.fromDateTimes(__WEBPACK_IMPORTED_MODULE_0__datetime__["default"].fromISO(s, opts), __WEBPACK_IMPORTED_MODULE_0__datetime__["default"].fromISO(e, opts));
+      }
+    }
+    return Interval.invalid('invalid ISO format');
+  }
+
+  /**
+   * Returns the start of the Interval
+   * @type {DateTime}
+   */
+  get start() {
+    return this.isValid ? this.s : null;
+  }
+
+  /**
+   * Returns the end of the Interval
+   * @type {DateTime}
+   */
+  get end() {
+    return this.isValid ? this.e : null;
+  }
+
+  /**
+   * Returns whether this Interval's end is at least its start, i.e. that the Interval isn't 'backwards'.
+   * @type {boolean}
+   */
+  get isValid() {
+    return this.invalidReason === null;
+  }
+
+  /**
+   * Returns an explanation of why this Interval became invalid, or null if the Interval is valid
+   * @type {string}
+   */
+  get invalidReason() {
+    return this.invalid;
+  }
+
+  /**
+   * Returns the length of the Interval in the specified unit.
+   * @param {string} unit - the unit (such as 'hours' or 'days') to return the length in.
+   * @return {number}
+   */
+  length(unit = 'milliseconds') {
+    return this.isValid ? this.toDuration(...[unit]).get(unit) : NaN;
+  }
+
+  /**
+   * Returns the count of minutes, hours, days, months, or years included in the Interval, even in part.
+   * Unlike {@link length} this counts sections of the calendar, not periods of time, e.g. specifying 'day'
+   * asks 'what dates are included in this interval?', not 'how many days long is this interval?'
+   * @param {string} [unit='milliseconds'] - the unit of time to count.
+   * @return {number}
+   */
+  count(unit = 'milliseconds') {
+    if (!this.isValid) return NaN;
+    const start = this.start.startOf(unit),
+      end = this.end.startOf(unit);
+    return Math.floor(end.diff(start, unit).get(unit)) + 1;
+  }
+
+  /**
+   * Returns whether this Interval's start and end are both in the same unit of time
+   * @param {string} unit - the unit of time to check sameness on
+   * @return {boolean}
+   */
+  hasSame(unit) {
+    return this.isValid ? this.e.minus(1).hasSame(this.s, unit) : false;
+  }
+
+  /**
+   * Return whether this Interval has the same start and end DateTimes.
+   * @return {boolean}
+   */
+  isEmpty() {
+    return this.s.valueOf() === this.e.valueOf();
+  }
+
+  /**
+   * Return whether this Interval's start is after the specified DateTime.
+   * @param {DateTime} dateTime
+   * @return {boolean}
+   */
+  isAfter(dateTime) {
+    if (!this.isValid) return false;
+    return this.s > dateTime;
+  }
+
+  /**
+   * Return whether this Interval's end is before the specified DateTime.
+   * @param {DateTime} dateTime
+   * @return {boolean}
+   */
+  isBefore(dateTime) {
+    if (!this.isValid) return false;
+    return this.e <= dateTime;
+  }
+
+  /**
+   * Return whether this Interval contains the specified DateTime.
+   * @param {DateTime} dateTime
+   * @return {boolean}
+   */
+  contains(dateTime) {
+    if (!this.isValid) return false;
+    return this.s <= dateTime && this.e > dateTime;
+  }
+
+  /**
+   * "Sets" the start and/or end dates. Returns a newly-constructed Interval.
+   * @param {Object} values - the values to set
+   * @param {DateTime} values.start - the starting DateTime
+   * @param {DateTime} values.end - the ending DateTime
+   * @return {Interval}
+   */
+  set({ start, end } = {}) {
+    if (!this.isValid) return this;
+    return Interval.fromDateTimes(start || this.s, end || this.e);
+  }
+
+  /**
+   * Split this Interval at each of the specified DateTimes
+   * @param {...[DateTime]} dateTimes - the unit of time to count.
+   * @return {[Interval]}
+   */
+  splitAt(...dateTimes) {
+    if (!this.isValid) return [];
+    const sorted = dateTimes.map(__WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"]).sort(),
+      results = [];
+    let { s } = this,
+      i = 0;
+
+    while (s < this.e) {
+      const added = sorted[i] || this.e,
+        next = +added > +this.e ? this.e : added;
+      results.push(Interval.fromDateTimes(s, next));
+      s = next;
+      i += 1;
+    }
+
+    return results;
+  }
+
+  /**
+   * Split this Interval into smaller Intervals, each of the specified length.
+   * Left over time is grouped into a smaller interval
+   * @param {Duration|Object|number} duration - The length of each resulting interval.
+   * @return {[Interval]}
+   */
+  splitBy(duration) {
+    if (!this.isValid) return [];
+    const dur = __WEBPACK_IMPORTED_MODULE_1__duration__["b" /* friendlyDuration */](duration),
+      results = [];
+    let { s } = this,
+      added,
+      next;
+
+    while (s < this.e) {
+      added = s.plus(dur);
+      next = +added > +this.e ? this.e : added;
+      results.push(Interval.fromDateTimes(s, next));
+      s = next;
+    }
+
+    return results;
+  }
+
+  /**
+   * Split this Interval into the specified number of smaller intervals.
+   * @param {number} numberOfParts - The number of Intervals to divide the Interval into.
+   * @return {[Interval]}
+   */
+  divideEqually(numberOfParts) {
+    if (!this.isValid) return [];
+    return this.splitBy(this.length() / numberOfParts).slice(0, numberOfParts);
+  }
+
+  /**
+   * Return whether this Interval overlaps with the specified Interval
+   * @param {Interval} other
+   * @return {boolean}
+   */
+  overlaps(other) {
+    return this.e > other.s && this.s < other.e;
+  }
+
+  /**
+   * Return whether this Interval's end is adjacent to the specified Interval's start.
+   * @param {Interval} other
+   * @return {boolean}
+   */
+  abutsStart(other) {
+    if (!this.isValid) return false;
+    return +this.e === +other.s;
+  }
+
+  /**
+   * Return whether this Interval's start is adjacent to the specified Interval's end.
+   * @param {Interval} other
+   * @return {boolean}
+   */
+  abutsEnd(other) {
+    if (!this.isValid) return false;
+    return +other.e === +this.s;
+  }
+
+  /**
+   * Return whether this Interval engulfs the start and end of the specified Interval.
+   * @param {Interval} other
+   * @return {boolean}
+   */
+  engulfs(other) {
+    if (!this.isValid) return false;
+    return this.s <= other.s && this.e >= other.e;
+  }
+
+  /**
+   * Return whether this Interval has the same start and end as the specified Interval.
+   * @param {Interval} other
+   * @return {boolean}
+   */
+  equals(other) {
+    return this.s.equals(other.s) && this.e.equals(other.e);
+  }
+
+  /**
+   * Return an Interval representing the intersection of this Interval and the specified Interval.
+   * Specifically, the resulting Interval has the maximum start time and the minimum end time of the two Intervals.
+   * Returns null if the intersection is empty, i.e., the intervals don't intersect.
+   * @param {Interval} other
+   * @return {Interval}
+   */
+  intersection(other) {
+    if (!this.isValid) return this;
+    const s = this.s > other.s ? this.s : other.s,
+      e = this.e < other.e ? this.e : other.e;
+
+    if (s > e) {
+      return null;
+    } else {
+      return Interval.fromDateTimes(s, e);
+    }
+  }
+
+  /**
+   * Return an Interval representing the union of this Interval and the specified Interval.
+   * Specifically, the resulting Interval has the minimum start time and the maximum end time of the two Intervals.
+   * @param {Interval} other
+   * @return {Interval}
+   */
+  union(other) {
+    if (!this.isValid) return this;
+    const s = this.s < other.s ? this.s : other.s,
+      e = this.e > other.e ? this.e : other.e;
+    return Interval.fromDateTimes(s, e);
+  }
+
+  /**
+   * Merge an array of Intervals into a equivalent minimal set of Intervals.
+   * Combines overlapping and adjacent Intervals.
+   * @param {[Interval]} intervals
+   * @return {[Interval]}
+   */
+  static merge(intervals) {
+    const [found, final] = intervals.sort((a, b) => a.s - b.s).reduce(([sofar, current], item) => {
+      if (!current) {
+        return [sofar, item];
+      } else if (current.overlaps(item) || current.abutsStart(item)) {
+        return [sofar, current.union(item)];
+      } else {
+        return [sofar.concat([current]), item];
+      }
+    },
+    [[], null]);
+    if (final) {
+      found.push(final);
+    }
+    return found;
+  }
+
+  /**
+   * Return an array of Intervals representing the spans of time that only appear in one of the specified Intervals.
+   * @param {[Interval]} intervals
+   * @return {[Interval]}
+   */
+  static xor(intervals) {
+    let start = null,
+      currentCount = 0;
+    const results = [],
+      ends = intervals.map(i => [{ time: i.s, type: 's' }, { time: i.e, type: 'e' }]),
+      flattened = Array.prototype.concat(...ends),
+      arr = flattened.sort((a, b) => a.time - b.time);
+
+    for (const i of arr) {
+      currentCount += i.type === 's' ? 1 : -1;
+
+      if (currentCount === 1) {
+        start = i.time;
+      } else {
+        if (start && +start !== +i.time) {
+          results.push(Interval.fromDateTimes(start, i.time));
+        }
+
+        start = null;
+      }
+    }
+
+    return Interval.merge(results);
+  }
+
+  /**
+   * Return an Interval representing the span of time in this Interval that doesn't overlap with any of the specified Intervals.
+   * @param {...Interval} intervals
+   * @return {[Interval]}
+   */
+  difference(...intervals) {
+    return Interval.xor([this].concat(intervals))
+      .map(i => this.intersection(i))
+      .filter(i => i && !i.isEmpty());
+  }
+
+  /**
+   * Returns a string representation of this Interval appropriate for debugging.
+   * @return {string}
+   */
+  toString() {
+    if (!this.isValid) return INVALID;
+    return `[${this.s.toISO()} – ${this.e.toISO()})`;
+  }
+
+  /**
+   * Returns a string representation of this Interval appropriate for the REPL.
+   * @return {string}
+   */
+  inspect() {
+    if (this.isValid) {
+      return `Interval {\n  start: ${this.start.toISO()},\n  end: ${this.end.toISO()},\n  zone:   ${this
+        .start.zone.name},\n  locale:   ${this.start.locale} }`;
+    } else {
+      return `Interval { Invalid, reason: ${this.invalidReason} }`;
+    }
+  }
+
+  /**
+   * Returns an ISO 8601-compliant string representation of this Interval.
+   * @see https://en.wikipedia.org/wiki/ISO_8601#Time_intervals
+   * @param {Object} opts - The same options as {@link DateTime.toISO}
+   * @return {string}
+   */
+  toISO(opts) {
+    if (!this.isValid) return INVALID;
+    return `${this.s.toISO(opts)}/${this.e.toISO(opts)}`;
+  }
+
+  /**
+   * Returns a string representation of this Interval formatted according to the specified format string.
+   * @param {string} dateFormat - the format string. This string formats the start and end time. See {@link DateTime.toFormat} for details.
+   * @param {Object} opts - options
+   * @param {string} [opts.separator =  ' – '] - a separator to place between the start and end representations
+   * @return {string}
+   */
+  toFormat(dateFormat, { separator = ' – ' } = {}) {
+    if (!this.isValid) return INVALID;
+    return `${this.s.toFormat(dateFormat)}${separator}${this.e.toFormat(dateFormat)}`;
+  }
+
+  /**
+   * Return a Duration representing the time spanned by this interval.
+   * @param {string|string[]} [unit=['milliseconds']] - the unit or units (such as 'hours' or 'days') to include in the duration.
+   * @param {Object} opts - options that affect the creation of the Duration
+   * @param {string} [opts.conversionAccuracy='casual'] - the conversion system to use
+   * @example Interval.fromDateTimes(dt1, dt2).toDuration().toObject() //=> { milliseconds: 88489257 }
+   * @example Interval.fromDateTimes(dt1, dt2).toDuration('days').toObject() //=> { days: 1.0241812152777778 }
+   * @example Interval.fromDateTimes(dt1, dt2).toDuration(['hours', 'minutes']).toObject() //=> { hours: 24, minutes: 34.82095 }
+   * @example Interval.fromDateTimes(dt1, dt2).toDuration(['hours', 'minutes', 'seconds']).toObject() //=> { hours: 24, minutes: 34, seconds: 49.257 }
+   * @example Interval.fromDateTimes(dt1, dt2).toDuration('seconds').toObject() //=> { seconds: 88489.257 }
+   * @return {Duration}
+   */
+  toDuration(unit, opts) {
+    if (!this.isValid) {
+      return __WEBPACK_IMPORTED_MODULE_1__duration__["a" /* default */].invalid(this.invalidReason);
+    }
+    return this.e.diff(this.s, unit, opts);
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Interval;
+
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__datetime__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__settings__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_locale__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_util__ = __webpack_require__(0);
+
+
+
+
+
+
+
+/**
+ * The Info class contains static methods for retrieving general time and date related data. For example, it has methods for finding out if a time zone has a DST, for listing the months in any supported locale, and for discovering which of Luxon features are available in the current environment.
+ */
+class Info {
+  /**
+   * Return whether the specified zone contains a DST.
+   * @param {string|Zone} [zone='local'] - Zone to check. Defaults to the environment's local zone.
+   * @return {boolean}
+   */
+  static hasDST(zone = __WEBPACK_IMPORTED_MODULE_1__settings__["a" /* default */].defaultZone) {
+    const proto = __WEBPACK_IMPORTED_MODULE_0__datetime__["default"].local()
+      .setZone(zone)
+      .set({ month: 12 });
+
+    return !zone.universal && proto.offset !== proto.set({ month: 6 }).offset;
+  }
+
+  /**
+   * Return whether the specified zone is a valid IANA specifier.
+   * @param {string} zone - Zone to check
+   * @return {boolean}
+   */
+  static isValidIANAZone(zone) {
+    return !!__WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__["a" /* default */].isValidSpecifier(zone) && __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__["a" /* default */].isValidZone(zone);
+  }
+
+  /**
+   * Return an array of standalone month names.
+   * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
+   * @param {string} [length='long'] - the length of the month representation, such as "numeric", "2-digit", "narrow", "short", "long"
+   * @param {Object} opts - options
+   * @param {string} [opts.locale] - the locale code
+   * @param {string} [opts.numberingSystem=null] - the numbering system
+   * @param {string} [opts.outputCalendar='gregory'] - the calendar
+   * @example Info.months()[0] //=> 'January'
+   * @example Info.months('short')[0] //=> 'Jan'
+   * @example Info.months('numeric')[0] //=> '1'
+   * @example Info.months('short', { locale: 'fr-CA' } )[0] //=> 'janv.'
+   * @example Info.months('numeric', { locale: 'ar' })[0] //=> '١'
+   * @example Info.months('long', { outputCalendar: 'islamic' })[0] //=> 'Rabiʻ I'
+   * @return {[string]}
+   */
+  static months(
+    length = 'long',
+    { locale = null, numberingSystem = null, outputCalendar = 'gregory' } = {}
+  ) {
+    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, outputCalendar).months(length);
+  }
+
+  /**
+   * Return an array of format month names.
+   * Format months differ from standalone months in that they're meant to appear next to the day of the month. In some languages, that
+   * changes the string.
+   * See {@link months}
+   * @param {string} [length='long'] - the length of the month representation, such as "numeric", "2-digit", "narrow", "short", "long"
+   * @param {Object} opts - options
+   * @param {string} [opts.locale] - the locale code
+   * @param {string} [opts.numberingSystem=null] - the numbering system
+   * @param {string} [opts.outputCalendar='gregory'] - the calendar
+   * @return {[string]}
+   */
+  static monthsFormat(
+    length = 'long',
+    { locale = null, numberingSystem = null, outputCalendar = 'gregory' } = {}
+  ) {
+    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, outputCalendar).months(length, true);
+  }
+
+  /**
+   * Return an array of standalone week names.
+   * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
+   * @param {string} [length='long'] - the length of the month representation, such as "narrow", "short", "long".
+   * @param {Object} opts - options
+   * @param {string} [opts.locale] - the locale code
+   * @param {string} [opts.numberingSystem=null] - the numbering system
+   * @example Info.weekdays()[0] //=> 'Monday'
+   * @example Info.weekdays('short')[0] //=> 'Mon'
+   * @example Info.weekdays('short', { locale: 'fr-CA' })[0] //=> 'lun.'
+   * @example Info.weekdays('short', { locale: 'ar' })[0] //=> 'الاثنين'
+   * @return {[string]}
+   */
+  static weekdays(length = 'long', { locale = null, numberingSystem = null } = {}) {
+    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, null).weekdays(length);
+  }
+
+  /**
+   * Return an array of format week names.
+   * Format weekdays differ from standalone weekdays in that they're meant to appear next to more date information. In some languages, that
+   * changes the string.
+   * See {@link weekdays}
+   * @param {string} [length='long'] - the length of the month representation, such as "narrow", "short", "long".
+   * @param {Object} opts - options
+   * @param {string} [opts.locale=null] - the locale code
+   * @param {string} [opts.numberingSystem=null] - the numbering system
+   * @return {[string]}
+   */
+  static weekdaysFormat(length = 'long', { locale = null, numberingSystem = null } = {}) {
+    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, null).weekdays(length, true);
+  }
+
+  /**
+   * Return an array of meridiems.
+   * @param {Object} opts - options
+   * @param {string} [opts.locale] - the locale code
+   * @example Info.meridiems() //=> [ 'AM', 'PM' ]
+   * @example Info.meridiems({ locale: 'de' }) //=> [ 'vorm.', 'nachm.' ]
+   * @return {[string]}
+   */
+  static meridiems({ locale = null } = {}) {
+    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale).meridiems();
+  }
+
+  /**
+   * Return an array of eras, such as ['BC', 'AD']. The locale can be specified, but the calendar system is always Gregorian.
+   * @param {string} [length='short'] - the length of the era representation, such as "short" or "long".
+   * @param {Object} opts - options
+   * @param {string} [opts.locale] - the locale code
+   * @example Info.eras() //=> [ 'BC', 'AD' ]
+   * @example Info.eras('long') //=> [ 'Before Christ', 'Anno Domini' ]
+   * @example Info.eras('long', { locale: 'fr' }) //=> [ 'avant Jésus-Christ', 'après Jésus-Christ' ]
+   * @return {[string]}
+   */
+  static eras(length = 'short', { locale = null } = {}) {
+    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, null, 'gregory').eras(length);
+  }
+
+  /**
+   * Return the set of available features in this environment.
+   * Some features of Luxon are not available in all environments. For example, on older browsers, timezone support is not available. Use this function to figure out if that's the case.
+   * Keys:
+   * * `zones`: whether this environment supports IANA timezones
+   * * `intlTokens`: whether this environment supports internationalized token-based formatting/parsing
+   * * `intl`: whether this environment supports general internationalization
+   * @example Info.features() //=> { intl: true, intlTokens: false, zones: true }
+   * @return {Object}
+   */
+  static features() {
+    let intl = false,
+      intlTokens = false,
+      zones = false;
+
+    if (__WEBPACK_IMPORTED_MODULE_4__impl_util__["e" /* hasIntl */]()) {
+      intl = true;
+      intlTokens = __WEBPACK_IMPORTED_MODULE_4__impl_util__["d" /* hasFormatToParts */]();
+
+      try {
+        zones =
+          new Intl.DateTimeFormat('en', { timeZone: 'America/New_York' }).resolvedOptions()
+            .timeZone === 'America/New_York';
+      } catch (e) {
+        zones = false;
+      }
+    }
+
+    return { intl, intlTokens, zones };
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Info;
+
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(11);
+
+
+function dayDiff(earlier, later) {
+  const utcDayStart = dt =>
+      dt
+        .toUTC(0, { keepLocalTime: true })
+        .startOf('day')
+        .valueOf(),
+    ms = utcDayStart(later) - utcDayStart(earlier);
+  return Math.floor(__WEBPACK_IMPORTED_MODULE_0__duration__["a" /* default */].fromMillis(ms).as('days'));
+}
+
+function highOrderDiffs(cursor, later, units) {
+  const differs = [
+    ['years', (a, b) => b.year - a.year],
+    ['months', (a, b) => b.month - a.month + (b.year - a.year) * 12],
+    [
+      'weeks',
+      (a, b) => {
+        const days = dayDiff(a, b);
+        return (days - days % 7) / 7;
+      }
+    ],
+    ['days', dayDiff]
+  ];
+
+  const results = {};
+  let lowestOrder, highWater;
+
+  for (const [unit, differ] of differs) {
+    if (units.indexOf(unit) >= 0) {
+      lowestOrder = unit;
+
+      let delta = differ(cursor, later);
+
+      highWater = cursor.plus({ [unit]: delta });
+
+      if (highWater > later) {
+        cursor = highWater.minus({ [unit]: 1 });
+        delta -= 1;
+      } else {
+        cursor = highWater;
+      }
+
+      if (delta > 0) {
+        results[unit] = delta;
+      }
+    }
+  }
+
+  return [cursor, results, highWater, lowestOrder];
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (function(earlier, later, units, opts) {
+  let [cursor, results, highWater, lowestOrder] = highOrderDiffs(earlier, later, units);
+
+  const remainingMillis = later - cursor;
+
+  const lowerOrderUnits = units.filter(
+    u => ['hours', 'minutes', 'seconds', 'milliseconds'].indexOf(u) >= 0
+  );
+
+  if (lowerOrderUnits.length === 0) {
+    if (highWater < later) {
+      highWater = cursor.plus({ [lowestOrder]: 1 });
+    }
+
+    if (highWater !== cursor) {
+      results[lowestOrder] = (results[lowestOrder] || 0) + remainingMillis / (highWater - cursor);
+    }
+  }
+
+  const duration = __WEBPACK_IMPORTED_MODULE_0__duration__["a" /* default */].fromObject(Object.assign(results, opts));
+
+  if (lowerOrderUnits.length > 0) {
+    return __WEBPACK_IMPORTED_MODULE_0__duration__["a" /* default */].fromMillis(remainingMillis, opts)
+      .shiftTo(...lowerOrderUnits)
+      .plus(duration);
+  } else {
+    return duration;
+  }
+});
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = explainFromTokens;
+/* harmony export (immutable) */ __webpack_exports__["b"] = parseFromTokens;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formatter__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(6);
+
+
+
+
+
+const MISSING_FTP = 'missing Intl.DateTimeFormat.formatToParts support';
+
+function intUnit(regex, post = i => i) {
+  return { regex, deser: ([s]) => post(parseInt(s)) };
+}
+
+function fixListRegex(s) {
+  // make dots optional and also make them literal
+  return s.replace(/\./, '\\.?');
+}
+
+function stripInsensitivities(s) {
+  return s.replace(/\./, '').toLowerCase();
+}
+
+function oneOf(strings, startIndex) {
+  if (strings === null) {
+    return null;
+  } else {
+    return {
+      regex: RegExp(strings.map(fixListRegex).join('|')),
+      deser: ([s]) =>
+        strings.findIndex(i => stripInsensitivities(s) === stripInsensitivities(i)) + startIndex
+    };
+  }
+}
+
+function offset(regex, groups) {
+  return { regex, deser: ([, h, m]) => __WEBPACK_IMPORTED_MODULE_0__util__["s" /* signedOffset */](h, m), groups };
+}
+
+function simple(regex) {
+  return { regex, deser: ([s]) => s };
+}
+
+function unitForToken(token, loc) {
+  const one = /\d/,
+    two = /\d{2}/,
+    three = /\d{3}/,
+    four = /\d{4}/,
+    oneOrTwo = /\d{1,2}/,
+    oneToThree = /\d{1,3}/,
+    twoToFour = /\d{2,4}/,
+    literal = t => ({ regex: RegExp(t.val), deser: ([s]) => s, literal: true }),
+    unitate = t => {
+      if (token.literal) {
+        return literal(t);
+      }
+      switch (t.val) {
+        // era
+        case 'G':
+          return oneOf(loc.eras('short', false), 0);
+        case 'GG':
+          return oneOf(loc.eras('long', false), 0);
+        // years
+        case 'y':
+          return intUnit(/\d{1,6}/);
+        case 'yy':
+          return intUnit(twoToFour, __WEBPACK_IMPORTED_MODULE_0__util__["u" /* untruncateYear */]);
+        case 'yyyy':
+          return intUnit(four);
+        case 'yyyyy':
+          return intUnit(/\d{4,6}/);
+        case 'yyyyyy':
+          return intUnit(/\d{6}/);
+        // months
+        case 'M':
+          return intUnit(oneOrTwo);
+        case 'MM':
+          return intUnit(two);
+        case 'MMM':
+          return oneOf(loc.months('short', false, false), 1);
+        case 'MMMM':
+          return oneOf(loc.months('long', false, false), 1);
+        case 'L':
+          return intUnit(oneOrTwo);
+        case 'LL':
+          return intUnit(two);
+        case 'LLL':
+          return oneOf(loc.months('short', true, false), 1);
+        case 'LLLL':
+          return oneOf(loc.months('long', true, false), 1);
+        // dates
+        case 'd':
+          return intUnit(oneOrTwo);
+        case 'dd':
+          return intUnit(two);
+        // ordinals
+        case 'o':
+          return intUnit(oneToThree);
+        case 'ooo':
+          return intUnit(three);
+        // time
+        case 'HH':
+          return intUnit(two);
+        case 'H':
+          return intUnit(oneOrTwo);
+        case 'hh':
+          return intUnit(two);
+        case 'h':
+          return intUnit(oneOrTwo);
+        case 'mm':
+          return intUnit(two);
+        case 'm':
+          return intUnit(oneOrTwo);
+        case 's':
+          return intUnit(oneOrTwo);
+        case 'ss':
+          return intUnit(two);
+        case 'S':
+          return intUnit(oneToThree);
+        case 'SSS':
+          return intUnit(three);
+        case 'u':
+          return simple(/\d{1,9}/);
+        // meridiem
+        case 'a':
+          return oneOf(loc.meridiems(), 0);
+        // weekYear (k)
+        case 'kkkk':
+          return intUnit(four);
+        case 'kk':
+          return intUnit(twoToFour, __WEBPACK_IMPORTED_MODULE_0__util__["u" /* untruncateYear */]);
+        // weekNumber (W)
+        case 'W':
+          return intUnit(oneOrTwo);
+        case 'WW':
+          return intUnit(two);
+        // weekdays
+        case 'E':
+        case 'c':
+          return intUnit(one);
+        case 'EEE':
+          return oneOf(loc.weekdays('short', false, false), 1);
+        case 'EEEE':
+          return oneOf(loc.weekdays('long', false, false), 1);
+        case 'ccc':
+          return oneOf(loc.weekdays('short', true, false), 1);
+        case 'cccc':
+          return oneOf(loc.weekdays('long', true, false), 1);
+        // offset/zone
+        case 'Z':
+        case 'ZZ':
+          return offset(/([+-]\d{1,2})(?::(\d{2}))?/, 2);
+        case 'ZZZ':
+          return offset(/([+-]\d{1,2})(\d{2})?/, 2);
+        // we don't support ZZZZ (PST) or ZZZZZ (Pacific Standard Time) in parsing
+        // because we don't have any way to figure out what they are
+        case 'z':
+          return simple(/[A-Za-z_]{1,256}\/[A-Za-z_]{1,256}/);
+        default:
+          return literal(t);
+      }
+    };
+
+  const unit = unitate(token) || {
+    invalidReason: MISSING_FTP
+  };
+
+  unit.token = token;
+
+  return unit;
+}
+
+function buildRegex(units) {
+  const re = units.map(u => u.regex).reduce((f, r) => `${f}(${r.source})`, '');
+  return [`^${re}$`, units];
+}
+
+function match(input, regex, handlers) {
+  const matches = input.match(regex);
+
+  if (matches) {
+    const all = {};
+    let matchIndex = 1;
+    for (const i in handlers) {
+      if (handlers.hasOwnProperty(i)) {
+        const h = handlers[i],
+          groups = h.groups ? h.groups + 1 : 1;
+        if (!h.literal && h.token) {
+          all[h.token.val[0]] = h.deser(matches.slice(matchIndex, matchIndex + groups));
+        }
+        matchIndex += groups;
+      }
+    }
+    return [matches, all];
+  } else {
+    return [matches, {}];
+  }
+}
+
+function dateTimeFromMatches(matches) {
+  const toField = token => {
+    switch (token) {
+      case 'S':
+        return 'millisecond';
+      case 's':
+        return 'second';
+      case 'm':
+        return 'minute';
+      case 'h':
+      case 'H':
+        return 'hour';
+      case 'd':
+        return 'day';
+      case 'o':
+        return 'ordinal';
+      case 'L':
+      case 'M':
+        return 'month';
+      case 'y':
+        return 'year';
+      case 'E':
+      case 'c':
+        return 'weekday';
+      case 'W':
+        return 'weekNumber';
+      case 'k':
+        return 'weekYear';
+      default:
+        return null;
+    }
+  };
+
+  let zone;
+  if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.Z)) {
+    zone = new __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__["a" /* default */](matches.Z);
+  } else if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.z)) {
+    zone = new __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__["a" /* default */](matches.z);
+  } else {
+    zone = null;
+  }
+
+  if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.h)) {
+    if (matches.h < 12 && matches.a === 1) {
+      matches.h += 12;
+    } else if (matches.h === 12 && matches.a === 0) {
+      matches.h = 0;
+    }
+  }
+
+  if (matches.G === 0 && matches.y) {
+    matches.y = -matches.y;
+  }
+
+  if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.u)) {
+    matches.S = __WEBPACK_IMPORTED_MODULE_0__util__["o" /* parseMillis */](matches.u);
+  }
+
+  const vals = Object.keys(matches).reduce((r, k) => {
+    const f = toField(k);
+    if (f) {
+      r[f] = matches[k];
+    }
+
+    return r;
+  }, {});
+
+  return [vals, zone];
+}
+
+/**
+ * @private
+ */
+
+function explainFromTokens(locale, input, format) {
+  const tokens = __WEBPACK_IMPORTED_MODULE_1__formatter__["a" /* default */].parseFormat(format),
+    units = tokens.map(t => unitForToken(t, locale)),
+    disqualifyingUnit = units.find(t => t.invalidReason);
+
+  if (disqualifyingUnit) {
+    return { input, tokens, invalidReason: disqualifyingUnit.invalidReason };
+  } else {
+    const [regexString, handlers] = buildRegex(units),
+      regex = RegExp(regexString, 'i'),
+      [rawMatches, matches] = match(input, regex, handlers),
+      [result, zone] = matches ? dateTimeFromMatches(matches) : [null, null];
+
+    return { input, tokens, regex, rawMatches, matches, result, zone };
+  }
+}
+
+function parseFromTokens(locale, input, format) {
+  const { result, zone, invalidReason } = explainFromTokens(locale, input, format);
+  return [result, zone, invalidReason];
+}
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = gregorianToWeek;
+/* harmony export (immutable) */ __webpack_exports__["h"] = weekToGregorian;
+/* harmony export (immutable) */ __webpack_exports__["a"] = gregorianToOrdinal;
+/* harmony export (immutable) */ __webpack_exports__["g"] = ordinalToGregorian;
+/* harmony export (immutable) */ __webpack_exports__["f"] = hasInvalidWeekData;
+/* harmony export (immutable) */ __webpack_exports__["d"] = hasInvalidOrdinalData;
+/* harmony export (immutable) */ __webpack_exports__["c"] = hasInvalidGregorianData;
+/* harmony export (immutable) */ __webpack_exports__["e"] = hasInvalidTimeData;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
+
+
+const nonLeapLadder = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
+  leapLadder = [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
+
+function dayOfWeek(year, month, day) {
+  const js = new Date(Date.UTC(year, month - 1, day)).getUTCDay();
+  return js === 0 ? 7 : js;
+}
+
+function computeOrdinal(year, month, day) {
+  return day + (__WEBPACK_IMPORTED_MODULE_0__util__["g" /* isLeapYear */](year) ? leapLadder : nonLeapLadder)[month - 1];
+}
+
+function uncomputeOrdinal(year, ordinal) {
+  const table = __WEBPACK_IMPORTED_MODULE_0__util__["g" /* isLeapYear */](year) ? leapLadder : nonLeapLadder,
+    month0 = table.findIndex(i => i < ordinal),
+    day = ordinal - table[month0];
+  return { month: month0 + 1, day };
+}
+
+/**
+ * @private
+ */
+
+function gregorianToWeek(gregObj) {
+  const { year, month, day } = gregObj,
+    ordinal = computeOrdinal(year, month, day),
+    weekday = dayOfWeek(year, month, day);
+
+  let weekNumber = Math.floor((ordinal - weekday + 10) / 7),
+    weekYear;
+
+  if (weekNumber < 1) {
+    weekYear = year - 1;
+    weekNumber = __WEBPACK_IMPORTED_MODULE_0__util__["v" /* weeksInWeekYear */](weekYear);
+  } else if (weekNumber > __WEBPACK_IMPORTED_MODULE_0__util__["v" /* weeksInWeekYear */](year)) {
+    weekYear = year + 1;
+    weekNumber = 1;
+  } else {
+    weekYear = year;
+  }
+
+  return Object.assign({ weekYear, weekNumber, weekday }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](gregObj));
+}
+
+function weekToGregorian(weekData) {
+  const { weekYear, weekNumber, weekday } = weekData,
+    weekdayOfJan4 = dayOfWeek(weekYear, 1, 4),
+    yearInDays = __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](weekYear);
+  let ordinal = weekNumber * 7 + weekday - weekdayOfJan4 - 3,
+    year;
+
+  if (ordinal < 1) {
+    year = weekYear - 1;
+    ordinal += __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](year);
+  } else if (ordinal > yearInDays) {
+    year = weekYear + 1;
+    ordinal -= __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](year);
+  } else {
+    year = weekYear;
+  }
+
+  const { month, day } = uncomputeOrdinal(year, ordinal);
+
+  return Object.assign({ year, month, day }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](weekData));
+}
+
+function gregorianToOrdinal(gregData) {
+  const { year, month, day } = gregData,
+    ordinal = computeOrdinal(year, month, day);
+
+  return Object.assign({ year, ordinal }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](gregData));
+}
+
+function ordinalToGregorian(ordinalData) {
+  const { year, ordinal } = ordinalData,
+    { month, day } = uncomputeOrdinal(year, ordinal);
+
+  return Object.assign({ year, month, day }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](ordinalData));
+}
+
+function hasInvalidWeekData(obj) {
+  const validYear = __WEBPACK_IMPORTED_MODULE_0__util__["h" /* isNumber */](obj.weekYear),
+    validWeek = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.weekNumber, 1, __WEBPACK_IMPORTED_MODULE_0__util__["v" /* weeksInWeekYear */](obj.weekYear)),
+    validWeekday = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.weekday, 1, 7);
+
+  if (!validYear) {
+    return 'weekYear out of range';
+  } else if (!validWeek) {
+    return 'week out of range';
+  } else if (!validWeekday) {
+    return 'weekday out of range';
+  } else return false;
+}
+
+function hasInvalidOrdinalData(obj) {
+  const validYear = __WEBPACK_IMPORTED_MODULE_0__util__["h" /* isNumber */](obj.year),
+    validOrdinal = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.ordinal, 1, __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](obj.year));
+
+  if (!validYear) {
+    return 'year out of range';
+  } else if (!validOrdinal) {
+    return 'ordinal out of range';
+  } else return false;
+}
+
+function hasInvalidGregorianData(obj) {
+  const validYear = __WEBPACK_IMPORTED_MODULE_0__util__["h" /* isNumber */](obj.year),
+    validMonth = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.month, 1, 12),
+    validDay = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.day, 1, __WEBPACK_IMPORTED_MODULE_0__util__["b" /* daysInMonth */](obj.year, obj.month));
+
+  if (!validYear) {
+    return 'year out of range';
+  } else if (!validMonth) {
+    return 'month out of range';
+  } else if (!validDay) {
+    return 'day out of range';
+  } else return false;
+}
+
+function hasInvalidTimeData(obj) {
+  const validHour = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.hour, 0, 23),
+    validMinute = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.minute, 0, 59),
+    validSecond = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.second, 0, 59),
+    validMillisecond = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.millisecond, 0, 999);
+
+  if (!validHour) {
+    return 'hour out of range';
+  } else if (!validMinute) {
+    return 'minute out of range';
+  } else if (!validSecond) {
+    return 'second out of range';
+  } else if (!validMillisecond) {
+    return 'millisecond out of range';
+  } else return false;
+}
+
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5403,15 +6705,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _createElement = __webpack_require__(25);
+var _createElement = __webpack_require__(31);
 
 var _createElement2 = _interopRequireDefault(_createElement);
 
-var _lookup = __webpack_require__(26);
+var _lookup = __webpack_require__(32);
 
 var _lookup2 = _interopRequireDefault(_lookup);
 
-var _randomizer = __webpack_require__(27);
+var _randomizer = __webpack_require__(33);
 
 var _randomizer2 = _interopRequireDefault(_randomizer);
 
@@ -5620,7 +6922,7 @@ var _class = function () {
 exports.default = _class;
 
 /***/ }),
-/* 25 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5647,7 +6949,7 @@ function createElement(str, domrDataId) {
 exports.default = createElement;
 
 /***/ }),
-/* 26 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5667,7 +6969,7 @@ function Lookup(elmId) {
 exports.default = Lookup;
 
 /***/ }),
-/* 27 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5685,7 +6987,7 @@ function randomizer() {
 exports.default = randomizer;
 
 /***/ }),
-/* 28 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5697,11 +6999,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _addView = __webpack_require__(29);
+var _addView = __webpack_require__(35);
 
 var _addView2 = _interopRequireDefault(_addView);
 
-var _hashLocation = __webpack_require__(4);
+var _hashLocation = __webpack_require__(10);
 
 var _hashLocation2 = _interopRequireDefault(_hashLocation);
 
@@ -5817,7 +7119,7 @@ var _class = function () {
 exports.default = _class;
 
 /***/ }),
-/* 29 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5827,7 +7129,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _cloneObject = __webpack_require__(30);
+var _cloneObject = __webpack_require__(36);
 
 var _cloneObject2 = _interopRequireDefault(_cloneObject);
 
@@ -5850,7 +7152,7 @@ function addView(candidate) {
 exports.default = addView;
 
 /***/ }),
-/* 30 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5889,7 +7191,7 @@ function cloneObject(obj) {
 exports.default = cloneObject;
 
 /***/ }),
-/* 31 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5899,7 +7201,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _hashLocation = __webpack_require__(4);
+var _hashLocation = __webpack_require__(10);
 
 var _hashLocation2 = _interopRequireDefault(_hashLocation);
 
@@ -6003,7 +7305,7 @@ function hashLocationSet(field, opt) {
 exports.default = hashLocationSet;
 
 /***/ }),
-/* 32 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6013,7 +7315,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _hashLocation = __webpack_require__(4);
+var _hashLocation = __webpack_require__(10);
 
 var _hashLocation2 = _interopRequireDefault(_hashLocation);
 
@@ -6033,7 +7335,7 @@ function hashLocationGet(field) {
 exports.default = hashLocationGet;
 
 /***/ }),
-/* 33 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6043,7 +7345,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _hashLocation = __webpack_require__(4);
+var _hashLocation = __webpack_require__(10);
 
 var _hashLocation2 = _interopRequireDefault(_hashLocation);
 
@@ -6056,7 +7358,7 @@ var utils = {
 exports.default = utils;
 
 /***/ }),
-/* 34 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6066,7 +7368,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _HomePageView = __webpack_require__(35);
+var _HomePageView = __webpack_require__(41);
 
 var _HomePageView2 = _interopRequireDefault(_HomePageView);
 
@@ -6090,7 +7392,7 @@ var routes = [{
 exports.default = routes;
 
 /***/ }),
-/* 35 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6107,18 +7409,18 @@ exports.default = function () {
   wrapper.innerHTML = homeContainer.Render();
 };
 
-var _apiSet = __webpack_require__(16);
+var _apiSet = __webpack_require__(18);
 
 var _apiSet2 = _interopRequireDefault(_apiSet);
 
-var _HomeContainer = __webpack_require__(36);
+var _HomeContainer = __webpack_require__(42);
 
 var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 36 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6128,15 +7430,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _domrC = __webpack_require__(3);
+var _domrC = __webpack_require__(9);
 
-var _goodOlAjaxPromise = __webpack_require__(17);
+var _goodOlAjaxPromise = __webpack_require__(19);
 
 var _goodOlAjaxPromise2 = _interopRequireDefault(_goodOlAjaxPromise);
 
-var _dbManipulation = __webpack_require__(11);
+var _dbManipulation = __webpack_require__(15);
 
-var _runningTime = __webpack_require__(19);
+var _runningTime = __webpack_require__(21);
 
 var _runningTime2 = _interopRequireDefault(_runningTime);
 
@@ -6237,7 +7539,7 @@ exports.default = class extends _domrC.Component {
 };
 
 /***/ }),
-/* 37 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6247,7 +7549,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dexie = __webpack_require__(38);
+var _dexie = __webpack_require__(44);
 
 var _dexie2 = _interopRequireDefault(_dexie);
 
@@ -6261,7 +7563,7 @@ db.version(1).stores({
 exports.default = db;
 
 /***/ }),
-/* 38 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10723,10 +12025,10 @@ dbNamesDB.version(1).stores({ dbnames: 'name' });
 /* harmony default export */ __webpack_exports__["default"] = (Dexie);
 //# sourceMappingURL=dexie.es.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(18), __webpack_require__(39).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(20), __webpack_require__(45).setImmediate))
 
 /***/ }),
-/* 39 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -10779,13 +12081,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(40);
+__webpack_require__(46);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 40 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -10975,10 +12277,10 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18), __webpack_require__(41)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20), __webpack_require__(47)))
 
 /***/ }),
-/* 41 */
+/* 47 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -11168,1288 +12470,6 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 42 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zone__ = __webpack_require__(2);
-
-
-let singleton = null;
-
-class InvalidZone extends __WEBPACK_IMPORTED_MODULE_0__zone__["a" /* default */] {
-  static get instance() {
-    if (singleton === null) {
-      singleton = new InvalidZone();
-    }
-    return singleton;
-  }
-
-  get type() {
-    return 'invalid';
-  }
-
-  get name() {
-    return null;
-  }
-
-  get universal() {
-    return false;
-  }
-
-  offsetName() {
-    return null;
-  }
-
-  offset() {
-    return NaN;
-  }
-
-  equals() {
-    return false;
-  }
-
-  get isValid() {
-    return false;
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = InvalidZone;
-
-
-
-/***/ }),
-/* 43 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__datetime__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__duration__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__errors__ = __webpack_require__(7);
-
-
-
-
-
-const INVALID = 'Invalid Interval';
-
-// checks if the start is equal to or before the end
-function validateStartEnd(start, end) {
-  return !!start && !!end && start.isValid && end.isValid && start <= end;
-}
-
-/**
- * An Interval object represents a half-open interval of time, where each endpoint is a {@link DateTime}. Conceptually, it's a container for those two endpoints, accompanied by methods for creating, parsing, interrogating, comparing, transforming, and formatting them.
- *
- * Here is a brief overview of the most commonly used methods and getters in Interval:
- *
- * * **Creation** To create an Interval, use {@link fromDateTimes}, {@link after}, {@link before}, or {@link fromISO}.
- * * **Accessors** Use {@link start} and {@link end} to get the start and end.
- * * **Interrogation** To analyze the Interval, use {@link count}, {@link length}, {@link hasSame}, {@link contains}, {@link isAfter}, or {@link isBefore}.
- * * **Transformation** To create other Intervals out of this one, use {@link set}, {@link splitAt}, {@link splitBy}, {@link divideEqually}, {@link merge}, {@link xor}, {@link union}, {@link intersection}, or {@link difference}.
- * * **Comparison** To compare this Interval to another one, use {@link equals}, {@link overlaps}, {@link abutsStart}, {@link abutsEnd}, {@link engulfs}
- * * **Output*** To convert the Interval into other representations, see {@link toString}, {@link toISO}, {@link toFormat}, and {@link toDuration}.
- */
-class Interval {
-  /**
-   * @private
-   */
-  constructor(config) {
-    /**
-     * @access private
-     */
-    this.s = config.start;
-    /**
-     * @access private
-     */
-    this.e = config.end;
-    /**
-     * @access private
-     */
-    this.invalid = config.invalidReason || null;
-  }
-
-  /**
-   * Create an invalid Interval.
-   * @return {Interval}
-   */
-  static invalid(reason) {
-    if (!reason) {
-      throw new __WEBPACK_IMPORTED_MODULE_3__errors__["b" /* InvalidArgumentError */]('need to specify a reason the DateTime is invalid');
-    }
-    if (__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* default */].throwOnInvalid) {
-      throw new __WEBPACK_IMPORTED_MODULE_3__errors__["e" /* InvalidIntervalError */](reason);
-    } else {
-      return new Interval({ invalidReason: reason });
-    }
-  }
-
-  /**
-   * Create an Interval from a start DateTime and an end DateTime. Inclusive of the start but not the end.
-   * @param {DateTime|Date|Object} start
-   * @param {DateTime|Date|Object} end
-   * @return {Interval}
-   */
-  static fromDateTimes(start, end) {
-    const builtStart = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](start),
-      builtEnd = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](end);
-
-    return new Interval({
-      start: builtStart,
-      end: builtEnd,
-      invalidReason: validateStartEnd(builtStart, builtEnd) ? null : 'invalid endpoints'
-    });
-  }
-
-  /**
-   * Create an Interval from a start DateTime and a Duration to extend to.
-   * @param {DateTime|Date|Object} start
-   * @param {Duration|Object|number} duration - the length of the Interval.
-   * @return {Interval}
-   */
-  static after(start, duration) {
-    const dur = __WEBPACK_IMPORTED_MODULE_1__duration__["b" /* friendlyDuration */](duration),
-      dt = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](start);
-    return Interval.fromDateTimes(dt, dt.plus(dur));
-  }
-
-  /**
-   * Create an Interval from an end DateTime and a Duration to extend backwards to.
-   * @param {DateTime|Date|Object} end
-   * @param {Duration|Object|number} duration - the length of the Interval.
-   * @return {Interval}
-   */
-  static before(end, duration) {
-    const dur = __WEBPACK_IMPORTED_MODULE_1__duration__["b" /* friendlyDuration */](duration),
-      dt = __WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"](end);
-    return Interval.fromDateTimes(dt.minus(dur), dt);
-  }
-
-  /**
-   * Create an Interval from an ISO 8601 string
-   * @param {string} string - the ISO string to parse
-   * @param {Object} opts - options to pass {@see DateTime.fromISO}
-   * @return {Interval}
-   */
-  static fromISO(string, opts) {
-    if (string) {
-      const [s, e] = string.split(/\//);
-      if (s && e) {
-        return Interval.fromDateTimes(__WEBPACK_IMPORTED_MODULE_0__datetime__["default"].fromISO(s, opts), __WEBPACK_IMPORTED_MODULE_0__datetime__["default"].fromISO(e, opts));
-      }
-    }
-    return Interval.invalid('invalid ISO format');
-  }
-
-  /**
-   * Returns the start of the Interval
-   * @type {DateTime}
-   */
-  get start() {
-    return this.isValid ? this.s : null;
-  }
-
-  /**
-   * Returns the end of the Interval
-   * @type {DateTime}
-   */
-  get end() {
-    return this.isValid ? this.e : null;
-  }
-
-  /**
-   * Returns whether this Interval's end is at least its start, i.e. that the Interval isn't 'backwards'.
-   * @type {boolean}
-   */
-  get isValid() {
-    return this.invalidReason === null;
-  }
-
-  /**
-   * Returns an explanation of why this Interval became invalid, or null if the Interval is valid
-   * @type {string}
-   */
-  get invalidReason() {
-    return this.invalid;
-  }
-
-  /**
-   * Returns the length of the Interval in the specified unit.
-   * @param {string} unit - the unit (such as 'hours' or 'days') to return the length in.
-   * @return {number}
-   */
-  length(unit = 'milliseconds') {
-    return this.isValid ? this.toDuration(...[unit]).get(unit) : NaN;
-  }
-
-  /**
-   * Returns the count of minutes, hours, days, months, or years included in the Interval, even in part.
-   * Unlike {@link length} this counts sections of the calendar, not periods of time, e.g. specifying 'day'
-   * asks 'what dates are included in this interval?', not 'how many days long is this interval?'
-   * @param {string} [unit='milliseconds'] - the unit of time to count.
-   * @return {number}
-   */
-  count(unit = 'milliseconds') {
-    if (!this.isValid) return NaN;
-    const start = this.start.startOf(unit),
-      end = this.end.startOf(unit);
-    return Math.floor(end.diff(start, unit).get(unit)) + 1;
-  }
-
-  /**
-   * Returns whether this Interval's start and end are both in the same unit of time
-   * @param {string} unit - the unit of time to check sameness on
-   * @return {boolean}
-   */
-  hasSame(unit) {
-    return this.isValid ? this.e.minus(1).hasSame(this.s, unit) : false;
-  }
-
-  /**
-   * Return whether this Interval has the same start and end DateTimes.
-   * @return {boolean}
-   */
-  isEmpty() {
-    return this.s.valueOf() === this.e.valueOf();
-  }
-
-  /**
-   * Return whether this Interval's start is after the specified DateTime.
-   * @param {DateTime} dateTime
-   * @return {boolean}
-   */
-  isAfter(dateTime) {
-    if (!this.isValid) return false;
-    return this.s > dateTime;
-  }
-
-  /**
-   * Return whether this Interval's end is before the specified DateTime.
-   * @param {DateTime} dateTime
-   * @return {boolean}
-   */
-  isBefore(dateTime) {
-    if (!this.isValid) return false;
-    return this.e <= dateTime;
-  }
-
-  /**
-   * Return whether this Interval contains the specified DateTime.
-   * @param {DateTime} dateTime
-   * @return {boolean}
-   */
-  contains(dateTime) {
-    if (!this.isValid) return false;
-    return this.s <= dateTime && this.e > dateTime;
-  }
-
-  /**
-   * "Sets" the start and/or end dates. Returns a newly-constructed Interval.
-   * @param {Object} values - the values to set
-   * @param {DateTime} values.start - the starting DateTime
-   * @param {DateTime} values.end - the ending DateTime
-   * @return {Interval}
-   */
-  set({ start, end } = {}) {
-    if (!this.isValid) return this;
-    return Interval.fromDateTimes(start || this.s, end || this.e);
-  }
-
-  /**
-   * Split this Interval at each of the specified DateTimes
-   * @param {...[DateTime]} dateTimes - the unit of time to count.
-   * @return {[Interval]}
-   */
-  splitAt(...dateTimes) {
-    if (!this.isValid) return [];
-    const sorted = dateTimes.map(__WEBPACK_IMPORTED_MODULE_0__datetime__["friendlyDateTime"]).sort(),
-      results = [];
-    let { s } = this,
-      i = 0;
-
-    while (s < this.e) {
-      const added = sorted[i] || this.e,
-        next = +added > +this.e ? this.e : added;
-      results.push(Interval.fromDateTimes(s, next));
-      s = next;
-      i += 1;
-    }
-
-    return results;
-  }
-
-  /**
-   * Split this Interval into smaller Intervals, each of the specified length.
-   * Left over time is grouped into a smaller interval
-   * @param {Duration|Object|number} duration - The length of each resulting interval.
-   * @return {[Interval]}
-   */
-  splitBy(duration) {
-    if (!this.isValid) return [];
-    const dur = __WEBPACK_IMPORTED_MODULE_1__duration__["b" /* friendlyDuration */](duration),
-      results = [];
-    let { s } = this,
-      added,
-      next;
-
-    while (s < this.e) {
-      added = s.plus(dur);
-      next = +added > +this.e ? this.e : added;
-      results.push(Interval.fromDateTimes(s, next));
-      s = next;
-    }
-
-    return results;
-  }
-
-  /**
-   * Split this Interval into the specified number of smaller intervals.
-   * @param {number} numberOfParts - The number of Intervals to divide the Interval into.
-   * @return {[Interval]}
-   */
-  divideEqually(numberOfParts) {
-    if (!this.isValid) return [];
-    return this.splitBy(this.length() / numberOfParts).slice(0, numberOfParts);
-  }
-
-  /**
-   * Return whether this Interval overlaps with the specified Interval
-   * @param {Interval} other
-   * @return {boolean}
-   */
-  overlaps(other) {
-    return this.e > other.s && this.s < other.e;
-  }
-
-  /**
-   * Return whether this Interval's end is adjacent to the specified Interval's start.
-   * @param {Interval} other
-   * @return {boolean}
-   */
-  abutsStart(other) {
-    if (!this.isValid) return false;
-    return +this.e === +other.s;
-  }
-
-  /**
-   * Return whether this Interval's start is adjacent to the specified Interval's end.
-   * @param {Interval} other
-   * @return {boolean}
-   */
-  abutsEnd(other) {
-    if (!this.isValid) return false;
-    return +other.e === +this.s;
-  }
-
-  /**
-   * Return whether this Interval engulfs the start and end of the specified Interval.
-   * @param {Interval} other
-   * @return {boolean}
-   */
-  engulfs(other) {
-    if (!this.isValid) return false;
-    return this.s <= other.s && this.e >= other.e;
-  }
-
-  /**
-   * Return whether this Interval has the same start and end as the specified Interval.
-   * @param {Interval} other
-   * @return {boolean}
-   */
-  equals(other) {
-    return this.s.equals(other.s) && this.e.equals(other.e);
-  }
-
-  /**
-   * Return an Interval representing the intersection of this Interval and the specified Interval.
-   * Specifically, the resulting Interval has the maximum start time and the minimum end time of the two Intervals.
-   * Returns null if the intersection is empty, i.e., the intervals don't intersect.
-   * @param {Interval} other
-   * @return {Interval}
-   */
-  intersection(other) {
-    if (!this.isValid) return this;
-    const s = this.s > other.s ? this.s : other.s,
-      e = this.e < other.e ? this.e : other.e;
-
-    if (s > e) {
-      return null;
-    } else {
-      return Interval.fromDateTimes(s, e);
-    }
-  }
-
-  /**
-   * Return an Interval representing the union of this Interval and the specified Interval.
-   * Specifically, the resulting Interval has the minimum start time and the maximum end time of the two Intervals.
-   * @param {Interval} other
-   * @return {Interval}
-   */
-  union(other) {
-    if (!this.isValid) return this;
-    const s = this.s < other.s ? this.s : other.s,
-      e = this.e > other.e ? this.e : other.e;
-    return Interval.fromDateTimes(s, e);
-  }
-
-  /**
-   * Merge an array of Intervals into a equivalent minimal set of Intervals.
-   * Combines overlapping and adjacent Intervals.
-   * @param {[Interval]} intervals
-   * @return {[Interval]}
-   */
-  static merge(intervals) {
-    const [found, final] = intervals.sort((a, b) => a.s - b.s).reduce(([sofar, current], item) => {
-      if (!current) {
-        return [sofar, item];
-      } else if (current.overlaps(item) || current.abutsStart(item)) {
-        return [sofar, current.union(item)];
-      } else {
-        return [sofar.concat([current]), item];
-      }
-    },
-    [[], null]);
-    if (final) {
-      found.push(final);
-    }
-    return found;
-  }
-
-  /**
-   * Return an array of Intervals representing the spans of time that only appear in one of the specified Intervals.
-   * @param {[Interval]} intervals
-   * @return {[Interval]}
-   */
-  static xor(intervals) {
-    let start = null,
-      currentCount = 0;
-    const results = [],
-      ends = intervals.map(i => [{ time: i.s, type: 's' }, { time: i.e, type: 'e' }]),
-      flattened = Array.prototype.concat(...ends),
-      arr = flattened.sort((a, b) => a.time - b.time);
-
-    for (const i of arr) {
-      currentCount += i.type === 's' ? 1 : -1;
-
-      if (currentCount === 1) {
-        start = i.time;
-      } else {
-        if (start && +start !== +i.time) {
-          results.push(Interval.fromDateTimes(start, i.time));
-        }
-
-        start = null;
-      }
-    }
-
-    return Interval.merge(results);
-  }
-
-  /**
-   * Return an Interval representing the span of time in this Interval that doesn't overlap with any of the specified Intervals.
-   * @param {...Interval} intervals
-   * @return {[Interval]}
-   */
-  difference(...intervals) {
-    return Interval.xor([this].concat(intervals))
-      .map(i => this.intersection(i))
-      .filter(i => i && !i.isEmpty());
-  }
-
-  /**
-   * Returns a string representation of this Interval appropriate for debugging.
-   * @return {string}
-   */
-  toString() {
-    if (!this.isValid) return INVALID;
-    return `[${this.s.toISO()} – ${this.e.toISO()})`;
-  }
-
-  /**
-   * Returns a string representation of this Interval appropriate for the REPL.
-   * @return {string}
-   */
-  inspect() {
-    if (this.isValid) {
-      return `Interval {\n  start: ${this.start.toISO()},\n  end: ${this.end.toISO()},\n  zone:   ${this
-        .start.zone.name},\n  locale:   ${this.start.locale} }`;
-    } else {
-      return `Interval { Invalid, reason: ${this.invalidReason} }`;
-    }
-  }
-
-  /**
-   * Returns an ISO 8601-compliant string representation of this Interval.
-   * @see https://en.wikipedia.org/wiki/ISO_8601#Time_intervals
-   * @param {Object} opts - The same options as {@link DateTime.toISO}
-   * @return {string}
-   */
-  toISO(opts) {
-    if (!this.isValid) return INVALID;
-    return `${this.s.toISO(opts)}/${this.e.toISO(opts)}`;
-  }
-
-  /**
-   * Returns a string representation of this Interval formatted according to the specified format string.
-   * @param {string} dateFormat - the format string. This string formats the start and end time. See {@link DateTime.toFormat} for details.
-   * @param {Object} opts - options
-   * @param {string} [opts.separator =  ' – '] - a separator to place between the start and end representations
-   * @return {string}
-   */
-  toFormat(dateFormat, { separator = ' – ' } = {}) {
-    if (!this.isValid) return INVALID;
-    return `${this.s.toFormat(dateFormat)}${separator}${this.e.toFormat(dateFormat)}`;
-  }
-
-  /**
-   * Return a Duration representing the time spanned by this interval.
-   * @param {string|string[]} [unit=['milliseconds']] - the unit or units (such as 'hours' or 'days') to include in the duration.
-   * @param {Object} opts - options that affect the creation of the Duration
-   * @param {string} [opts.conversionAccuracy='casual'] - the conversion system to use
-   * @example Interval.fromDateTimes(dt1, dt2).toDuration().toObject() //=> { milliseconds: 88489257 }
-   * @example Interval.fromDateTimes(dt1, dt2).toDuration('days').toObject() //=> { days: 1.0241812152777778 }
-   * @example Interval.fromDateTimes(dt1, dt2).toDuration(['hours', 'minutes']).toObject() //=> { hours: 24, minutes: 34.82095 }
-   * @example Interval.fromDateTimes(dt1, dt2).toDuration(['hours', 'minutes', 'seconds']).toObject() //=> { hours: 24, minutes: 34, seconds: 49.257 }
-   * @example Interval.fromDateTimes(dt1, dt2).toDuration('seconds').toObject() //=> { seconds: 88489.257 }
-   * @return {Duration}
-   */
-  toDuration(unit, opts) {
-    if (!this.isValid) {
-      return __WEBPACK_IMPORTED_MODULE_1__duration__["a" /* default */].invalid(this.invalidReason);
-    }
-    return this.e.diff(this.s, unit, opts);
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Interval;
-
-
-
-/***/ }),
-/* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__datetime__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__settings__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_locale__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_util__ = __webpack_require__(0);
-
-
-
-
-
-
-
-/**
- * The Info class contains static methods for retrieving general time and date related data. For example, it has methods for finding out if a time zone has a DST, for listing the months in any supported locale, and for discovering which of Luxon features are available in the current environment.
- */
-class Info {
-  /**
-   * Return whether the specified zone contains a DST.
-   * @param {string|Zone} [zone='local'] - Zone to check. Defaults to the environment's local zone.
-   * @return {boolean}
-   */
-  static hasDST(zone = __WEBPACK_IMPORTED_MODULE_1__settings__["a" /* default */].defaultZone) {
-    const proto = __WEBPACK_IMPORTED_MODULE_0__datetime__["default"].local()
-      .setZone(zone)
-      .set({ month: 12 });
-
-    return !zone.universal && proto.offset !== proto.set({ month: 6 }).offset;
-  }
-
-  /**
-   * Return whether the specified zone is a valid IANA specifier.
-   * @param {string} zone - Zone to check
-   * @return {boolean}
-   */
-  static isValidIANAZone(zone) {
-    return !!__WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__["a" /* default */].isValidSpecifier(zone) && __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__["a" /* default */].isValidZone(zone);
-  }
-
-  /**
-   * Return an array of standalone month names.
-   * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
-   * @param {string} [length='long'] - the length of the month representation, such as "numeric", "2-digit", "narrow", "short", "long"
-   * @param {Object} opts - options
-   * @param {string} [opts.locale] - the locale code
-   * @param {string} [opts.numberingSystem=null] - the numbering system
-   * @param {string} [opts.outputCalendar='gregory'] - the calendar
-   * @example Info.months()[0] //=> 'January'
-   * @example Info.months('short')[0] //=> 'Jan'
-   * @example Info.months('numeric')[0] //=> '1'
-   * @example Info.months('short', { locale: 'fr-CA' } )[0] //=> 'janv.'
-   * @example Info.months('numeric', { locale: 'ar' })[0] //=> '١'
-   * @example Info.months('long', { outputCalendar: 'islamic' })[0] //=> 'Rabiʻ I'
-   * @return {[string]}
-   */
-  static months(
-    length = 'long',
-    { locale = null, numberingSystem = null, outputCalendar = 'gregory' } = {}
-  ) {
-    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, outputCalendar).months(length);
-  }
-
-  /**
-   * Return an array of format month names.
-   * Format months differ from standalone months in that they're meant to appear next to the day of the month. In some languages, that
-   * changes the string.
-   * See {@link months}
-   * @param {string} [length='long'] - the length of the month representation, such as "numeric", "2-digit", "narrow", "short", "long"
-   * @param {Object} opts - options
-   * @param {string} [opts.locale] - the locale code
-   * @param {string} [opts.numberingSystem=null] - the numbering system
-   * @param {string} [opts.outputCalendar='gregory'] - the calendar
-   * @return {[string]}
-   */
-  static monthsFormat(
-    length = 'long',
-    { locale = null, numberingSystem = null, outputCalendar = 'gregory' } = {}
-  ) {
-    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, outputCalendar).months(length, true);
-  }
-
-  /**
-   * Return an array of standalone week names.
-   * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
-   * @param {string} [length='long'] - the length of the month representation, such as "narrow", "short", "long".
-   * @param {Object} opts - options
-   * @param {string} [opts.locale] - the locale code
-   * @param {string} [opts.numberingSystem=null] - the numbering system
-   * @example Info.weekdays()[0] //=> 'Monday'
-   * @example Info.weekdays('short')[0] //=> 'Mon'
-   * @example Info.weekdays('short', { locale: 'fr-CA' })[0] //=> 'lun.'
-   * @example Info.weekdays('short', { locale: 'ar' })[0] //=> 'الاثنين'
-   * @return {[string]}
-   */
-  static weekdays(length = 'long', { locale = null, numberingSystem = null } = {}) {
-    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, null).weekdays(length);
-  }
-
-  /**
-   * Return an array of format week names.
-   * Format weekdays differ from standalone weekdays in that they're meant to appear next to more date information. In some languages, that
-   * changes the string.
-   * See {@link weekdays}
-   * @param {string} [length='long'] - the length of the month representation, such as "narrow", "short", "long".
-   * @param {Object} opts - options
-   * @param {string} [opts.locale=null] - the locale code
-   * @param {string} [opts.numberingSystem=null] - the numbering system
-   * @return {[string]}
-   */
-  static weekdaysFormat(length = 'long', { locale = null, numberingSystem = null } = {}) {
-    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, numberingSystem, null).weekdays(length, true);
-  }
-
-  /**
-   * Return an array of meridiems.
-   * @param {Object} opts - options
-   * @param {string} [opts.locale] - the locale code
-   * @example Info.meridiems() //=> [ 'AM', 'PM' ]
-   * @example Info.meridiems({ locale: 'de' }) //=> [ 'vorm.', 'nachm.' ]
-   * @return {[string]}
-   */
-  static meridiems({ locale = null } = {}) {
-    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale).meridiems();
-  }
-
-  /**
-   * Return an array of eras, such as ['BC', 'AD']. The locale can be specified, but the calendar system is always Gregorian.
-   * @param {string} [length='short'] - the length of the era representation, such as "short" or "long".
-   * @param {Object} opts - options
-   * @param {string} [opts.locale] - the locale code
-   * @example Info.eras() //=> [ 'BC', 'AD' ]
-   * @example Info.eras('long') //=> [ 'Before Christ', 'Anno Domini' ]
-   * @example Info.eras('long', { locale: 'fr' }) //=> [ 'avant Jésus-Christ', 'après Jésus-Christ' ]
-   * @return {[string]}
-   */
-  static eras(length = 'short', { locale = null } = {}) {
-    return __WEBPACK_IMPORTED_MODULE_2__impl_locale__["a" /* default */].create(locale, null, 'gregory').eras(length);
-  }
-
-  /**
-   * Return the set of available features in this environment.
-   * Some features of Luxon are not available in all environments. For example, on older browsers, timezone support is not available. Use this function to figure out if that's the case.
-   * Keys:
-   * * `zones`: whether this environment supports IANA timezones
-   * * `intlTokens`: whether this environment supports internationalized token-based formatting/parsing
-   * * `intl`: whether this environment supports general internationalization
-   * @example Info.features() //=> { intl: true, intlTokens: false, zones: true }
-   * @return {Object}
-   */
-  static features() {
-    let intl = false,
-      intlTokens = false,
-      zones = false;
-
-    if (__WEBPACK_IMPORTED_MODULE_4__impl_util__["e" /* hasIntl */]()) {
-      intl = true;
-      intlTokens = __WEBPACK_IMPORTED_MODULE_4__impl_util__["d" /* hasFormatToParts */]();
-
-      try {
-        zones =
-          new Intl.DateTimeFormat('en', { timeZone: 'America/New_York' }).resolvedOptions()
-            .timeZone === 'America/New_York';
-      } catch (e) {
-        zones = false;
-      }
-    }
-
-    return { intl, intlTokens, zones };
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Info;
-
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(12);
-
-
-function dayDiff(earlier, later) {
-  const utcDayStart = dt =>
-      dt
-        .toUTC(0, { keepLocalTime: true })
-        .startOf('day')
-        .valueOf(),
-    ms = utcDayStart(later) - utcDayStart(earlier);
-  return Math.floor(__WEBPACK_IMPORTED_MODULE_0__duration__["a" /* default */].fromMillis(ms).as('days'));
-}
-
-function highOrderDiffs(cursor, later, units) {
-  const differs = [
-    ['years', (a, b) => b.year - a.year],
-    ['months', (a, b) => b.month - a.month + (b.year - a.year) * 12],
-    [
-      'weeks',
-      (a, b) => {
-        const days = dayDiff(a, b);
-        return (days - days % 7) / 7;
-      }
-    ],
-    ['days', dayDiff]
-  ];
-
-  const results = {};
-  let lowestOrder, highWater;
-
-  for (const [unit, differ] of differs) {
-    if (units.indexOf(unit) >= 0) {
-      lowestOrder = unit;
-
-      let delta = differ(cursor, later);
-
-      highWater = cursor.plus({ [unit]: delta });
-
-      if (highWater > later) {
-        cursor = highWater.minus({ [unit]: 1 });
-        delta -= 1;
-      } else {
-        cursor = highWater;
-      }
-
-      if (delta > 0) {
-        results[unit] = delta;
-      }
-    }
-  }
-
-  return [cursor, results, highWater, lowestOrder];
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (function(earlier, later, units, opts) {
-  let [cursor, results, highWater, lowestOrder] = highOrderDiffs(earlier, later, units);
-
-  const remainingMillis = later - cursor;
-
-  const lowerOrderUnits = units.filter(
-    u => ['hours', 'minutes', 'seconds', 'milliseconds'].indexOf(u) >= 0
-  );
-
-  if (lowerOrderUnits.length === 0) {
-    if (highWater < later) {
-      highWater = cursor.plus({ [lowestOrder]: 1 });
-    }
-
-    if (highWater !== cursor) {
-      results[lowestOrder] = (results[lowestOrder] || 0) + remainingMillis / (highWater - cursor);
-    }
-  }
-
-  const duration = __WEBPACK_IMPORTED_MODULE_0__duration__["a" /* default */].fromObject(Object.assign(results, opts));
-
-  if (lowerOrderUnits.length > 0) {
-    return __WEBPACK_IMPORTED_MODULE_0__duration__["a" /* default */].fromMillis(remainingMillis, opts)
-      .shiftTo(...lowerOrderUnits)
-      .plus(duration);
-  } else {
-    return duration;
-  }
-});
-
-
-/***/ }),
-/* 46 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = explainFromTokens;
-/* harmony export (immutable) */ __webpack_exports__["b"] = parseFromTokens;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formatter__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(8);
-
-
-
-
-
-const MISSING_FTP = 'missing Intl.DateTimeFormat.formatToParts support';
-
-function intUnit(regex, post = i => i) {
-  return { regex, deser: ([s]) => post(parseInt(s)) };
-}
-
-function fixListRegex(s) {
-  // make dots optional and also make them literal
-  return s.replace(/\./, '\\.?');
-}
-
-function stripInsensitivities(s) {
-  return s.replace(/\./, '').toLowerCase();
-}
-
-function oneOf(strings, startIndex) {
-  if (strings === null) {
-    return null;
-  } else {
-    return {
-      regex: RegExp(strings.map(fixListRegex).join('|')),
-      deser: ([s]) =>
-        strings.findIndex(i => stripInsensitivities(s) === stripInsensitivities(i)) + startIndex
-    };
-  }
-}
-
-function offset(regex, groups) {
-  return { regex, deser: ([, h, m]) => __WEBPACK_IMPORTED_MODULE_0__util__["s" /* signedOffset */](h, m), groups };
-}
-
-function simple(regex) {
-  return { regex, deser: ([s]) => s };
-}
-
-function unitForToken(token, loc) {
-  const one = /\d/,
-    two = /\d{2}/,
-    three = /\d{3}/,
-    four = /\d{4}/,
-    oneOrTwo = /\d{1,2}/,
-    oneToThree = /\d{1,3}/,
-    twoToFour = /\d{2,4}/,
-    literal = t => ({ regex: RegExp(t.val), deser: ([s]) => s, literal: true }),
-    unitate = t => {
-      if (token.literal) {
-        return literal(t);
-      }
-      switch (t.val) {
-        // era
-        case 'G':
-          return oneOf(loc.eras('short', false), 0);
-        case 'GG':
-          return oneOf(loc.eras('long', false), 0);
-        // years
-        case 'y':
-          return intUnit(/\d{1,6}/);
-        case 'yy':
-          return intUnit(twoToFour, __WEBPACK_IMPORTED_MODULE_0__util__["u" /* untruncateYear */]);
-        case 'yyyy':
-          return intUnit(four);
-        case 'yyyyy':
-          return intUnit(/\d{4,6}/);
-        case 'yyyyyy':
-          return intUnit(/\d{6}/);
-        // months
-        case 'M':
-          return intUnit(oneOrTwo);
-        case 'MM':
-          return intUnit(two);
-        case 'MMM':
-          return oneOf(loc.months('short', false, false), 1);
-        case 'MMMM':
-          return oneOf(loc.months('long', false, false), 1);
-        case 'L':
-          return intUnit(oneOrTwo);
-        case 'LL':
-          return intUnit(two);
-        case 'LLL':
-          return oneOf(loc.months('short', true, false), 1);
-        case 'LLLL':
-          return oneOf(loc.months('long', true, false), 1);
-        // dates
-        case 'd':
-          return intUnit(oneOrTwo);
-        case 'dd':
-          return intUnit(two);
-        // ordinals
-        case 'o':
-          return intUnit(oneToThree);
-        case 'ooo':
-          return intUnit(three);
-        // time
-        case 'HH':
-          return intUnit(two);
-        case 'H':
-          return intUnit(oneOrTwo);
-        case 'hh':
-          return intUnit(two);
-        case 'h':
-          return intUnit(oneOrTwo);
-        case 'mm':
-          return intUnit(two);
-        case 'm':
-          return intUnit(oneOrTwo);
-        case 's':
-          return intUnit(oneOrTwo);
-        case 'ss':
-          return intUnit(two);
-        case 'S':
-          return intUnit(oneToThree);
-        case 'SSS':
-          return intUnit(three);
-        case 'u':
-          return simple(/\d{1,9}/);
-        // meridiem
-        case 'a':
-          return oneOf(loc.meridiems(), 0);
-        // weekYear (k)
-        case 'kkkk':
-          return intUnit(four);
-        case 'kk':
-          return intUnit(twoToFour, __WEBPACK_IMPORTED_MODULE_0__util__["u" /* untruncateYear */]);
-        // weekNumber (W)
-        case 'W':
-          return intUnit(oneOrTwo);
-        case 'WW':
-          return intUnit(two);
-        // weekdays
-        case 'E':
-        case 'c':
-          return intUnit(one);
-        case 'EEE':
-          return oneOf(loc.weekdays('short', false, false), 1);
-        case 'EEEE':
-          return oneOf(loc.weekdays('long', false, false), 1);
-        case 'ccc':
-          return oneOf(loc.weekdays('short', true, false), 1);
-        case 'cccc':
-          return oneOf(loc.weekdays('long', true, false), 1);
-        // offset/zone
-        case 'Z':
-        case 'ZZ':
-          return offset(/([+-]\d{1,2})(?::(\d{2}))?/, 2);
-        case 'ZZZ':
-          return offset(/([+-]\d{1,2})(\d{2})?/, 2);
-        // we don't support ZZZZ (PST) or ZZZZZ (Pacific Standard Time) in parsing
-        // because we don't have any way to figure out what they are
-        case 'z':
-          return simple(/[A-Za-z_]{1,256}\/[A-Za-z_]{1,256}/);
-        default:
-          return literal(t);
-      }
-    };
-
-  const unit = unitate(token) || {
-    invalidReason: MISSING_FTP
-  };
-
-  unit.token = token;
-
-  return unit;
-}
-
-function buildRegex(units) {
-  const re = units.map(u => u.regex).reduce((f, r) => `${f}(${r.source})`, '');
-  return [`^${re}$`, units];
-}
-
-function match(input, regex, handlers) {
-  const matches = input.match(regex);
-
-  if (matches) {
-    const all = {};
-    let matchIndex = 1;
-    for (const i in handlers) {
-      if (handlers.hasOwnProperty(i)) {
-        const h = handlers[i],
-          groups = h.groups ? h.groups + 1 : 1;
-        if (!h.literal && h.token) {
-          all[h.token.val[0]] = h.deser(matches.slice(matchIndex, matchIndex + groups));
-        }
-        matchIndex += groups;
-      }
-    }
-    return [matches, all];
-  } else {
-    return [matches, {}];
-  }
-}
-
-function dateTimeFromMatches(matches) {
-  const toField = token => {
-    switch (token) {
-      case 'S':
-        return 'millisecond';
-      case 's':
-        return 'second';
-      case 'm':
-        return 'minute';
-      case 'h':
-      case 'H':
-        return 'hour';
-      case 'd':
-        return 'day';
-      case 'o':
-        return 'ordinal';
-      case 'L':
-      case 'M':
-        return 'month';
-      case 'y':
-        return 'year';
-      case 'E':
-      case 'c':
-        return 'weekday';
-      case 'W':
-        return 'weekNumber';
-      case 'k':
-        return 'weekYear';
-      default:
-        return null;
-    }
-  };
-
-  let zone;
-  if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.Z)) {
-    zone = new __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__["a" /* default */](matches.Z);
-  } else if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.z)) {
-    zone = new __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__["a" /* default */](matches.z);
-  } else {
-    zone = null;
-  }
-
-  if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.h)) {
-    if (matches.h < 12 && matches.a === 1) {
-      matches.h += 12;
-    } else if (matches.h === 12 && matches.a === 0) {
-      matches.h = 0;
-    }
-  }
-
-  if (matches.G === 0 && matches.y) {
-    matches.y = -matches.y;
-  }
-
-  if (!__WEBPACK_IMPORTED_MODULE_0__util__["j" /* isUndefined */](matches.u)) {
-    matches.S = __WEBPACK_IMPORTED_MODULE_0__util__["o" /* parseMillis */](matches.u);
-  }
-
-  const vals = Object.keys(matches).reduce((r, k) => {
-    const f = toField(k);
-    if (f) {
-      r[f] = matches[k];
-    }
-
-    return r;
-  }, {});
-
-  return [vals, zone];
-}
-
-/**
- * @private
- */
-
-function explainFromTokens(locale, input, format) {
-  const tokens = __WEBPACK_IMPORTED_MODULE_1__formatter__["a" /* default */].parseFormat(format),
-    units = tokens.map(t => unitForToken(t, locale)),
-    disqualifyingUnit = units.find(t => t.invalidReason);
-
-  if (disqualifyingUnit) {
-    return { input, tokens, invalidReason: disqualifyingUnit.invalidReason };
-  } else {
-    const [regexString, handlers] = buildRegex(units),
-      regex = RegExp(regexString, 'i'),
-      [rawMatches, matches] = match(input, regex, handlers),
-      [result, zone] = matches ? dateTimeFromMatches(matches) : [null, null];
-
-    return { input, tokens, regex, rawMatches, matches, result, zone };
-  }
-}
-
-function parseFromTokens(locale, input, format) {
-  const { result, zone, invalidReason } = explainFromTokens(locale, input, format);
-  return [result, zone, invalidReason];
-}
-
-
-/***/ }),
-/* 47 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = gregorianToWeek;
-/* harmony export (immutable) */ __webpack_exports__["h"] = weekToGregorian;
-/* harmony export (immutable) */ __webpack_exports__["a"] = gregorianToOrdinal;
-/* harmony export (immutable) */ __webpack_exports__["g"] = ordinalToGregorian;
-/* harmony export (immutable) */ __webpack_exports__["f"] = hasInvalidWeekData;
-/* harmony export (immutable) */ __webpack_exports__["d"] = hasInvalidOrdinalData;
-/* harmony export (immutable) */ __webpack_exports__["c"] = hasInvalidGregorianData;
-/* harmony export (immutable) */ __webpack_exports__["e"] = hasInvalidTimeData;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
-
-
-const nonLeapLadder = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
-  leapLadder = [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
-
-function dayOfWeek(year, month, day) {
-  const js = new Date(Date.UTC(year, month - 1, day)).getUTCDay();
-  return js === 0 ? 7 : js;
-}
-
-function computeOrdinal(year, month, day) {
-  return day + (__WEBPACK_IMPORTED_MODULE_0__util__["g" /* isLeapYear */](year) ? leapLadder : nonLeapLadder)[month - 1];
-}
-
-function uncomputeOrdinal(year, ordinal) {
-  const table = __WEBPACK_IMPORTED_MODULE_0__util__["g" /* isLeapYear */](year) ? leapLadder : nonLeapLadder,
-    month0 = table.findIndex(i => i < ordinal),
-    day = ordinal - table[month0];
-  return { month: month0 + 1, day };
-}
-
-/**
- * @private
- */
-
-function gregorianToWeek(gregObj) {
-  const { year, month, day } = gregObj,
-    ordinal = computeOrdinal(year, month, day),
-    weekday = dayOfWeek(year, month, day);
-
-  let weekNumber = Math.floor((ordinal - weekday + 10) / 7),
-    weekYear;
-
-  if (weekNumber < 1) {
-    weekYear = year - 1;
-    weekNumber = __WEBPACK_IMPORTED_MODULE_0__util__["v" /* weeksInWeekYear */](weekYear);
-  } else if (weekNumber > __WEBPACK_IMPORTED_MODULE_0__util__["v" /* weeksInWeekYear */](year)) {
-    weekYear = year + 1;
-    weekNumber = 1;
-  } else {
-    weekYear = year;
-  }
-
-  return Object.assign({ weekYear, weekNumber, weekday }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](gregObj));
-}
-
-function weekToGregorian(weekData) {
-  const { weekYear, weekNumber, weekday } = weekData,
-    weekdayOfJan4 = dayOfWeek(weekYear, 1, 4),
-    yearInDays = __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](weekYear);
-  let ordinal = weekNumber * 7 + weekday - weekdayOfJan4 - 3,
-    year;
-
-  if (ordinal < 1) {
-    year = weekYear - 1;
-    ordinal += __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](year);
-  } else if (ordinal > yearInDays) {
-    year = weekYear + 1;
-    ordinal -= __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](year);
-  } else {
-    year = weekYear;
-  }
-
-  const { month, day } = uncomputeOrdinal(year, ordinal);
-
-  return Object.assign({ year, month, day }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](weekData));
-}
-
-function gregorianToOrdinal(gregData) {
-  const { year, month, day } = gregData,
-    ordinal = computeOrdinal(year, month, day);
-
-  return Object.assign({ year, ordinal }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](gregData));
-}
-
-function ordinalToGregorian(ordinalData) {
-  const { year, ordinal } = ordinalData,
-    { month, day } = uncomputeOrdinal(year, ordinal);
-
-  return Object.assign({ year, month, day }, __WEBPACK_IMPORTED_MODULE_0__util__["t" /* timeObject */](ordinalData));
-}
-
-function hasInvalidWeekData(obj) {
-  const validYear = __WEBPACK_IMPORTED_MODULE_0__util__["h" /* isNumber */](obj.weekYear),
-    validWeek = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.weekNumber, 1, __WEBPACK_IMPORTED_MODULE_0__util__["v" /* weeksInWeekYear */](obj.weekYear)),
-    validWeekday = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.weekday, 1, 7);
-
-  if (!validYear) {
-    return 'weekYear out of range';
-  } else if (!validWeek) {
-    return 'week out of range';
-  } else if (!validWeekday) {
-    return 'weekday out of range';
-  } else return false;
-}
-
-function hasInvalidOrdinalData(obj) {
-  const validYear = __WEBPACK_IMPORTED_MODULE_0__util__["h" /* isNumber */](obj.year),
-    validOrdinal = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.ordinal, 1, __WEBPACK_IMPORTED_MODULE_0__util__["c" /* daysInYear */](obj.year));
-
-  if (!validYear) {
-    return 'year out of range';
-  } else if (!validOrdinal) {
-    return 'ordinal out of range';
-  } else return false;
-}
-
-function hasInvalidGregorianData(obj) {
-  const validYear = __WEBPACK_IMPORTED_MODULE_0__util__["h" /* isNumber */](obj.year),
-    validMonth = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.month, 1, 12),
-    validDay = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.day, 1, __WEBPACK_IMPORTED_MODULE_0__util__["b" /* daysInMonth */](obj.year, obj.month));
-
-  if (!validYear) {
-    return 'year out of range';
-  } else if (!validMonth) {
-    return 'month out of range';
-  } else if (!validDay) {
-    return 'day out of range';
-  } else return false;
-}
-
-function hasInvalidTimeData(obj) {
-  const validHour = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.hour, 0, 23),
-    validMinute = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.minute, 0, 59),
-    validSecond = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.second, 0, 59),
-    validMillisecond = __WEBPACK_IMPORTED_MODULE_0__util__["m" /* numberBetween */](obj.millisecond, 0, 999);
-
-  if (!validHour) {
-    return 'hour out of range';
-  } else if (!validMinute) {
-    return 'minute out of range';
-  } else if (!validSecond) {
-    return 'second out of range';
-  } else if (!validMillisecond) {
-    return 'millisecond out of range';
-  } else return false;
-}
-
-
-/***/ }),
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12501,9 +12521,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _domrC = __webpack_require__(3);
+var _domrC = __webpack_require__(9);
 
-var _dbManipulation = __webpack_require__(11);
+var _dbManipulation = __webpack_require__(15);
 
 exports.default = class extends _domrC.Component {
   constructor() {
@@ -12563,7 +12583,7 @@ exports.default = function (data) {
   wrapper.innerHTML = searchContainer;
 };
 
-var _apiSet = __webpack_require__(16);
+var _apiSet = __webpack_require__(18);
 
 var _apiSet2 = _interopRequireDefault(_apiSet);
 
@@ -12607,7 +12627,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _domrC = __webpack_require__(3);
+var _domrC = __webpack_require__(9);
 
 var _fireSearchEvent = __webpack_require__(54);
 
@@ -12617,11 +12637,11 @@ var _SearchResult = __webpack_require__(55);
 
 var _SearchResult2 = _interopRequireDefault(_SearchResult);
 
-var _runningTime = __webpack_require__(19);
+var _runningTime = __webpack_require__(21);
 
 var _runningTime2 = _interopRequireDefault(_runningTime);
 
-var _dbManipulation = __webpack_require__(11);
+var _dbManipulation = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12719,7 +12739,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _goodOlAjaxPromise = __webpack_require__(17);
+var _goodOlAjaxPromise = __webpack_require__(19);
 
 var _goodOlAjaxPromise2 = _interopRequireDefault(_goodOlAjaxPromise);
 
