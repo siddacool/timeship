@@ -10,7 +10,9 @@ export default function (param, searchTerm) {
   return `
     <li>
       <a href="#" class="search__result" data-id="${param.city_id}">
-        <span class="search__result__header">${param.header ? bolden(param.header, searchTerm) : ''}</span>
+        <div class="search__result__full">
+          <span class="search__result__header">${param.header ? bolden(param.header, searchTerm) : ''}</span>
+        </div>
         <div class="search__result__half">
           <div class="search__result__group">
             <span class="search__result__name" data-value="${param.name}">${param.header ? param.name : bolden(param.name, searchTerm)}</span>

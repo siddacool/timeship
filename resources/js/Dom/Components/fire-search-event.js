@@ -9,19 +9,21 @@ function fireSearchEvent(api, searchTerm) {
       const cityArr = arrSorted.filter(e => e.city_id);
       const countryArr = arrSorted.filter(e => e.country_id);
       const val = searchTerm;
-      const finalArr = [];
+      let finalArr = [];
 
       cityArr.forEach((city) => {
         const thisCity = city;
         const assignCountry = countryArr.filter(e => e.code === thisCity.country);
         thisCity.country_name = assignCountry[0].name;
         if (thisCity.name.startsWith(val)) {
+          thisCity.priority = 1;
           finalArr.push(thisCity);
         } else if (thisCity.alias && thisCity.alias.length) {
           const alias = thisCity.alias;
           for (let i = 0; i < alias.length; i++) {
             if (alias[i].trim().startsWith(val)) {
               thisCity.header = alias[i];
+              thisCity.priority = 3;
               finalArr.push(thisCity);
             }
           }
@@ -37,6 +39,7 @@ function fireSearchEvent(api, searchTerm) {
               const duplicates = finalArr.find(obj => obj.city_id === thisCity.city_id);
               if (!duplicates) {
                 thisCity.header = thisCountry.name;
+                thisCity.priority = 2;
                 finalArr.push(thisCity);
               }
             }
@@ -51,6 +54,7 @@ function fireSearchEvent(api, searchTerm) {
                   const duplicates = finalArr.find(obj => obj.city_id === thisCity.city_id);
                   if (!duplicates) {
                     thisCity.header = alias[i];
+                    thisCity.priority = 4;
                     finalArr.push(thisCity);
                   }
                 }
@@ -61,6 +65,7 @@ function fireSearchEvent(api, searchTerm) {
       });
 
       if (finalArr.length) {
+        finalArr = finalArr.sort((a, b) => a.priority < b.priority ? -1 : 1);
         resolve(finalArr);
       } else {
         reject('No Data');
