@@ -4,6 +4,8 @@ const rename = require('gulp-rename');
 const path = require('path');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
+const del = require('del');
+const workbox = require('workbox-build');
 const appPath = require('./dist/public/dist/build/rev-manifest.json');
 
 gulp.task('html-templates', () => {
@@ -16,6 +18,52 @@ gulp.task('html-templates', () => {
   .pipe(rename({
     extname: '.html',
   }))
+  .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('clean', () => {
+  del(['./dist/public/dist/build/**.js',
+    './dist/public/dist/build/**.css',
+    '!./dist/public/dist/build/app.js',
+    '!./dist/public/dist/build/app.css',
+    `!./dist/${appPath.app.js}`,
+    `!./dist/${appPath.app.css}`,
+  ]);
+});
+
+gulp.task('generate-service-worker', () => {
+  return workbox.generateSW({
+    globDirectory: './dist/',
+    globPatterns: [
+      '**/*.{html,js,css,webmanifest,png,ico}',
+    ],
+    swDest: './dist/sw.js',
+    clientsClaim: true,
+    skipWaiting: true,
+    runtimeCaching: [
+      {
+        urlPattern: new RegExp('https://fonts.googleapis.com/css?family'),
+        handler: 'cacheFirst',
+      },
+      {
+        urlPattern: new RegExp('https://sid-man-timezones.firebaseapp.com/'),
+        handler: 'staleWhileRevalidate',
+      },
+    ],
+  }).then(({ warnings }) => {
+    // In case there are any warnings from workbox-build, log them.
+    for (const warning of warnings) {
+      console.warn(warning);
+    }
+    console.info('Service worker generation completed.');
+  }).catch((error) => {
+    console.warn('Service worker generation failed:', error);
+  });
+});
+
+gulp.task('sw-files-transfer', () => {
+  return gulp
+  .src('./resources/sw/*')
   .pipe(gulp.dest('./dist/'));
 });
 

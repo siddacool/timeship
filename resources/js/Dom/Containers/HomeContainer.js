@@ -47,7 +47,7 @@ export default class extends Component {
     const worldTime = thisSelf.querySelector('.world-time__12');
     const worldTimeDay = thisSelf.querySelector('.world-time__day');
 
-    runningTime(worldTime, 'h:mm:ss a');
+    runningTime(worldTime, 'h:mm a');
     runningTime(worldTimeDay, 'cccc, LLL dd');
 
     getCityDataAll()

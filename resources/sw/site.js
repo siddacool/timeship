@@ -1,3 +1,9 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/folio/sw.js');
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/timeship/sw.js').then((registration) => {
+      console.log('SW registered: ', registration);
+    }).catch((registrationError) => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
 }

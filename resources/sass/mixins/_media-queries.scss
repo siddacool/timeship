@@ -8,6 +8,12 @@
   and (min-width: 1025px) { @content; }
 }
 
+@mixin desktopMixHeight {
+   @media only screen 
+  and (max-height: 500px),
+  screen and (max-device-height: 500px) { @content; }
+}
+
 @mixin desktopMix {
   @media only screen 
   and (min-width: 1025px), 

@@ -6,6 +6,10 @@
   overflow: auto;
   width: 100vw;
 
+  @include desktopMixHeight {
+    height: calc(100vh - 55px);
+  }
+
   @include desktop {
     height: calc(100vh - 320px);
     margin-top: 150px;
@@ -13,6 +17,7 @@
 
   &__close {
     bottom: 0;
+    display: block;
     height: 90px;
     left: 0;
     position: fixed;
@@ -20,6 +25,10 @@
 
     @include desktop {
       height: 170px;
+    }
+
+    @include desktopMixHeight {
+      display: none;
     }
 
     .container {
@@ -32,7 +41,7 @@
 
     .search-close-button {
       align-items: center;
-      background-color: $aui-n900;
+      background-color: $vibrant-red;
       border-radius: 50%;
       display: flex;
       height: 3rem;
@@ -43,10 +52,12 @@
 
       @keyframes rotatebtn {
         from {
+          background-color: $vibrant-blue;
           transform: rotate(0deg);
         }
 
         to {
+          background-color: $vibrant-red;
           transform: rotate(44deg);
         }
       }
@@ -149,6 +160,21 @@
     }
   }
 
+  &__err {
+    align-items: center;
+    background-color: $aui-n0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    height: 100%;
+    padding: 1rem;
+    text-transform: capitalize;
+
+    @include desktop {
+      font-size: 33px;
+    }
+  }
+
   &__result {
     background-color: $aui-n0;
     display: flex;
@@ -160,6 +186,7 @@
     position: relative;
 
     b {
+      color: $text-blue;
       font-weight: 800;
     }
 

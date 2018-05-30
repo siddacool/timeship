@@ -60,7 +60,11 @@ function fireSearchEvent(api, searchTerm) {
         }
       });
 
-      resolve(finalArr);
+      if (finalArr.length) {
+        resolve(finalArr);
+      } else {
+        reject('No Data');
+      }
     }).catch((err) => {
       reject(err);
     });

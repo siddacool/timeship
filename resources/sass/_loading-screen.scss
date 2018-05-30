@@ -1,0 +1,31 @@
+.loading-screen {
+  background-color: $backdrop-color;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  &.active {
+    .boat-img {
+      filter: initial;
+      opacity: 1;
+    }
+  }
+
+  .boat-img {
+    display: flex;
+    filter: grayscale(100%);
+    height: 192px;
+    justify-content: center;
+    opacity: .15;
+    position: fixed;
+    top: 30%;
+    transition: filter 400ms, opacity 400ms;
+    width: 100%;
+
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+}

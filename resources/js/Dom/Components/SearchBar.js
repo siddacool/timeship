@@ -21,7 +21,8 @@ export default class extends Component {
 
     this.Keyup((self) => {
       const thisSelf = self;
-      const parent = thisSelf.parentElement.parentElement.parentElement;
+      const searchBox = thisSelf.parentElement;
+      const parent = searchBox.parentElement.parentElement;
       const searchArea = parent.querySelector('.search__area');
       clearTimeout(timeout);
 
@@ -63,6 +64,29 @@ export default class extends Component {
               runningTime(itm.querySelector('.search__result__time-am'), 'a');
               runningTime(itm.querySelector('.search__result__time-24'), 'HH:mm');
             });
+          })
+          .catch((err) => {
+            if (err.toString() === '0') {
+              searchArea.innerHTML = `
+                <li>
+                  <div class="search__err">Unable to connect</div>
+                </li>
+              `;
+            } else if (err === 'Unable to connect') {
+              searchArea.innerHTML = `
+                <li>
+                  <div class="search__err">You Are Offline</div>
+                </li>
+              `;
+            } else if (err === 'No Data') {
+              searchArea.innerHTML = `
+                <li>
+                  <div class="search__err">No Cities found</div>
+                </li>
+              `;
+            } else {
+              console.log(err);
+            }
           });
         } else {
           searchArea.innerHTML = '';
