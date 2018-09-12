@@ -1,4 +1,4 @@
-import { Component } from 'domr-c';
+import { Component } from 'domr-framework';
 import { removeCityData, getCityDataAll } from '../utils/db-manipulation';
 
 export default class extends Component {

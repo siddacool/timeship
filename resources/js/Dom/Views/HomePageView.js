@@ -1,9 +1,8 @@
-import apiSet from '../api-set';
 import HomeContainer from '../Containers/HomeContainer';
 
 export default function () {
   const wrapper = document.getElementById('wrapper');
-  const homeContainer = new HomeContainer(apiSet.complete);
+  const homeContainer = new HomeContainer();
 
   wrapper.innerHTML = homeContainer.Render();
 }

@@ -1,13 +1,12 @@
-import { Component } from 'domr-c';
+import { Component } from 'domr-framework';
 import fireSearchEvent from './fire-search-event';
 import SearchResult from './SearchResult';
 import runningTime from '../utils/running-time';
 import { saveCityData } from '../utils/db-manipulation';
 
 export default class extends Component {
-  constructor(api) {
+  constructor() {
     super();
-    this.api = api;
   }
 
   Markup() {
@@ -29,7 +28,7 @@ export default class extends Component {
       timeout = setTimeout(() => {
         const val = self.value.trim().toLowerCase();
         if (val) {
-          fireSearchEvent(this.api, val)
+          fireSearchEvent(val)
           .then((result) => {
             const thisResult = result;
 

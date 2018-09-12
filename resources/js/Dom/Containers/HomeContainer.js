@@ -1,5 +1,5 @@
-import { Component } from 'domr-c';
-import goodOlAjax from '../utils/good-ol-ajax-promise';
+import { Component } from 'domr-framework';
+import { GetAllPlaces } from 'purple-maps-api';
 import { saveCityData, getCityDataAll } from '../utils/db-manipulation';
 import runningTime from '../utils/running-time';
 import getTimeZone from '../utils/get-timezone';
@@ -67,39 +67,44 @@ export default class extends Component {
         liveTime(city);
       });
     }).catch(() => {
-      goodOlAjax(this.api)
+      GetAllPlaces()
       .then((result) => {
-        const citiesArr = [];
-        const localtimezone = getTimeZone();
+        if (result !== '' && result.length > 0) {
+          const citiesArr = [];
+          const localtimezone = getTimeZone();
 
-        result.forEach((itm) => {
-          if (itm.city_id && localtimezone === itm.timezone) {
-            const thisCity = itm;
-            const countryName = result.filter(e => e.country_id && e.code === thisCity.country);
-            thisCity.country_name = countryName[0].name;
-            citiesArr.push(thisCity);
-          }
-        });
+          result.forEach((itm) => {
+            if (itm.city_id && localtimezone === itm.timezone) {
+              const thisCity = itm;
+              thisCity.country = thisCity.country_code;
+              const countryName = result.filter(e => e.country_id && e.country_code === thisCity.country);
+              thisCity.country_name = countryName[0].name;
+              citiesArr.push(thisCity);
+            }
+          });
 
-        const thisCity = citiesArr[0];
-        const cityId = thisCity.city_id;
-        const name = thisCity.name;
-        const country = thisCity.country;
-        const countryName = thisCity.country_name;
-        const timezone = thisCity.timezone;
-        const city = City(thisCity);
-        ul.innerHTML = city;
+          const thisCity = citiesArr[0];
+          const cityId = thisCity.city_id;
+          const name = thisCity.name;
+          const country = thisCity.country;
+          const countryName = thisCity.country_name;
+          const timezone = thisCity.timezone;
+          const city = City(thisCity);
+          ul.innerHTML = city;
 
-        const li = ul.querySelector('li');
+          console.log(countryName, country);
 
-        liveTime(li);
+          const li = ul.querySelector('li');
 
-        saveCityData(cityId, name, country, countryName, timezone)
-        .catch((err) => {
-          console.log(err);
-        });
+          liveTime(li);
 
-        ul.setAttribute('data-level', '0');
+          saveCityData(cityId, name, country, countryName, timezone)
+          .catch((err) => {
+            console.log(err);
+          });
+
+          ul.setAttribute('data-level', '0');
+        }
       }).catch((errAjax) => {
         console.log(errAjax);
         ul.setAttribute('data-level', '0');

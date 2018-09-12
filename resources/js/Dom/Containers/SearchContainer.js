@@ -1,7 +1,7 @@
 import SearchBar from '../Components/SearchBar';
 
-export default function (api) {
-  const searchBar = new SearchBar(api);
+export default function () {
+  const searchBar = new SearchBar();
 
   return `
     <div class="search container">

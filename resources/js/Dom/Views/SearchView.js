@@ -1,14 +1,8 @@
-import apiSet from '../api-set';
 import SearchContainer from '../Containers/SearchContainer';
 
-export default function (data) {
-  let api = apiSet.complete;
-
-  if (data && data.query && data.query.cached === 'true') {
-    api = apiSet.complete_catched;
-  }
+export default function () {
   const wrapper = document.getElementById('wrapper');
-  const searchContainer = SearchContainer(api);
+  const searchContainer = SearchContainer();
 
   wrapper.innerHTML = searchContainer;
 }
