@@ -24,11 +24,11 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "0a27e0fbd61381ae839c3a5f96adddf1"
+    "revision": "9b7261b1c9855c7ebfc6366ab5197065"
   },
   {
-    "url": "public/dist/build/app.166ecd9ae0cf752cf879.js",
-    "revision": "1699850c3f0ff5da05ab52b199dfa028"
+    "url": "public/dist/build/app.6201c914657fe47c1116.js",
+    "revision": "4bac306cb3377fcaac55a766aaa11304"
   },
   {
     "url": "public/dist/build/app.bb42f3ae0123afaf276a4f4586ed287c.css",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "public/dist/build/app.js",
-    "revision": "a82aa12b4dc8629b24940ce6ab71fedd"
+    "revision": "595337bc9b65f833ff69f6b6e062f504"
   },
   {
     "url": "public/dist/favicon/favicon.ico",

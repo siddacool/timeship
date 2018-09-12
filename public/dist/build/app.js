@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "public/dist/build/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -305,21 +305,21 @@ function timeObject(obj) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["friendlyDateTime"] = friendlyDateTime;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interval__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interval__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__info__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__info__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__impl_formatter__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__zones_fixedOffsetZone__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__zones_localZone__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__zones_localZone__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__impl_locale__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__impl_util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__impl_zoneUtil__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__impl_diff__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__impl_regexParser__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__impl_tokenParser__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__impl_conversions__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__impl_formats__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__impl_zoneUtil__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__impl_diff__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__impl_regexParser__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__impl_tokenParser__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__impl_conversions__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__impl_formats__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__errors__ = __webpack_require__(5);
 
 
@@ -2163,9 +2163,9 @@ function friendlyDateTime(dateTimeish) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zones_localZone__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zones_localZone__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_zoneUtil__ = __webpack_require__(16);
 
 
 
@@ -2394,7 +2394,7 @@ class Zone {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__datetime__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__formatter__ = __webpack_require__(8);
@@ -3077,8 +3077,8 @@ class FixedOffsetZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* default
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__english__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formats__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__english__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formats__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(0);
 
 
@@ -3471,6 +3471,105 @@ class Formatter {
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.utils = exports.Router = exports.Component = undefined;
+
+var _Component = __webpack_require__(29);
+
+var _Component2 = _interopRequireDefault(_Component);
+
+var _Router = __webpack_require__(33);
+
+var _Router2 = _interopRequireDefault(_Router);
+
+var _utils = __webpack_require__(38);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Component = _Component2.default;
+exports.Router = _Router2.default;
+exports.utils = _utils2.default;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _hashLocationSet = __webpack_require__(36);
+
+var _hashLocationSet2 = _interopRequireDefault(_hashLocationSet);
+
+var _hashLocationGet = __webpack_require__(37);
+
+var _hashLocationGet2 = _interopRequireDefault(_hashLocationGet);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function loc() {
+  var originalHash = location.hash;
+  var path = originalHash;
+  var search = '';
+  var query = '';
+
+  if (path.includes('?')) {
+    var searchQuery = path.split('?');
+    path = searchQuery[0];
+    search = searchQuery[1].replace(/\//g, '');
+
+    if (search !== '') {
+      var obj = {};
+      var filterString = search.split('&');
+
+      for (var i = 0; i < filterString.length; i++) {
+        var splitString = filterString[i].split('=');
+        var field = splitString[0];
+        var value = splitString[1];
+
+        obj[field] = value;
+      }
+      query = obj;
+    }
+  }
+
+  if (path.endsWith('/') && !path.endsWith('#/')) {
+    var pathSlice = path.slice(0, -1);
+
+    path = pathSlice.replace('#', '');
+  } else {
+    path = path.replace('#', '');
+  }
+
+  return {
+    hash: originalHash.replace('#', ''),
+    path: path,
+    search: search,
+    query: query,
+    set: _hashLocationSet2.default,
+    get: _hashLocationGet2.default
+  };
+}
+
+var hashLocation = loc;
+
+exports.default = hashLocation;
+
+/***/ }),
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3478,7 +3577,7 @@ class Formatter {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__impl_util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__impl_locale__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__impl_formatter__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_regexParser__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__impl_regexParser__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__settings__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(5);
 
@@ -4206,7 +4305,7 @@ class Duration {
 
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4218,7 +4317,7 @@ class Duration {
 /* harmony export (immutable) */ __webpack_exports__["f"] = monthForDateTime;
 /* harmony export (immutable) */ __webpack_exports__["a"] = eraForDateTime;
 /* harmony export (immutable) */ __webpack_exports__["c"] = formatString;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formats__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formats__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(0);
 
 
@@ -4431,7 +4530,7 @@ function formatString(knownFormat) {
 
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4654,7 +4753,7 @@ const DATETIME_HUGE_WITH_SECONDS = {
 
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4708,7 +4807,7 @@ class LocalZone extends __WEBPACK_IMPORTED_MODULE_1__zone__["a" /* default */] {
 
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4719,7 +4818,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.removeCityData = exports.getCityDataAll = exports.saveCityData = undefined;
 
-var _indexedStorage = __webpack_require__(31);
+var _indexedStorage = __webpack_require__(43);
 
 var _indexedStorage2 = _interopRequireDefault(_indexedStorage);
 
@@ -4773,16 +4872,16 @@ exports.getCityDataAll = getCityDataAll;
 exports.removeCityData = removeCityData;
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = normalizeZone;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__zone__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zones_localZone__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__zones_localZone__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_IANAZone__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_fixedOffsetZone__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_invalidZone__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__zones_invalidZone__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util__ = __webpack_require__(0);
 /**
  * @private
@@ -4824,7 +4923,7 @@ function normalizeZone(input, defaultZone) {
 
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4834,7 +4933,7 @@ function normalizeZone(input, defaultZone) {
 /* harmony export (immutable) */ __webpack_exports__["c"] = parseISODuration;
 /* harmony export (immutable) */ __webpack_exports__["e"] = parseSQL;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__english__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__zones_fixedOffsetZone__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zones_IANAZone__ = __webpack_require__(6);
 
@@ -5126,9 +5225,181 @@ function parseSQL(s) {
 
 
 /***/ }),
-/* 16 */,
-/* 17 */,
 /* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FindPlaceByCoordinates = exports.FindCountryByCountryCode = exports.FindCitiesByCountryCode = exports.GetAllCities = exports.GetAllCountries = exports.GetAllPlaces = undefined;
+
+var _goodOlAjaxPromise = __webpack_require__(42);
+
+var _goodOlAjaxPromise2 = _interopRequireDefault(_goodOlAjaxPromise);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var api = 'https://sid-maps-api.firebaseapp.com';
+
+function GetAllPlaces() {
+  var promiseObj = new Promise(function (resolve, reject) {
+    var dbApi = api + '/mapdata';
+
+    (0, _goodOlAjaxPromise2.default)(dbApi).then(function (data) {
+      resolve(data);
+    }).catch(function (err) {
+      reject(err);
+    });
+  });
+
+  return promiseObj;
+}
+
+function GetAllCountries() {
+  var promiseObj = new Promise(function (resolve, reject) {
+    GetAllPlaces().then(function (places) {
+      var arr = [];
+      places.forEach(function (p) {
+        var thisPlace = p;
+
+        if (thisPlace.country_id) {
+          arr.push(thisPlace);
+        }
+      });
+
+      resolve(arr);
+    }).catch(function (err) {
+      reject(err);
+    });
+  });
+
+  return promiseObj;
+}
+
+function GetAllCities() {
+  var promiseObj = new Promise(function (resolve, reject) {
+    GetAllPlaces().then(function (places) {
+      var arr = [];
+      places.forEach(function (p) {
+        var thisPlace = p;
+
+        if (thisPlace.city_id) {
+          arr.push(thisPlace);
+        }
+      });
+
+      resolve(arr);
+    }).catch(function (err) {
+      reject(err);
+    });
+  });
+
+  return promiseObj;
+}
+
+function FindCitiesByCountryCode(countryCode) {
+  var promiseObj = new Promise(function (resolve, reject) {
+    GetAllPlaces().then(function (places) {
+      var arr = [];
+      places.forEach(function (p) {
+        var thisPlace = p;
+
+        if (thisPlace.city_id && thisPlace.country_code === countryCode) {
+          arr.push(thisPlace);
+        }
+      });
+
+      resolve(arr);
+    }).catch(function (err) {
+      reject(err);
+    });
+  });
+
+  return promiseObj;
+}
+
+function FindCountryByCountryCode(countryCode) {
+  var promiseObj = new Promise(function (resolve, reject) {
+    GetAllPlaces().then(function (places) {
+      var obj = {};
+      places.forEach(function (p) {
+        var thisPlace = p;
+
+        if (thisPlace.country_id && thisPlace.country_code === countryCode) {
+          obj = thisPlace;
+          return;
+        }
+      });
+
+      resolve(obj);
+    }).catch(function (err) {
+      reject(err);
+    });
+  });
+
+  return promiseObj;
+}
+
+function FindPlaceByCoordinates(lat, lng) {
+  var promiseObj = new Promise(function (resolve, reject) {
+    GetAllPlaces().then(function (places) {
+      var toSend = '';
+      var arr = [];
+      var totalDiff = lat - lng;
+
+      places.forEach(function (p) {
+        var thisPlace = p;
+        var thisLat = thisPlace.lat;
+        var thisLng = thisPlace.lng;
+        var total = thisLat - thisLng;
+        var latMin = +thisLat - 0.18;
+        var latMax = +thisLat + 0.18;
+        var lngMin = +thisLng - 0.18;
+        var lngMax = +thisLng + 0.18;
+
+        thisPlace.total = total;
+
+        if (lat <= latMax && lat >= latMin && lng <= lngMax && lng >= lngMin) {
+          arr.push(thisPlace);
+        }
+      });
+
+      if (arr.length && arr.length > 0) {
+        var diff = '';
+
+        for (var i = 0; i < arr.length; i++) {
+          var thisPlace = arr[i];
+          var total = thisPlace.total;
+          var thisDiff = totalDiff - total;
+
+          if (diff === '' || diff > thisDiff) {
+            diff = thisDiff;
+            toSend = thisPlace;
+          }
+        }
+      }
+
+      resolve(toSend);
+    }).catch(function (err) {
+      reject(err);
+    });
+  });
+
+  return promiseObj;
+}
+
+exports.GetAllPlaces = GetAllPlaces;
+exports.GetAllCountries = GetAllCountries;
+exports.GetAllCities = GetAllCities;
+exports.FindCitiesByCountryCode = FindCitiesByCountryCode;
+exports.FindCountryByCountryCode = FindCountryByCountryCode;
+exports.FindPlaceByCoordinates = FindPlaceByCoordinates;
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports) {
 
 var g;
@@ -5155,7 +5426,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5191,18 +5462,18 @@ function runningTime(target) {
 exports.default = runningTime;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(21);
+__webpack_require__(22);
 
-__webpack_require__(44);
+__webpack_require__(56);
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5212,9 +5483,9 @@ var _datetime = __webpack_require__(1);
 
 var _datetime2 = _interopRequireDefault(_datetime);
 
-var _domrFramework = __webpack_require__(50);
+var _domrFramework = __webpack_require__(9);
 
-var _routes = __webpack_require__(28);
+var _routes = __webpack_require__(39);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -5257,7 +5528,7 @@ if (loadingScreen) {
 }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5307,12 +5578,12 @@ class InvalidZone extends __WEBPACK_IMPORTED_MODULE_0__zone__["a" /* default */]
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__datetime__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__duration__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__duration__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__errors__ = __webpack_require__(5);
 
@@ -5814,7 +6085,7 @@ class Interval {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5992,11 +6263,11 @@ class Info {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duration__ = __webpack_require__(11);
 
 
 function dayDiff(earlier, later) {
@@ -6082,7 +6353,7 @@ function highOrderDiffs(cursor, later, units) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6386,7 +6657,7 @@ function parseFromTokens(locale, input, format) {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6539,7 +6810,7 @@ function hasInvalidTimeData(obj) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6549,11 +6820,689 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _HomePageView = __webpack_require__(29);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _createElement = __webpack_require__(30);
+
+var _createElement2 = _interopRequireDefault(_createElement);
+
+var _lookup = __webpack_require__(31);
+
+var _lookup2 = _interopRequireDefault(_lookup);
+
+var _randomizer = __webpack_require__(32);
+
+var _randomizer2 = _interopRequireDefault(_randomizer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var _class = function () {
+  function _class() {
+    var _this = this;
+
+    var domrid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'domr-component';
+
+    _classCallCheck(this, _class);
+
+    this.createElement = _createElement2.default;
+    this.domrid = domrid + '-' + (0, _randomizer2.default)(7);
+    this.target = function () {
+      return (0, _lookup2.default)(_this.domrid);
+    };
+    this.GetThisComponent = this.target;
+    this.GetDomrID = this.domrid;
+    this.handlingParent = document.querySelector('body');
+  }
+
+  // debug
+
+
+  _createClass(_class, [{
+    key: 'errorHandler',
+    value: function errorHandler(field, error) {
+      var err = '_ ' + field + ': ' + error;
+      this.ErrorLog(err);
+    }
+    // OnError
+
+  }, {
+    key: 'ErrorLog',
+    value: function ErrorLog(err) {}
+
+    // Markup
+
+  }, {
+    key: 'Markup',
+    value: function Markup() {
+      // HTML DOM/Markup goes here
+      return '';
+    }
+
+    // Events
+
+  }, {
+    key: 'deligateEvents',
+    value: function deligateEvents(childen, eventName, eventAction) {
+      var _this2 = this;
+
+      this.handlingParent.addEventListener(eventName, function (e) {
+        var event = e;
+        if (event.target) {
+          if (event.target.matches(childen)) {
+            event.closest = false;
+            eventAction(event.target, event);
+            return;
+          } else if (event.target.closest(childen)) {
+            event.closest = true;
+            event.closestDomrId = _this2.domrid;
+            event.closestElm = childen;
+            eventAction(event.target.closest(childen), event);
+            return;
+          }
+        }
+      });
+    }
+  }, {
+    key: 'On',
+    value: function On(eventName, eventAction) {
+      this.deligateEvents('[data-domr-id="' + this.domrid + '"]', eventName, eventAction);
+    }
+  }, {
+    key: 'Click',
+    value: function Click(eventAction) {
+      this.On('click', eventAction);
+    }
+  }, {
+    key: 'Mouseover',
+    value: function Mouseover(eventAction) {
+      this.On('mouseover', eventAction);
+    }
+  }, {
+    key: 'Mouseout',
+    value: function Mouseout(eventAction) {
+      this.On('mouseout', eventAction);
+    }
+  }, {
+    key: 'Input',
+    value: function Input(eventAction) {
+      this.On('input', eventAction);
+    }
+  }, {
+    key: 'Blur',
+    value: function Blur(eventAction) {
+      this.On('blur', eventAction);
+    }
+  }, {
+    key: 'Keydown',
+    value: function Keydown(eventAction) {
+      this.On('keydown', eventAction);
+    }
+  }, {
+    key: 'Keypress',
+    value: function Keypress(eventAction) {
+      this.On('keypress', eventAction);
+    }
+  }, {
+    key: 'Keyup',
+    value: function Keyup(eventAction) {
+      this.On('keyup', eventAction);
+    }
+  }, {
+    key: 'Events',
+    value: function Events() {}
+    // This one will house the events
+
+
+    // AfterRender
+
+  }, {
+    key: 'AfterRenderDone',
+    value: function AfterRenderDone() {}
+  }, {
+    key: 'delayedContent',
+    value: function delayedContent() {
+      var _this3 = this;
+
+      setTimeout(function () {
+        if (_this3.target()) {
+          _this3.AfterRenderDone();
+        }
+      }, 50);
+    }
+  }, {
+    key: 'optimizedDom',
+    value: function optimizedDom() {
+      this.Events();
+      return this.createElement(this.Markup(), this.domrid);
+    }
+
+    // Add Events
+    // Render
+
+  }, {
+    key: 'Render',
+    value: function Render() {
+      this.delayedContent();
+      return this.optimizedDom();
+    }
+  }, {
+    key: 'AddTo',
+    value: function AddTo(parent) {
+      if (parent) {
+        parent.insertAdjacentHTML('beforeend', this.optimizedDom());
+        this.delayedContent();
+      } else {
+        this.errorHandler('AddTo', 'parent not found');
+      }
+    }
+  }, {
+    key: 'AddFromStartTo',
+    value: function AddFromStartTo(parent) {
+      if (parent) {
+        parent.insertAdjacentHTML('afterbegin', this.optimizedDom());
+        this.delayedContent();
+      } else {
+        this.errorHandler('AddFromStartTo', 'parent not found');
+      }
+    }
+  }, {
+    key: 'Before',
+    value: function Before(sibling) {
+      if (sibling) {
+        sibling.insertAdjacentHTML('beforebegin', this.optimizedDom());
+        this.delayedContent();
+      } else {
+        this.errorHandler('Before', 'sibling not found');
+      }
+    }
+  }, {
+    key: 'After',
+    value: function After(sibling) {
+      if (sibling) {
+        sibling.insertAdjacentHTML('afterend', this.optimizedDom());
+        this.delayedContent();
+      } else {
+        this.errorHandler('After', 'sibling not found');
+      }
+    }
+  }, {
+    key: 'Replace',
+    value: function Replace(sibling) {
+      if (sibling) {
+        var parent = sibling.parentElement;
+
+        if (parent) {
+          sibling.insertAdjacentHTML('afterend', this.optimizedDom());
+          parent.removeChild(sibling);
+          this.delayedContent();
+        } else {
+          this.errorHandler('Replace', 'sibling has no parentElement');
+        }
+      } else {
+        this.errorHandler('Replace', 'sibling not found');
+      }
+    }
+  }]);
+
+  return _class;
+}();
+
+exports.default = _class;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function createElement(str, domrDataId) {
+  var div = document.createElement('div');
+  div.innerHTML = str;
+  var container = document.createDocumentFragment();
+  for (var i = 0; i < div.childNodes.length; i++) {
+    var node = div.childNodes[i].cloneNode(true);
+    container.appendChild(node);
+  }
+
+  if (domrDataId) {
+    container.childNodes[1].setAttribute('data-domr-id', domrDataId);
+  }
+  return container.childNodes[1].outerHTML;
+}
+
+exports.default = createElement;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function Lookup(elmId) {
+  var targetSelector = document.querySelector("[data-domr-id=\"" + elmId + "\"]");
+
+  if (targetSelector) {
+    return targetSelector;
+  }
+}
+
+exports.default = Lookup;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function randomizer() {
+  var stringLength = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 7;
+
+  return Math.random().toString(36).substr(2, stringLength);
+}
+
+exports.default = randomizer;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _addView = __webpack_require__(34);
+
+var _addView2 = _interopRequireDefault(_addView);
+
+var _hashLocation = __webpack_require__(10);
+
+var _hashLocation2 = _interopRequireDefault(_hashLocation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var filterRoutes = function filterRoutes(routes) {
+  var arr = [];
+  routes.forEach(function (route) {
+    if (route.path && route.view) {
+      arr.push(route);
+    }
+  });
+
+  return arr;
+};
+var defaults = {
+  routes: [],
+  config: {
+    refreshPage: false
+  }
+};
+
+var _class = function () {
+  function _class() {
+    var routes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaults.routes;
+    var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaults.config;
+
+    _classCallCheck(this, _class);
+
+    this.routes = filterRoutes(routes);
+    this.refreshPage = config.refreshPage || false;
+    this.addView = _addView2.default;
+  }
+
+  _createClass(_class, [{
+    key: 'ShowRoutes',
+    value: function ShowRoutes() {
+      console.log(this.routes);
+    }
+  }, {
+    key: 'reloadOnHashChange',
+    value: function reloadOnHashChange() {
+      var _this = this;
+
+      addEventListener('hashchange', function (e) {
+        if (_this.refreshPage) {
+          location.reload();
+        } else {
+          _this.Start();
+          e.stopImmediatePropagation();
+        }
+      });
+    }
+  }, {
+    key: 'Start',
+    value: function Start() {
+      var loc = (0, _hashLocation2.default)();
+      var locPath = loc.path;
+      var candidate = void 0;
+
+      if (locPath === '') {
+        location.hash = '#/';
+      }
+
+      this.routes.forEach(function (route) {
+        var path = route.path;
+        if (path.endsWith('/') && path !== '/') {
+          path = path.slice(0, -1);
+        }
+
+        var routeDataVal = [];
+        var routePathMod = path.replace(/([:*])(\w+)/g, function (full, dots, name) {
+          routeDataVal.push(name);
+          return '([^/]+)';
+        }) + '(?:/|$)';
+        var routePathModRegEx = locPath.match(new RegExp(routePathMod));
+
+        if (routePathModRegEx) {
+          var params = routePathModRegEx.slice(1, routePathModRegEx.length).reduce(function (params, value, index) {
+            if (params === null) params = {};
+            params[routeDataVal[index]] = value;
+            return params;
+          }, null);
+
+          route.metadata = params || '';
+          route.query = loc.query;
+          candidate = route;
+        }
+      });
+
+      if (candidate) {
+        this.addView(candidate);
+      } else {
+        var routeDefault = this.routes.find(function (o) {
+          return o.isDefault === true;
+        });
+        if (routeDefault) {
+          this.addView(routeDefault);
+        } else {
+          console.error('Page Not Found');
+        }
+      }
+
+      this.reloadOnHashChange();
+    }
+  }]);
+
+  return _class;
+}();
+
+exports.default = _class;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _cloneObject = __webpack_require__(35);
+
+var _cloneObject2 = _interopRequireDefault(_cloneObject);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function addView(candidate) {
+  var view = candidate.view;
+  var skiplist = ['view'];
+  var routeData = (0, _cloneObject2.default)(candidate, skiplist);
+
+  if (candidate && view) {
+    if (typeof view === 'function') {
+      view(routeData);
+    } else {
+      view;
+    }
+  }
+}
+
+exports.default = addView;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var defaultSkipList = ['view'];
+
+function findInArr(arr, itm) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === itm) {
+      return true;
+    }
+  }
+}
+
+function cloneObject(obj) {
+  var skipList = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultSkipList;
+
+  var newObj = {};
+
+  Object.keys(obj).forEach(function (key) {
+    var value = obj[key];
+    var skip = findInArr(skipList, key);
+
+    if (!skip) {
+      newObj[key] = value;
+    }
+  });
+
+  return newObj;
+}
+
+exports.default = cloneObject;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _hashLocation = __webpack_require__(10);
+
+var _hashLocation2 = _interopRequireDefault(_hashLocation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function setHash(option) {
+  var hash = option;
+  if (!hash.startsWith('#')) {
+    hash = '#' + hash;
+  }
+
+  return hash;
+}
+
+function setPath(option) {
+  var loc = (0, _hashLocation2.default)();
+  var searchQuery = loc.search;
+  var path = option;
+
+  if (path.startsWith('#')) {
+    path = path.slice(0, -1);
+  }
+
+  if (searchQuery) {
+    if (!path.endsWith('/')) {
+      path = path + '/';
+    }
+
+    path = path + '?' + searchQuery;
+  }
+
+  path = setHash(path);
+  return path;
+}
+
+function setSearch(option) {
+  var search = option;
+  var loc = (0, _hashLocation2.default)();
+  var path = loc.path;
+
+  if (path.endsWith('/')) {
+    path = path.slice(0, -1);
+  }
+
+  if (!search.startsWith('?')) {
+    search = '?' + search;
+  }
+
+  search = setHash(path + '/' + search);
+
+  return search;
+}
+
+function loopSearchQuery(obj) {
+  var arr = [];
+  for (var key in obj) {
+    arr.push(key + '=' + obj[key]);
+  }
+
+  return '?' + arr.join('&');
+}
+
+function setQuery(obj) {
+  var searchQuery = loopSearchQuery(obj);
+  var query = setSearch(searchQuery);
+
+  return query;
+}
+
+function redirectTo(hash) {
+  location.hash = hash;
+}
+
+function hashLocationSet(field, opt) {
+  var setField = field;
+  var option = opt;
+  var link = void 0;
+
+  switch (setField) {
+    case 'search':
+      link = setSearch(option);
+      break;
+    case 'query':
+      link = setQuery(option);
+      break;
+    case 'path':
+      link = setPath(option);
+      break;
+    case 'hash':
+      link = setHash(option);
+      break;
+  }
+
+  if (link) {
+    redirectTo(link);
+  } else {
+    console.error('incorrect set location params');
+  }
+}
+
+exports.default = hashLocationSet;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _hashLocation = __webpack_require__(10);
+
+var _hashLocation2 = _interopRequireDefault(_hashLocation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function hashLocationGet(field) {
+  var loc = (0, _hashLocation2.default)();
+  var thisField = loc[field];
+
+  if (thisField) {
+    return thisField;
+  } else {
+    console.error('incorrect get location params');
+  }
+}
+
+exports.default = hashLocationGet;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _hashLocation = __webpack_require__(10);
+
+var _hashLocation2 = _interopRequireDefault(_hashLocation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var utils = {
+  hashLocation: _hashLocation2.default
+};
+
+exports.default = utils;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _HomePageView = __webpack_require__(40);
 
 var _HomePageView2 = _interopRequireDefault(_HomePageView);
 
-var _SearchView = __webpack_require__(39);
+var _SearchView = __webpack_require__(51);
 
 var _SearchView2 = _interopRequireDefault(_SearchView);
 
@@ -6573,7 +7522,7 @@ var routes = [{
 exports.default = routes;
 
 /***/ }),
-/* 29 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6590,14 +7539,14 @@ exports.default = function () {
   wrapper.innerHTML = homeContainer.Render();
 };
 
-var _HomeContainer = __webpack_require__(30);
+var _HomeContainer = __webpack_require__(41);
 
 var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 30 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6607,21 +7556,21 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _domrFramework = __webpack_require__(50);
+var _domrFramework = __webpack_require__(9);
 
-var _purpleMapsApi = __webpack_require__(61);
+var _purpleMapsApi = __webpack_require__(18);
 
-var _dbManipulation = __webpack_require__(13);
+var _dbManipulation = __webpack_require__(15);
 
-var _runningTime = __webpack_require__(19);
+var _runningTime = __webpack_require__(20);
 
 var _runningTime2 = _interopRequireDefault(_runningTime);
 
-var _getTimezone = __webpack_require__(36);
+var _getTimezone = __webpack_require__(48);
 
 var _getTimezone2 = _interopRequireDefault(_getTimezone);
 
-var _City = __webpack_require__(37);
+var _City = __webpack_require__(49);
 
 var _City2 = _interopRequireDefault(_City);
 
@@ -6696,8 +7645,6 @@ exports.default = class extends _domrFramework.Component {
           var city = (0, _City2.default)(thisCity);
           ul.innerHTML = city;
 
-          console.log(countryName, country);
-
           var li = ul.querySelector('li');
 
           liveTime(li);
@@ -6717,7 +7664,40 @@ exports.default = class extends _domrFramework.Component {
 };
 
 /***/ }),
-/* 31 */
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function goodOlAjaxPromise(url) {
+  var promiseObj = new Promise(function (resolve, reject) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open('GET', url, true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState === 4) {
+        if (xmlhttp.status === 200) {
+          var responseText = xmlhttp.responseText.trim();
+          var obj = JSON.parse(responseText);
+          resolve(obj);
+        } else {
+          reject(xmlhttp.status);
+          console.log('xmlhttp failed');
+        }
+      }
+    };
+  });
+  return promiseObj;
+}
+
+exports.default = goodOlAjaxPromise;
+
+/***/ }),
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6727,7 +7707,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dexie = __webpack_require__(32);
+var _dexie = __webpack_require__(44);
 
 var _dexie2 = _interopRequireDefault(_dexie);
 
@@ -6741,7 +7721,7 @@ db.version(1).stores({
 exports.default = db;
 
 /***/ }),
-/* 32 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11203,10 +12183,10 @@ dbNamesDB.version(1).stores({ dbnames: 'name' });
 /* harmony default export */ __webpack_exports__["default"] = (Dexie);
 //# sourceMappingURL=dexie.es.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(18), __webpack_require__(33).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(19), __webpack_require__(45).setImmediate))
 
 /***/ }),
-/* 33 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -11259,13 +12239,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(34);
+__webpack_require__(46);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 34 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -11455,10 +12435,10 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18), __webpack_require__(35)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19), __webpack_require__(47)))
 
 /***/ }),
-/* 35 */
+/* 47 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -11648,7 +12628,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 36 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11666,7 +12646,7 @@ function getTimeZone() {
 exports.default = getTimeZone;
 
 /***/ }),
-/* 37 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11682,14 +12662,14 @@ exports.default = function (param) {
   return '\n    <li class="city" data-id="' + param.city_id + '">\n      <div class="city__half">\n        <span class="city__name">' + param.name + '</span>\n        <span class="city__country-name">' + param.country_name + '</span>\n        <span class="city__country">(' + param.country + ')</span>\n      </div>\n      <div class="city__half">\n        <div class="city__time-master">\n          <div class="city__time-group">\n            <span class="city__time city__time--12" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__time city__time--am" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--day" data-timezone="' + param.timezone + '">...</span>\n          </div>\n          <div class="city__time-group">\n            <span class="city__time city__time--24" data-timezone="' + param.timezone + '">...</span>\n            <span class="city__timezone">GMT ' + param.timezone + '</span>\n          </div>\n        </div>\n      </div>\n      ' + deleteBtn.Render() + '\n    </li>\n  ';
 };
 
-var _CityDeleteButton = __webpack_require__(38);
+var _CityDeleteButton = __webpack_require__(50);
 
 var _CityDeleteButton2 = _interopRequireDefault(_CityDeleteButton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 38 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11699,9 +12679,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _domrFramework = __webpack_require__(50);
+var _domrFramework = __webpack_require__(9);
 
-var _dbManipulation = __webpack_require__(13);
+var _dbManipulation = __webpack_require__(15);
 
 exports.default = class extends _domrFramework.Component {
   constructor() {
@@ -11739,7 +12719,7 @@ exports.default = class extends _domrFramework.Component {
 };
 
 /***/ }),
-/* 39 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11756,14 +12736,14 @@ exports.default = function () {
   wrapper.innerHTML = searchContainer;
 };
 
-var _SearchContainer = __webpack_require__(40);
+var _SearchContainer = __webpack_require__(52);
 
 var _SearchContainer2 = _interopRequireDefault(_SearchContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 40 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11779,14 +12759,14 @@ exports.default = function () {
   return '\n    <div class="search container">\n      <div class="search__box">\n        <div class="search__box__ui container">\n          <a href="#/" class="search-icon">\n            <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-arrow-64"></use></svg>\n          </a>\n          ' + searchBar.Render() + '\n        </div>\n      </div>\n      <ul class="search__area"></ul>\n      <div class="search__close">\n        <div class="container">\n          <a href="#/" class="search-close-button">\n            <svg role="img" class="icon"><use xlink:href="#icon-iconmonstr-plus-2"></use></svg>\n          </a>\n        </div>\n      </div>\n    </div>\n  ';
 };
 
-var _SearchBar = __webpack_require__(41);
+var _SearchBar = __webpack_require__(53);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 41 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11796,21 +12776,21 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _domrFramework = __webpack_require__(50);
+var _domrFramework = __webpack_require__(9);
 
-var _fireSearchEvent = __webpack_require__(42);
+var _fireSearchEvent = __webpack_require__(54);
 
 var _fireSearchEvent2 = _interopRequireDefault(_fireSearchEvent);
 
-var _SearchResult = __webpack_require__(43);
+var _SearchResult = __webpack_require__(55);
 
 var _SearchResult2 = _interopRequireDefault(_SearchResult);
 
-var _runningTime = __webpack_require__(19);
+var _runningTime = __webpack_require__(20);
 
 var _runningTime2 = _interopRequireDefault(_runningTime);
 
-var _dbManipulation = __webpack_require__(13);
+var _dbManipulation = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11895,7 +12875,7 @@ exports.default = class extends _domrFramework.Component {
 };
 
 /***/ }),
-/* 42 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11905,7 +12885,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _purpleMapsApi = __webpack_require__(61);
+var _purpleMapsApi = __webpack_require__(18);
 
 function fireSearchEvent(searchTerm) {
   var promiseObj = new Promise(function (resolve, reject) {
@@ -11924,8 +12904,6 @@ function fireSearchEvent(searchTerm) {
         var val = searchTerm.toLowerCase();
         var finalArr = [];
 
-        console.log(val);
-
         cityArr.forEach(function (city) {
           var thisCity = city;
           thisCity.country = thisCity.country_code;
@@ -11936,7 +12914,6 @@ function fireSearchEvent(searchTerm) {
           var newCityName = thisCity.name.toLowerCase();
           thisCity.name = newCityName;
 
-          console.log(thisCity.name.toLowerCase());
           if (thisCity.name.toLowerCase().startsWith(val)) {
             thisCity.priority = 1;
             finalArr.push(thisCity);
@@ -11987,7 +12964,7 @@ function fireSearchEvent(searchTerm) {
 exports.default = fireSearchEvent;
 
 /***/ }),
-/* 43 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12008,998 +12985,10 @@ function bolden(text, searchTerm) {
 }
 
 /***/ }),
-/* 44 */
+/* 56 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _hashLocationSet = __webpack_require__(58);
-
-var _hashLocationSet2 = _interopRequireDefault(_hashLocationSet);
-
-var _hashLocationGet = __webpack_require__(59);
-
-var _hashLocationGet2 = _interopRequireDefault(_hashLocationGet);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function loc() {
-  var originalHash = location.hash;
-  var path = originalHash;
-  var search = '';
-  var query = '';
-
-  if (path.includes('?')) {
-    var searchQuery = path.split('?');
-    path = searchQuery[0];
-    search = searchQuery[1].replace(/\//g, '');
-
-    if (search !== '') {
-      var obj = {};
-      var filterString = search.split('&');
-
-      for (var i = 0; i < filterString.length; i++) {
-        var splitString = filterString[i].split('=');
-        var field = splitString[0];
-        var value = splitString[1];
-
-        obj[field] = value;
-      }
-      query = obj;
-    }
-  }
-
-  if (path.endsWith('/') && !path.endsWith('#/')) {
-    var pathSlice = path.slice(0, -1);
-
-    path = pathSlice.replace('#', '');
-  } else {
-    path = path.replace('#', '');
-  }
-
-  return {
-    hash: originalHash.replace('#', ''),
-    path: path,
-    search: search,
-    query: query,
-    set: _hashLocationSet2.default,
-    get: _hashLocationGet2.default
-  };
-}
-
-var hashLocation = loc;
-
-exports.default = hashLocation;
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.utils = exports.Router = exports.Component = undefined;
-
-var _Component = __webpack_require__(51);
-
-var _Component2 = _interopRequireDefault(_Component);
-
-var _Router = __webpack_require__(55);
-
-var _Router2 = _interopRequireDefault(_Router);
-
-var _utils = __webpack_require__(60);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.Component = _Component2.default;
-exports.Router = _Router2.default;
-exports.utils = _utils2.default;
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _createElement = __webpack_require__(52);
-
-var _createElement2 = _interopRequireDefault(_createElement);
-
-var _lookup = __webpack_require__(53);
-
-var _lookup2 = _interopRequireDefault(_lookup);
-
-var _randomizer = __webpack_require__(54);
-
-var _randomizer2 = _interopRequireDefault(_randomizer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var _class = function () {
-  function _class() {
-    var _this = this;
-
-    var domrid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'domr-component';
-
-    _classCallCheck(this, _class);
-
-    this.createElement = _createElement2.default;
-    this.domrid = domrid + '-' + (0, _randomizer2.default)(7);
-    this.target = function () {
-      return (0, _lookup2.default)(_this.domrid);
-    };
-    this.GetThisComponent = this.target;
-    this.GetDomrID = this.domrid;
-    this.handlingParent = document.querySelector('body');
-  }
-
-  // debug
-
-
-  _createClass(_class, [{
-    key: 'errorHandler',
-    value: function errorHandler(field, error) {
-      var err = '_ ' + field + ': ' + error;
-      this.ErrorLog(err);
-    }
-    // OnError
-
-  }, {
-    key: 'ErrorLog',
-    value: function ErrorLog(err) {}
-
-    // Markup
-
-  }, {
-    key: 'Markup',
-    value: function Markup() {
-      // HTML DOM/Markup goes here
-      return '';
-    }
-
-    // Events
-
-  }, {
-    key: 'deligateEvents',
-    value: function deligateEvents(childen, eventName, eventAction) {
-      var _this2 = this;
-
-      this.handlingParent.addEventListener(eventName, function (e) {
-        var event = e;
-        if (event.target) {
-          if (event.target.matches(childen)) {
-            event.closest = false;
-            eventAction(event.target, event);
-            return;
-          } else if (event.target.closest(childen)) {
-            event.closest = true;
-            event.closestDomrId = _this2.domrid;
-            event.closestElm = childen;
-            eventAction(event.target.closest(childen), event);
-            return;
-          }
-        }
-      });
-    }
-  }, {
-    key: 'On',
-    value: function On(eventName, eventAction) {
-      this.deligateEvents('[data-domr-id="' + this.domrid + '"]', eventName, eventAction);
-    }
-  }, {
-    key: 'Click',
-    value: function Click(eventAction) {
-      this.On('click', eventAction);
-    }
-  }, {
-    key: 'Mouseover',
-    value: function Mouseover(eventAction) {
-      this.On('mouseover', eventAction);
-    }
-  }, {
-    key: 'Mouseout',
-    value: function Mouseout(eventAction) {
-      this.On('mouseout', eventAction);
-    }
-  }, {
-    key: 'Input',
-    value: function Input(eventAction) {
-      this.On('input', eventAction);
-    }
-  }, {
-    key: 'Blur',
-    value: function Blur(eventAction) {
-      this.On('blur', eventAction);
-    }
-  }, {
-    key: 'Keydown',
-    value: function Keydown(eventAction) {
-      this.On('keydown', eventAction);
-    }
-  }, {
-    key: 'Keypress',
-    value: function Keypress(eventAction) {
-      this.On('keypress', eventAction);
-    }
-  }, {
-    key: 'Keyup',
-    value: function Keyup(eventAction) {
-      this.On('keyup', eventAction);
-    }
-  }, {
-    key: 'Events',
-    value: function Events() {}
-    // This one will house the events
-
-
-    // AfterRender
-
-  }, {
-    key: 'AfterRenderDone',
-    value: function AfterRenderDone() {}
-  }, {
-    key: 'delayedContent',
-    value: function delayedContent() {
-      var _this3 = this;
-
-      setTimeout(function () {
-        if (_this3.target()) {
-          _this3.AfterRenderDone();
-        }
-      }, 50);
-    }
-  }, {
-    key: 'optimizedDom',
-    value: function optimizedDom() {
-      this.Events();
-      return this.createElement(this.Markup(), this.domrid);
-    }
-
-    // Add Events
-    // Render
-
-  }, {
-    key: 'Render',
-    value: function Render() {
-      this.delayedContent();
-      return this.optimizedDom();
-    }
-  }, {
-    key: 'AddTo',
-    value: function AddTo(parent) {
-      if (parent) {
-        parent.insertAdjacentHTML('beforeend', this.optimizedDom());
-        this.delayedContent();
-      } else {
-        this.errorHandler('AddTo', 'parent not found');
-      }
-    }
-  }, {
-    key: 'AddFromStartTo',
-    value: function AddFromStartTo(parent) {
-      if (parent) {
-        parent.insertAdjacentHTML('afterbegin', this.optimizedDom());
-        this.delayedContent();
-      } else {
-        this.errorHandler('AddFromStartTo', 'parent not found');
-      }
-    }
-  }, {
-    key: 'Before',
-    value: function Before(sibling) {
-      if (sibling) {
-        sibling.insertAdjacentHTML('beforebegin', this.optimizedDom());
-        this.delayedContent();
-      } else {
-        this.errorHandler('Before', 'sibling not found');
-      }
-    }
-  }, {
-    key: 'After',
-    value: function After(sibling) {
-      if (sibling) {
-        sibling.insertAdjacentHTML('afterend', this.optimizedDom());
-        this.delayedContent();
-      } else {
-        this.errorHandler('After', 'sibling not found');
-      }
-    }
-  }, {
-    key: 'Replace',
-    value: function Replace(sibling) {
-      if (sibling) {
-        var parent = sibling.parentElement;
-
-        if (parent) {
-          sibling.insertAdjacentHTML('afterend', this.optimizedDom());
-          parent.removeChild(sibling);
-          this.delayedContent();
-        } else {
-          this.errorHandler('Replace', 'sibling has no parentElement');
-        }
-      } else {
-        this.errorHandler('Replace', 'sibling not found');
-      }
-    }
-  }]);
-
-  return _class;
-}();
-
-exports.default = _class;
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-function createElement(str, domrDataId) {
-  var div = document.createElement('div');
-  div.innerHTML = str;
-  var container = document.createDocumentFragment();
-  for (var i = 0; i < div.childNodes.length; i++) {
-    var node = div.childNodes[i].cloneNode(true);
-    container.appendChild(node);
-  }
-
-  if (domrDataId) {
-    container.childNodes[1].setAttribute('data-domr-id', domrDataId);
-  }
-  return container.childNodes[1].outerHTML;
-}
-
-exports.default = createElement;
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-function Lookup(elmId) {
-  var targetSelector = document.querySelector("[data-domr-id=\"" + elmId + "\"]");
-
-  if (targetSelector) {
-    return targetSelector;
-  }
-}
-
-exports.default = Lookup;
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-function randomizer() {
-  var stringLength = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 7;
-
-  return Math.random().toString(36).substr(2, stringLength);
-}
-
-exports.default = randomizer;
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _addView = __webpack_require__(56);
-
-var _addView2 = _interopRequireDefault(_addView);
-
-var _hashLocation = __webpack_require__(49);
-
-var _hashLocation2 = _interopRequireDefault(_hashLocation);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var filterRoutes = function filterRoutes(routes) {
-  var arr = [];
-  routes.forEach(function (route) {
-    if (route.path && route.view) {
-      arr.push(route);
-    }
-  });
-
-  return arr;
-};
-var defaults = {
-  routes: [],
-  config: {
-    refreshPage: false
-  }
-};
-
-var _class = function () {
-  function _class() {
-    var routes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaults.routes;
-    var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaults.config;
-
-    _classCallCheck(this, _class);
-
-    this.routes = filterRoutes(routes);
-    this.refreshPage = config.refreshPage || false;
-    this.addView = _addView2.default;
-  }
-
-  _createClass(_class, [{
-    key: 'ShowRoutes',
-    value: function ShowRoutes() {
-      console.log(this.routes);
-    }
-  }, {
-    key: 'reloadOnHashChange',
-    value: function reloadOnHashChange() {
-      var _this = this;
-
-      addEventListener('hashchange', function (e) {
-        if (_this.refreshPage) {
-          location.reload();
-        } else {
-          _this.Start();
-          e.stopImmediatePropagation();
-        }
-      });
-    }
-  }, {
-    key: 'Start',
-    value: function Start() {
-      var loc = (0, _hashLocation2.default)();
-      var locPath = loc.path;
-      var candidate = void 0;
-
-      if (locPath === '') {
-        location.hash = '#/';
-      }
-
-      this.routes.forEach(function (route) {
-        var path = route.path;
-        if (path.endsWith('/') && path !== '/') {
-          path = path.slice(0, -1);
-        }
-
-        var routeDataVal = [];
-        var routePathMod = path.replace(/([:*])(\w+)/g, function (full, dots, name) {
-          routeDataVal.push(name);
-          return '([^/]+)';
-        }) + '(?:/|$)';
-        var routePathModRegEx = locPath.match(new RegExp(routePathMod));
-
-        if (routePathModRegEx) {
-          var params = routePathModRegEx.slice(1, routePathModRegEx.length).reduce(function (params, value, index) {
-            if (params === null) params = {};
-            params[routeDataVal[index]] = value;
-            return params;
-          }, null);
-
-          route.metadata = params || '';
-          route.query = loc.query;
-          candidate = route;
-        }
-      });
-
-      if (candidate) {
-        this.addView(candidate);
-      } else {
-        var routeDefault = this.routes.find(function (o) {
-          return o.isDefault === true;
-        });
-        if (routeDefault) {
-          this.addView(routeDefault);
-        } else {
-          console.error('Page Not Found');
-        }
-      }
-
-      this.reloadOnHashChange();
-    }
-  }]);
-
-  return _class;
-}();
-
-exports.default = _class;
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _cloneObject = __webpack_require__(57);
-
-var _cloneObject2 = _interopRequireDefault(_cloneObject);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function addView(candidate) {
-  var view = candidate.view;
-  var skiplist = ['view'];
-  var routeData = (0, _cloneObject2.default)(candidate, skiplist);
-
-  if (candidate && view) {
-    if (typeof view === 'function') {
-      view(routeData);
-    } else {
-      view;
-    }
-  }
-}
-
-exports.default = addView;
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var defaultSkipList = ['view'];
-
-function findInArr(arr, itm) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === itm) {
-      return true;
-    }
-  }
-}
-
-function cloneObject(obj) {
-  var skipList = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultSkipList;
-
-  var newObj = {};
-
-  Object.keys(obj).forEach(function (key) {
-    var value = obj[key];
-    var skip = findInArr(skipList, key);
-
-    if (!skip) {
-      newObj[key] = value;
-    }
-  });
-
-  return newObj;
-}
-
-exports.default = cloneObject;
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _hashLocation = __webpack_require__(49);
-
-var _hashLocation2 = _interopRequireDefault(_hashLocation);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function setHash(option) {
-  var hash = option;
-  if (!hash.startsWith('#')) {
-    hash = '#' + hash;
-  }
-
-  return hash;
-}
-
-function setPath(option) {
-  var loc = (0, _hashLocation2.default)();
-  var searchQuery = loc.search;
-  var path = option;
-
-  if (path.startsWith('#')) {
-    path = path.slice(0, -1);
-  }
-
-  if (searchQuery) {
-    if (!path.endsWith('/')) {
-      path = path + '/';
-    }
-
-    path = path + '?' + searchQuery;
-  }
-
-  path = setHash(path);
-  return path;
-}
-
-function setSearch(option) {
-  var search = option;
-  var loc = (0, _hashLocation2.default)();
-  var path = loc.path;
-
-  if (path.endsWith('/')) {
-    path = path.slice(0, -1);
-  }
-
-  if (!search.startsWith('?')) {
-    search = '?' + search;
-  }
-
-  search = setHash(path + '/' + search);
-
-  return search;
-}
-
-function loopSearchQuery(obj) {
-  var arr = [];
-  for (var key in obj) {
-    arr.push(key + '=' + obj[key]);
-  }
-
-  return '?' + arr.join('&');
-}
-
-function setQuery(obj) {
-  var searchQuery = loopSearchQuery(obj);
-  var query = setSearch(searchQuery);
-
-  return query;
-}
-
-function redirectTo(hash) {
-  location.hash = hash;
-}
-
-function hashLocationSet(field, opt) {
-  var setField = field;
-  var option = opt;
-  var link = void 0;
-
-  switch (setField) {
-    case 'search':
-      link = setSearch(option);
-      break;
-    case 'query':
-      link = setQuery(option);
-      break;
-    case 'path':
-      link = setPath(option);
-      break;
-    case 'hash':
-      link = setHash(option);
-      break;
-  }
-
-  if (link) {
-    redirectTo(link);
-  } else {
-    console.error('incorrect set location params');
-  }
-}
-
-exports.default = hashLocationSet;
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _hashLocation = __webpack_require__(49);
-
-var _hashLocation2 = _interopRequireDefault(_hashLocation);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function hashLocationGet(field) {
-  var loc = (0, _hashLocation2.default)();
-  var thisField = loc[field];
-
-  if (thisField) {
-    return thisField;
-  } else {
-    console.error('incorrect get location params');
-  }
-}
-
-exports.default = hashLocationGet;
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _hashLocation = __webpack_require__(49);
-
-var _hashLocation2 = _interopRequireDefault(_hashLocation);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var utils = {
-  hashLocation: _hashLocation2.default
-};
-
-exports.default = utils;
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.FindPlaceByCoordinates = exports.FindCountryByCountryCode = exports.FindCitiesByCountryCode = exports.GetAllCities = exports.GetAllCountries = exports.GetAllPlaces = undefined;
-
-var _goodOlAjaxPromise = __webpack_require__(62);
-
-var _goodOlAjaxPromise2 = _interopRequireDefault(_goodOlAjaxPromise);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var api = 'https://sid-maps-api.firebaseapp.com';
-
-function GetAllPlaces() {
-  var promiseObj = new Promise(function (resolve, reject) {
-    var dbApi = api + '/mapdata';
-
-    (0, _goodOlAjaxPromise2.default)(dbApi).then(function (data) {
-      resolve(data);
-    }).catch(function (err) {
-      reject(err);
-    });
-  });
-
-  return promiseObj;
-}
-
-function GetAllCountries() {
-  var promiseObj = new Promise(function (resolve, reject) {
-    GetAllPlaces().then(function (places) {
-      var arr = [];
-      places.forEach(function (p) {
-        var thisPlace = p;
-
-        if (thisPlace.country_id) {
-          arr.push(thisPlace);
-        }
-      });
-
-      resolve(arr);
-    }).catch(function (err) {
-      reject(err);
-    });
-  });
-
-  return promiseObj;
-}
-
-function GetAllCities() {
-  var promiseObj = new Promise(function (resolve, reject) {
-    GetAllPlaces().then(function (places) {
-      var arr = [];
-      places.forEach(function (p) {
-        var thisPlace = p;
-
-        if (thisPlace.city_id) {
-          arr.push(thisPlace);
-        }
-      });
-
-      resolve(arr);
-    }).catch(function (err) {
-      reject(err);
-    });
-  });
-
-  return promiseObj;
-}
-
-function FindCitiesByCountryCode(countryCode) {
-  var promiseObj = new Promise(function (resolve, reject) {
-    GetAllPlaces().then(function (places) {
-      var arr = [];
-      places.forEach(function (p) {
-        var thisPlace = p;
-
-        if (thisPlace.city_id && thisPlace.country_code === countryCode) {
-          arr.push(thisPlace);
-        }
-      });
-
-      resolve(arr);
-    }).catch(function (err) {
-      reject(err);
-    });
-  });
-
-  return promiseObj;
-}
-
-function FindCountryByCountryCode(countryCode) {
-  var promiseObj = new Promise(function (resolve, reject) {
-    GetAllPlaces().then(function (places) {
-      var obj = {};
-      places.forEach(function (p) {
-        var thisPlace = p;
-
-        if (thisPlace.country_id && thisPlace.country_code === countryCode) {
-          obj = thisPlace;
-          return;
-        }
-      });
-
-      resolve(obj);
-    }).catch(function (err) {
-      reject(err);
-    });
-  });
-
-  return promiseObj;
-}
-
-function FindPlaceByCoordinates(lat, lng) {
-  var promiseObj = new Promise(function (resolve, reject) {
-    GetAllPlaces().then(function (places) {
-      var toSend = '';
-      var arr = [];
-      var totalDiff = lat - lng;
-
-      places.forEach(function (p) {
-        var thisPlace = p;
-        var thisLat = thisPlace.lat;
-        var thisLng = thisPlace.lng;
-        var total = thisLat - thisLng;
-        var latMin = +thisLat - 0.18;
-        var latMax = +thisLat + 0.18;
-        var lngMin = +thisLng - 0.18;
-        var lngMax = +thisLng + 0.18;
-
-        thisPlace.total = total;
-
-        if (lat <= latMax && lat >= latMin && lng <= lngMax && lng >= lngMin) {
-          arr.push(thisPlace);
-        }
-      });
-
-      if (arr.length && arr.length > 0) {
-        var diff = '';
-
-        for (var i = 0; i < arr.length; i++) {
-          var thisPlace = arr[i];
-          var total = thisPlace.total;
-          var thisDiff = totalDiff - total;
-
-          if (diff === '' || diff > thisDiff) {
-            diff = thisDiff;
-            toSend = thisPlace;
-          }
-        }
-      }
-
-      resolve(toSend);
-    }).catch(function (err) {
-      reject(err);
-    });
-  });
-
-  return promiseObj;
-}
-
-exports.GetAllPlaces = GetAllPlaces;
-exports.GetAllCountries = GetAllCountries;
-exports.GetAllCities = GetAllCities;
-exports.FindCitiesByCountryCode = FindCitiesByCountryCode;
-exports.FindCountryByCountryCode = FindCountryByCountryCode;
-exports.FindPlaceByCoordinates = FindPlaceByCoordinates;
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-function goodOlAjaxPromise(url) {
-  var promiseObj = new Promise(function (resolve, reject) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('GET', url, true);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange = function () {
-      if (xmlhttp.readyState === 4) {
-        if (xmlhttp.status === 200) {
-          var responseText = xmlhttp.responseText.trim();
-          var obj = JSON.parse(responseText);
-          resolve(obj);
-        } else {
-          reject(xmlhttp.status);
-          console.log('xmlhttp failed');
-        }
-      }
-    };
-  });
-  return promiseObj;
-}
-
-exports.default = goodOlAjaxPromise;
 
 /***/ })
 /******/ ]);
