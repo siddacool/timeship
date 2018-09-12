@@ -12,8 +12,6 @@ function fireSearchEvent(searchTerm) {
         const val = searchTerm.toLowerCase();
         let finalArr = [];
 
-        console.log(val);
-
         cityArr.forEach((city) => {
           const thisCity = city;
           thisCity.country = thisCity.country_code;
@@ -22,7 +20,6 @@ function fireSearchEvent(searchTerm) {
           const newCityName = thisCity.name.toLowerCase();
           thisCity.name = newCityName;
 
-          console.log(thisCity.name.toLowerCase());
           if (thisCity.name.toLowerCase().startsWith(val)) {
             thisCity.priority = 1;
             finalArr.push(thisCity);
