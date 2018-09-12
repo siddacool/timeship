@@ -46,7 +46,7 @@ gulp.task('generate-service-worker', () => {
         handler: 'cacheFirst',
       },
       {
-        urlPattern: new RegExp('https://sid-man-timezones.firebaseapp.com/'),
+        urlPattern: new RegExp('https://sid-maps-api.firebaseapp.com/mapdata'),
         handler: 'staleWhileRevalidate',
       },
     ],
