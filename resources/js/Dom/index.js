@@ -1,5 +1,5 @@
 import DateTime from 'luxon/src/datetime';
-import { Router } from 'domr-c';
+import { Router } from 'domr-framework';
 import routes from './routes';
 
 const router = new Router(routes);

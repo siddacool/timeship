@@ -46,7 +46,8 @@
   },
   "dependencies": {
     "dexie": "^2.0.3",
-    "domr-c": "^0.0.4",
-    "luxon": "^1.2.1"
+    "domr-framework": "^0.0.3",
+    "luxon": "^1.2.1",
+    "purple-maps-api": "^0.0.9"
   }
 }
