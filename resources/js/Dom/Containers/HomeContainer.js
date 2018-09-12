@@ -92,8 +92,6 @@ export default class extends Component {
           const city = City(thisCity);
           ul.innerHTML = city;
 
-          console.log(countryName, country);
-
           const li = ul.querySelector('li');
 
           liveTime(li);
