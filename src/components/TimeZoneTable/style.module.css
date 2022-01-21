@@ -1,0 +1,25 @@
+.TimeZoneTable {
+  margin-top: 30px;
+  max-height: calc(100vh - 60px);
+  overflow: auto;
+  position: relative;
+}
+
+.table {
+  width: 100%;
+}
+
+.thead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.Tbody {
+}
+
+.TableRow td {
+  font-weight: 400;
+  padding: 6px;
+}

@@ -1,0 +1,4986 @@
+[
+  {
+    "timestamp": "UTC-11",
+    "timezone": "Pacific/Midway",
+    "countryCode": "um",
+    "countryName": "United States Minor Outlying Islands",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-11",
+    "timezone": "Pacific/Niue",
+    "countryCode": "nu",
+    "countryName": "Niue",
+    "cities": [
+      "Alofi"
+    ]
+  },
+  {
+    "timestamp": "UTC-11",
+    "timezone": "Pacific/Pago_Pago",
+    "countryCode": "as",
+    "countryName": "American Samoa",
+    "cities": [
+      "Pago Pago",
+      "Tāfuna",
+      "Ta`ū",
+      "Taulaga"
+    ]
+  },
+  {
+    "timestamp": "UTC-10",
+    "timezone": "America/Adak",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-10",
+    "timezone": "Pacific/Honolulu",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Honolulu",
+      "East Honolulu",
+      "Pearl City",
+      "Hilo",
+      "Kailua"
+    ]
+  },
+  {
+    "timestamp": "UTC-10",
+    "timezone": "Pacific/Rarotonga",
+    "countryCode": "ck",
+    "countryName": "Cook Islands",
+    "cities": [
+      "Avarua"
+    ]
+  },
+  {
+    "timestamp": "UTC-10",
+    "timezone": "Pacific/Tahiti",
+    "countryCode": "pf",
+    "countryName": "French Polynesia",
+    "cities": [
+      "Faaa",
+      "Papeete",
+      "Punaauia",
+      "Pirae",
+      "Mahina"
+    ]
+  },
+  {
+    "timestamp": "UTC-9:30",
+    "timezone": "Pacific/Marquesas",
+    "countryCode": "pf",
+    "countryName": "French Polynesia",
+    "cities": [
+      "Taiohae"
+    ]
+  },
+  {
+    "timestamp": "UTC-9",
+    "timezone": "America/Anchorage",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Anchorage",
+      "Fairbanks",
+      "Eagle River",
+      "Badger",
+      "Knik-Fairview"
+    ]
+  },
+  {
+    "timestamp": "UTC-9",
+    "timezone": "America/Juneau",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Juneau"
+    ]
+  },
+  {
+    "timestamp": "UTC-9",
+    "timezone": "America/Metlakatla",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-9",
+    "timezone": "America/Nome",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-9",
+    "timezone": "America/Sitka",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Sitka",
+      "Ketchikan"
+    ]
+  },
+  {
+    "timestamp": "UTC-9",
+    "timezone": "America/Yakutat",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-9",
+    "timezone": "Pacific/Gambier",
+    "countryCode": "pf",
+    "countryName": "French Polynesia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-8",
+    "timezone": "America/Los_Angeles",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Los Angeles",
+      "San Diego",
+      "San Jose",
+      "San Francisco",
+      "Seattle"
+    ]
+  },
+  {
+    "timestamp": "UTC-8",
+    "timezone": "America/Tijuana",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Tijuana",
+      "Mexicali",
+      "Ensenada",
+      "Rosarito",
+      "Tecate"
+    ]
+  },
+  {
+    "timestamp": "UTC-8",
+    "timezone": "America/Vancouver",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Vancouver",
+      "Surrey",
+      "Okanagan",
+      "Victoria",
+      "Burnaby"
+    ]
+  },
+  {
+    "timestamp": "UTC-8",
+    "timezone": "Pacific/Pitcairn",
+    "countryCode": "pn",
+    "countryName": "Pitcairn",
+    "cities": [
+      "Adamstown"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Boise",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Boise",
+      "Meridian",
+      "Nampa",
+      "Idaho Falls",
+      "Pocatello"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Cambridge_Bay",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Chihuahua",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Chihuahua",
+      "Ciudad Delicias",
+      "Cuauhtémoc",
+      "Parral",
+      "Nuevo Casas Grandes"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Creston",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Dawson",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Dawson_Creek",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Fort St. John",
+      "Dawson Creek"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Denver",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Denver",
+      "El Paso",
+      "Albuquerque",
+      "Colorado Springs",
+      "Aurora"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Edmonton",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Calgary",
+      "Edmonton",
+      "Fort McMurray",
+      "Red Deer",
+      "Lethbridge"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Fort_Nelson",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Hermosillo",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Hermosillo",
+      "Ciudad Obregón",
+      "Nogales",
+      "San Luis Río Colorado",
+      "Navojoa"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Inuvik",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Mazatlan",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Culiacán",
+      "Mazatlán",
+      "Tepic",
+      "Los Mochis",
+      "La Paz"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Ojinaga",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Ciudad Juárez",
+      "Manuel Ojinaga",
+      "Ojinaga"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Phoenix",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Phoenix",
+      "Tucson",
+      "Mesa",
+      "Chandler",
+      "Gilbert"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Whitehorse",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Whitehorse"
+    ]
+  },
+  {
+    "timestamp": "UTC-7",
+    "timezone": "America/Yellowknife",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Yellowknife"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Bahia_Banderas",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Mezcales",
+      "San Vicente",
+      "Bucerías",
+      "Valle de Banderas"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Belize",
+    "countryCode": "bz",
+    "countryName": "Belize",
+    "cities": [
+      "Belize City",
+      "San Ignacio",
+      "Orange Walk",
+      "Belmopan",
+      "Dangriga"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Chicago",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Chicago",
+      "Houston",
+      "San Antonio",
+      "Dallas",
+      "Austin"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Costa_Rica",
+    "countryCode": "cr",
+    "countryName": "Costa Rica",
+    "cities": [
+      "San José",
+      "Limón",
+      "San Francisco",
+      "Alajuela",
+      "Liberia"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/El_Salvador",
+    "countryCode": "sv",
+    "countryName": "El Salvador",
+    "cities": [
+      "San Salvador",
+      "Soyapango",
+      "Santa Ana",
+      "San Miguel",
+      "Mejicanos"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Guatemala",
+    "countryCode": "gt",
+    "countryName": "Guatemala",
+    "cities": [
+      "Guatemala City",
+      "Mixco",
+      "Villa Nueva",
+      "Petapa",
+      "San Juan Sacatepéquez"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Indiana/Knox",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Indiana/Tell_City",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Tell City"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Managua",
+    "countryCode": "ni",
+    "countryName": "Nicaragua",
+    "cities": [
+      "Managua",
+      "León",
+      "Masaya",
+      "Chinandega",
+      "Matagalpa"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Matamoros",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Reynosa",
+      "Heroica Matamoros",
+      "Nuevo Laredo",
+      "Piedras Negras",
+      "Ciudad Acuña"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Menominee",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Menominee",
+      "Iron Mountain",
+      "Kingsford",
+      "Ironwood",
+      "Iron River"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Merida",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Mérida",
+      "Campeche",
+      "Ciudad del Carmen",
+      "Kanasín",
+      "Valladolid"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Mexico_City",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Mexico City",
+      "Iztapalapa",
+      "Ecatepec de Morelos",
+      "Guadalajara",
+      "Puebla"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Monterrey",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Monterrey",
+      "Saltillo",
+      "Guadalupe",
+      "Torreón",
+      "Victoria de Durango"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/North_Dakota/Beulah",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/North_Dakota/Center",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/North_Dakota/New_Salem",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Mandan"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Rainy_River",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Rankin_Inlet",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Regina",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Saskatoon",
+      "Regina",
+      "Prince Albert",
+      "Moose Jaw",
+      "North Battleford"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Resolute",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Swift_Current",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Swift Current"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Tegucigalpa",
+    "countryCode": "hn",
+    "countryName": "Honduras",
+    "cities": [
+      "Tegucigalpa",
+      "San Pedro Sula",
+      "Choloma",
+      "La Ceiba",
+      "El Progreso"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "America/Winnipeg",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Winnipeg",
+      "Brandon",
+      "Kenora",
+      "Portage la Prairie",
+      "Thompson"
+    ]
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "Pacific/Easter",
+    "countryCode": "cl",
+    "countryName": "Chile",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-6",
+    "timezone": "Pacific/Galapagos",
+    "countryCode": "ec",
+    "countryName": "Ecuador",
+    "cities": [
+      "Puerto Ayora",
+      "Puerto Baquerizo Moreno"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Atikokan",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Bogota",
+    "countryCode": "co",
+    "countryName": "Colombia",
+    "cities": [
+      "Bogotá",
+      "Cali",
+      "Medellín",
+      "Barranquilla",
+      "Cartagena"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Cancun",
+    "countryCode": "mx",
+    "countryName": "Mexico",
+    "cities": [
+      "Cancún",
+      "Chetumal",
+      "Playa del Carmen",
+      "Cozumel",
+      "Felipe Carrillo Puerto"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Cayman",
+    "countryCode": "ky",
+    "countryName": "Cayman Islands",
+    "cities": [
+      "George Town",
+      "West Bay",
+      "Bodden Town",
+      "East End",
+      "North Side"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Detroit",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Detroit",
+      "Grand Rapids",
+      "Warren",
+      "Sterling Heights",
+      "Ann Arbor"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Eirunepe",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Eirunepé",
+      "Benjamin Constant",
+      "Envira"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Grand_Turk",
+    "countryCode": "tc",
+    "countryName": "Turks and Caicos Islands",
+    "cities": [
+      "Cockburn Town"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Guayaquil",
+    "countryCode": "ec",
+    "countryName": "Ecuador",
+    "cities": [
+      "Guayaquil",
+      "Quito",
+      "Cuenca",
+      "Santo Domingo de los Colorados",
+      "Machala"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Havana",
+    "countryCode": "cu",
+    "countryName": "Cuba",
+    "cities": [
+      "Havana",
+      "Santiago de Cuba",
+      "Camagüey",
+      "Holguín",
+      "Guantánamo"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Indiana/Indianapolis",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Indianapolis",
+      "Fort Wayne",
+      "South Bend",
+      "Carmel",
+      "Bloomington"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Indiana/Marengo",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Indiana/Petersburg",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Indiana/Vevay",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Indiana/Vincennes",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Vincennes",
+      "Jasper",
+      "Washington",
+      "Huntingburg"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Indiana/Winamac",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Iqaluit",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Iqaluit"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Jamaica",
+    "countryCode": "jm",
+    "countryName": "Jamaica",
+    "cities": [
+      "Kingston",
+      "New Kingston",
+      "Spanish Town",
+      "Portmore",
+      "Montego Bay"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Kentucky/Louisville",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Louisville",
+      "Jeffersonville",
+      "New Albany",
+      "Jeffersontown",
+      "Pleasure Ridge Park"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Kentucky/Monticello",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "Monticello"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Lima",
+    "countryCode": "pe",
+    "countryName": "Peru",
+    "cities": [
+      "Lima",
+      "Arequipa",
+      "Callao",
+      "Trujillo",
+      "Chiclayo"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Nassau",
+    "countryCode": "bs",
+    "countryName": "Bahamas",
+    "cities": [
+      "Nassau",
+      "Lucaya",
+      "Freeport",
+      "West End",
+      "Cooper’s Town"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/New_York",
+    "countryCode": "us",
+    "countryName": "United States",
+    "cities": [
+      "New York City",
+      "Brooklyn",
+      "Queens",
+      "Philadelphia",
+      "Manhattan"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Nipigon",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Panama",
+    "countryCode": "pa",
+    "countryName": "Panama",
+    "cities": [
+      "Panamá",
+      "San Miguelito",
+      "Juan Díaz",
+      "David",
+      "Arraiján"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Pangnirtung",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Port-au-Prince",
+    "countryCode": "ht",
+    "countryName": "Haiti",
+    "cities": [
+      "Port-au-Prince",
+      "Carrefour",
+      "Delmas 73",
+      "Pétionville",
+      "Port-de-Paix"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Rio_Branco",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Rio Branco",
+      "Cruzeiro do Sul",
+      "Sena Madureira",
+      "Tarauacá",
+      "Feijó"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Thunder_Bay",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Thunder Bay"
+    ]
+  },
+  {
+    "timestamp": "UTC-5",
+    "timezone": "America/Toronto",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Toronto",
+      "Montréal",
+      "Ottawa",
+      "Mississauga",
+      "Québec"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Anguilla",
+    "countryCode": "ai",
+    "countryName": "Anguilla",
+    "cities": [
+      "The Valley",
+      "Blowing Point Village",
+      "Sandy Ground Village",
+      "The Quarter",
+      "Sandy Hill"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Antigua",
+    "countryCode": "ag",
+    "countryName": "Antigua and Barbuda",
+    "cities": [
+      "Saint John’s",
+      "Piggotts",
+      "Bolands",
+      "Codrington",
+      "Parham"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Aruba",
+    "countryCode": "aw",
+    "countryName": "Aruba",
+    "cities": [
+      "Oranjestad",
+      "Tanki Leendert",
+      "San Nicolas",
+      "Santa Cruz",
+      "Paradera"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Asuncion",
+    "countryCode": "py",
+    "countryName": "Paraguay",
+    "cities": [
+      "Asunción",
+      "Ciudad del Este",
+      "San Lorenzo",
+      "Capiatá",
+      "Lambaré"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Barbados",
+    "countryCode": "bb",
+    "countryName": "Barbados",
+    "cities": [
+      "Bridgetown",
+      "Speightstown",
+      "Oistins",
+      "Bathsheba",
+      "Holetown"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Blanc-Sablon",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Lévis"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Boa_Vista",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Boa Vista"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Campo_Grande",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Campo Grande",
+      "Dourados",
+      "Corumbá",
+      "Três Lagoas",
+      "Ponta Porã"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Caracas",
+    "countryCode": "ve",
+    "countryName": "Venezuela",
+    "cities": [
+      "Caracas",
+      "Maracaibo",
+      "Maracay",
+      "Valencia",
+      "Barquisimeto"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Cuiaba",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Cuiabá",
+      "Várzea Grande",
+      "Rondonópolis",
+      "Sinop",
+      "Barra do Garças"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Curacao",
+    "countryCode": "cw",
+    "countryName": "Curacao",
+    "cities": [
+      "Willemstad",
+      "Sint Michiel Liber"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Dominica",
+    "countryCode": "dm",
+    "countryName": "Dominica",
+    "cities": [
+      "Roseau",
+      "Portsmouth",
+      "Berekua",
+      "Saint Joseph",
+      "Wesley"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Glace_Bay",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Sydney",
+      "Glace Bay",
+      "Sydney Mines"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Goose_Bay",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Labrador City",
+      "Happy Valley-Goose Bay"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Grenada",
+    "countryCode": "gd",
+    "countryName": "Grenada",
+    "cities": [
+      "Saint George's",
+      "Gouyave",
+      "Grenville",
+      "Victoria",
+      "Saint David’s"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Guadeloupe",
+    "countryCode": "gp",
+    "countryName": "Guadeloupe",
+    "cities": [
+      "Les Abymes",
+      "Baie-Mahault",
+      "Le Gosier",
+      "Petit-Bourg",
+      "Sainte-Anne"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Guyana",
+    "countryCode": "gy",
+    "countryName": "Guyana",
+    "cities": [
+      "Georgetown",
+      "Linden",
+      "New Amsterdam",
+      "Anna Regina",
+      "Bartica"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Halifax",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Halifax",
+      "Dartmouth",
+      "Charlottetown",
+      "Lower Sackville",
+      "Truro"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Kralendijk",
+    "countryCode": "bq",
+    "countryName": "Bonaire, Saint Eustatius and Saba",
+    "cities": [
+      "Kralendijk",
+      "Oranjestad",
+      "The Bottom"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/La_Paz",
+    "countryCode": "bo",
+    "countryName": "Bolivia",
+    "cities": [
+      "Santa Cruz de la Sierra",
+      "Cochabamba",
+      "La Paz",
+      "Sucre",
+      "Oruro"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Lower_Princes",
+    "countryCode": "sx",
+    "countryName": "Sint Maarten",
+    "cities": [
+      "Cul de Sac",
+      "Lower Prince’s Quarter",
+      "Koolbaai",
+      "Philipsburg"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Manaus",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Manaus",
+      "Itacoatiara",
+      "Parintins",
+      "Manacapuru",
+      "Coari"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Marigot",
+    "countryCode": "mf",
+    "countryName": "Saint Martin",
+    "cities": [
+      "Marigot"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Martinique",
+    "countryCode": "mq",
+    "countryName": "Martinique",
+    "cities": [
+      "Fort-de-France",
+      "Le Lamentin",
+      "Le Robert",
+      "Sainte-Marie",
+      "Le François"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Moncton",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "Moncton",
+      "Saint John",
+      "Fredericton",
+      "Dieppe",
+      "Miramichi"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Montserrat",
+    "countryCode": "ms",
+    "countryName": "Montserrat",
+    "cities": [
+      "Brades",
+      "Saint Peters",
+      "Plymouth"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Porto_Velho",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Porto Velho",
+      "Ji Paraná",
+      "Vilhena",
+      "Ariquemes",
+      "Cacoal"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Port_of_Spain",
+    "countryCode": "tt",
+    "countryName": "Trinidad and Tobago",
+    "cities": [
+      "Chaguanas",
+      "Mon Repos",
+      "San Fernando",
+      "Port of Spain",
+      "Rio Claro"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Puerto_Rico",
+    "countryCode": "pr",
+    "countryName": "Puerto Rico",
+    "cities": [
+      "San Juan",
+      "Bayamón",
+      "Carolina",
+      "Ponce",
+      "Caguas"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Santiago",
+    "countryCode": "cl",
+    "countryName": "Chile",
+    "cities": [
+      "Santiago",
+      "Puente Alto",
+      "Antofagasta",
+      "Viña del Mar",
+      "Valparaíso"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Santo_Domingo",
+    "countryCode": "do",
+    "countryName": "Dominican Republic",
+    "cities": [
+      "Santo Domingo",
+      "Santiago de los Caballeros",
+      "Santo Domingo Oeste",
+      "Santo Domingo Este",
+      "San Pedro de Macorís"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/St_Barthelemy",
+    "countryCode": "bl",
+    "countryName": "Saint Barthelemy",
+    "cities": [
+      "Gustavia"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/St_Kitts",
+    "countryCode": "kn",
+    "countryName": "Saint Kitts and Nevis",
+    "cities": [
+      "Basseterre",
+      "Fig Tree",
+      "Market Shop",
+      "Saint Paul’s",
+      "Middle Island"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/St_Lucia",
+    "countryCode": "lc",
+    "countryName": "Saint Lucia",
+    "cities": [
+      "Castries",
+      "Bisee",
+      "Vieux Fort",
+      "Micoud",
+      "Soufrière"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/St_Thomas",
+    "countryCode": "vi",
+    "countryName": "U.S. Virgin Islands",
+    "cities": [
+      "Saint Croix",
+      "Charlotte Amalie",
+      "Cruz Bay"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/St_Vincent",
+    "countryCode": "vc",
+    "countryName": "Saint Vincent and the Grenadines",
+    "cities": [
+      "Kingstown",
+      "Kingstown Park",
+      "Georgetown",
+      "Barrouallie",
+      "Port Elizabeth"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Thule",
+    "countryCode": "gl",
+    "countryName": "Greenland",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "America/Tortola",
+    "countryCode": "vg",
+    "countryName": "British Virgin Islands",
+    "cities": [
+      "Road Town"
+    ]
+  },
+  {
+    "timestamp": "UTC-4",
+    "timezone": "Atlantic/Bermuda",
+    "countryCode": "bm",
+    "countryName": "Bermuda",
+    "cities": [
+      "Hamilton"
+    ]
+  },
+  {
+    "timestamp": "UTC-3:30",
+    "timezone": "America/St_Johns",
+    "countryCode": "ca",
+    "countryName": "Canada",
+    "cities": [
+      "St. John's",
+      "Mount Pearl",
+      "Corner Brook",
+      "Conception Bay South",
+      "Bay Roberts"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Araguaina",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Palmas",
+      "Araguaína",
+      "Gurupi",
+      "Miracema do Tocantins",
+      "Porto Franco"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "Buenos Aires",
+      "La Plata",
+      "Mar del Plata",
+      "Morón",
+      "Bahía Blanca"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Catamarca",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "San Fernando del Valle de Catamarca",
+      "Trelew",
+      "Puerto Madryn",
+      "Esquel",
+      "Rawson"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Cordoba",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "Córdoba",
+      "Rosario",
+      "Santa Fe",
+      "Resistencia",
+      "Santiago del Estero"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Jujuy",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "San Salvador de Jujuy",
+      "San Pedro de Jujuy",
+      "Libertador General San Martín",
+      "Palpalá",
+      "La Quiaca"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/La_Rioja",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "La Rioja",
+      "Chilecito",
+      "Arauco",
+      "Chamical"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Mendoza",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "Mendoza",
+      "San Rafael",
+      "San Martín"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Rio_Gallegos",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "Comodoro Rivadavia",
+      "Río Gallegos",
+      "Caleta Olivia",
+      "Pico Truncado",
+      "Puerto Deseado"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Salta",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "Salta",
+      "Neuquén",
+      "Santa Rosa",
+      "San Carlos de Bariloche",
+      "Cipolletti"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/San_Juan",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "San Juan",
+      "Chimbas",
+      "Santa Lucía",
+      "Pocito",
+      "Caucete"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/San_Luis",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "San Luis",
+      "Villa Mercedes",
+      "La Punta",
+      "Merlo",
+      "Justo Daract"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Tucuman",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "San Miguel de Tucumán",
+      "Yerba Buena",
+      "Tafí Viejo",
+      "Alderetes",
+      "Aguilares"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Argentina/Ushuaia",
+    "countryCode": "ar",
+    "countryName": "Argentina",
+    "cities": [
+      "Ushuaia",
+      "Río Grande"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Bahia",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Salvador",
+      "Feira de Santana",
+      "Vitória da Conquista",
+      "Itabuna",
+      "Camaçari"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Belem",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Belém",
+      "Ananindeua",
+      "Macapá",
+      "Parauapebas",
+      "Marabá"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Cayenne",
+    "countryCode": "gf",
+    "countryName": "French Guiana",
+    "cities": [
+      "Cayenne",
+      "Matoury",
+      "Saint-Laurent-du-Maroni",
+      "Kourou",
+      "Rémire-Montjoly"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Fortaleza",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Fortaleza",
+      "São Luís",
+      "Natal",
+      "Teresina",
+      "João Pessoa"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Godthab",
+    "countryCode": "gl",
+    "countryName": "Greenland",
+    "cities": [
+      "Nuuk",
+      "Sisimiut",
+      "Ilulissat",
+      "Qaqortoq",
+      "Aasiaat"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Maceio",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Maceió",
+      "Aracaju",
+      "Arapiraca",
+      "Nossa Senhora do Socorro",
+      "São Cristóvão"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Miquelon",
+    "countryCode": "pm",
+    "countryName": "Saint Pierre and Miquelon",
+    "cities": [
+      "Saint-Pierre",
+      "Miquelon"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Montevideo",
+    "countryCode": "uy",
+    "countryName": "Uruguay",
+    "cities": [
+      "Montevideo",
+      "Salto",
+      "Paysandú",
+      "Las Piedras",
+      "Rivera"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Paramaribo",
+    "countryCode": "sr",
+    "countryName": "Suriname",
+    "cities": [
+      "Paramaribo",
+      "Lelydorp",
+      "Brokopondo",
+      "Nieuw Nickerie",
+      "Moengo"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Punta_Arenas",
+    "countryCode": "cl",
+    "countryName": "Chile",
+    "cities": [
+      "Punta Arenas",
+      "Puerto Natales"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Recife",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Recife",
+      "Jaboatão",
+      "Jaboatão dos Guararapes",
+      "Olinda",
+      "Paulista"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Santarem",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Santarém",
+      "Altamira",
+      "Itaituba",
+      "Oriximiná",
+      "Alenquer"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "America/Sao_Paulo",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "São Paulo",
+      "Rio de Janeiro",
+      "Belo Horizonte",
+      "Brasília",
+      "Curitiba"
+    ]
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "Antarctica/Palmer",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "Antarctica/Rothera",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-3",
+    "timezone": "Atlantic/Stanley",
+    "countryCode": "fk",
+    "countryName": "Falkland Islands",
+    "cities": [
+      "Stanley"
+    ]
+  },
+  {
+    "timestamp": "UTC-2",
+    "timezone": "America/Noronha",
+    "countryCode": "br",
+    "countryName": "Brazil",
+    "cities": [
+      "Itamaracá"
+    ]
+  },
+  {
+    "timestamp": "UTC-2",
+    "timezone": "Atlantic/South_Georgia",
+    "countryCode": "gs",
+    "countryName": "South Georgia and the South Sandwich Islands",
+    "cities": [
+      "Grytviken"
+    ]
+  },
+  {
+    "timestamp": "UTC-1",
+    "timezone": "America/Scoresbysund",
+    "countryCode": "gl",
+    "countryName": "Greenland",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC-1",
+    "timezone": "Atlantic/Azores",
+    "countryCode": "pt",
+    "countryName": "Portugal",
+    "cities": [
+      "Ponta Delgada",
+      "Lagoa",
+      "Angra do Heroísmo",
+      "Rosto de Cão",
+      "Rabo de Peixe"
+    ]
+  },
+  {
+    "timestamp": "UTC-1",
+    "timezone": "Atlantic/Cape_Verde",
+    "countryCode": "cv",
+    "countryName": "Cabo Verde",
+    "cities": [
+      "Praia",
+      "Mindelo",
+      "Santa Maria",
+      "Cova Figueira",
+      "Santa Cruz"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Abidjan",
+    "countryCode": "ci",
+    "countryName": "Ivory Coast",
+    "cities": [
+      "Abidjan",
+      "Abobo",
+      "Bouaké",
+      "Daloa",
+      "San-Pédro"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Accra",
+    "countryCode": "gh",
+    "countryName": "Ghana",
+    "cities": [
+      "Accra",
+      "Kumasi",
+      "Tamale",
+      "Takoradi",
+      "Atsiaman"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Bamako",
+    "countryCode": "ml",
+    "countryName": "Mali",
+    "cities": [
+      "Bamako",
+      "Sikasso",
+      "Mopti",
+      "Koutiala",
+      "Ségou"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Banjul",
+    "countryCode": "gm",
+    "countryName": "Gambia",
+    "cities": [
+      "Serekunda",
+      "Brikama",
+      "Bakau",
+      "Banjul",
+      "Farafenni"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Bissau",
+    "countryCode": "gw",
+    "countryName": "Guinea-Bissau",
+    "cities": [
+      "Bissau",
+      "Bafatá",
+      "Gabú",
+      "Bissorã",
+      "Bolama"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Casablanca",
+    "countryCode": "ma",
+    "countryName": "Morocco",
+    "cities": [
+      "Casablanca",
+      "Rabat",
+      "Fès",
+      "Sale",
+      "Marrakesh"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Conakry",
+    "countryCode": "gn",
+    "countryName": "Guinea",
+    "cities": [
+      "Camayenne",
+      "Conakry",
+      "Nzérékoré",
+      "Kindia",
+      "Kankan"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Dakar",
+    "countryCode": "sn",
+    "countryName": "Senegal",
+    "cities": [
+      "Dakar",
+      "Pikine",
+      "Touba",
+      "Thiès",
+      "Thiès Nones"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/El_Aaiun",
+    "countryCode": "eh",
+    "countryName": "Western Sahara",
+    "cities": [
+      "Laayoune",
+      "Dakhla",
+      "Laayoune Plage"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Freetown",
+    "countryCode": "sl",
+    "countryName": "Sierra Leone",
+    "cities": [
+      "Freetown",
+      "Bo",
+      "Kenema",
+      "Koidu",
+      "Makeni"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Lome",
+    "countryCode": "tg",
+    "countryName": "Togo",
+    "cities": [
+      "Lomé",
+      "Sokodé",
+      "Kara",
+      "Atakpamé",
+      "Kpalimé"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Monrovia",
+    "countryCode": "lr",
+    "countryName": "Liberia",
+    "cities": [
+      "Monrovia",
+      "Gbarnga",
+      "Kakata",
+      "Bensonville",
+      "Harper"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Nouakchott",
+    "countryCode": "mr",
+    "countryName": "Mauritania",
+    "cities": [
+      "Nouakchott",
+      "Nouadhibou",
+      "Néma",
+      "Kaédi",
+      "Rosso"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Ouagadougou",
+    "countryCode": "bf",
+    "countryName": "Burkina Faso",
+    "cities": [
+      "Ouagadougou",
+      "Bobo-Dioulasso",
+      "Koudougou",
+      "Ouahigouya",
+      "Banfora"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Africa/Sao_Tome",
+    "countryCode": "st",
+    "countryName": "Sao Tome and Principe",
+    "cities": [
+      "São Tomé",
+      "Santo António"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "America/Danmarkshavn",
+    "countryCode": "gl",
+    "countryName": "Greenland",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Antarctica/Troll",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Atlantic/Canary",
+    "countryCode": "es",
+    "countryName": "Spain",
+    "cities": [
+      "Las Palmas de Gran Canaria",
+      "Santa Cruz de Tenerife",
+      "La Laguna",
+      "Telde",
+      "Arona"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Atlantic/Faroe",
+    "countryCode": "fo",
+    "countryName": "Faroe Islands",
+    "cities": [
+      "Tórshavn",
+      "Klaksvík",
+      "Fuglafjørður",
+      "Tvøroyri",
+      "Miðvágur"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Atlantic/Madeira",
+    "countryCode": "pt",
+    "countryName": "Portugal",
+    "cities": [
+      "Funchal",
+      "Câmara de Lobos",
+      "São Martinho",
+      "Caniço",
+      "Machico"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Atlantic/Reykjavik",
+    "countryCode": "is",
+    "countryName": "Iceland",
+    "cities": [
+      "Reykjavík",
+      "Kópavogur",
+      "Hafnarfjörður",
+      "Akureyri",
+      "Garðabær"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Atlantic/St_Helena",
+    "countryCode": "sh",
+    "countryName": "Saint Helena",
+    "cities": [
+      "Jamestown",
+      "Georgetown",
+      "Edinburgh of the Seven Seas"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Europe/Dublin",
+    "countryCode": "ie",
+    "countryName": "Ireland",
+    "cities": [
+      "Dublin",
+      "Cork",
+      "Luimneach",
+      "Gaillimh",
+      "Tallaght"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Europe/Guernsey",
+    "countryCode": "gg",
+    "countryName": "Guernsey",
+    "cities": [
+      "Saint Peter Port",
+      "St Martin",
+      "Saint Sampson",
+      "St Anne",
+      "Saint Saviour"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Europe/Isle_of_Man",
+    "countryCode": "im",
+    "countryName": "Isle of Man",
+    "cities": [
+      "Douglas",
+      "Ramsey",
+      "Peel",
+      "Port Erin",
+      "Castletown"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Europe/Jersey",
+    "countryCode": "je",
+    "countryName": "Jersey",
+    "cities": [
+      "Saint Helier",
+      "Le Hocq"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Europe/Lisbon",
+    "countryCode": "pt",
+    "countryName": "Portugal",
+    "cities": [
+      "Lisbon",
+      "Porto",
+      "Amadora",
+      "Braga",
+      "Setúbal"
+    ]
+  },
+  {
+    "timestamp": "UTC+0",
+    "timezone": "Europe/London",
+    "countryCode": "gb",
+    "countryName": "United Kingdom",
+    "cities": [
+      "London",
+      "Birmingham",
+      "Liverpool",
+      "Sheffield",
+      "Bristol"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Algiers",
+    "countryCode": "dz",
+    "countryName": "Algeria",
+    "cities": [
+      "Algiers",
+      "Boumerdas",
+      "Oran",
+      "Tébessa",
+      "Constantine"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Bangui",
+    "countryCode": "cf",
+    "countryName": "Central African Republic",
+    "cities": [
+      "Bangui",
+      "Bimbo",
+      "Mbaïki",
+      "Berbérati",
+      "Kaga Bandoro"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Brazzaville",
+    "countryCode": "cg",
+    "countryName": "Republic of the Congo",
+    "cities": [
+      "Brazzaville",
+      "Pointe-Noire",
+      "Dolisie",
+      "Kayes",
+      "Owando"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Ceuta",
+    "countryCode": "es",
+    "countryName": "Spain",
+    "cities": [
+      "Ceuta",
+      "Melilla"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Douala",
+    "countryCode": "cm",
+    "countryName": "Cameroon",
+    "cities": [
+      "Douala",
+      "Yaoundé",
+      "Garoua",
+      "Kousséri",
+      "Bamenda"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Kinshasa",
+    "countryCode": "cd",
+    "countryName": "Democratic Republic of the Congo",
+    "cities": [
+      "Kinshasa",
+      "Masina",
+      "Kikwit",
+      "Mbandaka",
+      "Matadi"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Lagos",
+    "countryCode": "ng",
+    "countryName": "Nigeria",
+    "cities": [
+      "Lagos",
+      "Kano",
+      "Ibadan",
+      "Kaduna",
+      "Port Harcourt"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Libreville",
+    "countryCode": "ga",
+    "countryName": "Gabon",
+    "cities": [
+      "Libreville",
+      "Port-Gentil",
+      "Franceville",
+      "Oyem",
+      "Moanda"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Luanda",
+    "countryCode": "ao",
+    "countryName": "Angola",
+    "cities": [
+      "Luanda",
+      "N’dalatando",
+      "Huambo",
+      "Lobito",
+      "Benguela"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Malabo",
+    "countryCode": "gq",
+    "countryName": "Equatorial Guinea",
+    "cities": [
+      "Bata",
+      "Malabo",
+      "Ebebiyin",
+      "Aconibe",
+      "Añisoc"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Ndjamena",
+    "countryCode": "td",
+    "countryName": "Chad",
+    "cities": [
+      "N'Djamena",
+      "Moundou",
+      "Sarh",
+      "Abéché",
+      "Kelo"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Niamey",
+    "countryCode": "ne",
+    "countryName": "Niger",
+    "cities": [
+      "Niamey",
+      "Zinder",
+      "Maradi",
+      "Agadez",
+      "Alaghsas"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Porto-Novo",
+    "countryCode": "bj",
+    "countryName": "Benin",
+    "cities": [
+      "Cotonou",
+      "Abomey-Calavi",
+      "Djougou",
+      "Porto-Novo",
+      "Parakou"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Tunis",
+    "countryCode": "tn",
+    "countryName": "Tunisia",
+    "cities": [
+      "Tunis",
+      "Sfax",
+      "Sousse",
+      "Kairouan",
+      "Bizerte"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Africa/Windhoek",
+    "countryCode": "na",
+    "countryName": "Namibia",
+    "cities": [
+      "Windhoek",
+      "Rundu",
+      "Walvis Bay",
+      "Oshakati",
+      "Swakopmund"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Arctic/Longyearbyen",
+    "countryCode": "sj",
+    "countryName": "Svalbard and Jan Mayen",
+    "cities": [
+      "Longyearbyen",
+      "Olonkinbyen"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Amsterdam",
+    "countryCode": "nl",
+    "countryName": "Netherlands",
+    "cities": [
+      "Amsterdam",
+      "Rotterdam",
+      "The Hague",
+      "Utrecht",
+      "Eindhoven"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Andorra",
+    "countryCode": "ad",
+    "countryName": "Andorra",
+    "cities": [
+      "Andorra la Vella",
+      "les Escaldes",
+      "Encamp",
+      "Sant Julià de Lòria",
+      "la Massana"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Belgrade",
+    "countryCode": "rs",
+    "countryName": "Serbia",
+    "cities": [
+      "Belgrade",
+      "Pristina",
+      "Niš",
+      "Novi Sad",
+      "Prizren"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Berlin",
+    "countryCode": "de",
+    "countryName": "Germany",
+    "cities": [
+      "Berlin",
+      "Hamburg",
+      "Munich",
+      "Köln",
+      "Frankfurt am Main"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Bratislava",
+    "countryCode": "sk",
+    "countryName": "Slovakia",
+    "cities": [
+      "Bratislava",
+      "Košice",
+      "Prešov",
+      "Nitra",
+      "Žilina"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Brussels",
+    "countryCode": "be",
+    "countryName": "Belgium",
+    "cities": [
+      "Brussels",
+      "Antwerpen",
+      "Gent",
+      "Charleroi",
+      "Liège"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Budapest",
+    "countryCode": "hu",
+    "countryName": "Hungary",
+    "cities": [
+      "Budapest",
+      "Debrecen",
+      "Miskolc",
+      "Szeged",
+      "Pécs"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Copenhagen",
+    "countryCode": "dk",
+    "countryName": "Denmark",
+    "cities": [
+      "Copenhagen",
+      "Århus",
+      "Odense",
+      "Aalborg",
+      "Frederiksberg"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Gibraltar",
+    "countryCode": "gi",
+    "countryName": "Gibraltar",
+    "cities": [
+      "Gibraltar"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Ljubljana",
+    "countryCode": "si",
+    "countryName": "Slovenia",
+    "cities": [
+      "Ljubljana",
+      "Maribor",
+      "Celje",
+      "Kranj",
+      "Velenje"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Luxembourg",
+    "countryCode": "lu",
+    "countryName": "Luxembourg",
+    "cities": [
+      "Luxembourg",
+      "Esch-sur-Alzette",
+      "Dudelange",
+      "Schifflange",
+      "Bettembourg"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Madrid",
+    "countryCode": "es",
+    "countryName": "Spain",
+    "cities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Sevilla",
+      "Zaragoza"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Malta",
+    "countryCode": "mt",
+    "countryName": "Malta",
+    "cities": [
+      "Birkirkara",
+      "Qormi",
+      "Mosta",
+      "Żabbar",
+      "San Pawl il-Baħar"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Monaco",
+    "countryCode": "mc",
+    "countryName": "Monaco",
+    "cities": [
+      "Monaco",
+      "Monte-Carlo",
+      "La Condamine"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Oslo",
+    "countryCode": "no",
+    "countryName": "Norway",
+    "cities": [
+      "Oslo",
+      "Bergen",
+      "Trondheim",
+      "Stavanger",
+      "Drammen"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Paris",
+    "countryCode": "fr",
+    "countryName": "France",
+    "cities": [
+      "Paris",
+      "Marseille",
+      "Lyon",
+      "Toulouse",
+      "Nice"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Podgorica",
+    "countryCode": "me",
+    "countryName": "Montenegro",
+    "cities": [
+      "Podgorica",
+      "Nikšić",
+      "Herceg Novi",
+      "Pljevlja",
+      "Budva"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Prague",
+    "countryCode": "cz",
+    "countryName": "Czechia",
+    "cities": [
+      "Prague",
+      "Brno",
+      "Ostrava",
+      "Pilsen",
+      "Olomouc"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Rome",
+    "countryCode": "it",
+    "countryName": "Italy",
+    "cities": [
+      "Rome",
+      "Milan",
+      "Naples",
+      "Turin",
+      "Palermo"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/San_Marino",
+    "countryCode": "sm",
+    "countryName": "San Marino",
+    "cities": [
+      "Serravalle",
+      "Borgo Maggiore",
+      "San Marino",
+      "Domagnano",
+      "Fiorentino"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Sarajevo",
+    "countryCode": "ba",
+    "countryName": "Bosnia and Herzegovina",
+    "cities": [
+      "Sarajevo",
+      "Banja Luka",
+      "Zenica",
+      "Tuzla",
+      "Mostar"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Skopje",
+    "countryCode": "mk",
+    "countryName": "North Macedonia",
+    "cities": [
+      "Skopje",
+      "Bitola",
+      "Kumanovo",
+      "Prilep",
+      "Tetovo"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Stockholm",
+    "countryCode": "se",
+    "countryName": "Sweden",
+    "cities": [
+      "Stockholm",
+      "Göteborg",
+      "Malmö",
+      "Uppsala",
+      "Sollentuna"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Tirane",
+    "countryCode": "al",
+    "countryName": "Albania",
+    "cities": [
+      "Tirana",
+      "Durrës",
+      "Elbasan",
+      "Vlorë",
+      "Shkodër"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Vaduz",
+    "countryCode": "li",
+    "countryName": "Liechtenstein",
+    "cities": [
+      "Schaan",
+      "Vaduz",
+      "Triesen",
+      "Balzers",
+      "Eschen"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Vatican",
+    "countryCode": "va",
+    "countryName": "Vatican",
+    "cities": [
+      "Vatican City"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Vienna",
+    "countryCode": "at",
+    "countryName": "Austria",
+    "cities": [
+      "Vienna",
+      "Graz",
+      "Linz",
+      "Favoriten",
+      "Donaustadt"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Warsaw",
+    "countryCode": "pl",
+    "countryName": "Poland",
+    "cities": [
+      "Warsaw",
+      "Łódź",
+      "Kraków",
+      "Wrocław",
+      "Poznań"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Zagreb",
+    "countryCode": "hr",
+    "countryName": "Croatia",
+    "cities": [
+      "Zagreb",
+      "Split",
+      "Rijeka",
+      "Osijek",
+      "Zadar"
+    ]
+  },
+  {
+    "timestamp": "UTC+1",
+    "timezone": "Europe/Zurich",
+    "countryCode": "ch",
+    "countryName": "Switzerland",
+    "cities": [
+      "Zürich",
+      "Genève",
+      "Basel",
+      "Lausanne",
+      "Bern"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Blantyre",
+    "countryCode": "mw",
+    "countryName": "Malawi",
+    "cities": [
+      "Lilongwe",
+      "Blantyre",
+      "Mzuzu",
+      "Zomba",
+      "Kasungu"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Bujumbura",
+    "countryCode": "bi",
+    "countryName": "Burundi",
+    "cities": [
+      "Bujumbura",
+      "Muyinga",
+      "Gitega",
+      "Ruyigi",
+      "Ngozi"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Cairo",
+    "countryCode": "eg",
+    "countryName": "Egypt",
+    "cities": [
+      "Cairo",
+      "Alexandria",
+      "Giza",
+      "Port Said",
+      "Suez"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Gaborone",
+    "countryCode": "bw",
+    "countryName": "Botswana",
+    "cities": [
+      "Gaborone",
+      "Francistown",
+      "Molepolole",
+      "Selebi-Phikwe",
+      "Maun"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Harare",
+    "countryCode": "zw",
+    "countryName": "Zimbabwe",
+    "cities": [
+      "Harare",
+      "Bulawayo",
+      "Chitungwiza",
+      "Mutare",
+      "Gweru"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Johannesburg",
+    "countryCode": "za",
+    "countryName": "South Africa",
+    "cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg",
+      "Soweto",
+      "Pretoria"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Juba",
+    "countryCode": "ss",
+    "countryName": "South Sudan",
+    "cities": [
+      "Juba",
+      "Winejok",
+      "Malakal",
+      "Wau",
+      "Kuacjok"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Khartoum",
+    "countryCode": "sd",
+    "countryName": "Sudan",
+    "cities": [
+      "Khartoum",
+      "Omdurman",
+      "Nyala",
+      "Port Sudan",
+      "Kassala"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Kigali",
+    "countryCode": "rw",
+    "countryName": "Rwanda",
+    "cities": [
+      "Kigali",
+      "Butare",
+      "Gitarama",
+      "Musanze",
+      "Gisenyi"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Lubumbashi",
+    "countryCode": "cd",
+    "countryName": "Democratic Republic of the Congo",
+    "cities": [
+      "Lubumbashi",
+      "Mbuji-Mayi",
+      "Kisangani",
+      "Kananga",
+      "Likasi"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Lusaka",
+    "countryCode": "zm",
+    "countryName": "Zambia",
+    "cities": [
+      "Lusaka",
+      "Kitwe",
+      "Ndola",
+      "Kabwe",
+      "Chingola"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Maputo",
+    "countryCode": "mz",
+    "countryName": "Mozambique",
+    "cities": [
+      "Maputo",
+      "Matola",
+      "Beira",
+      "Nampula",
+      "Chimoio"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Maseru",
+    "countryCode": "ls",
+    "countryName": "Lesotho",
+    "cities": [
+      "Maseru",
+      "Mafeteng",
+      "Leribe",
+      "Maputsoe",
+      "Mohale’s Hoek"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Mbabane",
+    "countryCode": "sz",
+    "countryName": "Eswatini",
+    "cities": [
+      "Manzini",
+      "Mbabane",
+      "Big Bend",
+      "Malkerns",
+      "Nhlangano"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Africa/Tripoli",
+    "countryCode": "ly",
+    "countryName": "Libya",
+    "cities": [
+      "Tripoli",
+      "Benghazi",
+      "Mişrātah",
+      "Tarhuna",
+      "Al Khums"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Amman",
+    "countryCode": "jo",
+    "countryName": "Jordan",
+    "cities": [
+      "Amman",
+      "Zarqa",
+      "Irbid",
+      "Russeifa",
+      "Wādī as Sīr"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Beirut",
+    "countryCode": "lb",
+    "countryName": "Lebanon",
+    "cities": [
+      "Beirut",
+      "Ra’s Bayrūt",
+      "Tripoli",
+      "Sidon",
+      "Tyre"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Damascus",
+    "countryCode": "sy",
+    "countryName": "Syria",
+    "cities": [
+      "Aleppo",
+      "Damascus",
+      "Homs",
+      "Ḩamāh",
+      "Latakia"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Famagusta",
+    "countryCode": "cy",
+    "countryName": "Cyprus",
+    "cities": [
+      "Famagusta",
+      "Kyrenia",
+      "Protaras",
+      "Paralímni",
+      "Lápithos"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Gaza",
+    "countryCode": "ps",
+    "countryName": "Palestinian Territory",
+    "cities": [
+      "Gaza",
+      "Khān Yūnis",
+      "Jabālyā",
+      "Rafaḩ",
+      "Dayr al Balaḩ"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Hebron",
+    "countryCode": "ps",
+    "countryName": "Palestinian Territory",
+    "cities": [
+      "East Jerusalem",
+      "Hebron",
+      "Nablus",
+      "Battir",
+      "Ţūlkarm"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Jerusalem",
+    "countryCode": "il",
+    "countryName": "Israel",
+    "cities": [
+      "Jerusalem",
+      "Tel Aviv",
+      "West Jerusalem",
+      "Haifa",
+      "Ashdod"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Asia/Nicosia",
+    "countryCode": "cy",
+    "countryName": "Cyprus",
+    "cities": [
+      "Nicosia",
+      "Limassol",
+      "Larnaca",
+      "Stróvolos",
+      "Paphos"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Athens",
+    "countryCode": "gr",
+    "countryName": "Greece",
+    "cities": [
+      "Athens",
+      "Thessaloníki",
+      "Pátra",
+      "Piraeus",
+      "Lárisa"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Bucharest",
+    "countryCode": "ro",
+    "countryName": "Romania",
+    "cities": [
+      "Bucharest",
+      "Sector 3",
+      "Sector 6",
+      "Sector 2",
+      "Iaşi"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Chisinau",
+    "countryCode": "md",
+    "countryName": "Moldova",
+    "cities": [
+      "Chisinau",
+      "Tiraspol",
+      "Bălţi",
+      "Bender",
+      "Rîbniţa"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Helsinki",
+    "countryCode": "fi",
+    "countryName": "Finland",
+    "cities": [
+      "Helsinki",
+      "Espoo",
+      "Tampere",
+      "Vantaa",
+      "Turku"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Kaliningrad",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Kaliningrad",
+      "Chernyakhovsk",
+      "Sovetsk",
+      "Baltiysk",
+      "Gusev"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Kiev",
+    "countryCode": "ua",
+    "countryName": "Ukraine",
+    "cities": [
+      "Kyiv",
+      "Kharkiv",
+      "Donetsk",
+      "Odessa",
+      "Dnipro"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Mariehamn",
+    "countryCode": "ax",
+    "countryName": "Aland Islands",
+    "cities": [
+      "Mariehamn"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Riga",
+    "countryCode": "lv",
+    "countryName": "Latvia",
+    "cities": [
+      "Riga",
+      "Daugavpils",
+      "Liepāja",
+      "Jelgava",
+      "Jūrmala"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Sofia",
+    "countryCode": "bg",
+    "countryName": "Bulgaria",
+    "cities": [
+      "Sofia",
+      "Plovdiv",
+      "Varna",
+      "Burgas",
+      "Ruse"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Tallinn",
+    "countryCode": "ee",
+    "countryName": "Estonia",
+    "cities": [
+      "Tallinn",
+      "Tartu",
+      "Narva",
+      "Kohtla-Järve",
+      "Pärnu"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Uzhgorod",
+    "countryCode": "ua",
+    "countryName": "Ukraine",
+    "cities": [
+      "Uzhgorod",
+      "Mukachevo",
+      "Khust",
+      "Berehove",
+      "Tyachiv"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Vilnius",
+    "countryCode": "lt",
+    "countryName": "Lithuania",
+    "cities": [
+      "Vilnius",
+      "Kaunas",
+      "Klaipėda",
+      "Šiauliai",
+      "Panevėžys"
+    ]
+  },
+  {
+    "timestamp": "UTC+2",
+    "timezone": "Europe/Zaporozhye",
+    "countryCode": "ua",
+    "countryName": "Ukraine",
+    "cities": [
+      "Luhansk",
+      "Sevastopol",
+      "Sievierodonetsk",
+      "Alchevsk",
+      "Lysychansk"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Africa/Addis_Ababa",
+    "countryCode": "et",
+    "countryName": "Ethiopia",
+    "cities": [
+      "Addis Ababa",
+      "Dire Dawa",
+      "Mek'ele",
+      "Nazrēt",
+      "Bahir Dar"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Africa/Asmara",
+    "countryCode": "er",
+    "countryName": "Eritrea",
+    "cities": [
+      "Asmara",
+      "Keren",
+      "Massawa",
+      "Assab",
+      "Mendefera"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Africa/Dar_es_Salaam",
+    "countryCode": "tz",
+    "countryName": "Tanzania",
+    "cities": [
+      "Dar es Salaam",
+      "Mwanza",
+      "Zanzibar",
+      "Arusha",
+      "Mbeya"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Africa/Djibouti",
+    "countryCode": "dj",
+    "countryName": "Djibouti",
+    "cities": [
+      "Djibouti",
+      "'Ali Sabieh",
+      "Tadjourah",
+      "Obock",
+      "Dikhil"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Africa/Kampala",
+    "countryCode": "ug",
+    "countryName": "Uganda",
+    "cities": [
+      "Kampala",
+      "Gulu",
+      "Lira",
+      "Mbarara",
+      "Jinja"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Africa/Mogadishu",
+    "countryCode": "so",
+    "countryName": "Somalia",
+    "cities": [
+      "Mogadishu",
+      "Hargeysa",
+      "Berbera",
+      "Kismayo",
+      "Marka"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Africa/Nairobi",
+    "countryCode": "ke",
+    "countryName": "Kenya",
+    "cities": [
+      "Nairobi",
+      "Mombasa",
+      "Nakuru",
+      "Eldoret",
+      "Kisumu"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Antarctica/Syowa",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Asia/Aden",
+    "countryCode": "ye",
+    "countryName": "Yemen",
+    "cities": [
+      "Sanaa",
+      "Al Ḩudaydah",
+      "Taiz",
+      "Aden",
+      "Mukalla"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Asia/Baghdad",
+    "countryCode": "iq",
+    "countryName": "Iraq",
+    "cities": [
+      "Baghdad",
+      "Basrah",
+      "Al Mawşil al Jadīdah",
+      "Al Başrah al Qadīmah",
+      "Mosul"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Asia/Bahrain",
+    "countryCode": "bh",
+    "countryName": "Bahrain",
+    "cities": [
+      "Manama",
+      "Al Muharraq",
+      "Ar Rifā‘",
+      "Dār Kulayb",
+      "Madīnat Ḩamad"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Asia/Kuwait",
+    "countryCode": "kw",
+    "countryName": "Kuwait",
+    "cities": [
+      "Al Aḩmadī",
+      "Ḩawallī",
+      "As Sālimīyah",
+      "Şabāḩ as Sālim",
+      "Al Farwānīyah"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Asia/Qatar",
+    "countryCode": "qa",
+    "countryName": "Qatar",
+    "cities": [
+      "Doha",
+      "Ar Rayyān",
+      "Umm Şalāl Muḩammad",
+      "Al Wakrah",
+      "Al Khawr"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Asia/Riyadh",
+    "countryCode": "sa",
+    "countryName": "Saudi Arabia",
+    "cities": [
+      "Riyadh",
+      "Jeddah",
+      "Mecca",
+      "Medina",
+      "Sulţānah"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Europe/Istanbul",
+    "countryCode": "tr",
+    "countryName": "Turkey",
+    "cities": [
+      "Istanbul",
+      "Ankara",
+      "İzmir",
+      "Bursa",
+      "Adana"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Europe/Kirov",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Kirov",
+      "Kirovo-Chepetsk",
+      "Vyatskiye Polyany",
+      "Slobodskoy",
+      "Kotel’nich"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Europe/Minsk",
+    "countryCode": "by",
+    "countryName": "Belarus",
+    "cities": [
+      "Minsk",
+      "Homyel'",
+      "Mahilyow",
+      "Vitebsk",
+      "Hrodna"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Europe/Moscow",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Moscow",
+      "Saint Petersburg",
+      "Nizhniy Novgorod",
+      "Kazan",
+      "Rostov-na-Donu"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Europe/Simferopol",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Simferopol",
+      "Kerch",
+      "Yevpatoriya",
+      "Yalta",
+      "Feodosiya"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Europe/Volgograd",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Volgograd",
+      "Volzhskiy",
+      "Kamyshin",
+      "Mikhaylovka",
+      "Uryupinsk"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Indian/Antananarivo",
+    "countryCode": "mg",
+    "countryName": "Madagascar",
+    "cities": [
+      "Antananarivo",
+      "Toamasina",
+      "Antsirabe",
+      "Fianarantsoa",
+      "Mahajanga"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Indian/Comoro",
+    "countryCode": "km",
+    "countryName": "Comoros",
+    "cities": [
+      "Moroni",
+      "Moutsamoudou",
+      "Fomboni",
+      "Domoni",
+      "Tsimbeo"
+    ]
+  },
+  {
+    "timestamp": "UTC+3",
+    "timezone": "Indian/Mayotte",
+    "countryCode": "yt",
+    "countryName": "Mayotte",
+    "cities": [
+      "Mamoudzou",
+      "Koungou",
+      "Dzaoudzi",
+      "Dembeni",
+      "Sada"
+    ]
+  },
+  {
+    "timestamp": "UTC+3:30",
+    "timezone": "Asia/Tehran",
+    "countryCode": "ir",
+    "countryName": "Iran",
+    "cities": [
+      "Tehran",
+      "Mashhad",
+      "Isfahan",
+      "Karaj",
+      "Tabriz"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Asia/Baku",
+    "countryCode": "az",
+    "countryName": "Azerbaijan",
+    "cities": [
+      "Baku",
+      "Ganja",
+      "Sumqayıt",
+      "Lankaran",
+      "Yevlakh"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Asia/Dubai",
+    "countryCode": "ae",
+    "countryName": "United Arab Emirates",
+    "cities": [
+      "Dubai",
+      "Sharjah",
+      "Abu Dhabi",
+      "Ajman City",
+      "Ras Al Khaimah City"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Asia/Muscat",
+    "countryCode": "om",
+    "countryName": "Oman",
+    "cities": [
+      "Muscat",
+      "Seeb",
+      "Şalālah",
+      "Bawshar",
+      "Sohar"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Asia/Tbilisi",
+    "countryCode": "ge",
+    "countryName": "Georgia",
+    "cities": [
+      "Tbilisi",
+      "Kutaisi",
+      "Batumi",
+      "Sokhumi",
+      "Zugdidi"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Asia/Yerevan",
+    "countryCode": "am",
+    "countryName": "Armenia",
+    "cities": [
+      "Yerevan",
+      "Gyumri",
+      "Vanadzor",
+      "Vagharshapat",
+      "Hrazdan"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Europe/Astrakhan",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Astrakhan",
+      "Akhtubinsk",
+      "Znamensk",
+      "Kharabali",
+      "Kamyzyak"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Europe/Samara",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Samara",
+      "Togliatti-on-the-Volga",
+      "Izhevsk",
+      "Syzran’",
+      "Novokuybyshevsk"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Europe/Saratov",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Saratov",
+      "Balakovo",
+      "Engel’s",
+      "Balashov",
+      "Vol’sk"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Europe/Ulyanovsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Ulyanovsk",
+      "Dimitrovgrad",
+      "Inza",
+      "Barysh",
+      "Novoul’yanovsk"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Indian/Mahe",
+    "countryCode": "sc",
+    "countryName": "Seychelles",
+    "cities": [
+      "Victoria",
+      "Anse Boileau",
+      "Bel Ombre",
+      "Beau Vallon",
+      "Cascade"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Indian/Mauritius",
+    "countryCode": "mu",
+    "countryName": "Mauritius",
+    "cities": [
+      "Port Louis",
+      "Beau Bassin-Rose Hill",
+      "Vacoas",
+      "Curepipe",
+      "Quatre Bornes"
+    ]
+  },
+  {
+    "timestamp": "UTC+4",
+    "timezone": "Indian/Reunion",
+    "countryCode": "re",
+    "countryName": "Reunion",
+    "cities": [
+      "Saint-Denis",
+      "Saint-Paul",
+      "Saint-Pierre",
+      "Le Tampon",
+      "Saint-André"
+    ]
+  },
+  {
+    "timestamp": "UTC+4:30",
+    "timezone": "Asia/Kabul",
+    "countryCode": "af",
+    "countryName": "Afghanistan",
+    "cities": [
+      "Kabul",
+      "Kandahār",
+      "Mazār-e Sharīf",
+      "Herāt",
+      "Jalālābād"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Antarctica/Mawson",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Aqtau",
+    "countryCode": "kz",
+    "countryName": "Kazakhstan",
+    "cities": [
+      "Shevchenko",
+      "Zhanaozen",
+      "Beyneu",
+      "Shetpe",
+      "Yeraliyev"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Aqtobe",
+    "countryCode": "kz",
+    "countryName": "Kazakhstan",
+    "cities": [
+      "Aktobe",
+      "Kandyagash",
+      "Shalqar",
+      "Khromtau",
+      "Embi"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Ashgabat",
+    "countryCode": "tm",
+    "countryName": "Turkmenistan",
+    "cities": [
+      "Ashgabat",
+      "Türkmenabat",
+      "Daşoguz",
+      "Mary",
+      "Balkanabat"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Atyrau",
+    "countryCode": "kz",
+    "countryName": "Kazakhstan",
+    "cities": [
+      "Atyrau",
+      "Qulsary",
+      "Shalkar",
+      "Balykshi",
+      "Maqat"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Dushanbe",
+    "countryCode": "tj",
+    "countryName": "Tajikistan",
+    "cities": [
+      "Dushanbe",
+      "Khujand",
+      "Kŭlob",
+      "Bokhtar",
+      "Istaravshan"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Karachi",
+    "countryCode": "pk",
+    "countryName": "Pakistan",
+    "cities": [
+      "Karachi",
+      "Lahore",
+      "Faisalabad",
+      "Rawalpindi",
+      "Multan"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Oral",
+    "countryCode": "kz",
+    "countryName": "Kazakhstan",
+    "cities": [
+      "Oral",
+      "Aqsay",
+      "Zhänibek",
+      "Tasqala",
+      "Zhumysker"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Qyzylorda",
+    "countryCode": "kz",
+    "countryName": "Kazakhstan",
+    "cities": [
+      "Kyzylorda",
+      "Baikonur",
+      "Novokazalinsk",
+      "Aral",
+      "Chiili"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Samarkand",
+    "countryCode": "uz",
+    "countryName": "Uzbekistan",
+    "cities": [
+      "Samarkand",
+      "Bukhara",
+      "Nukus",
+      "Qarshi",
+      "Jizzax"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Tashkent",
+    "countryCode": "uz",
+    "countryName": "Uzbekistan",
+    "cities": [
+      "Tashkent",
+      "Namangan",
+      "Andijon",
+      "Qo‘qon",
+      "Chirchiq"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Asia/Yekaterinburg",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Yekaterinburg",
+      "Chelyabinsk",
+      "Ufa",
+      "Perm",
+      "Orenburg"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Indian/Kerguelen",
+    "countryCode": "tf",
+    "countryName": "French Southern Territories",
+    "cities": [
+      "Port-aux-Français"
+    ]
+  },
+  {
+    "timestamp": "UTC+5",
+    "timezone": "Indian/Maldives",
+    "countryCode": "mv",
+    "countryName": "Maldives",
+    "cities": [
+      "Male",
+      "Fuvahmulah",
+      "Hithadhoo",
+      "Kulhudhuffushi",
+      "Thinadhoo"
+    ]
+  },
+  {
+    "timestamp": "UTC+5:30",
+    "timezone": "Asia/Colombo",
+    "countryCode": "lk",
+    "countryName": "Sri Lanka",
+    "cities": [
+      "Colombo",
+      "Dehiwala-Mount Lavinia",
+      "Moratuwa",
+      "Jaffna",
+      "Negombo"
+    ]
+  },
+  {
+    "timestamp": "UTC+5:30",
+    "timezone": "Asia/Kolkata",
+    "countryCode": "in",
+    "countryName": "India",
+    "cities": [
+      "Mumbai",
+      "Delhi",
+      "Bengaluru",
+      "Kolkata",
+      "Chennai"
+    ]
+  },
+  {
+    "timestamp": "UTC+5:45",
+    "timezone": "Asia/Kathmandu",
+    "countryCode": "np",
+    "countryName": "Nepal",
+    "cities": [
+      "Kathmandu",
+      "Pokhara",
+      "Pātan",
+      "Biratnagar",
+      "Birgañj"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Antarctica/Vostok",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Asia/Almaty",
+    "countryCode": "kz",
+    "countryName": "Kazakhstan",
+    "cities": [
+      "Almaty",
+      "Karagandy",
+      "Shymkent",
+      "Taraz",
+      "Nur-Sultan"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Asia/Bishkek",
+    "countryCode": "kg",
+    "countryName": "Kyrgyzstan",
+    "cities": [
+      "Bishkek",
+      "Osh",
+      "Jalal-Abad",
+      "Karakol",
+      "Tokmok"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Asia/Dhaka",
+    "countryCode": "bd",
+    "countryName": "Bangladesh",
+    "cities": [
+      "Dhaka",
+      "Chattogram",
+      "Khulna",
+      "Rājshāhi",
+      "Comilla"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Asia/Omsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Omsk",
+      "Tara",
+      "Kalachinsk",
+      "Znamenskoye",
+      "Tavricheskoye"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Asia/Qostanay",
+    "countryCode": "kz",
+    "countryName": "Kazakhstan",
+    "cities": [
+      "Kostanay",
+      "Rudnyy",
+      "Dzhetygara",
+      "Arkalyk",
+      "Lisakovsk"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Asia/Thimphu",
+    "countryCode": "bt",
+    "countryName": "Bhutan",
+    "cities": [
+      "Thimphu",
+      "Punākha",
+      "Tsirang",
+      "Phuntsholing",
+      "Pemagatshel"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Asia/Urumqi",
+    "countryCode": "cn",
+    "countryName": "China",
+    "cities": [
+      "Zhongshan",
+      "Ürümqi",
+      "Zhanjiang",
+      "Shihezi",
+      "Huocheng"
+    ]
+  },
+  {
+    "timestamp": "UTC+6",
+    "timezone": "Indian/Chagos",
+    "countryCode": "io",
+    "countryName": "British Indian Ocean Territory",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+6:30",
+    "timezone": "Asia/Yangon",
+    "countryCode": "mm",
+    "countryName": "Myanmar",
+    "cities": [
+      "Yangon",
+      "Mandalay",
+      "Nay Pyi Taw",
+      "Mawlamyine",
+      "Kyain Seikgyi Township"
+    ]
+  },
+  {
+    "timestamp": "UTC+6:30",
+    "timezone": "Indian/Cocos",
+    "countryCode": "cc",
+    "countryName": "Cocos Islands",
+    "cities": [
+      "West Island"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Antarctica/Davis",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Bangkok",
+    "countryCode": "th",
+    "countryName": "Thailand",
+    "cities": [
+      "Bangkok",
+      "Hanoi",
+      "Haiphong",
+      "Samut Prakan",
+      "Mueang Nonthaburi"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Barnaul",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Barnaul",
+      "Biysk",
+      "Rubtsovsk",
+      "Novoaltaysk",
+      "Gorno-Altaysk"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Hovd",
+    "countryCode": "mn",
+    "countryName": "Mongolia",
+    "cities": [
+      "Khovd",
+      "Ölgii",
+      "Ulaangom",
+      "Uliastay",
+      "Altai"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "countryCode": "vn",
+    "countryName": "Vietnam",
+    "cities": [
+      "Ho Chi Minh City",
+      "Da Nang",
+      "Biên Hòa",
+      "Nha Trang",
+      "Cần Thơ"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Jakarta",
+    "countryCode": "id",
+    "countryName": "Indonesia",
+    "cities": [
+      "Jakarta",
+      "Surabaya",
+      "Medan",
+      "Bandung",
+      "Bekasi"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Krasnoyarsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Krasnoyarsk",
+      "Abakan",
+      "Norilsk",
+      "Achinsk",
+      "Kyzyl"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Novokuznetsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Novokuznetsk",
+      "Kemerovo",
+      "Prokop’yevsk",
+      "Leninsk-Kuznetsky",
+      "Kiselëvsk"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Novosibirsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Novosibirsk",
+      "Berdsk",
+      "Iskitim",
+      "Akademgorodok",
+      "Kuybyshev"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Phnom_Penh",
+    "countryCode": "kh",
+    "countryName": "Cambodia",
+    "cities": [
+      "Phnom Penh",
+      "Takeo",
+      "Sihanoukville",
+      "Battambang",
+      "Siem Reap"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Pontianak",
+    "countryCode": "id",
+    "countryName": "Indonesia",
+    "cities": [
+      "Pontianak",
+      "Tanjung Pinang",
+      "Palangkaraya",
+      "Singkawang",
+      "Sampit"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Tomsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Tomsk",
+      "Seversk",
+      "Strezhevoy",
+      "Kolpashevo",
+      "Asino"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Asia/Vientiane",
+    "countryCode": "la",
+    "countryName": "Laos",
+    "cities": [
+      "Vientiane",
+      "Pakse",
+      "Thakhèk",
+      "Savannakhet",
+      "Luang Prabang"
+    ]
+  },
+  {
+    "timestamp": "UTC+7",
+    "timezone": "Indian/Christmas",
+    "countryCode": "cx",
+    "countryName": "Christmas Island",
+    "cities": [
+      "Flying Fish Cove"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Brunei",
+    "countryCode": "bn",
+    "countryName": "Brunei",
+    "cities": [
+      "Bandar Seri Begawan",
+      "Kuala Belait",
+      "Seria",
+      "Tutong",
+      "Bangar"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Choibalsan",
+    "countryCode": "mn",
+    "countryName": "Mongolia",
+    "cities": [
+      "Baruun-Urt",
+      "Choibalsan"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Hong_Kong",
+    "countryCode": "hk",
+    "countryName": "Hong Kong",
+    "cities": [
+      "Hong Kong",
+      "Kowloon",
+      "Tsuen Wan",
+      "Yuen Long Kau Hui",
+      "Tung Chung"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Irkutsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Irkutsk",
+      "Ulan-Ude",
+      "Bratsk",
+      "Angarsk",
+      "Ust’-Ilimsk"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Kuala_Lumpur",
+    "countryCode": "my",
+    "countryName": "Malaysia",
+    "cities": [
+      "Kota Bharu",
+      "Kuala Lumpur",
+      "Klang",
+      "Kampung Baru Subang",
+      "Johor Bahru"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Kuching",
+    "countryCode": "my",
+    "countryName": "Malaysia",
+    "cities": [
+      "Kuching",
+      "Kota Kinabalu",
+      "Sandakan",
+      "Tawau",
+      "Miri"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Macau",
+    "countryCode": "mo",
+    "countryName": "Macao",
+    "cities": [
+      "Macau"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Makassar",
+    "countryCode": "id",
+    "countryName": "Indonesia",
+    "cities": [
+      "Makassar",
+      "Denpasar",
+      "City of Balikpapan",
+      "Banjarmasin",
+      "Manado"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Manila",
+    "countryCode": "ph",
+    "countryName": "Philippines",
+    "cities": [
+      "Quezon City",
+      "Manila",
+      "Caloocan City",
+      "Budta",
+      "Davao"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Shanghai",
+    "countryCode": "cn",
+    "countryName": "China",
+    "cities": [
+      "Shanghai",
+      "Beijing",
+      "Tianjin",
+      "Guangzhou",
+      "Shenzhen"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Singapore",
+    "countryCode": "sg",
+    "countryName": "Singapore",
+    "cities": [
+      "Singapore",
+      "Woodlands"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Taipei",
+    "countryCode": "tw",
+    "countryName": "Taiwan",
+    "cities": [
+      "Taipei",
+      "Kaohsiung",
+      "Taichung",
+      "Tainan",
+      "Banqiao"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Asia/Ulaanbaatar",
+    "countryCode": "mn",
+    "countryName": "Mongolia",
+    "cities": [
+      "Ulan Bator",
+      "Erdenet",
+      "Darhan",
+      "Hovd",
+      "Mörön"
+    ]
+  },
+  {
+    "timestamp": "UTC+8",
+    "timezone": "Australia/Perth",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Perth",
+      "Rockingham",
+      "Mandurah",
+      "Bunbury",
+      "Albany"
+    ]
+  },
+  {
+    "timestamp": "UTC+8:45",
+    "timezone": "Australia/Eucla",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Chita",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Chita",
+      "Krasnokamensk",
+      "Borzya",
+      "Petrovsk-Zabaykal’skiy",
+      "Aginskoye"
+    ]
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Dili",
+    "countryCode": "tl",
+    "countryName": "Timor Leste",
+    "cities": [
+      "Dili",
+      "Maliana",
+      "Suai",
+      "Likisá",
+      "Aileu"
+    ]
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Jayapura",
+    "countryCode": "id",
+    "countryName": "Indonesia",
+    "cities": [
+      "Ambon",
+      "Jayapura",
+      "Sorong",
+      "Ternate",
+      "Abepura"
+    ]
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Khandyga",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Pyongyang",
+    "countryCode": "kp",
+    "countryName": "North Korea",
+    "cities": [
+      "Pyongyang",
+      "Hamhŭng",
+      "Namp’o",
+      "Sunch’ŏn",
+      "Hŭngnam"
+    ]
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Seoul",
+    "countryCode": "kr",
+    "countryName": "South Korea",
+    "cities": [
+      "Seoul",
+      "Busan",
+      "Incheon",
+      "Daegu",
+      "Daejeon"
+    ]
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Tokyo",
+    "countryCode": "jp",
+    "countryName": "Japan",
+    "cities": [
+      "Tokyo",
+      "Yokohama",
+      "Osaka",
+      "Nagoya",
+      "Sapporo"
+    ]
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Asia/Yakutsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Yakutsk",
+      "Blagoveshchensk",
+      "Belogorsk",
+      "Neryungri",
+      "Svobodnyy"
+    ]
+  },
+  {
+    "timestamp": "UTC+9",
+    "timezone": "Pacific/Palau",
+    "countryCode": "pw",
+    "countryName": "Palau",
+    "cities": [
+      "Koror",
+      "Koror Town",
+      "Kloulklubed",
+      "Ulimang",
+      "Mengellang"
+    ]
+  },
+  {
+    "timestamp": "UTC+9:30",
+    "timezone": "Australia/Adelaide",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Adelaide",
+      "Adelaide Hills",
+      "Mount Gambier",
+      "Morphett Vale",
+      "Gawler"
+    ]
+  },
+  {
+    "timestamp": "UTC+9:30",
+    "timezone": "Australia/Broken_Hill",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Broken Hill"
+    ]
+  },
+  {
+    "timestamp": "UTC+9:30",
+    "timezone": "Australia/Darwin",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Darwin",
+      "Alice Springs",
+      "Palmerston",
+      "Howard Springs"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Antarctica/DumontDUrville",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Antarctica/Macquarie",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Asia/Ust-Nera",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Asia/Vladivostok",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Vladivostok",
+      "Khabarovsk",
+      "Khabarovsk Vtoroy",
+      "Komsomolsk-on-Amur",
+      "Ussuriysk"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Australia/Brisbane",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Brisbane",
+      "Gold Coast",
+      "Logan City",
+      "Townsville",
+      "Cairns"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Australia/Currie",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Australia/Hobart",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Hobart",
+      "Launceston",
+      "Burnie",
+      "Devonport",
+      "Sandy Bay"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Australia/Lindeman",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Australia/Melbourne",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Melbourne",
+      "Geelong",
+      "Bendigo",
+      "Ballarat",
+      "Melbourne City Centre"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Australia/Sydney",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": [
+      "Sydney",
+      "Canberra",
+      "Newcastle",
+      "Wollongong",
+      "Maitland"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Pacific/Chuuk",
+    "countryCode": "fm",
+    "countryName": "Micronesia",
+    "cities": [
+      "Weno",
+      "Colonia"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Pacific/Guam",
+    "countryCode": "gu",
+    "countryName": "Guam",
+    "cities": [
+      "Dededo Village",
+      "Yigo Village",
+      "Tamuning",
+      "Tamuning-Tumon-Harmon Village",
+      "Mangilao Village"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Pacific/Port_Moresby",
+    "countryCode": "pg",
+    "countryName": "Papua New Guinea",
+    "cities": [
+      "Port Moresby",
+      "Lae",
+      "Mount Hagen",
+      "Popondetta",
+      "Madang"
+    ]
+  },
+  {
+    "timestamp": "UTC+10",
+    "timezone": "Pacific/Saipan",
+    "countryCode": "mp",
+    "countryName": "Northern Mariana Islands",
+    "cities": [
+      "Saipan",
+      "San Jose Village"
+    ]
+  },
+  {
+    "timestamp": "UTC+10:30",
+    "timezone": "Australia/Lord_Howe",
+    "countryCode": "au",
+    "countryName": "Australia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Antarctica/Casey",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Asia/Magadan",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Magadan",
+      "Ust-Nera",
+      "Susuman",
+      "Ola"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Asia/Sakhalin",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Yuzhno-Sakhalinsk",
+      "Korsakov",
+      "Kholmsk",
+      "Okha",
+      "Nevel’sk"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Asia/Srednekolymsk",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Pacific/Bougainville",
+    "countryCode": "pg",
+    "countryName": "Papua New Guinea",
+    "cities": [
+      "Arawa",
+      "Buka"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Pacific/Efate",
+    "countryCode": "vu",
+    "countryName": "Vanuatu",
+    "cities": [
+      "Port-Vila",
+      "Luganville",
+      "Isangel",
+      "Sola",
+      "Lakatoro"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Pacific/Guadalcanal",
+    "countryCode": "sb",
+    "countryName": "Solomon Islands",
+    "cities": [
+      "Honiara",
+      "Malango",
+      "Auki",
+      "Gizo",
+      "Buala"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Pacific/Kosrae",
+    "countryCode": "fm",
+    "countryName": "Micronesia",
+    "cities": [
+      "Tofol"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Pacific/Norfolk",
+    "countryCode": "nf",
+    "countryName": "Norfolk Island",
+    "cities": [
+      "Kingston"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Pacific/Noumea",
+    "countryCode": "nc",
+    "countryName": "New Caledonia",
+    "cities": [
+      "Nouméa",
+      "Mont-Dore",
+      "Dumbéa",
+      "Païta",
+      "Wé"
+    ]
+  },
+  {
+    "timestamp": "UTC+11",
+    "timezone": "Pacific/Pohnpei",
+    "countryCode": "fm",
+    "countryName": "Micronesia",
+    "cities": [
+      "Kolonia",
+      "Kolonia Town",
+      "Palikir - National Government Center"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Antarctica/McMurdo",
+    "countryCode": "aq",
+    "countryName": "Antarctica",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Asia/Anadyr",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Anadyr",
+      "Bilibino"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Asia/Kamchatka",
+    "countryCode": "ru",
+    "countryName": "Russia",
+    "cities": [
+      "Petropavlovsk-Kamchatsky",
+      "Yelizovo",
+      "Vilyuchinsk",
+      "Klyuchi",
+      "Mil’kovo"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Auckland",
+    "countryCode": "nz",
+    "countryName": "New Zealand",
+    "cities": [
+      "Auckland",
+      "Wellington",
+      "Christchurch",
+      "Manukau City",
+      "North Shore"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Fiji",
+    "countryCode": "fj",
+    "countryName": "Fiji",
+    "cities": [
+      "Suva",
+      "Lautoka",
+      "Nadi",
+      "Labasa",
+      "Ba"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Funafuti",
+    "countryCode": "tv",
+    "countryName": "Tuvalu",
+    "cities": [
+      "Funafuti",
+      "Savave Village",
+      "Tanrake Village",
+      "Toga Village",
+      "Asau Village"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Kwajalein",
+    "countryCode": "mh",
+    "countryName": "Marshall Islands",
+    "cities": [
+      "Ebaye",
+      "Jabat"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Majuro",
+    "countryCode": "mh",
+    "countryName": "Marshall Islands",
+    "cities": [
+      "Majuro",
+      "Arno",
+      "Jabor",
+      "Wotje",
+      "Mili"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Nauru",
+    "countryCode": "nr",
+    "countryName": "Nauru",
+    "cities": [
+      "Yaren",
+      "Baiti",
+      "Anabar",
+      "Uaboe",
+      "Ijuw"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Tarawa",
+    "countryCode": "ki",
+    "countryName": "Kiribati",
+    "cities": [
+      "Tarawa",
+      "Betio Village",
+      "Bikenibeu Village"
+    ]
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Wake",
+    "countryCode": "um",
+    "countryName": "United States Minor Outlying Islands",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+12",
+    "timezone": "Pacific/Wallis",
+    "countryCode": "wf",
+    "countryName": "Wallis and Futuna",
+    "cities": [
+      "Mata-Utu",
+      "Leava",
+      "Alo"
+    ]
+  },
+  {
+    "timestamp": "UTC+12:45",
+    "timezone": "Pacific/Chatham",
+    "countryCode": "nz",
+    "countryName": "New Zealand",
+    "cities": [
+      "Waitangi"
+    ]
+  },
+  {
+    "timestamp": "UTC+13",
+    "timezone": "Pacific/Apia",
+    "countryCode": "ws",
+    "countryName": "Samoa",
+    "cities": [
+      "Apia",
+      "Asau",
+      "Mulifanua",
+      "Afega",
+      "Leulumoega"
+    ]
+  },
+  {
+    "timestamp": "UTC+13",
+    "timezone": "Pacific/Enderbury",
+    "countryCode": "ki",
+    "countryName": "Kiribati",
+    "cities": []
+  },
+  {
+    "timestamp": "UTC+13",
+    "timezone": "Pacific/Fakaofo",
+    "countryCode": "tk",
+    "countryName": "Tokelau",
+    "cities": [
+      "Atafu Village",
+      "Nukunonu",
+      "Fale old settlement"
+    ]
+  },
+  {
+    "timestamp": "UTC+13",
+    "timezone": "Pacific/Tongatapu",
+    "countryCode": "to",
+    "countryName": "Tonga",
+    "cities": [
+      "Nuku‘alofa",
+      "Lapaha",
+      "Neiafu",
+      "Pangai",
+      "‘Ohonua"
+    ]
+  },
+  {
+    "timestamp": "UTC+14",
+    "timezone": "Pacific/Kiritimati",
+    "countryCode": "ki",
+    "countryName": "Kiribati",
+    "cities": []
+  }
+]
