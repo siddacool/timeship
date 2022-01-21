@@ -1,21 +1,21 @@
-import { createSignal, onMount, For } from 'solid-js';
+import { onMount, For, Show } from 'solid-js';
 import type { Component } from 'solid-js';
 import styles from './style.module.css';
 import TableRow from './TableRow';
+import { fetchTimezones, filteredTimeZones } from '../../store';
 
 const Tbody: Component = () => {
-  const [timezones, setTimezones] = createSignal([]);
-
-  onMount(async () => {
-    const res = await fetch('./data.json');
-    const json = await res.json();
-
-    setTimezones(json);
+  onMount(() => {
+    fetchTimezones();
   });
 
   return (
     <tbody class={styles.Tbody}>
-      <For each={timezones()}>{(timezone, i) => <TableRow {...timezone} index={i() + 1} />}</For>
+      <Show when={filteredTimeZones().length} fallback={<div>de nada</div>}>
+        <For each={filteredTimeZones()}>
+          {(timezone, i) => <TableRow {...timezone} index={i() + 1} />}
+        </For>
+      </Show>
     </tbody>
   );
 };

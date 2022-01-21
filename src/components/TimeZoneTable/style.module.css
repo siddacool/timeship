@@ -1,12 +1,17 @@
 .TimeZoneTable {
-  margin-top: 30px;
+}
+
+.tableInner {
   max-height: calc(100vh - 60px);
   overflow: auto;
-  position: relative;
 }
 
 .table {
   width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
 }
 
 .thead {
@@ -16,10 +21,31 @@
   background-color: #fff;
 }
 
+.thead th {
+  font-weight: 500;
+  padding: 6px;
+  border: none;
+}
+
 .Tbody {
+}
+
+.TableRow:nth-child(even) {
+  background-color: aliceblue;
+}
+
+.TableRow:hover {
+  background-color: #d7e5f1;
 }
 
 .TableRow td {
   font-weight: 400;
   padding: 6px;
+  border: none;
+}
+
+.Search {
+  margin-top: 30px;
+  padding: 10px;
+  display: flex;
 }
