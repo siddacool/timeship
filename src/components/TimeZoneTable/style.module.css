@@ -2,7 +2,7 @@
 }
 
 .tableInner {
-  max-height: calc(100vh - 60px);
+  max-height: calc(100vh - 100px);
   overflow: auto;
 }
 
@@ -48,4 +48,25 @@
   margin-top: 30px;
   padding: 10px;
   display: flex;
+}
+
+.SortableHead > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SortableHead svg {
+  width: 18px;
+  height: 18px;
+}
+
+.svgHolder {
+  display: flex;
+  margin-right: 8px;
+}
+
+.arrowsGroup {
+  display: flex;
+  color: #7e7d7d;
 }
