@@ -11,6 +11,10 @@ interface ITimezone {
   noCities: boolean;
 }
 
+interface IUtcTimeInitialData {
+  data: any;
+}
+
 export const [timezones, setTimezones] = createStore({
   data: [],
   filters: {
@@ -121,11 +125,16 @@ export const [previewList, setPreviewList] = createStore({
       countryName: 'India',
     },
   ],
-  utcTime: '',
 });
+
+const utcTimeInitialData: IUtcTimeInitialData = {
+  data: '',
+};
+
+export const [utcTime, setUtcTime] = createStore(utcTimeInitialData);
 
 export const updateUtCTime = () => {
   const utcTime = getDateUTC();
 
-  setPreviewList('utcTime', () => utcTime);
+  setUtcTime('data', () => utcTime);
 };
