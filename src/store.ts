@@ -7,6 +7,7 @@ interface ITimezone {
   timezone: string;
   countryCode: string;
   countryName: string;
+  noCities: boolean;
 }
 
 export const [timezones, setTimezones] = createStore({

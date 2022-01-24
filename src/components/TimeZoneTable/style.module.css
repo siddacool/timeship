@@ -50,6 +50,10 @@
   border: none;
 }
 
+.noCities {
+  color: red;
+}
+
 .Search {
   display: flex;
 }

@@ -8,14 +8,16 @@ interface IProps {
   timezone: string;
   countryCode: string;
   countryName: string;
-  cities: string[];
+  noCities: boolean;
 }
 
 const TableRow: Component<IProps> = (props) => {
+  console.log(props.noCities);
+
   return (
     <tr class={styles.TableRow}>
       <td>{props.index}</td>
-      <td>{props.name}</td>
+      <td class={`${props.noCities ? styles.noCities : ''}`}>{props.name}</td>
       <td>{props.timestamp}</td>
       <td>{props.timezone}</td>
       <td>{props.countryCode}</td>
