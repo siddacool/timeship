@@ -1,5 +1,6 @@
 import { createMemo } from 'solid-js';
 import { createStore } from 'solid-js/store';
+import { getDateUTC } from './time';
 
 interface ITimezone {
   name: string;
@@ -120,4 +121,11 @@ export const [previewList, setPreviewList] = createStore({
       countryName: 'India',
     },
   ],
+  utcTime: '',
 });
+
+export const updateUtCTime = () => {
+  const utcTime = getDateUTC();
+
+  setPreviewList('utcTime', () => utcTime);
+};

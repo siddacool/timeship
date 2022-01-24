@@ -1,5 +1,6 @@
 import type { Component } from 'solid-js';
-import { getCurruntTime } from '../../time';
+import { previewList } from '../../store';
+import { getCurruntTimeFromDateUtc } from '../../time';
 import styles from './style.module.css';
 
 interface IProps {
@@ -11,10 +12,16 @@ interface IProps {
   noCities?: boolean;
 }
 
+const formattedTime = (utcTime: string, timezone: string | undefined) => {
+  const { hour, minute, second } = getCurruntTimeFromDateUtc(utcTime, timezone);
+
+  return `${hour}:${minute}:${second}`;
+};
+
 const TimeCard: Component<IProps> = (props) => {
   return (
     <div class={styles.TimeCard}>
-      {props.name} {getCurruntTime(props.timezone)}
+      {props.name}, {props.countryName} {formattedTime(previewList.utcTime, props.timezone)}
     </div>
   );
 };
