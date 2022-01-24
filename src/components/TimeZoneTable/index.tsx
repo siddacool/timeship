@@ -1,4 +1,5 @@
 import type { Component } from 'solid-js';
+import Count from './Count';
 import Search from './Search';
 import SortableHead from './SortableHead';
 import styles from './style.module.css';
@@ -7,7 +8,10 @@ import Tbody from './Tbody';
 const TimeZoneTable: Component = () => {
   return (
     <div class={styles.TimeZoneTable}>
-      <Search />
+      <div class={styles.TableControl}>
+        <Search />
+        <Count />
+      </div>
 
       <div className={styles.tableInner}>
         <table class={styles.table}>
