@@ -95,3 +95,29 @@ export const filteredTimeZones = createMemo(() => {
 
   return ordered;
 });
+
+export const [previewList, setPreviewList] = createStore({
+  data: [
+    {
+      name: 'Alofi',
+      timestamp: 'UTC-11',
+      timezone: 'Pacific/Niue',
+      countryCode: 'nu',
+      countryName: 'Niue',
+    },
+    {
+      name: 'Tanjung Pinang',
+      timestamp: 'UTC+7',
+      timezone: 'Asia/Pontianak',
+      countryCode: 'id',
+      countryName: 'Indonesia',
+    },
+    {
+      name: 'Mumbai',
+      timestamp: 'UTC+5:30',
+      timezone: 'Asia/Kolkata',
+      countryCode: 'in',
+      countryName: 'India',
+    },
+  ],
+});
