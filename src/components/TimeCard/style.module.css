@@ -3,7 +3,7 @@
   background-color: var(--background-light);
   padding: 4px 6px;
   border-radius: var(--border-radius-6);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .DayTime {
@@ -32,15 +32,11 @@
 }
 
 .Day {
-  margin-top: -5px;
+  margin-top: -8px;
 }
 
 @media (min-width: 900px) {
   .TimeCard {
     padding: 2px var(--space-1);
-  }
-
-  .Day {
-    margin-top: -8px;
   }
 }
