@@ -1,14 +1,39 @@
 :root {
   --backdrop: #f7f7f7;
+  --background-light: #fff;
+  --paper-elevation-color-h: 0deg;
+  --paper-elevation-color-s: 0%;
+  --paper-elevation-color-l: 60%;
+  --paper-elevation-color: var(--paper-elevation-color-h) var(--paper-elevation-color-s)
+    var(--paper-elevation-color-l);
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+
+  --border-radius-1: 1px;
+  --border-radius-2: 2px;
+  --border-radius-3: 3px;
+  --border-radius-4: 4px;
+  --border-radius-5: 5px;
+  --border-radius-6: 6px;
+  --border-radius-7: 7px;
+  --border-radius-8: 8px;
+  --border-radius-9: 9px;
+  --border-radius-10: 10px;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Heebo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow: auto;
   background-color: var(--backdrop);
 }
 

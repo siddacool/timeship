@@ -1,7 +1,7 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "timeship",
+  "version": "1.0.0",
+  "description": "A world clock at your fingertips. Timeship displays time from cities all around the globe",
   "scripts": {
     "start": "vite",
     "dev": "vite",

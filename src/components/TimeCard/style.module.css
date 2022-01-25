@@ -1,2 +1,46 @@
 .TimeCard {
+  margin-bottom: 10px;
+  background-color: var(--background-light);
+  padding: 4px 6px;
+  border-radius: var(--border-radius-6);
+  font-size: 1.2rem;
+}
+
+.DayTime {
+  display: flex;
+  flex-direction: column;
+}
+
+.NameHolder {
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.Name {
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  margin-right: 2px;
+}
+
+.CountryName {
+  margin-left: 2px;
+}
+
+.Time {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 500;
+}
+
+.Day {
+  margin-top: -5px;
+}
+
+@media (min-width: 900px) {
+  .TimeCard {
+    padding: 2px var(--space-1);
+  }
+
+  .Day {
+    margin-top: -8px;
+  }
 }

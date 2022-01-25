@@ -124,6 +124,14 @@ export const [previewList, setPreviewList] = createStore({
       countryCode: 'in',
       countryName: 'India',
     },
+    {
+      name: 'Antarctica',
+      timestamp: 'UTC+6',
+      timezone: 'Antarctica/Vostok',
+      countryCode: 'aq',
+      countryName: 'Antarctica',
+      noCities: true,
+    },
   ],
 });
 
