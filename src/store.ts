@@ -1,4 +1,4 @@
-import { createMemo } from 'solid-js';
+import { createMemo, createSignal } from 'solid-js';
 import { createStore } from 'solid-js/store';
 import { getDateUTC } from './time';
 
@@ -13,6 +13,33 @@ interface ITimezone {
 
 interface IUtcTimeInitialData {
   data: any;
+}
+
+interface IPreviewList {
+  data:
+    | {
+        name: string;
+        timestamp: string;
+        timezone: string;
+        countryCode: string;
+        countryName: string;
+        noCities: boolean;
+      }[]
+    | any[];
+}
+
+interface IOrderList {
+  data:
+    | {
+        name: string;
+        timestamp: string;
+        timezone: string;
+        countryCode: string;
+        countryName: string;
+        noCities: boolean;
+      }[]
+    | any[];
+  active: boolean;
 }
 
 export const [timezones, setTimezones] = createStore({
@@ -101,51 +128,11 @@ export const filteredTimeZones = createMemo(() => {
   return ordered;
 });
 
-export const [previewList, setPreviewList] = createStore({
-  data: [
-    {
-      name: 'Alofi',
-      timestamp: 'UTC-11',
-      timezone: 'Pacific/Niue',
-      countryCode: 'nu',
-      countryName: 'Niue',
-    },
-    {
-      name: 'Tanjung Pinang',
-      timestamp: 'UTC+7',
-      timezone: 'Asia/Pontianak',
-      countryCode: 'id',
-      countryName: 'Indonesia',
-    },
-    {
-      name: 'Mumbai',
-      timestamp: 'UTC+5:30',
-      timezone: 'Asia/Kolkata',
-      countryCode: 'in',
-      countryName: 'India',
-    },
-    {
-      name: 'Antarctica',
-      timestamp: 'UTC+6',
-      timezone: 'Antarctica/Vostok',
-      countryCode: 'aq',
-      countryName: 'Antarctica',
-      noCities: true,
-    },
-  ],
-});
-
-const utcTimeInitialData: IUtcTimeInitialData = {
-  data: '',
+const previewListInitialState: IPreviewList = {
+  data: [],
 };
 
-export const [utcTime, setUtcTime] = createStore(utcTimeInitialData);
-
-export const updateUtCTime = () => {
-  const utcTime = getDateUTC();
-
-  setUtcTime('data', () => utcTime);
-};
+export const [previewList, setPreviewList] = createStore(previewListInitialState);
 
 export const poplulateAllItemsToPreviewList = async () => {
   const res = await fetch('./data.json');
@@ -186,6 +173,43 @@ export const resetPreviewList = () => {
       noCities: true,
     },
   ]);
+};
+
+const orderListInitialState: IOrderList = {
+  data: [],
+  active: false,
+};
+
+export const [orderList, setOrderList] = createStore(orderListInitialState);
+
+export const poplulateOrderList = (data = []) => {
+  setOrderList('data', () => [...data]);
+};
+
+export const poplulateOrderListFromPreviewList = () => {
+  setOrderList('data', () => [...previewList.data]);
+};
+
+export const orderListActiveToggle = () => {
+  setOrderList('active', (active) => !active);
+};
+
+const utcTimeInitialData: IUtcTimeInitialData = {
+  data: '',
+};
+
+export const [utcTime, setUtcTime] = createStore(utcTimeInitialData);
+
+export const updateUtCTime = () => {
+  const utcTime = getDateUTC();
+
+  setUtcTime('data', () => utcTime);
+};
+
+export const [actionMenuOpen, setActionMenuOpen] = createSignal(false);
+
+export const handleActionMenuToggle = () => {
+  setActionMenuOpen(!actionMenuOpen());
 };
 
 if (import.meta.env.DEV) {

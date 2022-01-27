@@ -1,0 +1,30 @@
+.MenuButton {
+  position: fixed;
+  bottom: var(--space-2);
+  right: var(--space-2);
+  z-index: 110;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-light);
+  border-radius: 50%;
+  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: hidden;
+}
+
+.MenuButton svg {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 900px) {
+  .MenuButton {
+    bottom: initial;
+    right: inherit;
+    top: var(--space-2);
+    left: var(--space-2);
+  }
+}

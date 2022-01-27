@@ -1,16 +1,20 @@
-import type { Component } from 'solid-js';
-import { previewList } from '../../store';
+import { Component, onMount } from 'solid-js';
+import { orderList, poplulateOrderListFromPreviewList } from '../../store';
 import TimeCard from '../TimeCard';
 import styles from './style.module.css';
 import { VirtualContainer } from '@minht11/solid-virtual-container';
 
-const PreviewList: Component = () => {
+const OrderList: Component = () => {
   let scrollTargetElement!: HTMLDivElement;
 
+  onMount(() => {
+    poplulateOrderListFromPreviewList();
+  });
+
   return (
-    <div style={{ overflow: 'auto' }} ref={scrollTargetElement} class={styles.PreviewList}>
+    <div style={{ overflow: 'auto' }} ref={scrollTargetElement} class={styles.OrderList}>
       <VirtualContainer
-        items={previewList.data}
+        items={orderList.data}
         scrollTarget={scrollTargetElement}
         itemSize={{ height: 120 }}
       >
@@ -20,4 +24,4 @@ const PreviewList: Component = () => {
   );
 };
 
-export default PreviewList;
+export default OrderList;

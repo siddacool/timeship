@@ -1,6 +1,8 @@
 :root {
   --backdrop: #f7f7f7;
   --background-light: #fff;
+  --color-selection: #cbe6fd;
+  --color-disable-text: #9b9b9b;
   --paper-elevation-color-h: 0deg;
   --paper-elevation-color-s: 0%;
   --paper-elevation-color-l: 60%;
