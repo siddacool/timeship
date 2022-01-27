@@ -233,6 +233,16 @@ export const orderListSetOrder = (id = '', action = 'up') => {
   // }
 };
 
+export const saveOrderList = () => {
+  setPreviewList('data', () => [...orderList.data]);
+  orderListActiveToggle();
+};
+
+export const cancelOrderList = () => {
+  setOrderList('data', () => []);
+  orderListActiveToggle();
+};
+
 const utcTimeInitialData: IUtcTimeInitialData = {
   data: '',
 };

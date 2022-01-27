@@ -1,5 +1,5 @@
 import type { Component } from 'solid-js';
-import { Show, createMemo } from 'solid-js';
+import { Show } from 'solid-js';
 import styles from './style.module.css';
 import elevationStyles from '../../styles/elevation.module.css';
 import DayTime from './DayTime';
@@ -20,8 +20,6 @@ interface IProps {
 }
 
 const TimeCardOrder: Component<IProps> = (props) => {
-  const name = createMemo(() => props.item.name);
-
   return (
     <div
       class={`${styles.TimeCard} ${styles.TimeCardOrder}`}

@@ -4,6 +4,7 @@ import styles from './App.module.css';
 import MenuButton from './components/MenuButton';
 import OrderList from './components/OrderList';
 import PreviewList from './components/PreviewList';
+import ReorderActions from './components/ReorderActions';
 import { orderList, updateUtCTime } from './store';
 // import TimeZoneTable from './components/TimeZoneTable';
 
@@ -28,6 +29,7 @@ const App: Component = () => {
 
       <Show when={orderList.active} fallback={() => <PreviewList />}>
         <OrderList />
+        <ReorderActions />
       </Show>
     </div>
   );
