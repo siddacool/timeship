@@ -12,7 +12,7 @@
   align-items: center;
   cursor: pointer;
   border: none;
-  outline: hidden;
+  outline: none;
 }
 
 .MenuButton svg {

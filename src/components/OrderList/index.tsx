@@ -1,6 +1,6 @@
 import { Component, onMount } from 'solid-js';
 import { orderList, poplulateOrderListFromPreviewList } from '../../store';
-import TimeCard from '../TimeCard';
+import TimeCardOrder from '../TimeCard/TimeCardOrder';
 import styles from './style.module.css';
 import { VirtualContainer } from '@minht11/solid-virtual-container';
 
@@ -18,7 +18,7 @@ const OrderList: Component = () => {
         scrollTarget={scrollTargetElement}
         itemSize={{ height: 120 }}
       >
-        {TimeCard}
+        {TimeCardOrder}
       </VirtualContainer>
     </div>
   );

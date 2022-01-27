@@ -3,6 +3,7 @@ import { createStore } from 'solid-js/store';
 import { getDateUTC } from './time';
 
 interface ITimezone {
+  _id: string;
   name: string;
   timestamp: string;
   timezone: string;
@@ -18,6 +19,7 @@ interface IUtcTimeInitialData {
 interface IPreviewList {
   data:
     | {
+        _id: string;
         name: string;
         timestamp: string;
         timezone: string;
@@ -144,6 +146,7 @@ export const poplulateAllItemsToPreviewList = async () => {
 export const resetPreviewList = () => {
   setPreviewList('data', () => [
     {
+      _id: '1',
       name: 'Alofi',
       timestamp: 'UTC-11',
       timezone: 'Pacific/Niue',
@@ -151,6 +154,7 @@ export const resetPreviewList = () => {
       countryName: 'Niue',
     },
     {
+      _id: '2',
       name: 'Tanjung Pinang',
       timestamp: 'UTC+7',
       timezone: 'Asia/Pontianak',
@@ -158,6 +162,7 @@ export const resetPreviewList = () => {
       countryName: 'Indonesia',
     },
     {
+      _id: '3',
       name: 'Mumbai',
       timestamp: 'UTC+5:30',
       timezone: 'Asia/Kolkata',
@@ -165,6 +170,7 @@ export const resetPreviewList = () => {
       countryName: 'India',
     },
     {
+      _id: '4',
       name: 'Antarctica',
       timestamp: 'UTC+6',
       timezone: 'Antarctica/Vostok',
@@ -192,6 +198,39 @@ export const poplulateOrderListFromPreviewList = () => {
 
 export const orderListActiveToggle = () => {
   setOrderList('active', (active) => !active);
+};
+
+export const orderListSetOrder = (id = '', action = 'up') => {
+  setOrderList('data', (d) => {
+    const index = d.findIndex((x) => x._id === id);
+    const maxIndex = d.length;
+
+    if (!maxIndex) {
+      return [...d];
+    }
+
+    if (index === 0 && action === 'up') {
+      return [...d];
+    }
+
+    if (index === maxIndex - 1 && action === 'down') {
+      return [...d];
+    }
+
+    const newIndex = action === 'up' ? index - 1 : index + 1;
+
+    const element = d[index];
+    d.splice(index, 1);
+    d.splice(newIndex, 0, element);
+
+    return [...d];
+  });
+
+  // function arraymove(arr, fromIndex, toIndex) {
+  //   var element = arr[fromIndex];
+  //   arr.splice(fromIndex, 1);
+  //   arr.splice(toIndex, 0, element);
+  // }
 };
 
 const utcTimeInitialData: IUtcTimeInitialData = {
