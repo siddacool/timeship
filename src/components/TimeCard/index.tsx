@@ -5,24 +5,36 @@ import elevationStyles from '../../styles/elevation.module.css';
 import DayTime from './DayTime';
 
 interface IProps {
-  name?: string;
-  timestamp?: string;
-  timezone?: string;
-  countryCode?: string;
-  countryName?: string;
-  noCities?: boolean;
+  style?: Object;
+  tabIndex?: number;
+  item: {
+    name?: string;
+    timestamp?: string;
+    timezone?: string;
+    countryCode?: string;
+    countryName?: string;
+    noCities?: boolean;
+  };
 }
 
 const TimeCard: Component<IProps> = (props) => {
   return (
-    <div class={`${styles.TimeCard} ${elevationStyles['elevation-2']}`}>
-      <div class={styles.NameHolder}>
-        <span class={styles.Name}>{props.name}</span>
-        <Show when={!props.noCities}>
-          (<span class={styles.CountryName}>{props.countryName}</span>)
-        </Show>
+    <div
+      class={`${styles.TimeCard}`}
+      style={props.style}
+      // Used for keyboard navigation and accessibility.
+      tabIndex={props.tabIndex}
+      role="listitem"
+    >
+      <div class={`${styles.InternalContainer} ${elevationStyles['elevation-2']}`}>
+        <div class={styles.NameHolder}>
+          <div class={styles.Name}>{props.item.name}</div>
+          <Show when={!props.item.noCities}>
+            <div class={styles.CountryName}>{props.item.countryName}</div>
+          </Show>
+        </div>
+        <DayTime {...props.item} />
       </div>
-      <DayTime {...props} />
     </div>
   );
 };

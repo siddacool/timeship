@@ -146,3 +146,49 @@ export const updateUtCTime = () => {
 
   setUtcTime('data', () => utcTime);
 };
+
+export const poplulateAllItemsToPreviewList = async () => {
+  const res = await fetch('./data.json');
+  const json = (await res.json()) || [];
+
+  setPreviewList('data', () => [...json]);
+};
+
+export const resetPreviewList = () => {
+  setPreviewList('data', () => [
+    {
+      name: 'Alofi',
+      timestamp: 'UTC-11',
+      timezone: 'Pacific/Niue',
+      countryCode: 'nu',
+      countryName: 'Niue',
+    },
+    {
+      name: 'Tanjung Pinang',
+      timestamp: 'UTC+7',
+      timezone: 'Asia/Pontianak',
+      countryCode: 'id',
+      countryName: 'Indonesia',
+    },
+    {
+      name: 'Mumbai',
+      timestamp: 'UTC+5:30',
+      timezone: 'Asia/Kolkata',
+      countryCode: 'in',
+      countryName: 'India',
+    },
+    {
+      name: 'Antarctica',
+      timestamp: 'UTC+6',
+      timezone: 'Antarctica/Vostok',
+      countryCode: 'aq',
+      countryName: 'Antarctica',
+      noCities: true,
+    },
+  ]);
+};
+
+if (import.meta.env.DEV) {
+  window.poplulateAllItemsToPreviewList = poplulateAllItemsToPreviewList;
+  window.resetPreviewList = resetPreviewList;
+}
