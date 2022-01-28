@@ -4,10 +4,13 @@
 
 .InternalContainer {
   background-color: var(--background-light);
-  padding: 4px 6px;
+  padding: 0 6px;
   border-radius: var(--border-radius-6);
   font-size: 1rem;
   height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .DayTime {

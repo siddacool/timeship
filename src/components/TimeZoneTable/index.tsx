@@ -13,7 +13,7 @@ const TimeZoneTable: Component = () => {
         <Count />
       </div>
 
-      <div className={styles.tableInner}>
+      <div class={styles.tableInner}>
         <table class={styles.table}>
           <thead class={styles.thead}>
             <tr>
