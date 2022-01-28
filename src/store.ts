@@ -271,6 +271,10 @@ export const addModalToggle = () => {
 
 export const [selectedFromList, setSelectedFromList] = createStore({ data: [] });
 
+export const poplutateSelected = () => {
+  setSelectedFromList('data', () => [...previewList.data.map((d) => d._id)]);
+};
+
 export const selectToggle = (id = '') => {
   setSelectedFromList('data', (d) => {
     if (d.includes(id)) {
@@ -284,6 +288,18 @@ export const selectToggle = (id = '') => {
 
     return [...d];
   });
+};
+
+export const saveSelectedToPreviewList = () => {
+  const listToSave =
+    timezones.data.filter((d) => {
+      if (selectedFromList.data.includes(d._id)) {
+        return d;
+      }
+    }) || [];
+
+  setPreviewList('data', () => [...listToSave]);
+  setSelectedFromList('data', () => []);
 };
 
 if (import.meta.env.DEV) {

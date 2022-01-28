@@ -9,10 +9,12 @@ import {
   orderListActiveToggle,
   previewList,
   addModalToggle,
+  poplutateSelected,
 } from '../../store';
 
 const handleAddCity = () => {
   addModalToggle();
+  poplutateSelected();
   handleActionMenuToggle();
 };
 
