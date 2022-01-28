@@ -6,7 +6,7 @@
   background-color: var(--background-light);
   padding: 0 6px;
   border-radius: var(--border-radius-6);
-  font-size: 1rem;
+  font-size: 0.9rem;
   height: 108px;
   display: flex;
   flex-direction: column;
@@ -24,10 +24,13 @@
 .Name {
   font-size: 1.2rem;
   color: var(--font-color-alt);
+  font-weight: 500;
 }
 
 .CountryName {
-  margin-top: -5px;
+  margin-top: -4px;
+  opacity: 0.7;
+  margin-bottom: 3px;
 }
 
 .Time {
@@ -35,7 +38,8 @@
 }
 
 .Day {
-  margin-top: -8px;
+  margin-top: -6px;
+  opacity: 0.7;
 }
 
 .TimeCardOrder {
