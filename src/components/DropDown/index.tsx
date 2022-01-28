@@ -8,10 +8,11 @@ import {
   orderList,
   orderListActiveToggle,
   previewList,
+  addModalToggle,
 } from '../../store';
 
 const handleAddCity = () => {
-  console.log('add city');
+  addModalToggle();
   handleActionMenuToggle();
 };
 

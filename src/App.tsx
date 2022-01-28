@@ -1,11 +1,12 @@
 import type { Component } from 'solid-js';
 import { onMount, Show } from 'solid-js';
 import styles from './App.module.css';
+import AddModal from './components/AddModal';
 import MenuButton from './components/MenuButton';
 import OrderList from './components/OrderList';
 import PreviewList from './components/PreviewList';
 import ReorderActions from './components/ReorderActions';
-import { orderList, updateUtCTime } from './store';
+import { addModal, orderList, updateUtCTime } from './store';
 // import TimeZoneTable from './components/TimeZoneTable';
 
 function runningTime() {
@@ -30,6 +31,10 @@ const App: Component = () => {
       <Show when={orderList.active} fallback={() => <PreviewList />}>
         <OrderList />
         <ReorderActions />
+      </Show>
+
+      <Show when={addModal.active}>
+        <AddModal />
       </Show>
     </div>
   );

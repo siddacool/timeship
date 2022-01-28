@@ -1,0 +1,49 @@
+.AcceptDualButton {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  border-radius: var(--border-radius-6);
+  overflow: hidden;
+  height: 50px;
+}
+
+.AcceptDualButton button {
+  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.AcceptDualButton button:first-child {
+  background-color: var(--color-safe-background);
+}
+
+.AcceptDualButton button:last-child {
+  background-color: var(--color-danger-background);
+}
+
+@media (min-width: 900px) {
+  .AcceptDualButton {
+    justify-content: flex-end;
+    border-radius: 0;
+    height: 40px;
+    margin-bottom: 40px;
+    padding-right: 40px;
+  }
+
+  .AcceptDualButton button {
+    width: 140px;
+    flex: inherit;
+    border-radius: var(--border-radius-6);
+  }
+
+  .AcceptDualButton button:first-child {
+    margin-right: 8px;
+  }
+}

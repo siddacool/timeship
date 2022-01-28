@@ -263,6 +263,12 @@ export const handleActionMenuToggle = () => {
   setActionMenuOpen(!actionMenuOpen());
 };
 
+export const [addModal, setAddModal] = createStore({ active: false });
+
+export const addModalToggle = () => {
+  setAddModal('active', (active) => !active);
+};
+
 if (import.meta.env.DEV) {
   window.poplulateAllItemsToPreviewList = poplulateAllItemsToPreviewList;
   window.resetPreviewList = resetPreviewList;
