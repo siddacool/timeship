@@ -1,5 +1,5 @@
 import { Component, createSignal, onMount } from 'solid-js';
-import { fetchTimezones, timezones } from '../../store';
+import { fetchTimezones, filteredTimeZones } from '../../store';
 import styles from './style.module.css';
 import { VirtualContainer } from '@minht11/solid-virtual-container';
 import ListItem from './ListItem';
@@ -33,7 +33,7 @@ const TimeSelectableList: Component = () => {
   return (
     <div style={{ overflow: 'auto' }} ref={scrollTargetElement} class={styles.TimeSelectableList}>
       <VirtualContainer
-        items={timezones.data}
+        items={filteredTimeZones()}
         scrollTarget={scrollTargetElement}
         itemSize={{ height: 60 }}
       >

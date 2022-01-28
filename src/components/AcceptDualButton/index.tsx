@@ -1,19 +1,25 @@
-import type { Component } from 'solid-js';
+import { Component, Show } from 'solid-js';
 import styles from './style.module.css';
 
 interface IProps {
   actionAccept?: any;
   actionCancel?: any;
+  acceptContent?: any;
+  cancelContent?: any;
 }
 
 const AcceptDualButton: Component<IProps> = (props) => {
   return (
     <div class={styles.AcceptDualButton}>
       <button class={styles.accept} onClick={props.actionAccept}>
-        Accept
+        <Show when={props.acceptContent} fallback={<>Accept</>}>
+          {props.acceptContent}
+        </Show>
       </button>
       <button class={styles.cancel} onClick={props.actionCancel}>
-        Cancel
+        <Show when={props.cancelContent} fallback={<>Cancel</>}>
+          {props.cancelContent}
+        </Show>
       </button>
     </div>
   );

@@ -83,53 +83,6 @@ export const orderTimezones = (sortBy = '') => {
   );
 };
 
-export const filteredTimeZones = createMemo(() => {
-  const searchTerm = timezones.filters.search.toLocaleLowerCase().trim();
-  const searched =
-    timezones.data.filter((d: ITimezone) => {
-      if (searchTerm) {
-        if (
-          d.countryName.toLocaleLowerCase().trim().includes(searchTerm) ||
-          d.name.toLocaleLowerCase().trim().includes(searchTerm)
-        ) {
-          return d;
-        }
-      } else {
-        return d;
-      }
-    }) || [];
-
-  let ordered = searched;
-
-  if (timezones.filters.sortBy) {
-    if (timezones.filters.sortBy === 'Name') {
-      ordered = ordered.sort((a: ITimezone, b: ITimezone) => a.name.localeCompare(b.name));
-
-      if (timezones.filters.sortOrder === 'DSC') {
-        ordered = ordered.reverse();
-      }
-    } else if (timezones.filters.sortBy === 'CountryName') {
-      ordered = ordered.sort((a: ITimezone, b: ITimezone) =>
-        a.countryName.localeCompare(b.countryName),
-      );
-
-      if (timezones.filters.sortOrder === 'DSC') {
-        ordered = ordered.reverse();
-      }
-    } else if (timezones.filters.sortBy === 'CountryCode') {
-      ordered = ordered.sort((a: ITimezone, b: ITimezone) =>
-        a.countryName.localeCompare(b.countryName),
-      );
-
-      if (timezones.filters.sortOrder === 'DSC') {
-        ordered = ordered.reverse();
-      }
-    }
-  }
-
-  return ordered;
-});
-
 const previewListInitialState: IPreviewList = {
   data: [],
 };
@@ -301,6 +254,53 @@ export const saveSelectedToPreviewList = () => {
   setPreviewList('data', () => [...listToSave]);
   setSelectedFromList('data', () => []);
 };
+
+export const filteredTimeZones = createMemo(() => {
+  const searchTerm = timezones.filters.search.toLocaleLowerCase().trim();
+  const searched =
+    timezones.data.filter((d: ITimezone) => {
+      if (searchTerm) {
+        if (
+          d.countryName.toLocaleLowerCase().trim().includes(searchTerm) ||
+          d.name.toLocaleLowerCase().trim().includes(searchTerm)
+        ) {
+          return d;
+        }
+      } else {
+        return d;
+      }
+    }) || [];
+
+  let ordered = searched;
+
+  if (timezones.filters.sortBy) {
+    if (timezones.filters.sortBy === 'Name') {
+      ordered = ordered.sort((a: ITimezone, b: ITimezone) => a.name.localeCompare(b.name));
+
+      if (timezones.filters.sortOrder === 'DSC') {
+        ordered = ordered.reverse();
+      }
+    } else if (timezones.filters.sortBy === 'CountryName') {
+      ordered = ordered.sort((a: ITimezone, b: ITimezone) =>
+        a.countryName.localeCompare(b.countryName),
+      );
+
+      if (timezones.filters.sortOrder === 'DSC') {
+        ordered = ordered.reverse();
+      }
+    } else if (timezones.filters.sortBy === 'CountryCode') {
+      ordered = ordered.sort((a: ITimezone, b: ITimezone) =>
+        a.countryName.localeCompare(b.countryName),
+      );
+
+      if (timezones.filters.sortOrder === 'DSC') {
+        ordered = ordered.reverse();
+      }
+    }
+  }
+
+  return ordered;
+});
 
 if (import.meta.env.DEV) {
   window.poplulateAllItemsToPreviewList = poplulateAllItemsToPreviewList;
