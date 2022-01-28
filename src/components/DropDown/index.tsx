@@ -7,6 +7,7 @@ import {
   handleActionMenuToggle,
   orderList,
   orderListActiveToggle,
+  previewList,
 } from '../../store';
 
 const handleAddCity = () => {
@@ -15,17 +16,12 @@ const handleAddCity = () => {
 };
 
 const handleReorder = () => {
-  if (orderList.active) {
+  if (orderList.active || !previewList.data.length) {
     return;
   }
 
   handleActionMenuToggle();
   orderListActiveToggle();
-};
-
-const handleOpenSettings = () => {
-  console.log('open settings');
-  handleActionMenuToggle();
 };
 
 const DropDown: Component = () => {
@@ -34,10 +30,9 @@ const DropDown: Component = () => {
       <div class={`${styles.DropDown} ${elevationStyles['elevation-4']}`}>
         <ul>
           <li onClick={handleAddCity}>Add city</li>
-          <li onClick={handleReorder} data-disable={orderList.active}>
+          <li onClick={handleReorder} data-disable={orderList.active || !previewList.data.length}>
             Reorder
           </li>
-          <li onClick={handleOpenSettings}>Settings</li>
         </ul>
       </div>
 
