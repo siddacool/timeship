@@ -269,6 +269,23 @@ export const addModalToggle = () => {
   setAddModal('active', (active) => !active);
 };
 
+export const [selectedFromList, setSelectedFromList] = createStore({ data: [] });
+
+export const selectToggle = (id = '') => {
+  setSelectedFromList('data', (d) => {
+    if (d.includes(id)) {
+      const index = d.indexOf(id);
+      if (index > -1) {
+        d.splice(index, 1);
+      }
+    } else {
+      d.push(id);
+    }
+
+    return [...d];
+  });
+};
+
 if (import.meta.env.DEV) {
   window.poplulateAllItemsToPreviewList = poplulateAllItemsToPreviewList;
   window.resetPreviewList = resetPreviewList;

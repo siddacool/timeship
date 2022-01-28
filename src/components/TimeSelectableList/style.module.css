@@ -1,0 +1,40 @@
+.TimeSelectableList {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 90px);
+  overflow: auto;
+}
+
+.ListItem {
+  width: 100%;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-1);
+  cursor: pointer;
+}
+
+.ListItem:hover {
+  background-color: var(--color-selection);
+}
+
+.ListItem[data-isselected='true'] {
+  background-color: var(--color-selection-safe);
+}
+
+.Name {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.Selected {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.Selected svg {
+  width: 18px;
+  height: 18px;
+}

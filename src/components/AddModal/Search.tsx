@@ -4,7 +4,7 @@ import styles from './style.module.css';
 const Search: Component = () => {
   return (
     <div class={styles.Search}>
-      <input type="text" placeholder="🔎 Search" />
+      <input type="search" placeholder="🔎 Search" />
     </div>
   );
 };
