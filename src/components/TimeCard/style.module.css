@@ -76,6 +76,31 @@
   height: 18px;
 }
 
+.RemoveButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.RemoveButton button {
+  display: flex;
+  background-color: transparent;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.RemoveButton button svg {
+  width: 18px;
+  height: 18px;
+}
+
 @media (min-width: 900px) {
   .TimeCard {
     padding: 2px var(--space-1);

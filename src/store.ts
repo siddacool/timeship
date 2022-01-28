@@ -225,12 +225,14 @@ export const orderListSetOrder = (id = '', action = 'up') => {
 
     return [...d];
   });
+};
 
-  // function arraymove(arr, fromIndex, toIndex) {
-  //   var element = arr[fromIndex];
-  //   arr.splice(fromIndex, 1);
-  //   arr.splice(toIndex, 0, element);
-  // }
+export const orderListRemoveItem = (id = '') => {
+  setOrderList('data', (d) => {
+    const newData = d.filter((d) => d._id !== id) || [];
+
+    return [...newData];
+  });
 };
 
 export const saveOrderList = () => {
