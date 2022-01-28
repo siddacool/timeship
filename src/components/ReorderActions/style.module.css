@@ -8,6 +8,15 @@
   width: 100vw;
 }
 
+.Internal {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  border-radius: var(--border-radius-6);
+  overflow: hidden;
+}
+
 .ReorderActions button {
   background-color: var(--background-light);
   overflow: hidden;
@@ -22,9 +31,9 @@
 }
 
 .ReorderActions button:first-child {
-  background-color: green;
+  background-color: var(--color-safe-background);
 }
 
 .ReorderActions button:last-child {
-  background-color: red;
+  background-color: var(--color-danger-background);
 }

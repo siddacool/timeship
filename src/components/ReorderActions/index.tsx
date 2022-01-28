@@ -5,8 +5,10 @@ import { saveOrderList, cancelOrderList } from '../../store';
 const ReorderActions: Component = () => {
   return (
     <div class={styles.ReorderActions}>
-      <button onClick={() => saveOrderList()}>Save</button>
-      <button onClick={() => cancelOrderList()}>Cancel</button>
+      <div class={styles.Internal}>
+        <button onClick={() => saveOrderList()}>Save</button>
+        <button onClick={() => cancelOrderList()}>Cancel</button>
+      </div>
     </div>
   );
 };
