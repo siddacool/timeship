@@ -1,6 +1,11 @@
 import { createMemo, createSignal } from 'solid-js';
+import { setDefaultStorageName, createStore as createSathaStore } from '@satha/core';
 import { createStore } from 'solid-js/store';
 import { getDateUTC } from './time';
+
+setDefaultStorageName('timeship-store-1');
+
+const previewListLocalStorage = createSathaStore('preview-list', []);
 
 interface ITimezone {
   _id: string;
@@ -84,20 +89,26 @@ export const orderTimezones = (sortBy = '') => {
 };
 
 const previewListInitialState: IPreviewList = {
-  data: [],
+  data: previewListLocalStorage.get(),
 };
 
 export const [previewList, setPreviewList] = createStore(previewListInitialState);
+
+const previewListSaver = (data = []) => {
+  setPreviewList('data', () => [...data]);
+
+  previewListLocalStorage.set(() => data);
+};
 
 export const poplulateAllItemsToPreviewList = async () => {
   const res = await fetch('./data.json');
   const json = (await res.json()) || [];
 
-  setPreviewList('data', () => [...json]);
+  previewListSaver(json);
 };
 
 export const resetPreviewList = () => {
-  setPreviewList('data', () => [
+  const data = [
     {
       _id: '1',
       name: 'Alofi',
@@ -131,7 +142,9 @@ export const resetPreviewList = () => {
       countryName: 'Antarctica',
       noCities: true,
     },
-  ]);
+  ];
+
+  previewListSaver(data);
 };
 
 const orderListInitialState: IOrderList = {
@@ -189,7 +202,7 @@ export const orderListRemoveItem = (id = '') => {
 };
 
 export const saveOrderList = () => {
-  setPreviewList('data', () => [...orderList.data]);
+  previewListSaver(orderList.data);
   orderListActiveToggle();
 };
 
@@ -251,7 +264,7 @@ export const saveSelectedToPreviewList = () => {
       }
     }) || [];
 
-  setPreviewList('data', () => [...listToSave]);
+  previewListSaver(listToSave);
   setSelectedFromList('data', () => []);
 };
 

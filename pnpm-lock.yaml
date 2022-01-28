@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@minht11/solid-virtual-container': ^0.2.1
+  '@satha/core': ^2.0.0
   solid-js: ^1.3.2
   typescript: ^4.5.4
   vite: ^2.7.10
@@ -9,6 +10,7 @@ specifiers:
 
 dependencies:
   '@minht11/solid-virtual-container': 0.2.1_solid-js@1.3.2
+  '@satha/core': 2.0.0
   solid-js: 1.3.2
 
 devDependencies:
@@ -331,6 +333,10 @@ packages:
       solid-js: '>= 1.0.0'
     dependencies:
       solid-js: 1.3.2
+    dev: false
+
+  /@satha/core/2.0.0:
+    resolution: {integrity: sha512-gpZkAHkTvg9poXNtKvuMVaQt75YIpnoVrD7nYoOQsBLHa+PFX/10IXauni3gq6db8wX4J87/JP/l0xlOf/LwrA==}
     dev: false
 
   /ansi-styles/3.2.1:
