@@ -3,7 +3,6 @@ import {
   addModalToggle,
   saveSelectedToPreviewList,
   searchTimezones,
-  selectedFromList,
   setSelectedFromList,
 } from '../../store';
 import AcceptDualButton from '../AcceptDualButton';
@@ -24,13 +23,7 @@ const handleCancel = () => {
 const Control: Component = () => {
   return (
     <div class={styles.Control}>
-      <AcceptDualButton
-        actionAccept={handleAccept}
-        actionCancel={handleCancel}
-        acceptContent={`Accept ${
-          selectedFromList.data.length ? `(${selectedFromList.data.length})` : ''
-        }`}
-      />
+      <AcceptDualButton actionAccept={handleAccept} actionCancel={handleCancel} />
     </div>
   );
 };

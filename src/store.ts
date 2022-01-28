@@ -309,6 +309,28 @@ export const filteredTimeZones = createMemo(() => {
       if (timezones.filters.sortOrder === 'DSC') {
         ordered = ordered.reverse();
       }
+    } else if (timezones.filters.sortBy === 'selected') {
+      const selected =
+        ordered.filter((d) => {
+          if (selectedFromList.data.includes(d._id)) {
+            return d;
+          }
+        }) || [];
+
+      if (selected && selected.length) {
+        const notSelected =
+          ordered.filter((d) => {
+            if (!selectedFromList.data.includes(d._id)) {
+              return d;
+            }
+          }) || [];
+
+        ordered = [...selected, ...notSelected];
+
+        if (timezones.filters.sortOrder === 'DSC') {
+          ordered = ordered.reverse();
+        }
+      }
     }
   }
 
