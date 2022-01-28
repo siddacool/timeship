@@ -4,9 +4,11 @@ import { render } from 'solid-js/web';
 import './index.css';
 import App from './App';
 
-const updateSW = registerSW({
-  onNeedRefresh() {},
-  onOfflineReady() {},
-});
+if ('serviceWorker' in navigator) {
+  registerSW({
+    onNeedRefresh() {},
+    onOfflineReady() {},
+  });
+}
 
 render(() => <App />, document.getElementById('root') as HTMLElement);
