@@ -1,0 +1,31 @@
+.NoEntriesPlaceholder {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-1);
+  display: block;
+  overflow: auto;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.NoEntriesPlaceholder img {
+  width: 128px;
+  height: 128px;
+}
+
+.NoEntriesPlaceholder button {
+  font-weight: 600;
+  background-color: var(--background-light);
+  font-size: 1.2rem;
+  height: 50px;
+  width: 300px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius-6);
+  color: var(--font-color-alt);
+}

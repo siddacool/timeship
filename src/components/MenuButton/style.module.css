@@ -18,6 +18,7 @@
 .MenuButton svg {
   width: 40px;
   height: 40px;
+  color: var(--font-color-alt);
 }
 
 @media (min-width: 900px) {

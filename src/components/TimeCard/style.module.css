@@ -23,6 +23,7 @@
 
 .Name {
   font-size: 1.2rem;
+  color: var(--font-color-alt);
 }
 
 .CountryName {
@@ -31,7 +32,6 @@
 
 .Time {
   font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .Day {
@@ -74,6 +74,7 @@
 .ReorderArrows button svg {
   width: 18px;
   height: 18px;
+  color: var(--font-color-alt);
 }
 
 .RemoveButton {
@@ -99,6 +100,7 @@
 .RemoveButton button svg {
   width: 18px;
   height: 18px;
+  color: var(--color-danger-background);
 }
 
 @media (min-width: 900px) {

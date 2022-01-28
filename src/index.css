@@ -1,6 +1,9 @@
 :root {
   --backdrop: #f7f7f7;
   --background-light: #fff;
+  --background-main: #0154ed;
+  --font-color-main: #384f78;
+  --font-color-alt: #0154ed;
   --color-selection: #cbe6fd;
   --color-disable-text: #9b9b9b;
   --color-safe-background: #2a852a;
@@ -41,6 +44,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   background-color: var(--backdrop);
+  color: var(--font-color-main);
 }
 
 code {
