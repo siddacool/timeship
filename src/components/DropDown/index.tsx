@@ -8,15 +8,7 @@ import {
   orderList,
   orderListActiveToggle,
   previewList,
-  addModalToggle,
-  poplutateSelected,
 } from '../../store';
-
-const handleAddCity = () => {
-  addModalToggle();
-  poplutateSelected();
-  handleActionMenuToggle();
-};
 
 const handleReorder = () => {
   if (orderList.active || !previewList.data.length) {
@@ -32,7 +24,6 @@ const DropDown: Component = () => {
     <Show when={actionMenuOpen()}>
       <div class={`${styles.DropDown} ${elevationStyles['elevation-4']}`}>
         <ul>
-          <li onClick={handleAddCity}>Add city</li>
           <li onClick={handleReorder} data-disable={orderList.active || !previewList.data.length}>
             Reorder
           </li>

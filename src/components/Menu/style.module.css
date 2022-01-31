@@ -1,10 +1,19 @@
-.MenuButton {
+.Menu {
   position: fixed;
   bottom: var(--space-2);
   right: var(--space-2);
-  z-index: 110;
+  z-index: 89;
+  display: flex;
+}
+
+.MenuButton,
+.AddButton {
   width: 50px;
   height: 50px;
+}
+
+.AddButton {
+  margin-right: var(--space-2);
 }
 
 .MenuButton svg {
@@ -12,8 +21,13 @@
   height: 40px;
 }
 
+.AddButton svg {
+  width: 35px;
+  height: 35px;
+}
+
 @media (min-width: 900px) {
-  .MenuButton {
+  .Menu {
     bottom: initial;
     right: inherit;
     top: var(--space-2);

@@ -2,7 +2,7 @@ import type { Component } from 'solid-js';
 import { onMount, Show, Switch, Match } from 'solid-js';
 import styles from './App.module.css';
 import AddModal from './components/AddModal';
-import MenuButton from './components/MenuButton';
+import Menu from './components/Menu';
 import NoEntriesPlaceholder from './components/NoEntriesPlaceholder';
 import OrderList from './components/OrderList';
 import PreviewList from './components/PreviewList';
@@ -28,7 +28,7 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <Show when={!orderList.active}>
-        <MenuButton />
+        <Menu />
       </Show>
 
       <Switch fallback={<NoEntriesPlaceholder />}>
