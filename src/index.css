@@ -12,7 +12,7 @@
   --color-border-light: #e3e3e3;
   --paper-elevation-color-h: 0deg;
   --paper-elevation-color-s: 0%;
-  --paper-elevation-color-l: 60%;
+  --paper-elevation-color-l: 59%;
   --paper-elevation-color: var(--paper-elevation-color-h) var(--paper-elevation-color-s)
     var(--paper-elevation-color-l);
 
