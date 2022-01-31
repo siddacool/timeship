@@ -33,6 +33,7 @@
   height: 60px;
   display: flex;
   position: relative;
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .Search input {
@@ -87,10 +88,27 @@
 .Order {
   display: flex;
   width: 100%;
-  padding: 8px;
-  border-bottom: 1px solid var(--color-border-light);
+  padding: 6px 4px;
   font-size: 0.9rem;
+  background-color: var(--backdrop);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.OrderPill {
   cursor: pointer;
+  flex: 1;
+  max-width: 150px;
+  background-color: var(--background-light);
+  border-radius: var(--border-radius-6);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-border-light);
+  height: 30px;
+}
+
+.OrderPillSelected {
+  color: var(--font-color-alt);
 }
 
 .svgHolder {
@@ -99,12 +117,16 @@
 
 .arrowsGroup {
   display: flex;
-  color: #7e7d7d;
 }
 
 .Order svg {
   width: 18px;
   height: 18px;
+  color: var(--font-color-alt);
+}
+
+.arrowsGroup svg {
+  color: #7e7d7d;
 }
 
 @media (min-width: 900px) {

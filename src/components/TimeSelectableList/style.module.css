@@ -20,13 +20,17 @@
 }
 
 .ListItem[data-isselected='true'] {
-  background-color: var(--color-selection-safe);
+  color: var(--font-color-alt);
 }
 
 .Name {
   font-weight: 500;
   display: flex;
   align-items: center;
+}
+
+.CountryName {
+  opacity: 0.8;
 }
 
 .Selected {
