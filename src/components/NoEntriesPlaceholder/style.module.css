@@ -9,21 +9,14 @@
   font-size: 1.2rem;
 }
 
-.NoEntriesPlaceholder img {
-}
-
 .NoEntriesPlaceholder button {
   font-weight: 600;
-  background-color: var(--background-light);
-  font-size: 1.2rem;
   height: 50px;
   width: 300px;
-  cursor: pointer;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  outline: none;
-  border-radius: var(--border-radius-6);
-  color: var(--font-color-alt);
+}
+
+.NoEntriesPlaceholder svg {
+  width: 24px;
+  height: 24px;
 }

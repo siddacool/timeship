@@ -10,11 +10,22 @@ interface IProps {
   onClick?: any;
   disabled?: boolean;
   outline?: boolean;
+  iconPrefix?: boolean;
+  iconPostfix?: boolean;
 }
 
 const Button: Component<IProps> = (props) => {
   const propsMerge = mergeProps(
-    { color: 'default', rounded: false, sqaure: false, elevation: 0, class: '', outline: false },
+    {
+      color: 'default',
+      rounded: false,
+      sqaure: false,
+      elevation: 0,
+      class: '',
+      outline: false,
+      iconPrefix: false,
+      iconPostfix: false,
+    },
     props,
   );
   const [local, others] = splitProps(propsMerge, [
@@ -25,6 +36,8 @@ const Button: Component<IProps> = (props) => {
     'elevation',
     'class',
     'outline',
+    'iconPrefix',
+    'iconPostfix',
   ]);
 
   return (
@@ -35,6 +48,8 @@ const Button: Component<IProps> = (props) => {
         ${local.rounded ? 'ui-button__rounded' : ''}
         ${local.sqaure ? 'ui-button__sqaure' : ''}
         ${local.outline ? 'ui-button__outline' : ''}
+        ${local.iconPrefix ? 'ui-button__iconPrefix' : ''}
+        ${local.iconPostfix ? 'ui-button__iconPostfix' : ''}
         ${local.class}
       `}
       {...others}

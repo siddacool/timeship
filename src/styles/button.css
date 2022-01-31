@@ -92,6 +92,14 @@
   border: 1px solid var(--color-border-light);
 }
 
+.ui-button__iconPrefix svg {
+  margin-right: 6px;
+}
+
+.ui-button__iconPostfix svg {
+  margin-left: 6px;
+}
+
 .ui-button:disabled {
   color: var(--color-disable-text);
   cursor: not-allowed;
