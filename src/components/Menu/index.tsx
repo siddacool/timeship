@@ -15,7 +15,7 @@ const Menu: Component = () => {
       <div class={styles.Menu}>
         <Button
           class={styles.AddButton}
-          color="white"
+          color="primary"
           elevation={3}
           rounded
           onClick={handleAddCity}
