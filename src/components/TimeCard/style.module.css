@@ -46,11 +46,8 @@
 }
 
 .TimeCardOrder > article {
-  padding-left: 34px;
+  padding-left: 38px;
   position: relative;
-}
-
-.ReorderArrows {
 }
 
 .ReorderArrows > div {
@@ -63,22 +60,8 @@
 }
 
 .ReorderArrows button {
-  display: flex;
-  background-color: transparent;
-  overflow: hidden;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  outline: none;
   flex: 1;
-  padding: 4px 8px;
   width: 34px;
-}
-
-.ReorderArrows button svg {
-  width: 18px;
-  height: 18px;
-  color: var(--font-color-alt);
 }
 
 .RemoveButton {
@@ -87,23 +70,7 @@
   right: 0;
 }
 
-.RemoveButton button {
-  display: flex;
-  background-color: transparent;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding: 4px 8px;
-  width: 40px;
-  height: 40px;
-}
-
-.RemoveButton button svg {
-  width: 18px;
-  height: 18px;
+.RemoveButton svg {
   color: var(--color-danger-background);
 }
 

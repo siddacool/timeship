@@ -1,5 +1,6 @@
 import type { Component } from 'solid-js';
 import { orderListSetOrder } from '../../store';
+import Button from '../Button';
 import styles from './style.module.css';
 
 const handleUpArrowClick = (id: string) => {
@@ -18,7 +19,7 @@ const ReorderArrows: Component<IProps> = (props) => {
   return (
     <div class={styles.ReorderArrows}>
       <div>
-        <button onClick={() => handleUpArrowClick(props.id)}>
+        <Button onClick={() => handleUpArrowClick(props.id)} color="white">
           <svg
             class="w-6 h-6"
             fill="none"
@@ -33,8 +34,9 @@ const ReorderArrows: Component<IProps> = (props) => {
               d="M8 7l4-4m0 0l4 4m-4-4v18"
             ></path>
           </svg>
-        </button>
-        <button onClick={() => handleDownArrowClick(props.id)}>
+        </Button>
+
+        <Button onClick={() => handleDownArrowClick(props.id)} color="white">
           <svg
             class="w-6 h-6"
             fill="none"
@@ -49,7 +51,7 @@ const ReorderArrows: Component<IProps> = (props) => {
               d="M16 17l-4 4m0 0l-4-4m4 4V3"
             ></path>
           </svg>
-        </button>
+        </Button>
       </div>
     </div>
   );

@@ -40,9 +40,14 @@
   color: var(--font-color-alt);
 }
 
+.ui-button__sqaure,
 .ui-button__rounded {
   height: 40px;
   width: 40px;
+  justify-content: center;
+}
+
+.ui-button__rounded {
   border-radius: 50%;
 }
 
@@ -68,4 +73,21 @@
 .ui-button__safe svg,
 .ui-button__danger svg {
   color: inherit;
+}
+
+.ui-button:disabled {
+  color: var(--color-disable-text);
+  cursor: not-allowed;
+}
+
+.ui-button:disabled svg {
+  color: var(--color-disable-text);
+}
+
+.ui-button:disabled:hover {
+  filter: none;
+}
+
+.ui-button:disabled:active {
+  filter: none;
 }
