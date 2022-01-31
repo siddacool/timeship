@@ -59,6 +59,10 @@ export const [timezones, setTimezones] = createStore({
 });
 
 export const fetchTimezones = async () => {
+  if (timezones.data.length) {
+    return;
+  }
+
   const res = await fetch('./data.json');
   const json = (await res.json()) || [];
 
