@@ -264,7 +264,13 @@ export const saveSelectedToPreviewList = () => {
       }
     }) || [];
 
-  previewListSaver(listToSave);
+  const alreadyInPreviewList =
+    previewList.data.filter((d1) => listToSave.map((d2) => d2._id).includes(d1._id)) || [];
+
+  const notInPreviewList =
+    listToSave.filter((d1) => !previewList.data.map((d2) => d2._id).includes(d1._id)) || [];
+
+  previewListSaver([...alreadyInPreviewList, ...notInPreviewList]);
   setSelectedFromList('data', () => []);
 };
 

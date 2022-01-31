@@ -28,7 +28,7 @@ const handleReorder = () => {
 const handleButtonPress = () => {
   buttonPressTimer = setTimeout(() => {
     handleReorder();
-  }, 1000);
+  }, 600);
 };
 
 const handleButtonRelease = () => {
