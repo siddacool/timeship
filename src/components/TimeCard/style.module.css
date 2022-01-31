@@ -1,5 +1,6 @@
 .TimeCard {
   width: 100%;
+  cursor: pointer;
 }
 
 .InternalContainer {
@@ -43,6 +44,7 @@
 }
 
 .TimeCardOrder {
+  cursor: initial;
 }
 
 .TimeCardOrder > article {

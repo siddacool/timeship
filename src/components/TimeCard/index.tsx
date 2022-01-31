@@ -4,6 +4,7 @@ import styles from './style.module.css';
 import elevationStyles from '../../styles/elevation.module.css';
 import DayTime from './DayTime';
 import CountryName from './CountryName';
+import { orderListActiveToggle } from '../../store';
 
 interface IProps {
   style?: Object;
@@ -18,6 +19,22 @@ interface IProps {
   };
 }
 
+let buttonPressTimer: NodeJS.Timeout;
+
+const handleReorder = () => {
+  orderListActiveToggle();
+};
+
+const handleButtonPress = () => {
+  buttonPressTimer = setTimeout(() => {
+    handleReorder();
+  }, 1000);
+};
+
+const handleButtonRelease = () => {
+  clearTimeout(buttonPressTimer);
+};
+
 const TimeCard: Component<IProps> = (props) => {
   return (
     <div
@@ -27,7 +44,14 @@ const TimeCard: Component<IProps> = (props) => {
       tabIndex={props.tabIndex}
       role="listitem"
     >
-      <div class={`${styles.InternalContainer} ${elevationStyles['elevation-2']}`}>
+      <div
+        class={`${styles.InternalContainer} ${elevationStyles['elevation-2']}`}
+        onTouchStart={handleButtonPress}
+        onTouchEnd={handleButtonRelease}
+        onMouseDown={handleButtonPress}
+        onMouseUp={handleButtonRelease}
+        onMouseLeave={handleButtonRelease}
+      >
         <div class={styles.NameHolder}>
           <div class={styles.Name}>{props.item.name}</div>
           <CountryName {...props.item} />

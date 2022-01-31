@@ -25,7 +25,7 @@ const DropDown: Component = () => {
       <div class={`${styles.DropDown} ${elevationStyles['elevation-4']}`}>
         <ul>
           <li onClick={handleReorder} data-disable={orderList.active || !previewList.data.length}>
-            Reorder
+            Reorder (click hold)
           </li>
         </ul>
       </div>

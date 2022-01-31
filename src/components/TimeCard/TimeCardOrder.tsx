@@ -1,5 +1,4 @@
 import type { Component } from 'solid-js';
-import { Show } from 'solid-js';
 import styles from './style.module.css';
 import elevationStyles from '../../styles/elevation.module.css';
 import DayTime from './DayTime';
