@@ -9,6 +9,11 @@
   font-size: 1.2rem;
 }
 
+.NoEntriesPlaceholder img {
+  width: 128px;
+  height: 128px;
+}
+
 .NoEntriesPlaceholder button {
   font-weight: 600;
   height: 50px;
