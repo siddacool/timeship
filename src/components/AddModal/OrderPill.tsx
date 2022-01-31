@@ -1,5 +1,5 @@
 import { Component, splitProps, Switch, Match } from 'solid-js';
-import { timezones } from '../../store';
+import { timezones, orderTimezones } from '../../store';
 import styles from './style.module.css';
 
 const ArrowsGroup: Component = () => {
@@ -40,7 +40,6 @@ const ArrowsGroup: Component = () => {
 
 interface IProps {
   sortBy: string;
-  onClick: any;
 }
 
 const OrderPill: Component<IProps> = (props) => {
@@ -51,6 +50,7 @@ const OrderPill: Component<IProps> = (props) => {
       class={`${styles.OrderPill} ${
         timezones.filters.sortBy === local.sortBy ? styles.OrderPillSelected : ''
       }`}
+      onClick={() => orderTimezones(local.sortBy)}
       {...others}
     >
       <div class={styles.svgHolder}>

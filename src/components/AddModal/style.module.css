@@ -96,8 +96,8 @@
 
 .OrderPill {
   cursor: pointer;
-  flex: 1;
   max-width: 150px;
+  min-width: 80px;
   background-color: var(--background-light);
   border-radius: var(--border-radius-6);
   display: inline-flex;
@@ -105,6 +105,19 @@
   align-items: center;
   border: 1px solid var(--color-border-light);
   height: 30px;
+  padding-right: 6px;
+}
+
+.OrderPill:first-of-type {
+  min-width: 120px;
+}
+
+.OrderPill:not(:first-of-type) {
+  flex: 1;
+}
+
+.OrderPill:not(:last-of-type) {
+  margin-right: 4px;
 }
 
 .OrderPillSelected {
@@ -120,8 +133,8 @@
 }
 
 .Order svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   color: var(--font-color-alt);
 }
 
