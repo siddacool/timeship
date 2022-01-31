@@ -32,5 +32,11 @@
     right: inherit;
     top: var(--space-2);
     left: var(--space-2);
+    flex-direction: column;
+  }
+
+  .AddButton {
+    margin-right: 0;
+    margin-bottom: var(--space-2);
   }
 }
