@@ -1,5 +1,5 @@
 :root {
-  --backdrop: #f1f1f1;
+  --backdrop: #e9e9e9;
   --background-light: #fff;
   --background-main: #0154ed;
   --font-color-main: #384f78;
@@ -12,7 +12,7 @@
   --color-border-light: #e3e3e3;
   --paper-elevation-color-h: 0deg;
   --paper-elevation-color-s: 0%;
-  --paper-elevation-color-l: 59%;
+  --paper-elevation-color-l: 57%;
   --paper-elevation-color: var(--paper-elevation-color-h) var(--paper-elevation-color-s)
     var(--paper-elevation-color-l);
 
