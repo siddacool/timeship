@@ -76,6 +76,17 @@
   color: var(--color-danger-background);
 }
 
+.AcceptButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.AcceptButton svg {
+  color: var(--font-color-alt);
+}
+
 @media (min-width: 900px) {
   .TimeCard {
     padding: 2px var(--space-1);

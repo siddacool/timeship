@@ -5,6 +5,7 @@ import DayTime from './DayTime';
 import ReorderArrows from './ReorderArrows';
 import RemoveButton from './RemoveButton';
 import CountryName from './CountryName';
+import AcceptButton from './AcceptButton';
 
 interface IProps {
   style?: Object;
@@ -31,6 +32,7 @@ const TimeCardOrder: Component<IProps> = (props) => {
       <article class={`${styles.InternalContainer} ${elevationStyles['elevation-2']}`}>
         <ReorderArrows id={props.item._id} />
         <RemoveButton id={props.item._id} />
+        <AcceptButton />
         <div class={styles.NameHolder}>
           <div class={styles.Name}>{props.item.name}</div>
           <CountryName {...props.item} />
