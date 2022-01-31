@@ -32,6 +32,7 @@
 .Search {
   height: 60px;
   display: flex;
+  position: relative;
 }
 
 .Search input {
@@ -41,6 +42,39 @@
   font-size: 1.2rem;
   border: none;
   outline: none;
+  position: relative;
+  z-index: 12;
+  background-color: transparent;
+  padding-left: 36px;
+}
+
+.Search input:focus {
+  padding-left: 8px;
+  background-color: var(--background-light);
+}
+
+.Search button {
+  color: var(--color-danger-background);
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 13;
+}
+
+.SearchIcon {
+  position: absolute;
+  left: 7px;
+  top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+.SearchIcon svg {
+  width: 22px;
+  height: 23px;
+  color: var(--font-color-alt);
 }
 
 .Control {
