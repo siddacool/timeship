@@ -3,6 +3,7 @@ import { Show } from 'solid-js';
 import styles from './style.module.css';
 import elevationStyles from '../../styles/elevation.module.css';
 import DayTime from './DayTime';
+import CountryName from './CountryName';
 
 interface IProps {
   style?: Object;
@@ -29,9 +30,7 @@ const TimeCard: Component<IProps> = (props) => {
       <div class={`${styles.InternalContainer} ${elevationStyles['elevation-2']}`}>
         <div class={styles.NameHolder}>
           <div class={styles.Name}>{props.item.name}</div>
-          <Show when={!props.item.noCities}>
-            <div class={styles.CountryName}>{props.item.countryName}</div>
-          </Show>
+          <CountryName {...props.item} />
         </div>
         <DayTime {...props.item} />
       </div>

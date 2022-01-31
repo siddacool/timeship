@@ -6,7 +6,7 @@ import Button from '../Button';
 
 const handleAddCity = () => {
   addModalToggle();
-  poplutateSelected;
+  poplutateSelected();
 };
 
 const Menu: Component = () => {

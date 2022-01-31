@@ -27,7 +27,6 @@ const ListItem: Component<IProps> = (props) => {
     <div
       class={styles.ListItem}
       style={props.style}
-      // Used for keyboard navigation and accessibility.
       tabIndex={props.tabIndex}
       role="listitem"
       onClick={() => selectToggle(props.item._id)}
@@ -36,9 +35,9 @@ const ListItem: Component<IProps> = (props) => {
       <Selected isSelected={isSelected()} />
       <div class={styles.InternalContainer}>
         <div class={styles.Name}>{props.item.name}</div>
-        <Show when={!props.item.noCities}>
-          <div class={styles.CountryName}>{props.item.countryName}</div>
-        </Show>
+        <div class={styles.CountryName}>
+          {props.item.countryName} ({props.item.timestamp})
+        </div>
       </div>
     </div>
   );

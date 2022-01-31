@@ -5,6 +5,7 @@ import elevationStyles from '../../styles/elevation.module.css';
 import DayTime from './DayTime';
 import ReorderArrows from './ReorderArrows';
 import RemoveButton from './RemoveButton';
+import CountryName from './CountryName';
 
 interface IProps {
   style?: Object;
@@ -33,9 +34,7 @@ const TimeCardOrder: Component<IProps> = (props) => {
         <RemoveButton id={props.item._id} />
         <div class={styles.NameHolder}>
           <div class={styles.Name}>{props.item.name}</div>
-          <Show when={!props.item.noCities}>
-            <div class={styles.CountryName}>{props.item.countryName}</div>
-          </Show>
+          <CountryName {...props.item} />
         </div>
         <DayTime {...props.item} />
       </article>
