@@ -1,0 +1,71 @@
+.ui-button {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  height: 100%;
+  font-size: 1.2rem;
+  border-radius: var(--border-radius-6);
+  height: 40px;
+  background-color: inherit;
+  transition: filter 100ms ease-in;
+}
+
+.ui-button:hover {
+  filter: brightness(0.97);
+}
+
+.ui-button:active {
+  filter: brightness(0.9);
+}
+
+.ui-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ui-button__white {
+  background-color: var(--background-light);
+}
+
+.ui-button__white-primary {
+  background-color: var(--background-light);
+  color: var(--font-color-alt);
+}
+
+.ui-button__white svg,
+.ui-button__white-primary svg {
+  color: var(--font-color-alt);
+}
+
+.ui-button__rounded {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.ui-button__primary {
+  background-color: var(--background-main);
+}
+
+.ui-button__safe {
+  background-color: var(--color-safe-background);
+}
+
+.ui-button__danger {
+  background-color: var(--color-danger-background);
+}
+
+.ui-button__primary,
+.ui-button__safe,
+.ui-button__danger {
+  color: #fff;
+}
+
+.ui-button__primary svg,
+.ui-button__safe svg,
+.ui-button__danger svg {
+  color: inherit;
+}

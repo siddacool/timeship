@@ -2,6 +2,7 @@ import { registerSW } from 'virtual:pwa-register';
 import { render } from 'solid-js/web';
 
 import './index.css';
+import './styles/button.css';
 import App from './App';
 
 if ('serviceWorker' in navigator) {

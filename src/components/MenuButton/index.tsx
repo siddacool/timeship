@@ -1,15 +1,18 @@
 import type { Component } from 'solid-js';
 import styles from './style.module.css';
-import elevationStyles from '../../styles/elevation.module.css';
 import DropDown from '../DropDown';
 import { handleActionMenuToggle } from '../../store';
+import Button from '../Button';
 
 const MenuButton: Component = () => {
   return (
     <>
-      <button
-        class={`${styles.MenuButton} ${elevationStyles['elevation-3']}`}
+      <Button
+        class={styles.MenuButton}
+        color="white"
+        elevation={3}
         onClick={handleActionMenuToggle}
+        rounded
       >
         <svg
           class="w-6 h-6"
@@ -25,7 +28,7 @@ const MenuButton: Component = () => {
             d="M4 6h16M4 12h16M4 18h7"
           ></path>
         </svg>
-      </button>
+      </Button>
 
       <DropDown />
     </>
