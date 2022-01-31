@@ -9,11 +9,12 @@ interface IProps {
   class?: string;
   onClick?: any;
   disabled?: boolean;
+  outline?: boolean;
 }
 
 const Button: Component<IProps> = (props) => {
   const propsMerge = mergeProps(
-    { color: 'default', rounded: false, sqaure: false, elevation: 0, class: '' },
+    { color: 'default', rounded: false, sqaure: false, elevation: 0, class: '', outline: false },
     props,
   );
   const [local, others] = splitProps(propsMerge, [
@@ -23,6 +24,7 @@ const Button: Component<IProps> = (props) => {
     'rounded',
     'elevation',
     'class',
+    'outline',
   ]);
 
   return (
@@ -32,6 +34,7 @@ const Button: Component<IProps> = (props) => {
         ${local.color !== 'default' ? `ui-button__${local.color}` : ''}
         ${local.rounded ? 'ui-button__rounded' : ''}
         ${local.sqaure ? 'ui-button__sqaure' : ''}
+        ${local.outline ? 'ui-button__outline' : ''}
         ${local.class}
       `}
       {...others}

@@ -1,4 +1,5 @@
 import { Component, Show } from 'solid-js';
+import Button from '../Button';
 import styles from './style.module.css';
 
 interface IProps {
@@ -11,16 +12,16 @@ interface IProps {
 const AcceptDualButton: Component<IProps> = (props) => {
   return (
     <div class={styles.AcceptDualButton}>
-      <button class={styles.accept} onClick={props.actionAccept}>
+      <Button class={styles.accept} onClick={props.actionAccept} color="primary">
         <Show when={props.acceptContent} fallback={<>Accept</>}>
           {props.acceptContent}
         </Show>
-      </button>
-      <button class={styles.cancel} onClick={props.actionCancel}>
+      </Button>
+      <Button class={styles.cancel} onClick={props.actionCancel} color="white" outline>
         <Show when={props.cancelContent} fallback={<>Cancel</>}>
           {props.cancelContent}
         </Show>
-      </button>
+      </Button>
     </div>
   );
 };
