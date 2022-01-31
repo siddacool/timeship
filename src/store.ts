@@ -6,6 +6,9 @@ import { getDateUTC } from './time';
 setDefaultStorageName('timeship-store-1');
 
 const previewListLocalStorage = createSathaStore('preview-list', []);
+const darkThemeLocalStorage = createSathaStore('dark-theme', false);
+
+const body = document.querySelector('body');
 
 interface ITimezone {
   _id: string;
@@ -346,6 +349,21 @@ export const filteredTimeZones = createMemo(() => {
 
   return ordered;
 });
+
+export const [darkTheme, setDarkTheme] = createStore({ active: darkThemeLocalStorage.get() });
+
+export const darkThemeToggle = () => {
+  const newCondition = !darkTheme.active;
+  darkThemeLocalStorage.set(() => newCondition);
+
+  setDarkTheme('active', () => newCondition);
+
+  if (newCondition) {
+    body?.classList.add('dark');
+  } else {
+    body?.classList.remove('dark');
+  }
+};
 
 if (import.meta.env.DEV) {
   window.poplulateAllItemsToPreviewList = poplulateAllItemsToPreviewList;

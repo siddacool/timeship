@@ -47,6 +47,7 @@
   z-index: 12;
   background-color: transparent;
   padding-left: 36px;
+  color: inherit;
 }
 
 .Search input:focus {

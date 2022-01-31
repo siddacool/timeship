@@ -16,11 +16,12 @@
 }
 
 .DropDown li {
-  display: block;
+  display: flex;
   padding: 8px 6px;
   width: 100%;
   cursor: pointer;
   font-size: 1.1rem;
+  align-items: center;
 }
 
 .DropDown li:hover {
@@ -29,6 +30,13 @@
 
 .DropDown li[data-disable='true'] {
   color: var(--color-disable-text);
+}
+
+.DropDown li svg {
+  width: 18px;
+  height: 18px;
+  color: var(--font-color-alt);
+  margin-right: 8px;
 }
 
 .screen {

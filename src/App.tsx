@@ -7,7 +7,7 @@ import NoEntriesPlaceholder from './components/NoEntriesPlaceholder';
 import OrderList from './components/OrderList';
 import PreviewList from './components/PreviewList';
 import ReorderActions from './components/ReorderActions';
-import { addModal, orderList, previewList, updateUtCTime } from './store';
+import { addModal, darkTheme, orderList, previewList, updateUtCTime } from './store';
 // import TimeZoneTable from './components/TimeZoneTable';
 
 function runningTime() {
@@ -22,6 +22,11 @@ function runningTime() {
 
 const App: Component = () => {
   onMount(() => {
+    const body = document.querySelector('body');
+    if (darkTheme.active) {
+      body?.classList.add('dark');
+    }
+
     runningTime();
   });
 

@@ -117,3 +117,11 @@
 .ui-button:disabled:active {
   filter: none;
 }
+
+.dark .ui-button:hover {
+  filter: brightness(1.6);
+}
+
+.dark .ui-button:active {
+  filter: brightness(1.8);
+}

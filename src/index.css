@@ -47,6 +47,22 @@ body {
   color: var(--font-color-main);
 }
 
+body.dark {
+  --backdrop: #192130;
+  --background-light: #101826;
+  --font-color-main: #b7c9e9;
+  --font-color-alt: #5f90ff;
+  --color-selection: #052e50;
+  --color-border-light: #21262e;
+
+  --paper-elevation-color-h: 220deg;
+  --paper-elevation-color-s: 49%;
+  --paper-elevation-color-l: 5%;
+
+  --paper-elevation-color: var(--paper-elevation-color-h) var(--paper-elevation-color-s)
+    var(--paper-elevation-color-l);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
