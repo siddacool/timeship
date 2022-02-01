@@ -23,8 +23,10 @@ function runningTime() {
 const App: Component = () => {
   onMount(() => {
     const body = document.querySelector('body');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
     if (darkTheme.active) {
       body?.classList.add('dark');
+      themeColor.content = '#192130';
     }
 
     runningTime();

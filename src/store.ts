@@ -9,6 +9,7 @@ const previewListLocalStorage = createSathaStore('preview-list', []);
 const darkThemeLocalStorage = createSathaStore('dark-theme', false);
 
 const body = document.querySelector('body');
+const themeColor = document.querySelector('meta[name="theme-color"]');
 
 interface ITimezone {
   _id: string;
@@ -360,8 +361,12 @@ export const darkThemeToggle = () => {
 
   if (newCondition) {
     body?.classList.add('dark');
+
+    themeColor.content = '#192130';
   } else {
     body?.classList.remove('dark');
+
+    themeColor.content = '#e9e9e9';
   }
 };
 
