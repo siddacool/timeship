@@ -36,6 +36,7 @@
 
 .Time {
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .Day {

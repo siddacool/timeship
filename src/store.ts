@@ -22,7 +22,7 @@ interface ITimezone {
 }
 
 interface IUtcTimeInitialData {
-  data: any;
+  data: number;
 }
 
 interface IPreviewList {
@@ -220,7 +220,7 @@ export const cancelOrderList = () => {
 };
 
 const utcTimeInitialData: IUtcTimeInitialData = {
-  data: '',
+  data: getDateUTC(),
 };
 
 export const [utcTime, setUtcTime] = createStore(utcTimeInitialData);
