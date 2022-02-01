@@ -1,6 +1,7 @@
 :root {
   --backdrop: #e9e9e9;
   --background-light: #fff;
+  --background-light-alt: #f1f6ff;
   --background-main: #0154ed;
   --font-color-main: #384f78;
   --font-color-alt: #0154ed;
@@ -10,7 +11,10 @@
   --color-safe-background: #2a852a;
   --color-selection-safe: #e3f3e3;
   --color-danger-background: #ed3333;
+  --color-danger-background-light: #ffeaea;
   --color-border-light: #e3e3e3;
+  --color-border-alt: #acc8fb;
+  --color-modal-screen: rgb(0 0 0 / 10%);
   --paper-elevation-color-h: 0deg;
   --paper-elevation-color-s: 0%;
   --paper-elevation-color-l: 57%;
@@ -50,11 +54,16 @@ body {
 
 body.dark {
   --backdrop: #192130;
-  --background-light: #101826;
+  --background-light: #243044;
+  --background-light-alt: #203960;
   --font-color-main: #b7c9e9;
   --font-color-alt: #5f90ff;
   --color-selection: #052e50;
   --color-border-light: #21262e;
+  --background-light-alt: #16366a;
+  --color-border-alt: #2450a1;
+  --color-danger-background-light: #3e3131;
+  --color-modal-screen: rgb(0 0 0 / 39%);
 
   --paper-elevation-color-h: 220deg;
   --paper-elevation-color-s: 49%;

@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(0 0 0 / 85%);
+  background-color: var(--color-modal-screen);
   width: 100vw;
   height: 100vh;
   z-index: 1000;
@@ -57,6 +57,7 @@
 
 .Search button {
   color: var(--color-danger-background);
+  background-color: var(--color-danger-background-light);
   position: absolute;
   right: 0;
   top: 10px;
@@ -140,7 +141,7 @@
 }
 
 .arrowsGroup svg {
-  color: #7e7d7d;
+  color: var(--color-disable-text);
 }
 
 @media (min-width: 900px) {
@@ -148,7 +149,7 @@
     top: 40px;
     height: 65vh;
     min-height: 400px;
-    max-width: 700px;
+    max-width: 667px;
     border-radius: var(--border-radius-5);
   }
 

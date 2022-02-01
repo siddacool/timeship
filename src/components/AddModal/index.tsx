@@ -11,7 +11,7 @@ const AddModal: Component = () => {
   return (
     <div class={styles.AddModal}>
       <div class={styles.screen} onClick={() => addModalToggle()}></div>
-      <div class={`${styles.dialog} ${elevationStyles['elevation-3']}`}>
+      <div class={`${styles.dialog} ${elevationStyles['elevation-6']}`}>
         <Search />
         <Order />
         <TimeSelectableList />

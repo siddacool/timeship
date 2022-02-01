@@ -31,25 +31,26 @@ const App: Component = () => {
   });
 
   return (
-    <div class={styles.App}>
-      <Show when={!orderList.active}>
-        <Menu />
-      </Show>
+    <>
+      <div class={`${styles.App} ${addModal.active ? styles.blur : ''}`}>
+        <Show when={!orderList.active}>
+          <Menu />
+        </Show>
 
-      <Switch fallback={<NoEntriesPlaceholder />}>
-        <Match when={previewList.data.length && orderList.active}>
-          <OrderList />
-          <ReorderActions />
-        </Match>
-        <Match when={previewList.data.length && !orderList.active}>
-          <PreviewList />
-        </Match>
-      </Switch>
-
+        <Switch fallback={<NoEntriesPlaceholder />}>
+          <Match when={previewList.data.length && orderList.active}>
+            <OrderList />
+            <ReorderActions />
+          </Match>
+          <Match when={previewList.data.length && !orderList.active}>
+            <PreviewList />
+          </Match>
+        </Switch>
+      </div>
       <Show when={addModal.active}>
         <AddModal />
       </Show>
-    </div>
+    </>
   );
 };
 
