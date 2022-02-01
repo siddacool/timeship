@@ -1,30 +1,115 @@
-import spacetime from 'spacetime';
+export const monthsListFullNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+export const monthsList = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'June',
+  'July',
+  'Aug',
+  'Sept',
+  'Oct',
+  'Nov',
+  'Dec',
+];
 
-const getSpaceTimeNow = (timezone = '') => (timezone ? spacetime.now(timezone) : spacetime.now());
-const getSpaceTime = (epoch: number, timezone = '') => spacetime(epoch, timezone);
+export const getCurruntTime = (timezone: string | undefined) => {
+  const date = new Date();
+  const dataUtc = new Date(
+    Date.UTC(
+      date.getUTCFullYear(),
+      date.getUTCMonth(),
+      date.getUTCDate(),
+      date.getUTCHours(),
+      date.getUTCMinutes(),
+      date.getUTCSeconds(),
+    ),
+  );
 
-export const getDateUTC = () => getSpaceTimeNow('Africa/Abidjan').epoch;
-
-export const formattedTime = ({ hour, minute, am }) => {
-  return `${hour}:${minute} ${am}`;
+  return dataUtc.toLocaleString('en-US', {
+    timeZone: timezone,
+  });
 };
 
-export const formattedDay = ({ month, day }) => {
-  return `${day}, ${month}`;
-};
+export const getCurruntTimeFromDateUtc = (
+  dataUtc: { toLocaleString: (arg0: string, arg1: { timeZone: string | undefined }) => any },
+  timezone: string | undefined,
+) => {
+  const [date = '', time = ''] =
+    `${dataUtc.toLocaleString('en-US', {
+      timeZone: timezone,
+    })}`.split(', ') || [];
 
-export const getDateTimeDetails = (utcTime: number, timezone: string | undefined) => {
-  const d = getSpaceTime(utcTime, timezone)
-    .format('{month}__{date-ordinal}__{hour}__{minute-pad}__{ampm}')
-    .split('__');
+  const [month = '1', day = '1'] = date.split('/') || [];
+  const am = time.includes('PM') ? 'PM' : 'AM';
+  const [hour = '', minute = ''] = time.replace(' PM', '').replace(' AM', '').split(':') || [];
 
-  const [month, day, hour, minute, am] = d;
+  const hour24 = am === 'PM' ? parseInt(hour, 10) + 12 : parseInt(hour, 10);
+  let timeOfDay = 'night';
+
+  if (hour24 >= 20 && hour24 <= 24) {
+    timeOfDay = 'night';
+  } else if (hour24 >= 1 && hour24 <= 4) {
+    timeOfDay = 'early-morning';
+  } else if (hour24 >= 5 && hour24 <= 6) {
+    timeOfDay = 'sunrise';
+  } else if (hour24 >= 7 && hour24 <= 11) {
+    timeOfDay = 'morning';
+  } else if (hour24 >= 12 && hour24 <= 16) {
+    timeOfDay = 'noon';
+  } else if (hour24 >= 16 && hour24 <= 18) {
+    timeOfDay = 'sunset';
+  } else if (hour24 >= 18 && hour24 <= 19) {
+    timeOfDay = 'late-evening';
+  }
 
   return {
     month,
     day,
+    am,
     hour,
     minute,
-    am,
+    hour24,
+    timeOfDay,
   };
+};
+
+export const getDateUTC = () => {
+  const date = new Date();
+
+  return new Date(
+    Date.UTC(
+      date.getUTCFullYear(),
+      date.getUTCMonth(),
+      date.getUTCDate(),
+      date.getUTCHours(),
+      date.getUTCMinutes(),
+      date.getUTCSeconds(),
+    ),
+  );
+};
+
+export const formattedTime = ({ am, hour, minute }) => {
+  return `${hour}:${minute} ${am}`;
+};
+
+export const formattedDay = ({ month = '1', day }) => {
+  const monthNumber = Number(month) - 1;
+  const monthName = monthsListFullNames[monthNumber];
+
+  return `${day}, ${monthName}`;
 };

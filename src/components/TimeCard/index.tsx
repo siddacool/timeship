@@ -1,10 +1,11 @@
 import type { Component } from 'solid-js';
-import { Show } from 'solid-js';
+import { createMemo } from 'solid-js';
 import styles from './style.module.css';
 import elevationStyles from '../../styles/elevation.module.css';
 import DayTime from './DayTime';
 import CountryName from './CountryName';
-import { orderListActiveToggle } from '../../store';
+import { orderListActiveToggle, utcTime } from '../../store';
+import { getCurruntTimeFromDateUtc } from '../../time';
 
 interface IProps {
   style?: Object;
@@ -36,6 +37,8 @@ const handleButtonRelease = () => {
 };
 
 const TimeCard: Component<IProps> = (props) => {
+  const d = createMemo(() => getCurruntTimeFromDateUtc(utcTime.data, props.item.timezone));
+
   return (
     <div
       class={`${styles.TimeCard}`}
@@ -45,7 +48,9 @@ const TimeCard: Component<IProps> = (props) => {
       role="listitem"
     >
       <div
-        class={`${styles.InternalContainer} ${elevationStyles['elevation-2']}`}
+        class={`${styles.InternalContainer} ${elevationStyles['elevation-2']} time-of-day__${
+          d().timeOfDay
+        }`}
         onTouchStart={handleButtonPress}
         onTouchEnd={handleButtonRelease}
         onMouseDown={handleButtonPress}
@@ -53,10 +58,10 @@ const TimeCard: Component<IProps> = (props) => {
         onMouseLeave={handleButtonRelease}
       >
         <div class={styles.NameHolder}>
-          <div class={styles.Name}>{props.item.name}</div>
+          <article class={styles.Name}>{props.item.name}</article>
           <CountryName {...props.item} />
         </div>
-        <DayTime {...props.item} />
+        <DayTime d={d()} {...props.item} />
       </div>
     </div>
   );

@@ -1,0 +1,30 @@
+.time-of-day__night {
+  background-color: #333266;
+  color: #d9d8f5;
+}
+
+.time-of-day__early-morning {
+  background-color: #334aa1;
+  color: aliceblue;
+}
+
+.time-of-day__sunrise {
+  background-color: #e59054;
+  color: #13191e;
+}
+.time-of-day__morning {
+  background-color: #a5d6ff;
+  color: #132024;
+}
+.time-of-day__noon {
+  background-color: #36a0f9;
+  color: #000000;
+}
+.time-of-day__sunset {
+  background-color: #ef7a42;
+  color: #13191e;
+}
+.time-of-day__late-evening {
+  background-color: #0e2c9b;
+  color: aliceblue;
+}

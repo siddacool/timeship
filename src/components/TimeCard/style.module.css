@@ -4,7 +4,6 @@
 }
 
 .InternalContainer {
-  background-color: var(--background-light);
   padding: 0 6px;
   border-radius: var(--border-radius-6);
   font-size: 0.9rem;
@@ -24,24 +23,22 @@
 
 .Name {
   font-size: 1.2rem;
-  color: var(--font-color-alt);
   font-weight: 500;
 }
 
 .CountryName {
   margin-top: -4px;
-  opacity: 0.7;
+  opacity: 0.74;
   margin-bottom: 3px;
 }
 
 .Time {
   font-size: 1.2rem;
-  text-transform: uppercase;
 }
 
 .Day {
   margin-top: -6px;
-  opacity: 0.7;
+  opacity: 0.74;
 }
 
 .TimeCardOrder {

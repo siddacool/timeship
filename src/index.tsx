@@ -3,6 +3,7 @@ import { render } from 'solid-js/web';
 
 import './index.css';
 import './styles/button.css';
+import './styles/timeofday.css';
 import App from './App';
 
 if ('serviceWorker' in navigator) {

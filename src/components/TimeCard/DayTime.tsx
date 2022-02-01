@@ -1,18 +1,18 @@
 import { Component, createMemo } from 'solid-js';
 import { utcTime } from '../../store';
-import { formattedTime, formattedDay, getDateTimeDetails } from '../../time';
+import { formattedTime, formattedDay, getCurruntTimeFromDateUtc } from '../../time';
 import styles from './style.module.css';
 
 interface IProps {
   name?: string;
   timestamp?: string;
   timezone?: string;
+  d: any;
 }
 
 const DayTime: Component<IProps> = (props) => {
-  const d = createMemo(() => getDateTimeDetails(utcTime.data, props.timezone));
-  const timeValue = createMemo(() => formattedTime(d()));
-  const dayValue = createMemo(() => formattedDay(d()));
+  const timeValue = createMemo(() => formattedTime(props.d));
+  const dayValue = createMemo(() => formattedDay(props.d));
 
   return (
     <div class={styles.DayTime}>
