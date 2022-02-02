@@ -20,6 +20,7 @@ interface IProps {
     countryCode?: string;
     countryName?: string;
     noCities?: boolean;
+    timeOfDay?: string;
   };
 }
 
@@ -35,7 +36,7 @@ const TimeCardOrder: Component<IProps> = (props) => {
     >
       <article
         class={`${styles.InternalContainer} ${elevationStyles['elevation-2']} time-of-day__${
-          d().timeOfDay
+          props.item.timeOfDay ? props.item.timeOfDay : d().timeOfDay
         }`}
       >
         <ReorderArrows id={props.item._id} />

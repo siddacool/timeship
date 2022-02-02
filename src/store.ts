@@ -19,6 +19,7 @@ interface ITimezone {
   countryCode: string;
   countryName: string;
   noCities: boolean;
+  timeOfDay?: string;
 }
 
 interface IUtcTimeInitialData {
@@ -124,6 +125,7 @@ export const resetPreviewList = () => {
       timezone: 'Pacific/Niue',
       countryCode: 'nu',
       countryName: 'Niue',
+      timeOfDay: 'night',
     },
     {
       _id: '2',
@@ -132,6 +134,7 @@ export const resetPreviewList = () => {
       timezone: 'Asia/Pontianak',
       countryCode: 'id',
       countryName: 'Indonesia',
+      timeOfDay: 'earlyMorning',
     },
     {
       _id: '3',
@@ -140,6 +143,7 @@ export const resetPreviewList = () => {
       timezone: 'Asia/Kolkata',
       countryCode: 'in',
       countryName: 'India',
+      timeOfDay: 'sunrise',
     },
     {
       _id: '4',
@@ -149,6 +153,35 @@ export const resetPreviewList = () => {
       countryCode: 'aq',
       countryName: 'Antarctica',
       noCities: true,
+      timeOfDay: 'morning',
+    },
+    {
+      countryCode: 'cl',
+      countryName: 'Chile',
+      name: 'Antofagasta',
+      timestamp: 'UTC-4',
+      timezone: 'America/Santiago',
+      _id: 'cl__UTC-4__Antofagasta',
+      timeOfDay: 'noon',
+    },
+    {
+      countryCode: 'kn',
+      countryName: 'Saint Kitts and Nevis',
+      name: 'Middle Island',
+      timestamp: 'UTC-4',
+      timezone: 'America/St_Kitts',
+      _id: 'kn__UTC-4__Middle_Island',
+      timeOfDay: 'sunset',
+    },
+    {
+      countryCode: 'gl',
+      countryName: 'Greenland',
+      name: 'Greenland',
+      noCities: true,
+      timestamp: 'UTC-4',
+      timezone: 'America/Thule',
+      _id: 'gl__UTC-4__blank',
+      timeOfDay: 'lateEvening',
     },
   ];
 

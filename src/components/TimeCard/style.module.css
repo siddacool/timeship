@@ -24,11 +24,12 @@
 .Name {
   font-size: 1.2rem;
   font-weight: 500;
+  /* color: var(--font-color-alt); */
 }
 
 .CountryName {
   margin-top: -4px;
-  opacity: 0.74;
+  opacity: 0.8;
   margin-bottom: 3px;
 }
 
@@ -38,7 +39,7 @@
 
 .Day {
   margin-top: -6px;
-  opacity: 0.74;
+  opacity: 0.8;
 }
 
 .TimeCardOrder {
@@ -68,7 +69,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--color-danger-background-light);
+  background-color: inherit;
 }
 
 .RemoveButton svg {
@@ -80,6 +81,7 @@
   bottom: 0;
   right: 0;
   z-index: 5;
+  background-color: inherit;
 }
 
 .AcceptButton svg {

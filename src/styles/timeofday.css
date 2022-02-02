@@ -1,30 +1,55 @@
 .time-of-day__night {
-  background-color: #333266;
-  color: #d9d8f5;
+  background-color: var(--color-bg-time-of-day__night);
 }
 
-.time-of-day__early-morning {
-  background-color: #334aa1;
-  color: aliceblue;
+.time-of-day__night button {
+  background-color: var(--color-bg-time-of-day__night);
+}
+
+.time-of-day__earlyMorning {
+  background-color: var(--color-bg-time-of-day__earlyMorning);
+}
+
+.time-of-day__earlyMorning button {
+  background-color: var(--color-bg-time-of-day__earlyMorning);
 }
 
 .time-of-day__sunrise {
-  background-color: #e59054;
-  color: #13191e;
+  background-color: var(--color-bg-time-of-day__sunrise);
 }
+
+.time-of-day__sunrise button {
+  background-color: var(--color-bg-time-of-day__sunrise);
+}
+
 .time-of-day__morning {
-  background-color: #a5d6ff;
-  color: #132024;
+  background-color: var(--color-bg-time-of-day__morning);
 }
+
+.time-of-day__morning button {
+  background-color: var(--color-bg-time-of-day__morning);
+}
+
 .time-of-day__noon {
-  background-color: #36a0f9;
-  color: #000000;
+  background-color: var(--color-bg-time-of-day__noon);
 }
+
+.time-of-day__noon button {
+  background-color: var(--color-bg-time-of-day__noon);
+}
+
 .time-of-day__sunset {
-  background-color: #ef7a42;
-  color: #13191e;
+  background-color: var(--color-bg-time-of-day__sunset);
 }
-.time-of-day__late-evening {
-  background-color: #0e2c9b;
-  color: aliceblue;
+
+.time-of-day__sunset button {
+  background-color: var(--color-bg-time-of-day__sunset);
+}
+
+.time-of-day__lateEvening {
+  background-color: var(--color-bg-time-of-day__lateEvening);
+}
+
+.time-of-day__lateEvening button {
+  background-color: var(--color-bg-time-of-day__lateEvening);
 }

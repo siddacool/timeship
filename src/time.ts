@@ -64,7 +64,7 @@ export const getCurruntTimeFromDateUtc = (
   if (hour24 >= 20 && hour24 <= 24) {
     timeOfDay = 'night';
   } else if (hour24 >= 1 && hour24 <= 4) {
-    timeOfDay = 'early-morning';
+    timeOfDay = 'earlyMorning';
   } else if (hour24 >= 5 && hour24 <= 6) {
     timeOfDay = 'sunrise';
   } else if (hour24 >= 7 && hour24 <= 11) {
@@ -74,7 +74,7 @@ export const getCurruntTimeFromDateUtc = (
   } else if (hour24 >= 16 && hour24 <= 18) {
     timeOfDay = 'sunset';
   } else if (hour24 >= 18 && hour24 <= 19) {
-    timeOfDay = 'late-evening';
+    timeOfDay = 'lateEvening';
   }
 
   return {

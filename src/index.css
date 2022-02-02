@@ -21,6 +21,14 @@
   --paper-elevation-color: var(--paper-elevation-color-h) var(--paper-elevation-color-s)
     var(--paper-elevation-color-l);
 
+  --color-bg-time-of-day__night: #aecbfa;
+  --color-bg-time-of-day__earlyMorning: #cfdef7;
+  --color-bg-time-of-day__sunrise: #f7d1c0;
+  --color-bg-time-of-day__morning: #cbf0f8;
+  --color-bg-time-of-day__noon: #b4e5ff;
+  --color-bg-time-of-day__sunset: #fdcfe8;
+  --color-bg-time-of-day__lateEvening: #e7ccff;
+
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -56,7 +64,7 @@ body.dark {
   --backdrop: #192130;
   --background-light: #243044;
   --background-light-alt: #203960;
-  --font-color-main: #b7c9e9;
+  --font-color-main: #dce3f1;
   --font-color-alt: #5f90ff;
   --color-selection: #052e50;
   --color-border-light: #21262e;
@@ -64,6 +72,14 @@ body.dark {
   --color-border-alt: #2450a1;
   --color-danger-background-light: #3e3131;
   --color-modal-screen: rgb(0 0 0 / 39%);
+
+  --color-bg-time-of-day__night: #1e3a5f;
+  --color-bg-time-of-day__earlyMorning: #194656;
+  --color-bg-time-of-day__sunrise: #522e1e;
+  --color-bg-time-of-day__morning: #1e6085;
+  --color-bg-time-of-day__noon: #005583;
+  --color-bg-time-of-day__sunset: #5b2245;
+  --color-bg-time-of-day__lateEvening: #42275e;
 
   --paper-elevation-color-h: 220deg;
   --paper-elevation-color-s: 49%;

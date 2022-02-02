@@ -17,6 +17,7 @@ interface IProps {
     countryCode?: string;
     countryName?: string;
     noCities?: boolean;
+    timeOfDay?: string;
   };
 }
 
@@ -49,7 +50,7 @@ const TimeCard: Component<IProps> = (props) => {
     >
       <div
         class={`${styles.InternalContainer} ${elevationStyles['elevation-2']} time-of-day__${
-          d().timeOfDay
+          props.item.timeOfDay ? props.item.timeOfDay : d().timeOfDay
         }`}
         onTouchStart={handleButtonPress}
         onTouchEnd={handleButtonRelease}
