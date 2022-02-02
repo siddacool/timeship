@@ -1,9 +1,9 @@
 .TimeCard {
   width: 100%;
-  cursor: pointer;
 }
 
 .InternalContainer {
+  cursor: pointer;
   padding: 0 6px;
   border-radius: var(--border-radius-7);
   font-size: 1rem;
@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  filter: saturate(1.4) contrast(1.1);
 }
 
 .DayTime {
@@ -43,12 +45,12 @@
 }
 
 .TimeCardOrder {
-  cursor: initial;
 }
 
 .TimeCardOrder > article {
+  cursor: initial;
   padding-left: 38px;
-  position: relative;
+  filter: saturate(1) contrast(1);
 }
 
 .ReorderArrows > div {
@@ -58,6 +60,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 50;
 }
 
 .ReorderArrows button {
@@ -70,6 +73,7 @@
   top: 0;
   right: 0;
   background-color: inherit;
+  z-index: 50;
 }
 
 .RemoveButton svg {
@@ -82,10 +86,23 @@
   right: 0;
   z-index: 5;
   background-color: inherit;
+  z-index: 50;
 }
 
 .AcceptButton svg {
   color: var(--font-color-alt);
+}
+
+.BackgroundWave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(layered-waves.png);
+  background-size: cover;
+  opacity: 0.5;
 }
 
 @media (min-width: 900px) {

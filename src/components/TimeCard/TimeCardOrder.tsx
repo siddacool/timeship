@@ -8,6 +8,7 @@ import CountryName from './CountryName';
 import AcceptButton from './AcceptButton';
 import { getCurruntTimeFromDateUtc } from '../../time';
 import { utcTime } from '../../store';
+import BackgroundWave from './BackgroundWave';
 
 interface IProps {
   style?: Object;

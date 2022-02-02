@@ -6,6 +6,7 @@ import DayTime from './DayTime';
 import CountryName from './CountryName';
 import { orderListActiveToggle, utcTime } from '../../store';
 import { getCurruntTimeFromDateUtc } from '../../time';
+import BackgroundWave from './BackgroundWave';
 
 interface IProps {
   style?: Object;
@@ -58,6 +59,7 @@ const TimeCard: Component<IProps> = (props) => {
         onMouseUp={handleButtonRelease}
         onMouseLeave={handleButtonRelease}
       >
+        <BackgroundWave />
         <DayTime d={d()} {...props.item} />
         <div class={styles.NameHolder}>
           <article class={styles.Name}>{props.item.name}</article>
