@@ -3,7 +3,7 @@
   --background-light: #fff;
   --background-light-alt: #f1f6ff;
   --background-main: #0154ed;
-  --font-color-main: #384f78;
+  --font-color-main: #1f2124;
   --font-color-alt: #0154ed;
   --font-color-yellow: #e4cf4f;
   --color-selection: #cbe6fd;
@@ -74,7 +74,7 @@ body.dark {
   --color-modal-screen: rgb(0 0 0 / 39%);
 
   --color-bg-time-of-day__night: #1e3a5f;
-  --color-bg-time-of-day__earlyMorning: #194656;
+  --color-bg-time-of-day__earlyMorning: #2e405e;
   --color-bg-time-of-day__sunrise: #522e1e;
   --color-bg-time-of-day__morning: #1e6085;
   --color-bg-time-of-day__noon: #005583;

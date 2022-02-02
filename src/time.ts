@@ -109,7 +109,7 @@ export const formattedTime = ({ am, hour, minute }) => {
 
 export const formattedDay = ({ month = '1', day }) => {
   const monthNumber = Number(month) - 1;
-  const monthName = monthsListFullNames[monthNumber];
+  const monthName = monthsList[monthNumber];
 
-  return `${day}, ${monthName}`;
+  return `${monthName} ${day}`;
 };

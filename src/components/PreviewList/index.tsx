@@ -12,7 +12,7 @@ const PreviewList: Component = () => {
       <VirtualContainer
         items={previewList.data}
         scrollTarget={scrollTargetElement}
-        itemSize={{ height: 130 }}
+        itemSize={{ height: 106 }}
       >
         {TimeCard}
       </VirtualContainer>

@@ -9,11 +9,7 @@ interface IProps {
 }
 
 const CountryName: Component<IProps> = (props) => {
-  return (
-    <div class={styles.CountryName}>
-      {props.countryName} ({props.timestamp} {props.timezone})
-    </div>
-  );
+  return <div class={styles.CountryName}>, {props.countryName}</div>;
 };
 
 export default CountryName;

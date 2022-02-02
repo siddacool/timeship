@@ -16,7 +16,7 @@ const OrderList: Component = () => {
       <VirtualContainer
         items={orderList.data}
         scrollTarget={scrollTargetElement}
-        itemSize={{ height: 130 }}
+        itemSize={{ height: 106 }}
       >
         {TimeCardOrder}
       </VirtualContainer>

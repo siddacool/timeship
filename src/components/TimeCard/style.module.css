@@ -5,9 +5,9 @@
 
 .InternalContainer {
   padding: 0 6px;
-  border-radius: var(--border-radius-6);
-  font-size: 0.9rem;
-  height: 122px;
+  border-radius: var(--border-radius-7);
+  font-size: 1rem;
+  height: 96px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,31 +15,32 @@
 
 .DayTime {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .NameHolder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .Name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   /* color: var(--font-color-alt); */
 }
 
 .CountryName {
-  margin-top: -4px;
-  opacity: 0.8;
-  margin-bottom: 3px;
 }
 
 .Time {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin-right: 4px;
 }
 
 .Day {
-  margin-top: -6px;
-  opacity: 0.8;
 }
 
 .TimeCardOrder {

@@ -58,11 +58,11 @@ const TimeCard: Component<IProps> = (props) => {
         onMouseUp={handleButtonRelease}
         onMouseLeave={handleButtonRelease}
       >
+        <DayTime d={d()} {...props.item} />
         <div class={styles.NameHolder}>
           <article class={styles.Name}>{props.item.name}</article>
           <CountryName {...props.item} />
         </div>
-        <DayTime d={d()} {...props.item} />
       </div>
     </div>
   );

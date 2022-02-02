@@ -42,11 +42,11 @@ const TimeCardOrder: Component<IProps> = (props) => {
         <ReorderArrows id={props.item._id} />
         <RemoveButton id={props.item._id} />
         <AcceptButton />
+        <DayTime d={d()} {...props.item} />
         <div class={styles.NameHolder}>
           <div class={styles.Name}>{props.item.name}</div>
           <CountryName {...props.item} />
         </div>
-        <DayTime d={d()} {...props.item} />
       </article>
     </div>
   );
