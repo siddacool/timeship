@@ -399,7 +399,7 @@ export const darkThemeToggle = () => {
   } else {
     body?.classList.remove('dark');
 
-    themeColor.content = '#e9e9e9';
+    themeColor.content = '#0a214d';
   }
 };
 

@@ -26,7 +26,7 @@ const App: Component = () => {
     const themeColor = document.querySelector('meta[name="theme-color"]');
     if (darkTheme.active) {
       body?.classList.add('dark');
-      themeColor.content = '#192130';
+      themeColor.content = '#0a214d';
     }
 
     runningTime();
