@@ -54,6 +54,12 @@ export const getCurruntTimeFromDateUtc = (
       timeZone: timezone,
     })}`.split(', ') || [];
 
+  const weekday =
+    dataUtc.toLocaleString('en-US', {
+      timeZone: timezone,
+      weekday: 'long',
+    }) || '';
+
   const [month = '1', day = '1'] = date.split('/') || [];
   const am = time.includes('PM') ? 'PM' : 'AM';
   const [hour = '', minute = ''] = time.replace(' PM', '').replace(' AM', '').split(':') || [];
@@ -85,6 +91,7 @@ export const getCurruntTimeFromDateUtc = (
     minute,
     hour24,
     timeOfDay,
+    weekday,
   };
 };
 
@@ -107,9 +114,9 @@ export const formattedTime = ({ am, hour, minute }) => {
   return `${hour}:${minute} ${am}`;
 };
 
-export const formattedDay = ({ month = '1', day }) => {
+export const formattedDay = ({ month = '1', day, weekday = '' }) => {
   const monthNumber = Number(month) - 1;
   const monthName = monthsList[monthNumber];
 
-  return `${monthName} ${day}`;
+  return `${weekday}, ${monthName} ${day}`;
 };
