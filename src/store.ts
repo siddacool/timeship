@@ -395,11 +395,11 @@ export const darkThemeToggle = () => {
   if (newCondition) {
     body?.classList.add('dark');
 
-    themeColor.content = '#192130';
+    themeColor.content = '#0a214d';
   } else {
     body?.classList.remove('dark');
 
-    themeColor.content = '#0a214d';
+    themeColor.content = '#e9e9e9';
   }
 };
 
