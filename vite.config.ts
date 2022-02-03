@@ -6,9 +6,15 @@ export default defineConfig({
   plugins: [
     solidPlugin(),
     VitePWA({
-      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png', 'data.json'],
+      includeAssets: [
+        'favicon.ico',
+        'robots.txt',
+        'apple-touch-icon.png',
+        'data.json',
+        'layered-waves.png',
+      ],
       manifest: {
-        name: 'Timeship',
+        name: 'Timeship - A world clock at your fingertips',
         short_name: 'Timeship',
         description:
           'A world clock at your fingertips. Timeship displays time from cities all around the globe',
