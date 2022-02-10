@@ -12,7 +12,6 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  filter: saturate(1.3) contrast(1.1);
 }
 
 .DayTime {
@@ -50,7 +49,6 @@
 .TimeCardOrder > article {
   cursor: initial;
   padding-left: 38px;
-  filter: saturate(1) contrast(1);
 }
 
 .ReorderArrows > div {
@@ -101,7 +99,6 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  opacity: 0.5;
 }
 
 @media (min-width: 900px) {

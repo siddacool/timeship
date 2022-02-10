@@ -61,6 +61,17 @@ body {
   min-height: 100vh;
 }
 
+.wave-image {
+  opacity: 0.4;
+  background-image: url('../wave.png');
+}
+
+@media (min-width: 900px) {
+  .wave-image {
+    background-image: url('../wave-desktop.png');
+  }
+}
+
 body.dark {
   background-image: linear-gradient(
     35deg,
@@ -103,6 +114,10 @@ body.dark {
     var(--paper-elevation-color-l);
 }
 
+body.dark .wave-image {
+  opacity: 0.5;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -125,8 +140,4 @@ input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   display: none;
-}
-
-.wave-image {
-  background-image: url('../layered-waves.png');
 }

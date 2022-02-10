@@ -8,13 +8,13 @@ export default defineConfig({
     VitePWA({
       includeAssets: [
         'favicon.ico',
-        'robots.txt',
         'apple-touch-icon.png',
         'data.json',
-        'layered-waves.png',
+        'wave-desktop.png',
+        'wave.png',
       ],
       manifest: {
-        name: 'Timeship - A world clock at your fingertips',
+        name: 'Timeship - world clock',
         short_name: 'Timeship',
         description:
           'A world clock at your fingertips. Timeship displays time from cities all around the globe',
