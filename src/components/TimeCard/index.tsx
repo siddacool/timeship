@@ -50,9 +50,9 @@ const TimeCard: Component<IProps> = (props) => {
       role="listitem"
     >
       <div
-        class={`${styles.InternalContainer} ${elevationStyles['elevation-2']} time-of-day__${
-          props.item.timeOfDay ? props.item.timeOfDay : d().timeOfDay
-        }`}
+        class={`${styles.InternalContainer} ${
+          elevationStyles['elevation-2']
+        } time-of-day time-of-day__${props.item.timeOfDay ? props.item.timeOfDay : d().timeOfDay}`}
         onTouchStart={handleButtonPress}
         onTouchEnd={handleButtonRelease}
         onMouseDown={handleButtonPress}

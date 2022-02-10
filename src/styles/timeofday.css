@@ -1,9 +1,37 @@
+.time-of-day {
+}
+
+.time-of-day .sun,
+.time-of-day .moon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  opacity: 0;
+  transition: all 600ms;
+}
+
+.time-of-day .moon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.time-of-day .sun svg {
+  width: 22px;
+  height: 22px;
+}
+
 .time-of-day__night {
   background-color: var(--color-bg-time-of-day__night);
 }
 
 .time-of-day__night button {
   background-color: var(--color-bg-time-of-day__night);
+}
+
+.time-of-day__night .moon {
+  opacity: 1;
+  top: 20px;
 }
 
 .time-of-day__earlyMorning {
@@ -18,6 +46,11 @@
   background-color: var(--color-bg-time-of-day__sunrise);
 }
 
+.time-of-day__sunrise .sun {
+  opacity: 1;
+  top: -10px;
+}
+
 .time-of-day__sunrise button {
   background-color: var(--color-bg-time-of-day__sunrise);
 }
@@ -30,12 +63,22 @@
   background-color: var(--color-bg-time-of-day__morning);
 }
 
+.time-of-day__morning .sun {
+  opacity: 1;
+  top: 10px;
+}
+
 .time-of-day__noon {
   background-color: var(--color-bg-time-of-day__noon);
 }
 
 .time-of-day__noon button {
   background-color: var(--color-bg-time-of-day__noon);
+}
+
+.time-of-day__noon .sun {
+  opacity: 1;
+  top: 30px;
 }
 
 .time-of-day__sunset {
@@ -46,10 +89,36 @@
   background-color: var(--color-bg-time-of-day__sunset);
 }
 
+.time-of-day__sunset .sun {
+  opacity: 1;
+  top: initial;
+  bottom: -10px;
+}
+
 .time-of-day__lateEvening {
   background-color: var(--color-bg-time-of-day__lateEvening);
 }
 
 .time-of-day__lateEvening button {
   background-color: var(--color-bg-time-of-day__lateEvening);
+}
+
+@media (min-width: 900px) {
+  .time-of-day .moon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .time-of-day .sun svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .time-of-day__sunrise .sun {
+    top: -15px;
+  }
+
+  .time-of-day__sunset .sun {
+    bottom: -15px;
+  }
 }

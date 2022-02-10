@@ -51,6 +51,7 @@
 .TimeCardOrder > article {
   cursor: initial;
   padding-left: 38px;
+  transition: none;
 }
 
 .ReorderArrows > div {
@@ -101,6 +102,7 @@
   width: 100%;
   height: 100%;
   background-size: cover;
+  overflow: hidden;
 }
 
 @media (min-width: 900px) {
