@@ -23,7 +23,7 @@ interface ITimezone {
 }
 
 interface IUtcTimeInitialData {
-  data: any;
+  data: string;
 }
 
 interface IPreviewList {
@@ -259,9 +259,13 @@ const utcTimeInitialData: IUtcTimeInitialData = {
 export const [utcTime, setUtcTime] = createStore(utcTimeInitialData);
 
 export const updateUtCTime = () => {
-  const utcTime = getDateUTC();
+  const timeNow = getDateUTC();
 
-  setUtcTime('data', () => utcTime);
+  if (timeNow === utcTime.data) {
+    return;
+  }
+
+  setUtcTime('data', () => timeNow);
 };
 
 export const [actionMenuOpen, setActionMenuOpen] = createSignal(false);
