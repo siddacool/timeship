@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  transition: background-color 600ms;
 }
 
 .DayTime {
@@ -38,6 +39,7 @@
 .Time {
   font-size: 1.4rem;
   margin-right: 4px;
+  text-transform: uppercase;
 }
 
 .Day {
