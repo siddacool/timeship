@@ -1,70 +1,18 @@
-export const monthsListFullNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-export const monthsList = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'June',
-  'July',
-  'Aug',
-  'Sept',
-  'Oct',
-  'Nov',
-  'Dec',
-];
+import spacetime from 'spacetime';
 
-export const getCurruntTime = (timezone: string | undefined) => {
-  const date = new Date();
-  const dataUtc = new Date(
-    Date.UTC(
-      date.getUTCFullYear(),
-      date.getUTCMonth(),
-      date.getUTCDate(),
-      date.getUTCHours(),
-      date.getUTCMinutes(),
-      date.getUTCSeconds(),
-    ),
-  );
-
-  return dataUtc.toLocaleString('en-US', {
-    timeZone: timezone,
-  });
-};
+export const getDateUTC = () => spacetime.now().format('time-24');
 
 export const getCurruntTimeFromDateUtc = (
   dataUtc: { toLocaleString: (arg0: string, arg1: { timeZone: string | undefined }) => any },
   timezone: string | undefined,
 ) => {
-  const [date = '', time = ''] =
-    `${dataUtc.toLocaleString('en-US', {
-      timeZone: timezone,
-    })}`.split(', ') || [];
+  const d = spacetime
+    .now(timezone)
+    .format('{date}__{day-short}__{month-short}__{hour}__{minute-pad}__{hour-24}__{ampm}');
 
-  const weekday =
-    dataUtc.toLocaleString('en-US', {
-      timeZone: timezone,
-      weekday: 'long',
-    }) || '';
+  const [day, weekday, month, hour, minute, hour24String, am] = d.split('__');
 
-  const [month = '1', day = '1'] = date.split('/') || [];
-  const am = time.includes('PM') ? 'PM' : 'AM';
-  const [hour = '', minute = ''] = time.replace(' PM', '').replace(' AM', '').split(':') || [];
-
-  const hour24 = am === 'PM' ? parseInt(hour, 10) + 12 : parseInt(hour, 10);
+  const hour24 = Number(hour24String);
   let timeOfDay = 'night';
 
   if (hour24 >= 20 && hour24 <= 24) {
@@ -95,28 +43,10 @@ export const getCurruntTimeFromDateUtc = (
   };
 };
 
-export const getDateUTC = () => {
-  const date = new Date();
-
-  return new Date(
-    Date.UTC(
-      date.getUTCFullYear(),
-      date.getUTCMonth(),
-      date.getUTCDate(),
-      date.getUTCHours(),
-      date.getUTCMinutes(),
-      date.getUTCSeconds(),
-    ),
-  );
-};
-
-export const formattedTime = ({ am, hour, minute }) => {
+export const formattedTime = ({ am = '', hour = '', minute = '' }) => {
   return `${hour}:${minute} ${am}`;
 };
 
-export const formattedDay = ({ month = '1', day, weekday = '' }) => {
-  const monthNumber = Number(month) - 1;
-  const monthName = monthsList[monthNumber];
-
-  return `${weekday}, ${monthName} ${day}`;
+export const formattedDay = ({ month = '', day = '', weekday = '' }) => {
+  return `${weekday}, ${month} ${day}`;
 };

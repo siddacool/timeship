@@ -19,6 +19,7 @@
   "dependencies": {
     "@minht11/solid-virtual-container": "^0.2.1",
     "@satha/core": "^2.0.0",
-    "solid-js": "^1.3.2"
+    "solid-js": "^1.3.2",
+    "spacetime": "^7.1.0"
   }
 }
