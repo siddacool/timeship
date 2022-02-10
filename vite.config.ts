@@ -14,7 +14,7 @@ export default defineConfig({
         'wave.png',
       ],
       manifest: {
-        name: 'Timeship - world clock',
+        name: 'Timeship - World Clock',
         short_name: 'Timeship',
         description:
           'A world clock at your fingertips. Timeship displays time from cities all around the globe',

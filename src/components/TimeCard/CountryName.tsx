@@ -1,4 +1,5 @@
-import { Component } from 'solid-js';
+import { Component, Show } from 'solid-js';
+import { settings } from '../../store';
 import styles from './style.module.css';
 
 interface IProps {
@@ -9,7 +10,12 @@ interface IProps {
 }
 
 const CountryName: Component<IProps> = (props) => {
-  return <div class={styles.CountryName}>, {props.countryName}</div>;
+  return (
+    <div class={styles.CountryName}>
+      , {props.countryName}
+      <Show when={settings.utcDetails}>, {props.timestamp}</Show>
+    </div>
+  );
 };
 
 export default CountryName;
