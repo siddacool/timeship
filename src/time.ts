@@ -47,6 +47,10 @@ export const formattedTime = ({ am = '', hour = '', minute = '' }) => {
   return `${hour}:${minute} ${am}`;
 };
 
+export const formattedTime24 = ({ am = '', hour24 = '', minute = '' }) => {
+  return `${hour24}:${minute}`;
+};
+
 export const formattedDay = ({ month = '', day = '', weekday = '' }) => {
   return `${weekday}, ${month} ${day}`;
 };

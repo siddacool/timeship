@@ -8,6 +8,7 @@ setDefaultStorageName('timeship-store-1');
 const previewListLocalStorage = createSathaStore('preview-list', []);
 const darkThemeLocalStorage = createSathaStore('dark-theme', false);
 const utcDetailsLocalStorage = createSathaStore('utc-details', false);
+const hours24LocalStorage = createSathaStore('hours-24', false);
 
 const body = document.querySelector('body');
 const themeColor = document.querySelector('meta[name="theme-color"]');
@@ -408,13 +409,23 @@ export const darkThemeToggle = () => {
   }
 };
 
-export const [settings, setSettings] = createStore({ utcDetails: utcDetailsLocalStorage.get() });
+export const [settings, setSettings] = createStore({
+  utcDetails: utcDetailsLocalStorage.get(),
+  hours24: hours24LocalStorage.get(),
+});
 
 export const utcDetailsToggle = () => {
   const newCondition = !settings.utcDetails;
   utcDetailsLocalStorage.set(() => newCondition);
 
   setSettings('utcDetails', () => newCondition);
+};
+
+export const hours24Toggle = () => {
+  const newCondition = !settings.hours24;
+  hours24LocalStorage.set(() => newCondition);
+
+  setSettings('hours24', () => newCondition);
 };
 
 if (import.meta.env.DEV) {

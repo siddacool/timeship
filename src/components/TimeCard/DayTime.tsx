@@ -1,6 +1,6 @@
 import { Component, createMemo } from 'solid-js';
-import { utcTime } from '../../store';
-import { formattedTime, formattedDay, getCurruntTimeFromDateUtc } from '../../time';
+import { settings } from '../../store';
+import { formattedTime, formattedDay, formattedTime24 } from '../../time';
 import styles from './style.module.css';
 
 interface IProps {
@@ -11,7 +11,9 @@ interface IProps {
 }
 
 const DayTime: Component<IProps> = (props) => {
-  const timeValue = createMemo(() => formattedTime(props.d));
+  const timeValue = createMemo(() =>
+    settings.hours24 ? formattedTime24(props.d) : formattedTime(props.d),
+  );
   const dayValue = createMemo(() => formattedDay(props.d));
 
   return (
